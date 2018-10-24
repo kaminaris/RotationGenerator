@@ -13,4 +13,9 @@ class Helper
 	{
 		return str_replace('_', '', ucwords($s, '_'));
 	}
+
+	public static function splitString($s)
+	{
+		return preg_split("/\r\n|\n|\r/", $s);
+	}
 }

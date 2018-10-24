@@ -2,7 +2,8 @@
     "name": "kaminari/rotation-generator",
     "type": "project",
     "require": {
-        "guzzlehttp/guzzle": "^6.3"
+        "guzzlehttp/guzzle": "^6.3",
+        "tmilos/lexer": "^1.0"
     },
     "autoload": {
         "psr-4": {"Generator\\": "Generator/"}
