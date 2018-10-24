@@ -37,10 +37,18 @@ class Profile
 	/**
 	 * Loads simcraft profile either from URL or string
 	 * @param $string
+	 * @return Profile
+	 * @throws \Exception
 	 */
 	public function load($string)
 	{
+		if (strpos($string, 'http') === 0) {
+			$this->loadFromUri($string);
+		} else {
+			$this->loadFromString($string);
+		}
 
+		return $this;
 	}
 
 	/**
@@ -74,7 +82,7 @@ class Profile
 
 		foreach ($this->rawProfile as $line) {
 			$line = trim($line);
-			if (strpos($line, '#') || empty($line)) {
+			if (strpos($line, '#') === 0 || empty($line)) {
 				continue;
 			}
 
@@ -100,10 +108,16 @@ class Profile
 		return $this->actionLists[$name];
 	}
 
+	/**
+	 * @param $key
+	 * @param $value
+	 * @throws \Exception
+	 */
 	protected function parseProfileLine($key, $value)
 	{
 		if (in_array($key, $this->classList)) {
 			$this->class = $key;
+			$this->name = trim($value, '"');
 			return;
 		}
 
@@ -122,6 +136,9 @@ class Profile
 
 		switch ($key) {
 			case 'spec': $this->spec = $value; break;
+			default:
+				$this->parsedProfile[$key] = $value;
+				break;
 		}
 	}
 }

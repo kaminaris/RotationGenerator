@@ -7,7 +7,7 @@ use Tmilos\Lexer\Lexer;
 
 class Action
 {
-	public $allowedActionTypes = ['spell', 'run', 'call'];
+	public $allowedActionTypes = ['spell', 'run', 'call', 'variable'];
 
 	public $type;
 
@@ -19,8 +19,15 @@ class Action
 	public $aplToRun;
 	public $aplCondition; // Lexed spell condition
 
+	public $variableName;
+	public $variableOperator;
+	public $variableValue;
+	public $variableValueElse;
+	public $variableCondition;
+
 	/**
 	 * @param $line
+	 * @return Action
 	 * @throws \Exception
 	 */
 	public function parse($line)
@@ -34,6 +41,9 @@ class Action
 				case 'run_action_list':
 					$this->parseCallRun($action, $directive);
 					break;
+				case 'variable':
+					$this->parseVariable($action, $directive);
+					break;
 				default:
 					$this->type = 'spell';
 					$this->parseSpell($action, $directive);
@@ -44,6 +54,8 @@ class Action
 		} else {
 			throw new \Exception('Unrecognized action: ' . $line);
 		}
+
+		return $this;
 	}
 
 	/**
@@ -64,6 +76,38 @@ class Action
 			$this->aplCondition = empty($output[2]) ? null : $this->parseExpression($output[2]);
 		} else {
 			throw new \Exception('Unrecognized call/run command: ' . $expression);
+		}
+	}
+
+	/**
+	 * @param $action
+	 * @param $expression
+	 * @throws \Exception
+	 */
+	public function parseVariable($action, $expression)
+	{
+		$this->type = 'variable';
+
+		$exploded = explode(',', $expression);
+
+		foreach ($exploded as $item) {
+			if (preg_match('/^(\w+)=(.*)$/', $item, $out)) {
+				$name = $out[1];
+				$val = $out[2];
+
+				switch ($name) {
+					case 'name': $this->variableName = $val; break;
+					case 'value': $this->variableValue = $this->parseExpression($val); break;
+					case 'value_else': $this->variableValueElse = $this->parseExpression($val); break;
+					case 'op': $this->variableOperator = $val; break;
+					case 'condition': $this->variableCondition = $this->parseExpression($val); break;
+					default:
+						throw new \Exception('Unrecognized variable operator: ' . $name . ' expression: '. $expression);
+						break;
+				}
+			} else {
+				throw new \Exception('Unrecognized variable command: ' . $expression);
+			}
 		}
 	}
 
@@ -106,6 +150,8 @@ class Action
 			'-' => 'minus',
 			'\\*' => 'mul',
 			'/' => 'div',
+			'\\=' => 'eq',
+			'\\:' => 'semicolon',
 
 			'\\|' => 'or',
 			'\\&' => 'and',
@@ -133,6 +179,7 @@ class Action
 				case 'and': $output[] = 'and'; break;
 				case 'or': $output[] = 'or'; break;
 				case 'not': $output[] = 'not'; break;
+				case 'eq': $output[] = '=='; break;
 				case 'plus':
 				case 'minus':
 				case 'mul':
@@ -142,6 +189,7 @@ class Action
 				case 'open':
 				case 'close':
 				case 'number':
+				case 'semicolon':
 					$output[] = $value;
 					break;
 				case 'variable':
@@ -158,10 +206,13 @@ class Action
 							case 'azerite': $this->handleAzerite($lexer, $exploded, $output); break;
 							case 'dot':
 							case 'buff':
+							case 'cooldown':
 							case 'debuff': $this->handleAura($lexer, $exploded, $output); break;
 							case 'next_wi_bomb': $output[] = $value; break; //@TODO
 							case 'focus': $output[] = $value; break; //@TODO
 							case 'action': $output[] = $value; break; //@TODO
+							case 'race': $output[] = $value; break; //@TODO
+							case 'target': $output[] = $value; break; //@TODO
 							default:
 								throw new \Exception('Unrecognized variable type: ' . $variableType . ' name: ' . $value);
 								break;
@@ -203,14 +254,19 @@ class Action
 			throw new \Exception('Unrecognized talent switch type: ' . $suffix);
 		}
 
-		$nextVal = $lexer->glimpse()->getValue();
-
-		if (
-			in_array($previousElement, ['*', '/', '+', '-']) ||
-			in_array($nextVal, ['*', '/', '+', '-'])
-		) {
-			$value = "({$value} and 1 or 0)";
+		$glimpse = $lexer->glimpse();
+		if ($glimpse) {
+			$nextVal = $glimpse->getValue();
+			if (
+				in_array($previousElement, ['*', '/', '+', '-']) ||
+				in_array($nextVal, ['*', '/', '+', '-'])
+			) {
+				$value = "({$value} and 1 or 0)";
+			}
 		}
+
+
+
 
 		$output[] = $value;
 	}

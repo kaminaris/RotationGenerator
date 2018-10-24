@@ -10,7 +10,7 @@ class SimcDb
 	public function findByName($name)
 	{
 		$name = str_replace(' ', '_', $name);
-		$o = shell_exec(self::EXEC_PATH . ' spell_query="spell.name=' . $name. '" spell_query_xml_output_file=r.xml');
+		$o = shell_exec(self::EXEC_PATH . ' spell_query="spell.name=' . $name . '" spell_query_xml_output_file=r.xml');
 		file_put_contents('x.txt', $o);
 		usleep(10);
 

@@ -12,8 +12,12 @@ class ActionList
 		$this->name = $name ?? 'main';
 	}
 
+	/**
+	 * @param $line
+	 * @throws \Exception
+	 */
 	public function addAction($line)
 	{
-
+		$this->actions[] = (new Action())->parse($line);
 	}
 }

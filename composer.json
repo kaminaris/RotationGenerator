@@ -6,6 +6,9 @@
         "tmilos/lexer": "^1.0"
     },
     "autoload": {
-        "psr-4": {"Generator\\": "Generator/"}
+        "psr-4": {
+            "Generator\\": "Generator/",
+            "LuaWriter\\": "LuaWriter/"
+        }
     }
 }
