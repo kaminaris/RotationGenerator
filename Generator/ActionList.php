@@ -5,11 +5,17 @@ namespace Generator;
 class ActionList
 {
 	public $name;
+	/** @var Profile */
+	public $profile;
 	public $actions = [];
 
-	public function __construct($name = null)
+	public static function forProfile(Profile $profile, $name = null)
 	{
-		$this->name = $name ?? 'main';
+		$actionList = new ActionList();
+		$actionList->profile = $profile;
+		$actionList->name = $name ?? 'main';
+
+		return $actionList;
 	}
 
 	/**
@@ -18,6 +24,6 @@ class ActionList
 	 */
 	public function addAction($line)
 	{
-		$this->actions[] = (new Action())->parse($line);
+		$this->actions[] = Action::fromSimcAction($line);
 	}
 }

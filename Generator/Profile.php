@@ -34,6 +34,9 @@ class Profile
 	/** @var ActionList[] */
 	public $actionLists = [];
 
+	/** @var SpellList */
+	public $spellList;
+
 	/**
 	 * Loads simcraft profile either from URL or string
 	 * @param $string
@@ -102,7 +105,7 @@ class Profile
 	protected function getOrCreateActionList($name)
 	{
 		if (!isset($this->actionLists[$name])) {
-			$this->actionLists[$name] = new ActionList($name);
+			$this->actionLists[$name] = ActionList::forProfile($this, $name);
 		}
 
 		return $this->actionLists[$name];

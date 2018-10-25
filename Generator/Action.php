@@ -15,6 +15,7 @@ class Action
 	public $spellName; // Canonical spell name like Shadow Word: Pain
 	public $spellId;
 	public $spellCondition; // Lexed spell condition
+	public $spellTarget;
 
 	public $aplToRun;
 	public $aplCondition; // Lexed spell condition
@@ -25,45 +26,44 @@ class Action
 	public $variableValueElse;
 	public $variableCondition;
 
+	public $spellList = [];
+
 	/**
 	 * @param $line
 	 * @return Action
 	 * @throws \Exception
 	 */
-	public function parse($line)
+	public static function fromSimcAction($line)
 	{
-		if (preg_match('/^([\w]+),?(.*)$/', $line, $output)) {
-			$action = $output[1];
-			$directive = $output[2];
+		$action = new Action();
 
-			switch ($action) {
-				case 'call_action_list':
-				case 'run_action_list':
-					$this->parseCallRun($action, $directive);
-					break;
-				case 'variable':
-					$this->parseVariable($action, $directive);
-					break;
-				default:
-					$this->type = 'spell';
-					$this->parseSpell($action, $directive);
-					break;
+		$exploded = explode(',', $line);
+		$actionName = array_shift($exploded);
 
-			}
+		switch ($actionName) {
+			case 'call_action_list':
+			case 'run_action_list':
+				$action->parseCallRun($actionName, $exploded);
+				break;
+			case 'variable':
+				$action->parseVariable($actionName, $exploded);
+				break;
+			default:
+				$action->type = 'spell';
+				$action->parseSpell($actionName, $exploded);
+				break;
 
-		} else {
-			throw new \Exception('Unrecognized action: ' . $line);
 		}
 
-		return $this;
+		return $action;
 	}
 
 	/**
 	 * @param $action
-	 * @param $expression
+	 * @param $exploded
 	 * @throws \Exception
 	 */
-	public function parseCallRun($action, $expression)
+	public function parseCallRun($action, $exploded)
 	{
 		if ($action == 'call_action_list') {
 			$this->type = 'call';
@@ -71,66 +71,89 @@ class Action
 			$this->type = 'run';
 		}
 
-		if (preg_match('/^name=([\w]+),?i?f?=?(.*)$/', $expression, $output)) {
-			$this->aplToRun = $output[1];
-			$this->aplCondition = empty($output[2]) ? null : $this->parseExpression($output[2]);
-		} else {
-			throw new \Exception('Unrecognized call/run command: ' . $expression);
+		foreach ($exploded as $item) {
+			list($name, $value) = $this->parseVar($item);
+
+			switch ($name) {
+				case 'name': $this->aplToRun = $value; break;
+				case 'if': $this->aplCondition = $this->parseExpression($value); break;
+				default:
+					throw new \Exception(
+						'Unrecognized call/run command: ' . $name . ' expression: '. implode(',', $exploded)
+					);
+					break;
+			}
 		}
 	}
 
 	/**
 	 * @param $action
-	 * @param $expression
+	 * @param $exploded
 	 * @throws \Exception
 	 */
-	public function parseVariable($action, $expression)
+	public function parseVariable($action, $exploded)
 	{
 		$this->type = 'variable';
 
-		$exploded = explode(',', $expression);
-
 		foreach ($exploded as $item) {
-			if (preg_match('/^(\w+)=(.*)$/', $item, $out)) {
-				$name = $out[1];
-				$val = $out[2];
+			list($name, $value) = $this->parseVar($item);
 
-				switch ($name) {
-					case 'name': $this->variableName = $val; break;
-					case 'value': $this->variableValue = $this->parseExpression($val); break;
-					case 'value_else': $this->variableValueElse = $this->parseExpression($val); break;
-					case 'op': $this->variableOperator = $val; break;
-					case 'condition': $this->variableCondition = $this->parseExpression($val); break;
-					default:
-						throw new \Exception('Unrecognized variable operator: ' . $name . ' expression: '. $expression);
-						break;
-				}
-			} else {
-				throw new \Exception('Unrecognized variable command: ' . $expression);
+			switch ($name) {
+				case 'name': $this->variableName = $value; break;
+				case 'value': $this->variableValue = $this->parseExpression($value); break;
+				case 'value_else': $this->variableValueElse = $this->parseExpression($value); break;
+				case 'op': $this->variableOperator = $value; break;
+				case 'condition': $this->variableCondition = $this->parseExpression($value); break;
+				default:
+					throw new \Exception(
+						'Unrecognized variable operator: ' . $name . ' expression: '. implode(',', $exploded)
+					);
+					break;
 			}
 		}
 	}
 
 	/**
 	 * @param $action
-	 * @param $expression
+	 * @param $exploded
 	 * @throws \Exception
 	 */
-	public function parseSpell($action, $expression)
+	public function parseSpell($action, $exploded)
 	{
 		$this->spell = $action;
-		if (empty($expression)) {
+
+		if (empty($exploded)) {
 			// unconditional spell
 			$this->spellCondition = true;
 		} else {
-			if (preg_match('/^if=(.*)$/', $expression, $output)) {
-				$this->spellCondition = $this->parseExpression($output[1]);
-			} elseif (preg_match('/^target_if=(.*)$/', $expression, $output)) {
+			foreach ($exploded as $item) {
+				list($name, $value) = $this->parseVar($item);
 
-				$this->spellCondition = $this->parseExpression($output[1]);
-			} else {
-				throw new \Exception('Unrecognized call/run command: ' . $expression);
+				switch ($name) {
+					case 'target_if': $this->spellTarget = $this->parseExpression($value); break;
+					case 'if': $this->spellCondition = $this->parseExpression($value); break;
+					default:
+						throw new \Exception(
+							'Unrecognized spell operator: ' . $name . ' expression: '. implode(',', $exploded)
+						);
+						break;
+				}
 			}
+		}
+	}
+
+	/**
+	 * @param $part
+	 * @return mixed
+	 * @throws \Exception
+	 */
+	public function parseVar($part)
+	{
+		if (preg_match('/^(\w+)=(.*)$/', $part, $out)) {
+			array_shift($out);
+			return $out;
+		} else {
+			throw new \Exception('Unrecognized variable part: ' . $part);
 		}
 	}
 
@@ -143,12 +166,13 @@ class Action
 	{
 		$config = new LexerArrayConfig([
 			'\\s' => '',
-			'\\d+' => 'number',
+			'\\d+\.' => 'number',
 			'[\\w\.]+' => 'variable',
 
 			'\\+' => 'plus',
 			'-' => 'minus',
 			'\\*' => 'mul',
+			'\\%' => 'mod',
 			'/' => 'div',
 			'\\=' => 'eq',
 			'\\:' => 'semicolon',
@@ -183,6 +207,7 @@ class Action
 				case 'plus':
 				case 'minus':
 				case 'mul':
+				case 'mod':
 				case 'div':
 				case 'lt':
 				case 'gt':
@@ -208,13 +233,17 @@ class Action
 							case 'buff':
 							case 'cooldown':
 							case 'debuff': $this->handleAura($lexer, $exploded, $output); break;
+							case 'variable': $this->handleVariable($lexer, $exploded, $output); break;
 							case 'next_wi_bomb': $output[] = $value; break; //@TODO
 							case 'focus': $output[] = $value; break; //@TODO
 							case 'action': $output[] = $value; break; //@TODO
 							case 'race': $output[] = $value; break; //@TODO
 							case 'target': $output[] = $value; break; //@TODO
+							case 'bloodseeker': $output[] = $value; break; //@TODO
 							default:
-								throw new \Exception('Unrecognized variable type: ' . $variableType . ' name: ' . $value);
+								throw new \Exception(
+									'Unrecognized variable type: ' . $variableType . ' name: ' . $value . ' expr: ' . $expression
+								);
 								break;
 						}
 
@@ -265,9 +294,6 @@ class Action
 			}
 		}
 
-
-
-
 		$output[] = $value;
 	}
 
@@ -296,6 +322,19 @@ class Action
 		}
 
 		$output[] = $value;
+	}
+
+	/**
+	 * @param Lexer $lexer
+	 * @param $variable
+	 * @param $output
+	 * @throws \Exception
+	 */
+	protected function handleVariable($lexer, $variable, &$output)
+	{
+		$variable = Helper::pascalCase($variable[1]);
+
+		$output[] = $variable;
 	}
 
 	/**
