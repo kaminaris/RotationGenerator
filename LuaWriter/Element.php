@@ -10,29 +10,29 @@ class Element
 	const TYPE_VARIABLE = 'VARIABLE';
 	const TYPE_RESULT = 'RESULT';
 	const TYPE_ARRAY = 'ARRAY';
+	const TYPE_STATEMENT = 'STATEMENT';
 
 	public $stream;
 	public $type;
 	public $level;
 
 	public $content = [];
-	// for function
-	public $children;
 
-	public function __construct($type, $stream, $level)
+	public function __construct($stream, $level)
 	{
-		$this->type = $this;
+		$this->stream = $stream;
 		$this->level = $level;
 	}
 
-	public function makeChildren($type)
+	public function makeChildren()
 	{
-		$child = new Element($type, $this->stream, $this->level + 1);
+		$child = new Element($this->stream, $this->level + 1);
 		return $child;
 	}
 
 	public function makeVariable($name, $value)
 	{
+		$this->type = self::TYPE_VARIABLE;
 		$this->content = [
 			'variable' => [
 				'name' => $name,
@@ -41,8 +41,25 @@ class Element
 		];
 	}
 
+	public function makeStatement($statement)
+	{
+		$this->type = self::TYPE_STATEMENT;
+		$this->content = [
+			'statement' => $statement
+		];
+	}
+
+	public function makeResult($result)
+	{
+		$this->type = self::TYPE_RESULT;
+		$this->content = [
+			'result' => $result
+		];
+	}
+
 	public function makeArray($arrayName, $array)
 	{
+		$this->type = self::TYPE_ARRAY;
 		$this->content = [
 			'array' => [
 				'name' => $arrayName,
@@ -51,8 +68,9 @@ class Element
 		];
 	}
 
-	public function makeCondition($condition, $if, $else)
+	public function makeCondition($condition, $if, $else = null)
 	{
+		$this->type = self::TYPE_CONDITION;
 		$this->content = [
 			'condition' => [
 				'condition' => $condition,
@@ -62,12 +80,35 @@ class Element
 		];
 	}
 
+	public function makeFunction($name, $arguments = [], $children)
+	{
+		$this->type = self::TYPE_FUNCTION;
+		$this->content = [
+			'function' => [
+				'name' => $name,
+				'arguments' => $arguments,
+				'children' => $children,
+			]
+		];
+	}
+
+	/**
+	 * @throws \Exception
+	 */
 	public function write()
 	{
 		switch ($this->type) {
 			case self::TYPE_VARIABLE:
 				$variable = $this->content['variable'];
 				$this->writeLine("local {$variable['name']} = {$variable['value']};", $this->level);
+				break;
+			case self::TYPE_STATEMENT:
+				$variable = $this->content['statement'];
+				$this->writeLine("{$variable};", $this->level);
+				break;
+			case self::TYPE_RESULT:
+				$result = $this->content['result'];
+				$this->writeLine("return {$result};", $this->level);
 				break;
 			case self::TYPE_ARRAY:
 				$array = $this->content['array'];
@@ -102,7 +143,20 @@ class Element
 
 				$this->writeLine("end", $this->level);
 				break;
+			case self::TYPE_FUNCTION:
+				$function = $this->content['function'];
+				$arguments = implode(', ', $function['arguments']);
+				$this->writeLine("function {$function['name']}({$arguments})", $this->level);
 
+				/** @var Element $children */
+				foreach ($function['children'] as $children) {
+					$children->write();
+				}
+
+				$this->writeLine("end", $this->level);
+				break;
+			default:
+				throw new \Exception('Unrecognized element type: ' . $this->type);
 		}
 	}
 

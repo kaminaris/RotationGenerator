@@ -2,15 +2,18 @@
 
 namespace Generator;
 
+use Generator\Spell\SpellInfo;
+
 class Spell
 {
 	public $spellSimcName;
 
 	public $spellName;
-	public $spellId;
+	public $spellId = 0;
 
-	public $spellCooldown = 0;
-	public $spellCost = 0;
+	/** @var SpellInfo */
+	public $info;
+
 	public $isTalent;
 
 	public function __construct($name)

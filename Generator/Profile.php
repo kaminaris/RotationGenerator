@@ -21,6 +21,22 @@ class Profile
 		'demonhunter'
 	];
 
+	public $spellPrefix;
+	public $spellPrefixes = [
+		'warrior'     => ['arms'          => 'AR', 'fury'         => 'FR', 'protection'  => 'PR'],
+		'paladin'     => ['retribution'   => 'RT', 'holy'         => 'HL', 'protection'  => 'PR'],
+		'hunter'      => ['beast_mastery' => 'BM', 'marksmanship' => 'MM', 'survival'    => 'SV'],
+		'rogue'       => ['assassination' => 'AS', 'outlaw'       => 'OL', 'subtlety'    => 'SB'],
+		'priest'      => ['shadow'        => 'SH', 'discipline'   => 'DS', 'holy'        => 'HL'],
+		'deathknight' => ['blood'         => 'BL', 'frost'        => 'FR', 'unholy'      => 'UH'],
+		'shaman'      => ['elemental'     => 'EL', 'enhancement'  => 'EH', 'restoration' => 'RT'],
+		'mage'        => ['arcane'        => 'AR', 'fire'         => 'FR', 'frost'       => 'FT'],
+		'warlock'     => ['affliction'    => 'AF', 'demonology'   => 'DE', 'destruction' => 'DS'],
+		'monk'        => ['brewmaster'    => 'BR', 'windwalker'   => 'WW', 'mistweaver'  => 'MW'],
+		'druid'       => ['balance'       => 'BL', 'guardian'     => 'GR', 'feral'       => 'FR', 'restoration' => 'RS'],
+		'demonhunter' => ['havoc'         => 'HV', 'vengeance'    => 'VG'],
+	];
+
 	public $rawProfile;
 	public $parsedProfile;
 
@@ -36,6 +52,8 @@ class Profile
 
 	/** @var SpellList */
 	public $spellList;
+
+	public $spellDb;
 
 	/**
 	 * Loads simcraft profile either from URL or string
@@ -79,7 +97,8 @@ class Profile
 	{
 		$this->rawProfile = Helper::splitString($string);
 
-		$this->mainActionList = new ActionList();
+		$this->mainActionList = ActionList::forProfile($this);
+
 		$this->actionLists = [];
 		$this->parsedProfile = [];
 
@@ -138,10 +157,31 @@ class Profile
 		}
 
 		switch ($key) {
-			case 'spec': $this->spec = $value; break;
+			case 'spec':
+				$this->spec = $value;
+				$this->spellPrefix = $this->spellPrefixes[$this->class][$this->spec];
+				// we need to know spec first
+				$this->spellDb = new Spell\GameDb($this->class, $this->spec);
+				$this->spellList = new SpellList($this->spellDb);
+			break;
 			default:
 				$this->parsedProfile[$key] = $value;
 				break;
 		}
+	}
+
+	/**
+	 * Prefix Spell Name
+	 *
+	 * @param $name
+	 * @return string
+	 * @throws \Exception
+	 */
+	public function SpellName($name)
+	{
+		// keep it in spell list
+		$this->spellList->addSpell($name);
+
+		return $this->spellPrefix . '.' . Helper::properCase($name);
 	}
 }

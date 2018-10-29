@@ -7,15 +7,27 @@ class ActionList
 	public $name;
 	/** @var Profile */
 	public $profile;
+	/** @var Action[] */
 	public $actions = [];
 
 	public static function forProfile(Profile $profile, $name = null)
 	{
 		$actionList = new ActionList();
 		$actionList->profile = $profile;
-		$actionList->name = $name ?? 'main';
+		$actionList->name = $name ?? '_MAIN';
 
 		return $actionList;
+	}
+
+	public function getFunctionName()
+	{
+		$result = Helper::properCase($this->profile->class);
+
+		if ($this->name == '_MAIN') {
+			return $result . ':' . Helper::properCase($this->profile->spec);
+		} else {
+			return $result . ':' . Helper::properCase($this->name);
+		}
 	}
 
 	/**
@@ -24,6 +36,12 @@ class ActionList
 	 */
 	public function addAction($line)
 	{
-		$this->actions[] = Action::fromSimcAction($line);
+		$action = Action::fromSimcAction($line, $this->profile);
+		if ($action && !$action->isBlacklisted) {
+			$this->actions[] = $action;
+		} else {
+			echo 'Action blacklisted: ' . $line . PHP_EOL;
+		}
+
 	}
 }

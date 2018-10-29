@@ -7,12 +7,21 @@ use Tmilos\Lexer\Lexer;
 
 class Action
 {
+	const TYPE_SPELL = 'spell';
+	const TYPE_RUN = 'run';
+	const TYPE_CALL = 'call';
+	const TYPE_VARIABLE = 'variable';
+
+	/** @var Profile */
+	public $profile;
+
 	public $allowedActionTypes = ['spell', 'run', 'call', 'variable'];
 
 	public $type;
 
 	public $spell;
-	public $spellName; // Canonical spell name like Shadow Word: Pain
+	public $spellName; // Variable spell name like ShadowWordPain
+	public $spellNameCanonical; // Canonical spell name like Shadow Word: Pain
 	public $spellId;
 	public $spellCondition; // Lexed spell condition
 	public $spellTarget;
@@ -26,16 +35,20 @@ class Action
 	public $variableValueElse;
 	public $variableCondition;
 
+	public $isBlacklisted = false;
+
 	public $spellList = [];
 
 	/**
 	 * @param $line
+	 * @param $profile
 	 * @return Action
 	 * @throws \Exception
 	 */
-	public static function fromSimcAction($line)
+	public static function fromSimcAction($line, $profile)
 	{
 		$action = new Action();
+		$action->profile = $profile;
 
 		$exploded = explode(',', $line);
 		$actionName = array_shift($exploded);
@@ -121,6 +134,13 @@ class Action
 	public function parseSpell($action, $exploded)
 	{
 		$this->spell = $action;
+		$this->spellName = $this->profile->SpellName($action);
+		$this->spellNameCanonical = Helper::properCaseWithSpaces($action);
+
+		if ($this->isSpellBlacklisted($action)) {
+			$this->isBlacklisted = true;
+			return;
+		}
 
 		if (empty($exploded)) {
 			// unconditional spell
@@ -166,8 +186,16 @@ class Action
 	{
 		$config = new LexerArrayConfig([
 			'\\s' => '',
-			'\\d+\.' => 'number',
+			'[\\d\.]+' => 'number',
 			'[\\w\.]+' => 'variable',
+
+			'\\|' => 'or',
+			'\\&' => 'and',
+			'\\!' => 'not',
+			'\\<=' => 'lteq',
+			'\\>=' => 'gteq',
+			'\\<' => 'lt',
+			'\\>' => 'gt',
 
 			'\\+' => 'plus',
 			'-' => 'minus',
@@ -177,11 +205,6 @@ class Action
 			'\\=' => 'eq',
 			'\\:' => 'semicolon',
 
-			'\\|' => 'or',
-			'\\&' => 'and',
-			'\\!' => 'not',
-			'\\<' => 'lt',
-			'\\>' => 'gt',
 
 			'\\(' => 'open',
 			'\\)' => 'close',
@@ -192,6 +215,7 @@ class Action
 		$lexer->moveNext();
 
 		$output = [];
+		$spellsFound = [];
 
 		while ($lookAhead = $lexer->getLookahead()) {
 			$name = $lookAhead->getName();
@@ -209,6 +233,8 @@ class Action
 				case 'mul':
 				case 'mod':
 				case 'div':
+				case 'lteq':
+				case 'gteq':
 				case 'lt':
 				case 'gt':
 				case 'open':
@@ -227,12 +253,12 @@ class Action
 						$variableType = $exploded[0];
 
 						switch ($variableType) {
-							case 'talent': $this->handleTalent($lexer, $exploded, $output); break;
-							case 'azerite': $this->handleAzerite($lexer, $exploded, $output); break;
+							case 'talent': $this->handleTalent($lexer, $exploded, $output, $spellsFound); break;
+							case 'azerite': $this->handleAzerite($lexer, $exploded, $output, $spellsFound); break;
 							case 'dot':
 							case 'buff':
 							case 'cooldown':
-							case 'debuff': $this->handleAura($lexer, $exploded, $output); break;
+							case 'debuff': $this->handleAura($lexer, $exploded, $output, $spellsFound); break;
 							case 'variable': $this->handleVariable($lexer, $exploded, $output); break;
 							case 'next_wi_bomb': $output[] = $value; break; //@TODO
 							case 'focus': $output[] = $value; break; //@TODO
@@ -267,12 +293,15 @@ class Action
 	 * @param Lexer $lexer
 	 * @param $variable
 	 * @param $output
+	 * @param $spellsFound
 	 * @throws \Exception
 	 */
-	protected function handleTalent($lexer, $variable, &$output)
+	protected function handleTalent($lexer, $variable, &$output, &$spellsFound)
 	{
 		$previousElement = end($output);
-		$talentName = Helper::pascalCase($variable[1]);
+		$spellsFound[$variable[1]] = true;
+
+		$talentName = $this->profile->SpellName($variable[1]);
 		$suffix = $variable[2];
 
 		if ($suffix == 'enabled') {
@@ -301,11 +330,14 @@ class Action
 	 * @param Lexer $lexer
 	 * @param $variable
 	 * @param $output
+	 * @param $spellsFound
 	 * @throws \Exception
 	 */
-	protected function handleAzerite($lexer, $variable, &$output)
+	protected function handleAzerite($lexer, $variable, &$output, &$spellsFound)
 	{
-		$spell = Helper::pascalCase($variable[1]);
+		$spellsFound[$variable[1]] = true;
+		$spell = $this->profile->SpellName($variable[1]);
+
 		$suffix = $variable[2];
 
 		$value = null;
@@ -341,16 +373,19 @@ class Action
 	 * @param $lexer
 	 * @param $variable
 	 * @param $output
+	 * @param $spellsFound
 	 * @throws \Exception
 	 */
-	protected function handleAura($lexer, $variable, &$output)
+	protected function handleAura($lexer, $variable, &$output, &$spellsFound)
 	{
+		$spell = $this->profile->SpellName($variable[1]);
+		$spellsFound[$variable[1]] = true;
+
 		$prefix = $variable[0];
 		if ($prefix == 'dot') {
 			$prefix = 'debuff';
 		}
 
-		$spell = Helper::pascalCase($variable[1]);
 		$suffix = $variable[2];
 
 		$value = null;
@@ -378,5 +413,13 @@ class Action
 
 
 		$output[] = $value;
+	}
+
+	protected function isSpellBlacklisted($spellName)
+	{
+		//echo $spellName . PHP_EOL;
+		return in_array($spellName, [
+			'flask', 'food', 'augmentation', 'summon_pet', 'snapshot_stats', 'potion'
+		]);
 	}
 }
