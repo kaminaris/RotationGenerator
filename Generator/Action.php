@@ -244,11 +244,7 @@ class Action
 					$output[] = $value;
 					break;
 				case 'variable':
-					if ($value == 'blacklisted_variable') {
-						if ($previousElement == 'and' || $previousElement == 'or') {
-							array_pop($output);
-						}
-					} elseif (strpos($value, '.') !== false) {
+					if (strpos($value, '.') !== false) {
 						$exploded = explode('.', $value);
 						$variableType = $exploded[0];
 
@@ -260,6 +256,7 @@ class Action
 							case 'cooldown':
 							case 'debuff': $this->handleAura($lexer, $exploded, $output, $spellsFound); break;
 							case 'variable': $this->handleVariable($lexer, $exploded, $output); break;
+							case 'active_enemies': $output[] = 'targets'; break;
 							case 'next_wi_bomb': $output[] = $value; break; //@TODO
 							case 'focus': $output[] = $value; break; //@TODO
 							case 'action': $output[] = $value; break; //@TODO
@@ -275,7 +272,14 @@ class Action
 
 
 					} else {
-						$output[] = $value;
+						switch ($value) {
+							case 'active_enemies': $output[] = 'targets'; break;
+							case 'full_recharge_time': $output[] = "cooldown[{$this->spellName}].remains"; break;
+							case 'refreshable': $output[] = "debuff[{$this->spellName}].refreshable"; break;
+							default:
+								$output[] = $value;
+								break;
+						}
 					}
 					break;
 				default:
