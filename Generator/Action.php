@@ -521,7 +521,8 @@ class Action
 		//echo $spellName . PHP_EOL;
 		return in_array($spellName, [
 			'flask', 'food', 'augmentation', 'summon_pet', 'snapshot_stats', 'potion', 'arcane_pulse',
-			'lights_judgment', 'arcane_torrent', 'blood_fury', 'berserking', 'fireblood'
+			'lights_judgment', 'arcane_torrent', 'blood_fury', 'berserking', 'fireblood', 'auto_attack',
+			'use_items'
 		]);
 	}
 }
