@@ -90,6 +90,8 @@ class Converter
 					$child->makeVariable($action->variableName, $action->variableValue);
 					break;
 				case $action::TYPE_SPELL:
+					$children[] = $element->makeChildren()->makeNewline();
+					$children[] = $element->makeChildren()->makeComment($action->rawLine);
 					if ($action->spellCondition) {
 						$child = $element->makeChildren();
 

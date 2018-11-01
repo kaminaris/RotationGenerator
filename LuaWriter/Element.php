@@ -11,6 +11,8 @@ class Element
 	const TYPE_RESULT = 'RESULT';
 	const TYPE_ARRAY = 'ARRAY';
 	const TYPE_STATEMENT = 'STATEMENT';
+	const TYPE_COMMENT = 'COMMENT';
+	const TYPE_NEWLINE = 'NEWLINE';
 
 	public $stream;
 	public $type;
@@ -39,6 +41,7 @@ class Element
 				'value' => $value
 			]
 		];
+		return $this;
 	}
 
 	public function makeStatement($statement)
@@ -47,6 +50,22 @@ class Element
 		$this->content = [
 			'statement' => $statement
 		];
+		return $this;
+	}
+
+	public function makeComment($comment)
+	{
+		$this->type = self::TYPE_COMMENT;
+		$this->content = [
+			'comment' => $comment
+		];
+		return $this;
+	}
+
+	public function makeNewline()
+	{
+		$this->type = self::TYPE_NEWLINE;
+		return $this;
 	}
 
 	public function makeResult($result)
@@ -55,6 +74,7 @@ class Element
 		$this->content = [
 			'result' => $result
 		];
+		return $this;
 	}
 
 	public function makeArray($arrayName, $array)
@@ -66,6 +86,7 @@ class Element
 				'array' => $array
 			]
 		];
+		return $this;
 	}
 
 	public function makeCondition($condition, $if, $else = null)
@@ -78,6 +99,7 @@ class Element
 				'else' => $else,
 			]
 		];
+		return $this;
 	}
 
 	public function makeFunction($name, $arguments = [], $children)
@@ -90,6 +112,7 @@ class Element
 				'children' => $children,
 			]
 		];
+		return $this;
 	}
 
 	/**
@@ -102,9 +125,16 @@ class Element
 				$variable = $this->content['variable'];
 				$this->writeLine("local {$variable['name']} = {$variable['value']};", $this->level);
 				break;
+			case self::TYPE_NEWLINE:
+				$this->writeLine('', 0);
+				break;
 			case self::TYPE_STATEMENT:
-				$variable = $this->content['statement'];
-				$this->writeLine("{$variable};", $this->level);
+				$statement = $this->content['statement'];
+				$this->writeLine("{$statement};", $this->level);
+				break;
+			case self::TYPE_COMMENT:
+				$comment = $this->content['comment'];
+				$this->writeLine("-- {$comment};", $this->level);
 				break;
 			case self::TYPE_RESULT:
 				$result = $this->content['result'];

@@ -35,6 +35,8 @@ class Action
 	public $variableValueElse;
 	public $variableCondition;
 
+	public $rawLine;
+
 	public $isBlacklisted = false;
 
 	public $spellList = [];
@@ -49,6 +51,7 @@ class Action
 	{
 		$action = new Action();
 		$action->profile = $profile;
+		$action->rawLine = $line;
 
 		$exploded = explode(',', $line);
 		$actionName = array_shift($exploded);
@@ -150,8 +153,15 @@ class Action
 				list($name, $value) = $this->parseVar($item);
 
 				switch ($name) {
+					case 'name': $this->spellName = $value; break;
 					case 'target_if': $this->spellTarget = $this->parseExpression($value); break;
 					case 'if': $this->spellCondition = $this->parseExpression($value); break;
+					case 'for_next': //@TODO
+					case 'cycle_targets': //@TODO
+					case 'precombat_seconds':
+						$this->isBlacklisted = true;
+						return;
+						break;
 					default:
 						throw new \Exception(
 							'Unrecognized spell operator: ' . $name . ' expression: '. implode(',', $exploded)
@@ -256,13 +266,27 @@ class Action
 							case 'cooldown':
 							case 'debuff': $this->handleAura($lexer, $exploded, $output, $spellsFound); break;
 							case 'variable': $this->handleVariable($lexer, $exploded, $output); break;
-							case 'active_enemies': $output[] = 'targets'; break;
+							case 'prev_gcd': $this->handlePreviousSpell($lexer, $exploded, $output, $spellsFound); break;
+
 							case 'next_wi_bomb': $output[] = $value; break; //@TODO
-							case 'focus': $output[] = $value; break; //@TODO
 							case 'action': $output[] = $value; break; //@TODO
 							case 'race': $output[] = $value; break; //@TODO
 							case 'target': $output[] = $value; break; //@TODO
 							case 'bloodseeker': $output[] = $value; break; //@TODO
+							case 'stealthed': $output[] = $variableType; break; //@TODO
+
+							// targets
+							case 'spell_targets':
+							case 'active_enemies': $output[] = 'targets'; break;
+
+							// resources
+							case 'focus': $output[] = $value; break;
+							case 'combo_points': $output[] = $value; break;
+							case 'energy': $output[] = $value; break;
+
+							case 'raid_event':
+								$this->handleBlacklisted($lexer, $exploded, $output);
+								break;
 							default:
 								throw new \Exception(
 									'Unrecognized variable type: ' . $variableType . ' name: ' . $value . ' expr: ' . $expression
@@ -364,6 +388,25 @@ class Action
 	 * @param Lexer $lexer
 	 * @param $variable
 	 * @param $output
+	 * @param $spellsFound
+	 * @throws \Exception
+	 */
+	protected function handlePreviousSpell($lexer, $variable, &$output, &$spellsFound)
+	{
+		$history = is_numeric($variable[1]) ? intval($variable[1]) : 1;
+		$spellSimcName = is_numeric($variable[1]) ? $variable[2] : $variable[1];
+		$spell = $this->profile->SpellName($spellSimcName);
+		$spellsFound[$spellSimcName] = true;
+
+		$value = "spellHistory[{$history}] == {$spell}";
+
+		$output[] = $value;
+	}
+
+	/**
+	 * @param Lexer $lexer
+	 * @param $variable
+	 * @param $output
 	 * @throws \Exception
 	 */
 	protected function handleVariable($lexer, $variable, &$output)
@@ -374,7 +417,39 @@ class Action
 	}
 
 	/**
-	 * @param $lexer
+	 * @param Lexer $lexer
+	 * @param $variable
+	 * @param $output
+	 * @throws \Exception
+	 */
+	protected function handleBlacklisted($lexer, $variable, &$output)
+	{
+		$previousElement = end($output);
+		$blacklist = ['*', '/', '+', '-', '>', '<', '<=', '>=', '&', '|'];
+
+		while (in_array($previousElement, $blacklist)) {
+			array_pop($output);
+			$previousElement = end($output);
+		}
+
+		while ($glimpse = $lexer->glimpse()) {
+			$nextVal = $glimpse->getValue();
+
+			if (in_array($nextVal, $blacklist)) {
+				// skip next
+				$lexer->moveNext();
+			} else {
+				break;
+			}
+		}
+
+		if (count($output) == 1 && in_array($output[0], ['and', 'or'])) {
+			array_pop($output);
+		}
+	}
+
+	/**
+	 * @param Lexer $lexer
 	 * @param $variable
 	 * @param $output
 	 * @param $spellsFound
@@ -410,6 +485,28 @@ class Action
 			case 'refreshable':
 				$value = "{$prefix}[{$spell}].refreshable";
 				break;
+			case 'pmultiplier':
+				$previousElement = end($output);
+				$glimpse = $lexer->glimpse();
+
+				if ($glimpse) {
+					$nextVal = $glimpse->getValue();
+					$blacklist = ['*', '/', '+', '-', '>', '<', '<=', '>='];
+
+					if (in_array($previousElement, $blacklist)) {
+						array_pop($output);
+						array_pop($output);
+					}
+
+					if (in_array($nextVal, $blacklist)) {
+						// skip next
+						$lexer->moveNext();
+						$lexer->moveNext();
+					}
+				}
+
+				return;
+				break;
 			default:
 				throw new \Exception('Unrecognized spell/aura suffix type: ' . $suffix);
 				break;
@@ -423,7 +520,8 @@ class Action
 	{
 		//echo $spellName . PHP_EOL;
 		return in_array($spellName, [
-			'flask', 'food', 'augmentation', 'summon_pet', 'snapshot_stats', 'potion'
+			'flask', 'food', 'augmentation', 'summon_pet', 'snapshot_stats', 'potion', 'arcane_pulse',
+			'lights_judgment', 'arcane_torrent', 'blood_fury', 'berserking', 'fireblood'
 		]);
 	}
 }
