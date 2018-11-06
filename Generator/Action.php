@@ -156,6 +156,8 @@ class Action
 					case 'name': $this->spellName = $value; break;
 					case 'target_if': $this->spellTarget = $this->parseExpression($value); break;
 					case 'if': $this->spellCondition = $this->parseExpression($value); break;
+					case 'interval': break; // ignore intervals
+					case 'pct_health': break; // ignore pct_health
 					case 'for_next': //@TODO
 					case 'cycle_targets': //@TODO
 					case 'precombat_seconds':
@@ -268,7 +270,6 @@ class Action
 							case 'variable': $this->handleVariable($lexer, $exploded, $output); break;
 							case 'prev_gcd': $this->handlePreviousSpell($lexer, $exploded, $output, $spellsFound); break;
 
-							case 'next_wi_bomb': $output[] = $value; break; //@TODO
 							case 'action': $output[] = $value; break; //@TODO
 							case 'race': $output[] = $value; break; //@TODO
 							case 'target': $output[] = $value; break; //@TODO
@@ -280,9 +281,16 @@ class Action
 							case 'active_enemies': $output[] = 'targets'; break;
 
 							// resources
+							case 'chi': $output[] = $value; break;
 							case 'focus': $output[] = $value; break;
 							case 'combo_points': $output[] = $value; break;
 							case 'energy': $output[] = $value; break;
+
+							case 'next_wi_bomb':
+								$spellPrefix = $this->profile->spellPrefix;
+								$bombName = Helper::properCase($exploded[1]) . 'Bomb';
+								$output[] = "nextWiBomb == {$spellPrefix}.$bombName";
+								break; //@TODO
 
 							case 'raid_event':
 								$this->handleBlacklisted($lexer, $exploded, $output);
@@ -298,7 +306,7 @@ class Action
 					} else {
 						switch ($value) {
 							case 'active_enemies': $output[] = 'targets'; break;
-							case 'full_recharge_time': $output[] = "cooldown[{$this->spellName}].remains"; break;
+							case 'full_recharge_time': $output[] = "cooldown[{$this->spellName}].fullRecharge"; break;
 							case 'refreshable': $output[] = "debuff[{$this->spellName}].refreshable"; break;
 							default:
 								$output[] = $value;
@@ -374,7 +382,7 @@ class Action
 				$value = "azerite[{$spell}]";
 				break;
 			case 'enabled':
-				$value = "(azerite[{$spell}] > 0 and true or false)";
+				$value = "azerite[{$spell}] > 0";
 				break;
 			default:
 				throw new \Exception('Unrecognized azerite suffix type: ' . $suffix);
@@ -476,6 +484,7 @@ class Action
 			case 'down':
 				$value = "not {$prefix}[{$spell}].up";
 				break;
+			case 'charges':
 			case 'stack':
 				$value = "{$prefix}[{$spell}].count";
 				break;
@@ -522,7 +531,7 @@ class Action
 		return in_array($spellName, [
 			'flask', 'food', 'augmentation', 'summon_pet', 'snapshot_stats', 'potion', 'arcane_pulse',
 			'lights_judgment', 'arcane_torrent', 'blood_fury', 'berserking', 'fireblood', 'auto_attack',
-			'use_items'
+			'use_items', 'flying_serpent_kick', 'ancestral_call'
 		]);
 	}
 }
