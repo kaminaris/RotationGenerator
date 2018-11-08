@@ -66,6 +66,7 @@ class Converter
 				var_dump($actionList);
 			}
 			$list->write();
+			$list->makeChildren()->makeNewline()->write();
 		}
 
 		//fclose($this->handle);
@@ -81,11 +82,19 @@ class Converter
 		$funcName = $list->getFunctionName();
 
 		$children = [];
+
+		$children[] = $element->makeChildren()->makeVariable('fd', 'MaxDps.FrameData');
+		$children[] = $element->makeChildren()->makeVariable(
+			'cooldown, buff, debuff, talents, azerite, currentSpell',
+			'fd.cooldown, fd.buff, fd.debuff, fd.talents, fd.azerite, fd.currentSpell'
+		);
+
 		foreach ($list->actions as $action) {
 			$child = null;
 //			echo $action->type . PHP_EOL;
 			switch ($action->type) {
 				case $action::TYPE_VARIABLE: //@TODO
+					$children[] = $element->makeChildren()->makeComment($action->rawLine);
 					$child = $element->makeChildren();
 					$child->makeVariable($action->variableName, $action->variableValue);
 					break;
@@ -143,7 +152,7 @@ class Converter
 
 	protected function getAplListName($apl)
 	{
-		$class = Helper::properCase($this->profile->class);
-		return $class . ':' . Helper::properCase($apl) . '()';
+		$actionList = $this->profile->getActionListByName($apl);
+		return $actionList->getFunctionName() . '()';
 	}
 }

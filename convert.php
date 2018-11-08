@@ -4,7 +4,7 @@ require_once 'vendor/autoload.php';
 
 $urlPrefix = 'https://raw.githubusercontent.com/simulationcraft/simc/bfa-dev/profiles/Tier22/';
 
-$availableClasses = [
+$availableProfiles = [
 	'blood'       => 'T22_Death_Knight_Blood.simc',
 	'dk_frost'    => 'T22_Death_Knight_Frost.simc',
 	'unholy'      => 'T22_Death_Knight_Unholy.simc',
@@ -52,14 +52,14 @@ TEXT;
 
 function specList()
 {
-	global $availableClasses;
+	global $availableProfiles;
 	echo <<<TEXT
 Invalid profile, needs to be either existing file or one of:
 
 
 TEXT;
 
-	foreach ($availableClasses as $short => $v) {
+	foreach ($availableProfiles as $short => $v) {
 		echo str_pad($short, 20) . ' - ' . preg_replace('/T22_(.*).simc/', '$1', $v) . PHP_EOL;
 	}
 }
@@ -70,9 +70,22 @@ if ($argc < 2) {
 	die;
 }
 
-$profile = $argv[1];
+$selectedProfile = $argv[1];
 
-if (!file_exists($profile) && !array_key_exists($profile, $availableClasses)) {
+if (!file_exists($selectedProfile) && !array_key_exists($selectedProfile, $availableProfiles)) {
 	specList();
 	die;
 }
+
+$profile = new \Generator\Profile();
+
+$outFile = $argv[2] ?? 'result.lua';
+if (file_exists($selectedProfile)) {
+	$profile->load($selectedProfile);
+} else {
+	$outFile = $argv[2] ?? $selectedProfile . '.lua';
+	$profile->load($urlPrefix . $availableProfiles[$selectedProfile]);
+}
+
+$converter = new \Converter\Converter($outFile, $profile);
+$converter->convert();

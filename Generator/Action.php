@@ -283,7 +283,7 @@ class Action
 							// resources
 							case 'chi': $output[] = $value; break;
 							case 'focus': $output[] = $value; break;
-							case 'combo_points': $output[] = $value; break;
+							case 'combo_points': $output[] = 'combo'; break;
 							case 'energy': $output[] = $value; break;
 
 							case 'next_wi_bomb':

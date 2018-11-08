@@ -130,6 +130,11 @@ class Profile
 		return $this->actionLists[$name];
 	}
 
+	public function getActionListByName($name)
+	{
+		return $this->actionLists[$name] ?? null;
+	}
+
 	/**
 	 * @param $key
 	 * @param $value

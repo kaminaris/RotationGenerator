@@ -26,7 +26,7 @@ class ActionList
 		if ($this->name == '_MAIN') {
 			return $result . ':' . Helper::properCase($this->profile->spec);
 		} else {
-			return $result . ':' . Helper::properCase($this->name);
+			return $result . ':' . Helper::properCase($this->profile->spec) . Helper::properCase($this->name);
 		}
 	}
 
