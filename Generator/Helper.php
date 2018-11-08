@@ -14,6 +14,11 @@ class Helper
 		return str_replace('_', '', ucwords($s, '_'));
 	}
 
+	public static function camelCase($s)
+	{
+		return lcfirst(str_replace('_', '', ucwords($s, '_')));
+	}
+
 	public static function properCaseWithSpaces($s)
 	{
 		return str_replace('_', ' ', ucwords($s, '_'));

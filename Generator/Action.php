@@ -115,7 +115,7 @@ class Action
 			list($name, $value) = $this->parseVar($item);
 
 			switch ($name) {
-				case 'name': $this->variableName = $value; break;
+				case 'name': $this->variableName = Helper::camelCase($value); break;
 				case 'value': $this->variableValue = $this->parseExpression($value); break;
 				case 'value_else': $this->variableValueElse = $this->parseExpression($value); break;
 				case 'op': $this->variableOperator = $value; break;
@@ -158,8 +158,8 @@ class Action
 					case 'if': $this->spellCondition = $this->parseExpression($value); break;
 					case 'interval': break; // ignore intervals
 					case 'pct_health': break; // ignore pct_health
+					case 'cycle_targets': break; //ignore cycling targets
 					case 'for_next': //@TODO
-					case 'cycle_targets': //@TODO
 					case 'precombat_seconds':
 						$this->isBlacklisted = true;
 						return;
@@ -305,9 +305,18 @@ class Action
 
 					} else {
 						switch ($value) {
+							case 'cp_max_spend':
+								$output[] = Helper::camelCase($value);
+								break;
+							case 'combo_points':
+								$output[] = 'combo';
+								break;
+							case 'spell_targets': $output[] = 'targets'; break;
 							case 'active_enemies': $output[] = 'targets'; break;
 							case 'full_recharge_time': $output[] = "cooldown[{$this->spellName}].fullRecharge"; break;
-							case 'refreshable': $output[] = "debuff[{$this->spellName}].refreshable"; break;
+							case 'ticking': $output[] = "debuff[{$this->spellName}].up"; break;
+							case 'refreshable':
+							case 'remains': $output[] = "debuff[{$this->spellName}].{$value}"; break;
 							default:
 								$output[] = $value;
 								break;
@@ -419,7 +428,7 @@ class Action
 	 */
 	protected function handleVariable($lexer, $variable, &$output)
 	{
-		$variable = Helper::pascalCase($variable[1]);
+		$variable = Helper::camelCase($variable[1]);
 
 		$output[] = $variable;
 	}
