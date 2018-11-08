@@ -40,6 +40,7 @@ class Action
 	public $isBlacklisted = false;
 
 	public $spellList = [];
+	public $resourcesUsed = [];
 
 	/**
 	 * @param $line
@@ -64,11 +65,14 @@ class Action
 			case 'variable':
 				$action->parseVariable($actionName, $exploded);
 				break;
+			case 'use_item':
+			case 'use_items':
+				$action->isBlacklisted = true;
+				break;
 			default:
 				$action->type = 'spell';
 				$action->parseSpell($actionName, $exploded);
 				break;
-
 		}
 
 		return $action;
@@ -226,8 +230,7 @@ class Action
 		$lexer->setInput($expression);
 		$lexer->moveNext();
 
-		$output = [];
-		$spellsFound = [];
+		$output = []; 
 
 		while ($lookAhead = $lexer->getLookahead()) {
 			$name = $lookAhead->getName();
@@ -261,14 +264,14 @@ class Action
 						$variableType = $exploded[0];
 
 						switch ($variableType) {
-							case 'talent': $this->handleTalent($lexer, $exploded, $output, $spellsFound); break;
-							case 'azerite': $this->handleAzerite($lexer, $exploded, $output, $spellsFound); break;
+							case 'talent': $this->handleTalent($lexer, $exploded, $output); break;
+							case 'azerite': $this->handleAzerite($lexer, $exploded, $output); break;
+							case 'cooldown': $this->handleCooldown($lexer, $exploded, $output); break;
 							case 'dot':
 							case 'buff':
-							case 'cooldown':
-							case 'debuff': $this->handleAura($lexer, $exploded, $output, $spellsFound); break;
+							case 'debuff': $this->handleAura($lexer, $exploded, $output); break;
 							case 'variable': $this->handleVariable($lexer, $exploded, $output); break;
-							case 'prev_gcd': $this->handlePreviousSpell($lexer, $exploded, $output, $spellsFound); break;
+							case 'prev_gcd': $this->handlePreviousSpell($lexer, $exploded, $output); break;
 
 							case 'action': $output[] = $value; break; //@TODO
 							case 'race': $output[] = $value; break; //@TODO
@@ -281,10 +284,12 @@ class Action
 							case 'active_enemies': $output[] = 'targets'; break;
 
 							// resources
-							case 'chi': $output[] = $value; break;
-							case 'focus': $output[] = $value; break;
-							case 'combo_points': $output[] = 'combo'; break;
-							case 'energy': $output[] = $value; break;
+							case 'runic_power':
+							case 'chi':
+							case 'focus':
+							case 'combo_points':
+							case 'rune':
+							case 'energy': $this->handleResources($lexer, $exploded, $output); break;
 
 							case 'next_wi_bomb':
 								$spellPrefix = $this->profile->spellPrefix;
@@ -308,15 +313,23 @@ class Action
 							case 'cp_max_spend':
 								$output[] = Helper::camelCase($value);
 								break;
+
+							case 'runic_power':
+							case 'chi':
+							case 'focus':
 							case 'combo_points':
-								$output[] = 'combo';
-								break;
+							case 'rune':
+							case 'energy': $this->handleResources($lexer, [$value], $output); break;
+
 							case 'spell_targets': $output[] = 'targets'; break;
 							case 'active_enemies': $output[] = 'targets'; break;
-							case 'full_recharge_time': $output[] = "cooldown[{$this->spellName}].fullRecharge"; break;
+
+							case 'charges_fractional': $this->handleCooldown($lexer, ['cooldown', $this->spellName, 'charges'], $output); break;
+							case 'full_recharge_time': $this->handleCooldown($lexer, ['cooldown', $this->spellName, 'fullRecharge'], $output); break;
 							case 'ticking': $output[] = "debuff[{$this->spellName}].up"; break;
 							case 'refreshable':
 							case 'remains': $output[] = "debuff[{$this->spellName}].{$value}"; break;
+
 							default:
 								$output[] = $value;
 								break;
@@ -338,13 +351,12 @@ class Action
 	 * @param Lexer $lexer
 	 * @param $variable
 	 * @param $output
-	 * @param $spellsFound
 	 * @throws \Exception
 	 */
-	protected function handleTalent($lexer, $variable, &$output, &$spellsFound)
+	protected function handleTalent($lexer, $variable, &$output)
 	{
 		$previousElement = end($output);
-		$spellsFound[$variable[1]] = true;
+		$this->spellList[$variable[1]] = true;
 
 		$talentName = $this->profile->SpellName($variable[1]);
 		$suffix = $variable[2];
@@ -375,12 +387,11 @@ class Action
 	 * @param Lexer $lexer
 	 * @param $variable
 	 * @param $output
-	 * @param $spellsFound
 	 * @throws \Exception
 	 */
-	protected function handleAzerite($lexer, $variable, &$output, &$spellsFound)
+	protected function handleAzerite($lexer, $variable, &$output)
 	{
-		$spellsFound[$variable[1]] = true;
+		$this->spellList[$variable[1]] = true;
 		$spell = $this->profile->SpellName($variable[1]);
 
 		$suffix = $variable[2];
@@ -405,15 +416,14 @@ class Action
 	 * @param Lexer $lexer
 	 * @param $variable
 	 * @param $output
-	 * @param $spellsFound
 	 * @throws \Exception
 	 */
-	protected function handlePreviousSpell($lexer, $variable, &$output, &$spellsFound)
+	protected function handlePreviousSpell($lexer, $variable, &$output)
 	{
 		$history = is_numeric($variable[1]) ? intval($variable[1]) : 1;
 		$spellSimcName = is_numeric($variable[1]) ? $variable[2] : $variable[1];
 		$spell = $this->profile->SpellName($spellSimcName);
-		$spellsFound[$spellSimcName] = true;
+		$this->spellList[$spellSimcName] = true;
 
 		$value = "spellHistory[{$history}] == {$spell}";
 
@@ -465,17 +475,53 @@ class Action
 		}
 	}
 
+
+	protected function handleResources($lexer, $exploded, &$output)
+	{
+		switch ($exploded[0]) {
+			case 'runic_power': $exploded[0] = 'runic'; break;
+			case 'combo_points': $exploded[0] = 'combo'; break;
+		}
+
+		$output[] = Helper::camelCase(implode('_', $exploded));
+	}
+
+	protected function handleCooldown($lexer, $variable, &$output)
+	{
+		$spell = $this->profile->SpellName($variable[1]);
+		$this->spellList[$variable[1]] = true;
+
+		$prefix = $variable[0];
+		$suffix = $variable[2];
+
+		$value = null;
+		switch($suffix) {
+			case 'ready': $value = "{$prefix}[{$spell}].ready"; break;
+			case 'charges':
+			case 'charges_factional':
+			case 'stack': $value = "{$prefix}[{$spell}].charges"; break;
+			case 'remains': $value = "{$prefix}[{$spell}].remains"; break;
+			default:
+				throw new \Exception(
+					'Unrecognized cooldown suffix type: ' . $suffix . ' expression: ' . implode('.', $variable)
+				);
+				break;
+		}
+
+
+		$output[] = $value;
+	}
+
 	/**
 	 * @param Lexer $lexer
 	 * @param $variable
 	 * @param $output
-	 * @param $spellsFound
 	 * @throws \Exception
 	 */
-	protected function handleAura($lexer, $variable, &$output, &$spellsFound)
+	protected function handleAura($lexer, $variable, &$output)
 	{
 		$spell = $this->profile->SpellName($variable[1]);
-		$spellsFound[$variable[1]] = true;
+		$this->spellList[$variable[1]] = true;
 
 		$prefix = $variable[0];
 		if ($prefix == 'dot') {
@@ -495,6 +541,7 @@ class Action
 				break;
 			case 'charges':
 			case 'stack':
+			case 'react':
 				$value = "{$prefix}[{$spell}].count";
 				break;
 			case 'remains':
@@ -526,7 +573,9 @@ class Action
 				return;
 				break;
 			default:
-				throw new \Exception('Unrecognized spell/aura suffix type: ' . $suffix);
+				throw new \Exception(
+					'Unrecognized spell/aura suffix type: ' . $suffix . ' expression: ' . implode('.', $variable)
+				);
 				break;
 		}
 
