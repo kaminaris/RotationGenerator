@@ -163,6 +163,7 @@ class Action
 					case 'interval': break; // ignore intervals
 					case 'pct_health': break; // ignore pct_health
 					case 'cycle_targets': break; //ignore cycling targets
+					case 'moving': break; //ignore moving
 					case 'for_next': //@TODO
 					case 'precombat_seconds':
 						$this->isBlacklisted = true;
@@ -297,6 +298,7 @@ class Action
 								$output[] = "nextWiBomb == {$spellPrefix}.$bombName";
 								break; //@TODO
 
+							case 'movement':
 							case 'raid_event':
 								$this->handleBlacklisted($lexer, $exploded, $output);
 								break;
@@ -543,6 +545,9 @@ class Action
 			case 'stack':
 			case 'react':
 				$value = "{$prefix}[{$spell}].count";
+				break;
+			case 'duration':
+				$value = "{$prefix}[{$spell}].duration";
 				break;
 			case 'remains':
 				$value = "{$prefix}[{$spell}].remains";
