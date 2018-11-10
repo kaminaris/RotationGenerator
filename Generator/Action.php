@@ -160,10 +160,13 @@ class Action
 					case 'name': $this->spellName = $value; break;
 					case 'target_if': $this->spellTarget = $this->parseExpression($value); break;
 					case 'if': $this->spellCondition = $this->parseExpression($value); break;
-					case 'interval': break; // ignore intervals
-					case 'pct_health': break; // ignore pct_health
-					case 'cycle_targets': break; //ignore cycling targets
-					case 'moving': break; //ignore moving
+
+					case 'interval': // ignore intervals
+					case 'pct_health': // ignore pct_health
+					case 'cycle_targets': //ignore cycling targets
+					case 'moving': //ignore moving
+					case 'use_off_gcd': break; //ignore use_off_gcd
+
 					case 'for_next': //@TODO
 					case 'precombat_seconds':
 						$this->isBlacklisted = true;
@@ -260,86 +263,77 @@ class Action
 					$output[] = $value;
 					break;
 				case 'variable':
-					if (strpos($value, '.') !== false) {
-						$exploded = explode('.', $value);
-						$variableType = $exploded[0];
+					$exploded = explode('.', $value);
+					$variableType = $exploded[0];
 
-						switch ($variableType) {
-							case 'talent': $this->handleTalent($lexer, $exploded, $output); break;
-							case 'azerite': $this->handleAzerite($lexer, $exploded, $output); break;
-							case 'cooldown': $this->handleCooldown($lexer, $exploded, $output); break;
-							case 'dot':
-							case 'buff':
-							case 'debuff': $this->handleAura($lexer, $exploded, $output); break;
-							case 'variable': $this->handleVariable($lexer, $exploded, $output); break;
-							case 'prev_gcd': $this->handlePreviousSpell($lexer, $exploded, $output); break;
+					switch ($variableType) {
+						case 'talent': $this->handleTalent($lexer, $exploded, $output); break;
+						case 'azerite': $this->handleAzerite($lexer, $exploded, $output); break;
+						case 'cooldown': $this->handleCooldown($lexer, $exploded, $output); break;
+						case 'dot':
+						case 'buff':
+						case 'debuff': $this->handleAura($lexer, $exploded, $output); break;
+						case 'variable': $this->handleVariable($lexer, $exploded, $output); break;
+						case 'prev_gcd': $this->handlePreviousSpell($lexer, $exploded, $output); break;
 
-							case 'action': $output[] = $value; break; //@TODO
-							case 'race': $output[] = $value; break; //@TODO
-							case 'target': $output[] = $value; break; //@TODO
-							case 'bloodseeker': $output[] = $value; break; //@TODO
-							case 'stealthed': $output[] = $variableType; break; //@TODO
+						case 'action': $output[] = $value; break; //@TODO
+						case 'race': $output[] = $value; break; //@TODO
+						case 'target': $output[] = $value; break; //@TODO
+						case 'bloodseeker': $output[] = $value; break; //@TODO
+						case 'stealthed': $output[] = $variableType; break; //@TODO
 
-							// targets
-							case 'spell_targets':
-							case 'active_enemies': $output[] = 'targets'; break;
+						// targets
+						case 'spell_targets':
+						case 'active_enemies': $output[] = 'targets'; break;
 
-							// resources
-							case 'runic_power':
-							case 'chi':
-							case 'focus':
-							case 'combo_points':
-							case 'rune':
-							case 'energy': $this->handleResources($lexer, $exploded, $output); break;
+						// resources
+						case 'runic_power':
+						case 'chi':
+						case 'focus':
+						case 'combo_points':
+						case 'rune':
+						case 'gcd':
+						case 'energy': $this->handleResources($lexer, $exploded, $output); break;
 
-							case 'next_wi_bomb':
-								$spellPrefix = $this->profile->spellPrefix;
-								$bombName = Helper::properCase($exploded[1]) . 'Bomb';
-								$output[] = "nextWiBomb == {$spellPrefix}.$bombName";
-								break; //@TODO
+						// global vars
+						case 'tick_time':
+						case 'priority_rotation':
+						case 'cp_max_spend':
+							$output[] = Helper::camelCase($value);
+							break;
 
-							case 'movement':
-							case 'raid_event':
-								$this->handleBlacklisted($lexer, $exploded, $output);
-								break;
-							default:
-								throw new \Exception(
-									'Unrecognized variable type: ' . $variableType . ' name: ' . $value . ' expr: ' . $expression
-								);
-								break;
-						}
+						// shortcuts
+						case 'charges_fractional': $this->handleCooldown($lexer, ['cooldown', $this->spellName, 'charges'], $output); break;
+						case 'full_recharge_time': $this->handleCooldown($lexer, ['cooldown', $this->spellName, 'fullRecharge'], $output); break;
+						case 'ticking': $output[] = "debuff[{$this->spellName}].up"; break;
+						case 'refreshable':
+						case 'remains': $output[] = "debuff[{$this->spellName}].{$value}"; break;
 
+						case 'next_wi_bomb':
+							$spellPrefix = $this->profile->spellPrefix;
+							$bombName = Helper::properCase($exploded[1]) . 'Bomb';
+							$output[] = "nextWiBomb == {$spellPrefix}.$bombName";
+							break; //@TODO
 
-					} else {
-						switch ($value) {
-							case 'cp_max_spend':
-								$output[] = Helper::camelCase($value);
-								break;
-
-							case 'runic_power':
-							case 'chi':
-							case 'focus':
-							case 'combo_points':
-							case 'rune':
-							case 'energy': $this->handleResources($lexer, [$value], $output); break;
-
-							case 'spell_targets': $output[] = 'targets'; break;
-							case 'active_enemies': $output[] = 'targets'; break;
-
-							case 'charges_fractional': $this->handleCooldown($lexer, ['cooldown', $this->spellName, 'charges'], $output); break;
-							case 'full_recharge_time': $this->handleCooldown($lexer, ['cooldown', $this->spellName, 'fullRecharge'], $output); break;
-							case 'ticking': $output[] = "debuff[{$this->spellName}].up"; break;
-							case 'refreshable':
-							case 'remains': $output[] = "debuff[{$this->spellName}].{$value}"; break;
-
-							default:
-								$output[] = $value;
-								break;
-						}
+						case 'min':
+						case 'max':
+						case 'movement':
+						case 'raid_event':
+						case 'time':
+							$this->handleBlacklisted($lexer, $exploded, $output);
+							break;
+						default:
+							throw new \Exception(
+								'Unrecognized variable type: ' . $variableType . ' name: ' . $value . ' expr: ' . $expression
+							);
+							break;
 					}
+
 					break;
 				default:
-					//
+					throw new \Exception(
+						'Unrecognized token: ' . $name . ' expr: ' . $expression
+					);
 					break;
 			}
 
@@ -488,6 +482,12 @@ class Action
 		$output[] = Helper::camelCase(implode('_', $exploded));
 	}
 
+	/**
+	 * @param $lexer
+	 * @param $variable
+	 * @param $output
+	 * @throws \Exception
+	 */
 	protected function handleCooldown($lexer, $variable, &$output)
 	{
 		$spell = $this->profile->SpellName($variable[1]);
@@ -498,9 +498,10 @@ class Action
 
 		$value = null;
 		switch($suffix) {
+			case 'up':
 			case 'ready': $value = "{$prefix}[{$spell}].ready"; break;
 			case 'charges':
-			case 'charges_factional':
+			case 'charges_fractional':
 			case 'stack': $value = "{$prefix}[{$spell}].charges"; break;
 			case 'remains': $value = "{$prefix}[{$spell}].remains"; break;
 			default:
