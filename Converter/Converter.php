@@ -101,7 +101,11 @@ class Converter
 				case $action::TYPE_SPELL:
 					$children[] = $element->makeChildren()->makeNewline();
 					$children[] = $element->makeChildren()->makeComment($action->rawLine);
-					if ($action->spellCondition) {
+
+					if ($action->spellCondition === true) {
+						// unconditional spells
+						$child = $element->makeChildren()->makeResult($action->spellName);
+					} elseif ($action->spellCondition) {
 						$child = $element->makeChildren();
 
 						$result = $child->makeChildren();
@@ -115,8 +119,12 @@ class Converter
 
 
 					break;
+
 				case $action::TYPE_CALL: //@TODO
 				case $action::TYPE_RUN:
+					$children[] = $element->makeChildren()->makeNewline();
+					$children[] = $element->makeChildren()->makeComment($action->rawLine);
+
 					if ($action->aplCondition) {
 						$child = $element->makeChildren();
 
@@ -138,6 +146,8 @@ class Converter
 							$child->makeResult($this->getAplListName($action->aplToRun));
 						}
 					}
+
+					$children[] = $element->makeChildren()->makeNewline();
 					break;
 				default:
 					throw new \Exception('Unrecognized action type: ' . $action->type);

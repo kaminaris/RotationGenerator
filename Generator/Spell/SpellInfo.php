@@ -30,4 +30,14 @@ class SpellInfo extends \stdClass
 	{
 		return strtolower($this->name) == strtolower($name) || $this->nameNormalized == $name;
 	}
+
+	public function hasCost()
+	{
+		return !empty($this->costs);
+	}
+
+	public function hasCooldown()
+	{
+		return $this->cooldown > 0;
+	}
 }

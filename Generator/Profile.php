@@ -2,6 +2,7 @@
 
 namespace Generator;
 
+use Generator\Spell\GameDb;
 use GuzzleHttp\Client;
 
 class Profile
@@ -53,6 +54,7 @@ class Profile
 	/** @var SpellList */
 	public $spellList;
 
+	/** @var GameDb */
 	public $spellDb;
 
 	/**

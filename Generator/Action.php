@@ -180,6 +180,37 @@ class Action
 				}
 			}
 		}
+
+		$additionalConditions = [];
+		$spellInfo = $this->profile->spellDb->findByName($action);
+		if ($spellInfo) {
+			if ($spellInfo->isTalent) {
+				$additionalConditions[] = "talents[{$this->spellName}]";
+			}
+
+			if ($spellInfo->hasCooldown()) {
+				$additionalConditions[] = "cooldown[{$this->spellName}].ready";
+			}
+
+			if ($spellInfo->hasCost()) {
+				foreach ($spellInfo->costs as $resource => $amount) {
+					$resource = strtolower($resource);
+					$additionalConditions[] = "$resource >= $amount";
+				}
+			}
+
+			if ($spellInfo->castTime > 0) {
+				$additionalConditions[] = "currentSpell ~= {$this->spellName}]";
+			}
+		}
+
+		if (!empty($additionalConditions)) {
+			if ($this->spellCondition !== true) {
+				$additionalConditions[] = "({$this->spellCondition})";
+			}
+
+			$this->spellCondition = implode(' and ', $additionalConditions);
+		}
 	}
 
 	/**
@@ -291,6 +322,7 @@ class Action
 						case 'chi':
 						case 'focus':
 						case 'combo_points':
+						case 'soul_shard':
 						case 'rune':
 						case 'gcd':
 						case 'energy': $this->handleResources($lexer, $exploded, $output); break;
@@ -303,6 +335,8 @@ class Action
 							break;
 
 						// shortcuts
+						case 'duration': $this->handleCooldown($lexer, ['cooldown', $this->spellName, 'duration'], $output); break;
+						case 'charges':
 						case 'charges_fractional': $this->handleCooldown($lexer, ['cooldown', $this->spellName, 'charges'], $output); break;
 						case 'full_recharge_time': $this->handleCooldown($lexer, ['cooldown', $this->spellName, 'fullRecharge'], $output); break;
 						case 'ticking': $output[] = "debuff[{$this->spellName}].up"; break;
@@ -315,11 +349,19 @@ class Action
 							$output[] = "nextWiBomb == {$spellPrefix}.$bombName";
 							break; //@TODO
 
+						case 'execute_time':
+						case 'cast_time': $output[] = "timeShift"; break;
+
+						case 'pet': $output[] = "pet"; break;
+
 						case 'min':
 						case 'max':
 						case 'movement':
 						case 'raid_event':
 						case 'time':
+						case 'sim':
+						case 'travel_time':
+						case 'trinket':
 							$this->handleBlacklisted($lexer, $exploded, $output);
 							break;
 						default:
@@ -477,6 +519,7 @@ class Action
 		switch ($exploded[0]) {
 			case 'runic_power': $exploded[0] = 'runic'; break;
 			case 'combo_points': $exploded[0] = 'combo'; break;
+			case 'soul_shard': $exploded[0] = 'shard'; break;
 		}
 
 		$output[] = Helper::camelCase(implode('_', $exploded));
@@ -499,7 +542,8 @@ class Action
 		$value = null;
 		switch($suffix) {
 			case 'up':
-			case 'ready': $value = "{$prefix}[{$spell}].ready"; break;
+			case 'ready':
+			case 'duration': $value = "{$prefix}[{$spell}].{$suffix}"; break;
 			case 'charges':
 			case 'charges_fractional':
 			case 'stack': $value = "{$prefix}[{$spell}].charges"; break;
