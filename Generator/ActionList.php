@@ -10,11 +10,15 @@ class ActionList
 	/** @var Action[] */
 	public $actions = [];
 
+	/** @var ResourceUsage */
+	public $resourceUsage;
+
 	public static function forProfile(Profile $profile, $name = null)
 	{
 		$actionList = new ActionList();
 		$actionList->profile = $profile;
 		$actionList->name = $name ?? '_MAIN';
+		$actionList->resourceUsage = new ResourceUsage();
 
 		return $actionList;
 	}
@@ -36,7 +40,7 @@ class ActionList
 	 */
 	public function addAction($line)
 	{
-		$action = Action::fromSimcAction($line, $this->profile);
+		$action = Action::fromSimcAction($line, $this);
 		if ($action && !$action->isBlacklisted) {
 			$this->actions[] = $action;
 		} else {
