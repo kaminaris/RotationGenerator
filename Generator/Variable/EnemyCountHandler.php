@@ -2,9 +2,9 @@
 
 namespace Generator\Variable;
 
-class TargetsHandler extends Handler
+class EnemyCountHandler extends Handler
 {
-	public static $handledPrefixes = ['spell_targets', 'active_enemies'];
+	public $handledPrefixes = ['spell_targets', 'active_enemies'];
 
 	public function handle($lexer, $variableParts, &$output)
 	{

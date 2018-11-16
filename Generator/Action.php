@@ -43,7 +43,8 @@ class Action
 
 	public $isBlacklisted = false;
 
-	public $resourcesUsed = [];
+	public $variableHandlers = [];
+
 
 	/**
 	 * @param $line
@@ -57,6 +58,23 @@ class Action
 		$action->profile = $actionList->profile;
 		$action->actionList = $actionList;
 		$action->rawLine = $line;
+
+		$action->variableHandlers = $handlers = [
+			new Variable\DefaultHandler($action->profile, $action),
+			new Variable\AuraHandler($action->profile, $action),
+			new Variable\AzeriteHandler($action->profile, $action),
+			new Variable\BlacklistHandler($action->profile, $action),
+			new Variable\CooldownHandler($action->profile, $action),
+			new Variable\GcdHandler($action->profile, $action),
+			new Variable\ResourceHandler($action->profile, $action),
+			new Variable\SpellHistoryHandler($action->profile, $action),
+			new Variable\TalentHandler($action->profile, $action),
+			new Variable\TargetHandler($action->profile, $action),
+			new Variable\EnemyCountHandler($action->profile, $action),
+			new Variable\TimeShiftHandler($action->profile, $action),
+			new Variable\VariableHandler($action->profile, $action),
+			new Variable\WiBombHandler($action->profile, $action),
+		];
 
 		$exploded = explode(',', $line);
 		$actionName = array_shift($exploded);
@@ -301,9 +319,8 @@ class Action
 					$exploded = explode('.', $value);
 					$variableType = $exploded[0];
 
-					$handlers = Handler::getAllHandlers($this->profile, $this);
-					foreach ($handlers as $handler) {
-						if ($handler::canHandle($exploded)) {
+					foreach ($this->variableHandlers as $handler) {
+						if ($handler->canHandle($exploded)) {
 							$handler->handle($lexer, $exploded, $output);
 							break 2;
 						}

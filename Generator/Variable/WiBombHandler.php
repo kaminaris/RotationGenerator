@@ -6,7 +6,7 @@ use Generator\Helper;
 
 class WiBombHandler extends Handler
 {
-	public static $handledPrefixes = ['next_wi_bomb'];
+	public $handledPrefixes = ['next_wi_bomb'];
 
 	public function handle($lexer, $variableParts, &$output)
 	{

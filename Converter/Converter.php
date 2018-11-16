@@ -83,11 +83,7 @@ class Converter
 
 		$children = [];
 
-		$children[] = $element->makeChildren()->makeVariable('fd', 'MaxDps.FrameData');
-		$children[] = $element->makeChildren()->makeVariable(
-			'cooldown, buff, debuff, talents, azerite, currentSpell',
-			'fd.cooldown, fd.buff, fd.debuff, fd.talents, fd.azerite, fd.currentSpell'
-		);
+		$this->writeResources($list, $element, $children);
 
 		foreach ($list->actions as $action) {
 			$child = null;
@@ -158,6 +154,23 @@ class Converter
 		}
 
 		$element->makeFunction($funcName, [], $children);
+	}
+
+	protected function writeResources(ActionList $list, Element $element, &$children)
+	{
+		$children[] = $element->makeChildren()->makeVariable('fd', 'MaxDps.FrameData');
+
+		foreach ($list->resourceUsage as $key => $value) {
+			if (!$value || $key == 'resources') {
+				continue;
+			}
+
+			$children[] = $element->makeChildren()->makeVariable($key, 'fd.' . $key);
+		}
+
+		foreach ($list->resourceUsage->resources as $resource => $isUsed) {
+			$children[] = $element->makeChildren()->makeVariable($resource, "UnitPower('player', Enum.PowerType.{$resource})");
+		}
 	}
 
 	protected function getAplListName($apl)

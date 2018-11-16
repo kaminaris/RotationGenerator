@@ -4,11 +4,10 @@ namespace Generator\Variable;
 
 class TalentHandler extends Handler
 {
-	public static $handledPrefixes = ['talent'];
+	public $handledPrefixes = ['talent'];
 
 	public function handle($lexer, $variableParts, &$output)
 	{
-		$this->profile->spellList[$variableParts[1]] = true;
 		$this->action->actionList->resourceUsage->talents = true;
 
 		$talentName = $this->profile->SpellName($variableParts[1]);

@@ -6,7 +6,7 @@ use Generator\Helper;
 
 class VariableHandler extends Handler
 {
-	public static $handledPrefixes = ['variable'];
+	public $handledPrefixes = ['variable'];
 
 	public function handle($lexer, $variableParts, &$output)
 	{

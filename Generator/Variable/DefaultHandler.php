@@ -6,7 +6,7 @@ use Generator\Helper;
 
 class DefaultHandler extends Handler
 {
-	public static $handledPrefixes = [''];
+	public $handledPrefixes = [''];
 
 	public function handle($lexer, $variableParts, &$output)
 	{

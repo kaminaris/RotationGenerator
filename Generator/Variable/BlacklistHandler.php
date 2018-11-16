@@ -4,7 +4,7 @@ namespace Generator\Variable;
 
 class BlacklistHandler extends Handler
 {
-	public static $handledPrefixes = ['min', 'max', 'movement', 'raid_event', 'time', 'sim', 'travel_time', 'trinket'];
+	public $handledPrefixes = ['min', 'max', 'movement', 'raid_event', 'time', 'sim', 'travel_time', 'trinket'];
 
 	public function handle($lexer, $variableParts, &$output)
 	{

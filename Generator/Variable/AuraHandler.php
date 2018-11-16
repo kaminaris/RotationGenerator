@@ -4,7 +4,7 @@ namespace Generator\Variable;
 
 class AuraHandler extends Handler
 {
-	public static $handledPrefixes = ['dot', 'buff', 'debuff', 'ticking', 'refreshable', 'remains'];
+	public $handledPrefixes = ['dot', 'buff', 'debuff', 'ticking', 'refreshable', 'remains'];
 
 	public function handle($lexer, $variableParts, &$output)
 	{
@@ -15,7 +15,6 @@ class AuraHandler extends Handler
 		}
 
 		$spell = $this->profile->SpellName($variableParts[1]);
-		$this->profile->spellList[$variableParts[1]] = true;
 
 		$prefix = $variableParts[0];
 		if ($prefix == 'dot') {

@@ -4,11 +4,10 @@ namespace Generator\Variable;
 
 class AzeriteHandler extends Handler
 {
-	public static $handledPrefixes = ['azerite'];
+	public $handledPrefixes = ['azerite'];
 
 	public function handle($lexer, $variableParts, &$output)
 	{
-		$this->profile->spellList[$variableParts[1]] = true;
 		$this->action->actionList->resourceUsage->azerite = true;
 
 		$spell = $this->profile->SpellName($variableParts[1]);

@@ -4,7 +4,7 @@ namespace Generator\Variable;
 
 class CooldownHandler extends Handler
 {
-	public static $handledPrefixes = [
+	public $handledPrefixes = [
 		'cooldown', 'duration', 'charges', 'charges_fractional', 'full_recharge_time', 'cost'
 	];
 
@@ -23,7 +23,6 @@ class CooldownHandler extends Handler
 		$this->action->actionList->resourceUsage->cooldown = true;
 
 		$spell = $this->profile->SpellName($variableParts[1]);
-		$this->profile->spellList[$variableParts[1]] = true;
 
 		$prefix = $variableParts[0];
 		$suffix = $variableParts[2];

@@ -2,14 +2,31 @@
 
 namespace Generator\Variable;
 
-use Generator\Helper;
-
 class GcdHandler extends Handler
 {
-	public static $handledPrefixes = ['gcd'];
+	public $handledPrefixes = ['gcd'];
 
 	public function handle($lexer, $variableParts, &$output)
 	{
-		$output[] = Helper::camelCase(implode('_', $variableParts));
+		if (count($variableParts) == 1) {
+			$variableParts[] = '';
+		}
+
+		switch ($variableParts[1]) {
+			case '':
+			case 'max':
+				$this->action->actionList->resourceUsage->gcd = true;
+				$output[] = 'gcd';
+				break;
+			case 'remains':
+				$this->action->actionList->resourceUsage->gcdRemains = true;
+				$output[] = 'gcdRemains';
+				break;
+			default:
+				throw new \Exception(
+					'Unrecognized gcd part: ' . $variableParts[1] . ' expression ' . implode('.', $variableParts)
+				);
+		}
+
 	}
 }
