@@ -74,6 +74,7 @@ class Action
 			new Variable\TimeShiftHandler($action->profile, $action),
 			new Variable\VariableHandler($action->profile, $action),
 			new Variable\WiBombHandler($action->profile, $action),
+			new Variable\TotemHandler($action->profile, $action),
 		];
 
 		$exploded = explode(',', $line);
@@ -187,6 +188,7 @@ class Action
 					case 'pct_health': // ignore pct_health
 					case 'cycle_targets': //ignore cycling targets
 					case 'moving': //ignore moving
+					case 'strikes': //ignore strikes
 					case 'use_off_gcd': break; //ignore use_off_gcd
 
 					case 'for_next': //@TODO
@@ -207,21 +209,25 @@ class Action
 		$spellInfo = $this->profile->spellDb->findByName($action);
 		if ($spellInfo) {
 			if ($spellInfo->isTalent) {
+				$this->actionList->resourceUsage->talents = true;
 				$additionalConditions[] = "talents[{$this->spellName}]";
 			}
 
 			if ($spellInfo->hasCooldown()) {
+				$this->actionList->resourceUsage->cooldown = true;
 				$additionalConditions[] = "cooldown[{$this->spellName}].ready";
 			}
 
 			if ($spellInfo->hasCost()) {
 				foreach ($spellInfo->costs as $resource => $amount) {
-					$resource = strtolower($resource);
+					$resource = Helper::camelCase($resource);
+					$this->actionList->resourceUsage->resources[$resource] = true;
 					$additionalConditions[] = "$resource >= $amount";
 				}
 			}
 
 			if ($spellInfo->castTime > 0) {
+				$this->actionList->resourceUsage->currentSpell = true;
 				$additionalConditions[] = "currentSpell ~= {$this->spellName}]";
 			}
 		}

@@ -4,9 +4,9 @@ namespace Generator\Variable;
 
 use Generator\Helper;
 
-class DefaultHandler extends Handler
+class TotemHandler extends Handler
 {
-	public $handledPrefixes = ['cooldown_react'];
+	public $handledPrefixes = ['consecration'];
 
 	public function handle($lexer, $variableParts, &$output)
 	{

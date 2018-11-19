@@ -169,7 +169,9 @@ class Converter
 		}
 
 		foreach ($list->resourceUsage->resources as $resource => $isUsed) {
-			$children[] = $element->makeChildren()->makeVariable($resource, "UnitPower('player', Enum.PowerType.{$resource})");
+			$name = Helper::camelCase($resource);
+			$properName = Helper::properCase($resource);
+			$children[] = $element->makeChildren()->makeVariable($name, "UnitPower('player', Enum.PowerType.{$properName})");
 		}
 	}
 

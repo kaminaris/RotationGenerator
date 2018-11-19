@@ -67,6 +67,8 @@ class Profile
 	{
 		if (strpos($string, 'http') === 0) {
 			$this->loadFromUri($string);
+		} elseif (file_exists($string)) {
+			$this->loadFromString(file_get_contents($string));
 		} else {
 			$this->loadFromString($string);
 		}
