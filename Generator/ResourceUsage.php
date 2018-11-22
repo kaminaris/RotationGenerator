@@ -15,6 +15,7 @@ class ResourceUsage extends \stdClass
 	public $targets = false;
 	public $gcd = false;
 	public $gcdRemains = false;
+	public $timeToDie = false;
 
 	public $resources = [];
 }

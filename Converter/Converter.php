@@ -86,71 +86,52 @@ class Converter
 		$this->writeResources($list, $element, $children);
 
 		foreach ($list->actions as $action) {
-			$child = null;
-//			echo $action->type . PHP_EOL;
+
+			$children[] = $element->makeChildren()->makeNewline();
+			$children[] = $element->makeChildren()->makeComment($action->rawLine);
+
 			switch ($action->type) {
 				case $action::TYPE_VARIABLE: //@TODO
-					$children[] = $element->makeChildren()->makeComment($action->rawLine);
-					$child = $element->makeChildren();
-					$child->makeVariable($action->variableName, $action->variableValue);
+					$children[] = $element->makeChildren()->makeVariable($action->variableName, $action->variableValue);
 					break;
 				case $action::TYPE_SPELL:
-					$children[] = $element->makeChildren()->makeNewline();
-					$children[] = $element->makeChildren()->makeComment($action->rawLine);
-
 					if ($action->spellCondition === true) {
 						// unconditional spells
-						$child = $element->makeChildren()->makeResult($action->spellName);
+						$children[] = $element->makeChildren()->makeResult($action->spellName);
 					} elseif ($action->spellCondition) {
 						$child = $element->makeChildren();
+						$result = $child->makeChildren()->makeResult($action->spellName);
 
-						$result = $child->makeChildren();
-						$result->makeResult($action->spellName);
-
-						$child->makeCondition($action->spellCondition, [$result]);
+						$children[] = $child->makeCondition($action->spellCondition, [$result]);
 					} else {
-						$child = $element->makeChildren();
-						$child->makeResult($action->spellName);
+						$children[] = $element->makeChildren()->makeResult($action->spellName);
 					}
-
 
 					break;
-
 				case $action::TYPE_CALL: //@TODO
 				case $action::TYPE_RUN:
-					$children[] = $element->makeChildren()->makeNewline();
-					$children[] = $element->makeChildren()->makeComment($action->rawLine);
-
 					if ($action->aplCondition) {
-						$child = $element->makeChildren();
-
-						$aplChild = $child->makeChildren();
 						if ($action->type == $action::TYPE_CALL) {
-							$aplChild->makeStatement($this->getAplListName($action->aplToRun));
+							$children[] = $element->makeChildren()->makeVariable('result', $this->getAplListName($action->aplToRun));
+							$child = $element->makeChildren();
+							$children[] = $child->makeCondition('result', [$child->makeChildren()->makeResult('result')]);
 						} else {
-							$aplChild->makeResult($this->getAplListName($action->aplToRun));
+							$children[] = $element->makeChildren()->makeResult($this->getAplListName($action->aplToRun));
 						}
-
-
-						$child->makeCondition($action->aplCondition, [$aplChild]);
 					} else {
-						$child = $element->makeChildren();
-
 						if ($action->type == $action::TYPE_CALL) {
-							$child->makeStatement($this->getAplListName($action->aplToRun));
+							$children[] = $element->makeChildren()->makeVariable('result', $this->getAplListName($action->aplToRun));
+							$child = $element->makeChildren();
+							$children[] = $child->makeCondition('result', [$child->makeChildren()->makeResult('result')]);
 						} else {
-							$child->makeResult($this->getAplListName($action->aplToRun));
+							$children[] = $element->makeChildren()->makeResult($this->getAplListName($action->aplToRun));
 						}
 					}
-
-					$children[] = $element->makeChildren()->makeNewline();
 					break;
 				default:
 					throw new \Exception('Unrecognized action type: ' . $action->type);
 					break;
 			}
-
-			$children[] = $child;
 		}
 
 		$element->makeFunction($funcName, [], $children);

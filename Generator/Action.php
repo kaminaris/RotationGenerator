@@ -75,6 +75,9 @@ class Action
 			new Variable\VariableHandler($action->profile, $action),
 			new Variable\WiBombHandler($action->profile, $action),
 			new Variable\TotemHandler($action->profile, $action),
+			new Variable\ActionHandler($action->profile, $action),
+			new Variable\ActiveDotHandler($action->profile, $action),
+			new Variable\TimeToDieHandler($action->profile, $action),
 		];
 
 		$exploded = explode(',', $line);
@@ -147,6 +150,7 @@ class Action
 				case 'value_else': $this->variableValueElse = $this->parseExpression($value); break;
 				case 'op': $this->variableOperator = $value; break;
 				case 'condition': $this->variableCondition = $this->parseExpression($value); break;
+				case 'if': $this->variableCondition = $this->parseExpression($value); break;
 				default:
 					throw new \Exception(
 						'Unrecognized variable operator: ' . $name . ' expression: '. implode(',', $exploded)
@@ -189,6 +193,12 @@ class Action
 					case 'cycle_targets': //ignore cycling targets
 					case 'moving': //ignore moving
 					case 'strikes': //ignore strikes
+					case 'interrupt_global': //ignore interrupt_global
+					case 'interrupt': //ignore interrupt_global
+					case 'interrupt_if': //ignore interrupt_global
+					case 'chain': //ignore chain
+					case 'cancel_if': //ignore cancel_if
+					case 'line_cd': //ignore line_cd
 					case 'use_off_gcd': break; //ignore use_off_gcd
 
 					case 'for_next': //@TODO
