@@ -91,8 +91,22 @@ class Converter
 			$children[] = $element->makeChildren()->makeComment($action->rawLine);
 
 			switch ($action->type) {
-				case $action::TYPE_VARIABLE: //@TODO
-					$children[] = $element->makeChildren()->makeVariable($action->variableName, $action->variableValue);
+				case $action::TYPE_VARIABLE:
+					if ($action->variableCondition) {
+						$condition = $element->makeChildren();
+						switch ($action->variableOperation) {
+							case 'set': $value = $action->variableValue; break;
+							case 'reset': $value = 0; break;
+							default:
+								throw new \Exception('Unrecognized variable operation: ' . $action->variableOperation);
+						}
+
+						$var = $condition->makeChildren()->makeVariable($action->variableName, $value);
+
+						$children[] = $condition->makeCondition($action->variableCondition, [$var]);
+					} else {
+						$children[] = $element->makeChildren()->makeVariable($action->variableName, $action->variableValue);
+					}
 					break;
 				case $action::TYPE_SPELL:
 					if ($action->spellCondition === true) {
@@ -111,13 +125,26 @@ class Converter
 				case $action::TYPE_CALL: //@TODO
 				case $action::TYPE_RUN:
 					if ($action->aplCondition) {
+						$subCondition = $element->makeChildren();
+
+						$conditionChildren = [];
 						if ($action->type == $action::TYPE_CALL) {
-							$children[] = $element->makeChildren()->makeVariable('result', $this->getAplListName($action->aplToRun));
-							$child = $element->makeChildren();
-							$children[] = $child->makeCondition('result', [$child->makeChildren()->makeResult('result')]);
+
+							$conditionChildren[] = $subCondition
+								->makeChildren()
+								->makeVariable('result', $this->getAplListName($action->aplToRun));
+
+							$child = $subCondition->makeChildren();
+
+							$conditionChildren[] = $subCondition
+								->makeChildren()
+								->makeCondition('result', [$child->makeChildren()->makeResult('result')]);
 						} else {
-							$children[] = $element->makeChildren()->makeResult($this->getAplListName($action->aplToRun));
+							$conditionChildren[] = $subCondition
+								->makeChildren()->makeResult($this->getAplListName($action->aplToRun));
 						}
+
+						$children[] = $subCondition->makeCondition($action->aplCondition, $conditionChildren);
 					} else {
 						if ($action->type == $action::TYPE_CALL) {
 							$children[] = $element->makeChildren()->makeVariable('result', $this->getAplListName($action->aplToRun));

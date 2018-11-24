@@ -34,7 +34,7 @@ class Action
 	public $aplCondition; // Lexed spell condition
 
 	public $variableName;
-	public $variableOperator;
+	public $variableOperation;
 	public $variableValue;
 	public $variableValueElse;
 	public $variableCondition;
@@ -148,7 +148,7 @@ class Action
 				case 'name': $this->variableName = Helper::camelCase($value); break;
 				case 'value': $this->variableValue = $this->parseExpression($value); break;
 				case 'value_else': $this->variableValueElse = $this->parseExpression($value); break;
-				case 'op': $this->variableOperator = $value; break;
+				case 'op': $this->variableOperation = $value; break;
 				case 'condition': $this->variableCondition = $this->parseExpression($value); break;
 				case 'if': $this->variableCondition = $this->parseExpression($value); break;
 				default:
@@ -238,7 +238,7 @@ class Action
 
 			if ($spellInfo->castTime > 0) {
 				$this->actionList->resourceUsage->currentSpell = true;
-				$additionalConditions[] = "currentSpell ~= {$this->spellName}]";
+				$additionalConditions[] = "currentSpell ~= {$this->spellName}";
 			}
 		}
 
