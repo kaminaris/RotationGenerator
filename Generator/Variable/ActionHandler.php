@@ -18,6 +18,17 @@ class ActionHandler extends Handler
 				$this->action->actionList->resourceUsage->gcd = true;
 				$output[] = 'gcd';
 				break;
+			case 'full_recharge_time':
+				$spellName = $this->profile->SpellName($variableParts[1]);
+				$output[] = "cooldown[{$spellName}].fullRecharge";
+				break;
+			case 'charges':
+			case 'executing':
+			case 'in_flight_remains':
+			case 'execute_remains':
+				$spellName = $this->profile->SpellName($variableParts[1]);
+				$output[] = "cooldown[{$spellName}].{$variableParts[2]}";
+				break;
 			case 'in_flight':
 				$output[] = 'inFlight';
 				break;

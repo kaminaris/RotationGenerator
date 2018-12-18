@@ -78,6 +78,7 @@ class Action
 			new Variable\ActionHandler($action->profile, $action),
 			new Variable\ActiveDotHandler($action->profile, $action),
 			new Variable\TimeToDieHandler($action->profile, $action),
+			new Variable\EquippedHandler($action->profile, $action),
 		];
 
 		$exploded = explode(',', $line);
@@ -196,7 +197,10 @@ class Action
 					case 'interrupt_global': //ignore interrupt_global
 					case 'interrupt': //ignore interrupt_global
 					case 'interrupt_if': //ignore interrupt_global
+					case 'interrupt_immediate': //ignore interrupt_immediate
 					case 'chain': //ignore chain
+					case 'use_while_casting': //ignore use_while_casting
+					case 'max_cycle_targets': //ignore use_while_casting
 					case 'cancel_if': //ignore cancel_if
 					case 'line_cd': //ignore line_cd
 					case 'use_off_gcd': break; //ignore use_off_gcd
@@ -345,26 +349,6 @@ class Action
 					throw new \Exception(
 						'Unrecognized variable type: ' . $variableType . ' name: ' . $value . ' expr: ' . $expression
 					);
-
-					switch ($variableType) {
-
-						case 'action': $output[] = $value; break; //@TODO
-						case 'race': $output[] = $value; break; //@TODO
-						case 'target': $output[] = $value; break; //@TODO
-						case 'bloodseeker': $output[] = $value; break; //@TODO
-						case 'stealthed': $output[] = $variableType; break; //@TODO
-
-						// global vars
-						case 'tick_time':
-						case 'priority_rotation':
-						case 'cp_max_spend':
-							$output[] = Helper::camelCase($value);
-							break;
-
-
-						case 'pet': $output[] = "pet"; break;
-
-					}
 
 					break;
 				default:
