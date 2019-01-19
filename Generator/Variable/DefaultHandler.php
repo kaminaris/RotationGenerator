@@ -6,7 +6,7 @@ use Generator\Helper;
 
 class DefaultHandler extends Handler
 {
-	public $handledPrefixes = ['cooldown_react', 'contagion', 'spell_haste', 'time_to_shard', 'firestarter'];
+	public $handledPrefixes = ['cooldown_react', 'contagion', 'spell_haste', 'time_to_shard', 'firestarter', 'soul_fragments'];
 
 	public function handle($lexer, $variableParts, &$output)
 	{
