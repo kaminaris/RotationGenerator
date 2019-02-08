@@ -79,6 +79,7 @@ class Action
 			new Variable\ActiveDotHandler($action->profile, $action),
 			new Variable\TimeToDieHandler($action->profile, $action),
 			new Variable\EquippedHandler($action->profile, $action),
+			new Variable\PetHandler($action->profile, $action),
 		];
 
 		$exploded = explode(',', $line);
@@ -204,6 +205,7 @@ class Action
 					case 'cancel_if': //ignore cancel_if
 					case 'line_cd': //ignore line_cd
 					case 'use_off_gcd': break; //ignore use_off_gcd
+					case 'precast_time': break; //ignore precast_time
 
 					case 'for_next': //@TODO
 					case 'precombat_seconds':

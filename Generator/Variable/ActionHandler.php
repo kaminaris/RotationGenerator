@@ -25,6 +25,8 @@ class ActionHandler extends Handler
 			case 'charges':
 			case 'executing':
 			case 'in_flight_remains':
+			case 'travel_time':
+			case 'cost':
 			case 'execute_remains':
 				$spellName = $this->profile->SpellName($variableParts[1]);
 				$output[] = "cooldown[{$spellName}].{$variableParts[2]}";

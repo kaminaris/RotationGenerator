@@ -12,6 +12,7 @@ class CooldownHandler extends Handler
 	{
 		// shortcut handler
 		switch ($variableParts[0]) {
+			case 'duration_guess':
 			case 'duration':
 			case 'full_recharge_time':
 			case 'cost': $variableParts = ['cooldown', $this->action->spellName, $variableParts[0]]; break;
@@ -29,6 +30,8 @@ class CooldownHandler extends Handler
 
 		$value = null;
 		switch($suffix) {
+			case 'duration_guess':
+				$suffix = 'duration';
 			case 'up':
 			case 'ready':
 			case 'cost':
