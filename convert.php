@@ -38,6 +38,7 @@ $availableProfiles = [
 	'destro'      => 'T23_Warlock_Destruction.simc',
 	'arms'        => 'T23_Warrior_Arms.simc',
 	'fury'        => 'T23_Warrior_Fury.simc',
+	'warr_prot'   => 'T23_Warrior_Protection.simc',
 ];
 
 function usage()
