@@ -7,7 +7,8 @@ use Generator\Helper;
 class ResourceHandler extends Handler
 {
 	public $handledPrefixes = [
-		'runic_power', 'chi', 'focus', 'cast_regen', 'combo_points', 'soul_shard', 'rune', 'energy', 'rage', 'holy_power', 'pain'
+		'runic_power', 'chi', 'focus', 'cast_regen', 'combo_points', 'soul_shard', 'rune', 'energy', 'rage',
+		'holy_power', 'pain', 'maelstrom'
 	];
 
 	public function handle($lexer, $variableParts, &$output)
