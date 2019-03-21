@@ -14,6 +14,7 @@ class TargetHandler extends Handler
 			case 'health':
 				$output[] = 'targetHp'; break;
 			case 'time_to_die':
+				$this->action->actionList->resourceUsage->timeToDie = true;
 				$output[] = 'timeToDie'; break;
 			case '':
 				$output[] = $variableParts[0]; break;

@@ -32,13 +32,14 @@ class Element
 		return $child;
 	}
 
-	public function makeVariable($name, $value)
+	public function makeVariable($name, $value, $operator = 'set')
 	{
 		$this->type = self::TYPE_VARIABLE;
 		$this->content = [
 			'variable' => [
 				'name' => $name,
-				'value' => $value
+				'value' => $value,
+				'operator' => $operator
 			]
 		];
 		return $this;
@@ -123,7 +124,14 @@ class Element
 		switch ($this->type) {
 			case self::TYPE_VARIABLE:
 				$variable = $this->content['variable'];
-				$this->writeLine("local {$variable['name']} = {$variable['value']};", $this->level);
+				$operator = $this->content['operator'];
+				if ($operator == 'add') {
+					$this->writeLine("local {$variable['name']} = {$variable['name']} + {$variable['value']};", $this->level);
+				} elseif ($operator == 'sub') {
+					$this->writeLine("local {$variable['name']} = {$variable['name']} - {$variable['value']};", $this->level);
+				} else {
+					$this->writeLine("local {$variable['name']} = {$variable['value']};", $this->level);
+				}
 				break;
 			case self::TYPE_NEWLINE:
 				$this->writeLine('', 0);

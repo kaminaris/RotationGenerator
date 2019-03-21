@@ -4,7 +4,7 @@ namespace Generator\Variable;
 
 class SpellHistoryHandler extends Handler
 {
-	public $handledPrefixes = ['prev_gcd', 'prev_off_gcd'];
+	public $handledPrefixes = ['prev_gcd', 'prev_off_gcd', 'prev'];
 
 	public function handle($lexer, $variableParts, &$output)
 	{

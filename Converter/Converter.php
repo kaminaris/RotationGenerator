@@ -52,6 +52,10 @@ class Converter
 		$spellList->makeArray($spellPrefix, $this->profile->spellList->toArray());
 		$spellList->write();
 
+		$azeriteList = new Element($this->handle, 0);
+		$azeriteList->makeArray('A', $this->profile->azeriteSpellList->toArray());
+		$azeriteList->write();
+
 		$this->class = Helper::properCase($this->profile->class);
 		$this->spec = Helper::properCase($this->profile->spec);
 
@@ -95,17 +99,19 @@ class Converter
 					if ($action->variableCondition) {
 						$condition = $element->makeChildren();
 						switch ($action->variableOperation) {
-							case 'set': $value = $action->variableValue; break;
+							case 'set':
+							case 'add':
+							case 'sub': $value = $action->variableValue; break;
 							case 'reset': $value = 0; break;
 							default:
 								throw new \Exception('Unrecognized variable operation: ' . $action->variableOperation);
 						}
 
-						$var = $condition->makeChildren()->makeVariable($action->variableName, $value);
+						$var = $condition->makeChildren()->makeVariable($action->variableName, $value, $action->variableOperation);
 
 						$children[] = $condition->makeCondition($action->variableCondition, [$var]);
 					} else {
-						$children[] = $element->makeChildren()->makeVariable($action->variableName, $action->variableValue);
+						$children[] = $element->makeChildren()->makeVariable($action->variableName, $action->variableValue, $action->variableOperation);
 					}
 					break;
 				case $action::TYPE_SPELL:
@@ -132,7 +138,7 @@ class Converter
 
 							$conditionChildren[] = $subCondition
 								->makeChildren()
-								->makeVariable('result', $this->getAplListName($action->aplToRun));
+								->makeVariable('result', $this->getAplListName($action->aplToRun), 'set');
 
 							$child = $subCondition->makeChildren();
 
@@ -177,9 +183,8 @@ class Converter
 		}
 
 		foreach ($list->resourceUsage->resources as $resource => $isUsed) {
-			$name = Helper::camelCase($resource);
 			$properName = Helper::properCase($resource);
-			$children[] = $element->makeChildren()->makeVariable($name, "UnitPower('player', Enum.PowerType.{$properName})");
+			$children[] = $element->makeChildren()->makeVariable($resource, "UnitPower('player', Enum.PowerType.{$properName})");
 		}
 	}
 

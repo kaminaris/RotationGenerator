@@ -10,7 +10,7 @@ class AzeriteHandler extends Handler
 	{
 		$this->action->actionList->resourceUsage->azerite = true;
 
-		$spell = $this->profile->SpellName($variableParts[1]);
+		$spell = $this->profile->AzeriteName($variableParts[1]);
 
 		$suffix = $variableParts[2];
 

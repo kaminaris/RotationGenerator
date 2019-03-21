@@ -2,6 +2,7 @@
 
 namespace Generator;
 
+use Generator\Spell\AzeriteDb;
 use Generator\Spell\GameDb;
 use GuzzleHttp\Client;
 
@@ -54,8 +55,14 @@ class Profile
 	/** @var SpellList */
 	public $spellList;
 
+	/** @var SpellListAzerite */
+	public $azeriteSpellList;
+
 	/** @var GameDb */
 	public $spellDb;
+
+	/** @var AzeriteDb */
+	public $azeriteDb;
 
 	/**
 	 * Loads simcraft profile either from URL or string
@@ -171,7 +178,10 @@ class Profile
 				$this->spellPrefix = $this->spellPrefixes[$this->class][$this->spec];
 				// we need to know spec first
 				$this->spellDb = new Spell\GameDb($this->class, $this->spec);
+				$this->azeriteDb = new Spell\AzeriteDb($this->class, $this->spec);
+
 				$this->spellList = new SpellList($this->spellDb);
+				$this->azeriteSpellList = new SpellListAzerite($this->azeriteDb);
 			break;
 			default:
 				$this->parsedProfile[$key] = $value;
@@ -192,5 +202,20 @@ class Profile
 		$this->spellList->addSpell($name);
 
 		return $this->spellPrefix . '.' . Helper::properCase($name);
+	}
+
+	/**
+	 * Prefix Spell Name
+	 *
+	 * @param $name
+	 * @return string
+	 * @throws \Exception
+	 */
+	public function AzeriteName($name)
+	{
+		// keep it in spell list
+		$this->azeriteSpellList->addSpell($name);
+
+		return 'A.' . Helper::properCase($name);
 	}
 }

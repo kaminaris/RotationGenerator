@@ -15,10 +15,10 @@ class CooldownHandler extends Handler
 			case 'duration_guess':
 			case 'duration':
 			case 'full_recharge_time':
-			case 'cost': $variableParts = ['cooldown', $this->action->spellName, $variableParts[0]]; break;
+			case 'cost': $variableParts = ['cooldown', $this->action->spellNameCanonical, $variableParts[0]]; break;
 
 			case 'charges_fractional':
-			case 'charges': $variableParts = ['cooldown', $this->action->spellName, 'charges']; break;
+			case 'charges': $variableParts = ['cooldown', $this->action->spellNameCanonical, 'charges']; break;
 		}
 
 		$this->action->actionList->resourceUsage->cooldown = true;

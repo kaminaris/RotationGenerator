@@ -1,15 +1,16 @@
 {
-    "name": "kaminari/rotation-generator",
-    "type": "project",
-    "require": {
-        "guzzlehttp/guzzle": "^6.3",
-        "tmilos/lexer": "^1.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Generator\\": "Generator/",
-            "Converter\\": "Converter/",
-            "LuaWriter\\": "LuaWriter/"
-        }
-    }
+	"name": "kaminari/rotation-generator",
+	"type": "project",
+	"require": {
+		"guzzlehttp/guzzle": "^6.3",
+		"tmilos/lexer": "^1.0",
+		"ext-json": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Generator\\": "Generator/",
+			"Converter\\": "Converter/",
+			"LuaWriter\\": "LuaWriter/"
+		}
+	}
 }

@@ -11,7 +11,7 @@ class AuraHandler extends Handler
 		switch ($variableParts[0]) {
 			case 'ticking':
 			case 'refreshable':
-			case 'remains': $variableParts = ['debuff', $this->action->spellName, $variableParts[0]]; break;
+			case 'remains': $variableParts = ['debuff', $this->action->spellNameCanonical, $variableParts[0]]; break;
 		}
 
 		$spell = $this->profile->SpellName($variableParts[1]);

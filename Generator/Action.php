@@ -237,7 +237,7 @@ class Action
 			if ($spellInfo->hasCost()) {
 				foreach ($spellInfo->costs as $resource => $amount) {
 					$resource = Helper::camelCase($resource);
-					$this->actionList->resourceUsage->resources[$resource] = true;
+					$this->actionList->resourceUsage->addResource($resource);
 					$additionalConditions[] = "$resource >= $amount";
 				}
 			}

@@ -16,6 +16,14 @@ class ResourceUsage extends \stdClass
 	public $gcd = false;
 	public $gcdRemains = false;
 	public $timeToDie = false;
+	public $spellHaste = false;
 
 	public $resources = [];
+	public $azeriteIds = [];
+
+	public function addResource($resource)
+	{
+		$normalized = Helper::camelCase($resource);
+		$this->resources[$normalized] = true;
+	}
 }

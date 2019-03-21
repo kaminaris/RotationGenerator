@@ -2,17 +2,17 @@
 
 namespace Generator;
 
-use Generator\Spell\SpellDb;
+use Generator\Spell\AzeriteDb;
 
-class SpellList
+class SpellListAzerite
 {
 	/** @var Spell[] */
 	public $spellList = [];
 
-	/** @var SpellDb */
+	/** @var AzeriteDb */
 	public $spellDb;
 
-	public function __construct($spellDb)
+	public function __construct(AzeriteDb $spellDb)
 	{
 		$this->spellDb = $spellDb;
 	}
@@ -35,10 +35,7 @@ class SpellList
 			$spell->info = $info;
 			$this->spellList[] = $spell;
 		} else {
-			if (strpos($spellSimcName, 'BL.') !== false) {
-				throw new \Exception('Spell prefix is invalid');
-			}
-			echo 'Unknown spell: ' . $spellSimcName . PHP_EOL;
+			echo 'Unknown azerite: ' . $spellSimcName . PHP_EOL;
 		}
 
 	}
@@ -47,7 +44,7 @@ class SpellList
 	{
 		$output = [];
 		foreach ($this->spellList as $spell) {
-			$output[str_replace(' ', '', $spell->spellName)] = $spell->info->id;
+			$output[$spell->spellName] = $spell->info->id;
 		}
 
 		return $output;

@@ -12,6 +12,7 @@ class SpellInfo extends \stdClass
 	public $maxRange;
 	public $isPassive;
 	public $isTalent;
+	public $isAzerite;
 	public $cooldown;
 	public $costs;
 
@@ -28,7 +29,8 @@ class SpellInfo extends \stdClass
 
 	public function isSpell($name)
 	{
-		return strtolower($this->name) == strtolower($name) || $this->nameNormalized == $name;
+		return strtolower($this->name) == strtolower($name) || $this->nameNormalized == $name ||
+			$this->nameNormalized == $this->normalizeSpellName($name);
 	}
 
 	public function hasCost()
