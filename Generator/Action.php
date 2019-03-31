@@ -204,6 +204,7 @@ class Action
 					case 'max_cycle_targets': //ignore use_while_casting
 					case 'cancel_if': //ignore cancel_if
 					case 'line_cd': //ignore line_cd
+					case 'delay': //ignore line_cd
 					case 'use_off_gcd': break; //ignore use_off_gcd
 					case 'precast_time': break; //ignore precast_time
 
@@ -372,7 +373,8 @@ class Action
 		return in_array($spellName, [
 			'flask', 'food', 'augmentation', 'summon_pet', 'snapshot_stats', 'potion', 'arcane_pulse',
 			'lights_judgment', 'arcane_torrent', 'blood_fury', 'berserking', 'fireblood', 'auto_attack',
-			'use_items', 'flying_serpent_kick', 'ancestral_call', 'auto_shot', 'bloodlust', 'wind_shear'
+			'use_items', 'flying_serpent_kick', 'ancestral_call', 'auto_shot', 'bloodlust', 'wind_shear',
+			'counterspell'
 		]);
 	}
 }

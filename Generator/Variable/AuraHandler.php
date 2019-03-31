@@ -4,7 +4,7 @@ namespace Generator\Variable;
 
 class AuraHandler extends Handler
 {
-	public $handledPrefixes = ['dot', 'buff', 'debuff', 'ticking', 'refreshable', 'remains'];
+	public $handledPrefixes = ['dot', 'buff', 'debuff', 'ticking', 'refreshable', 'remains' , 'death_and_decay'];
 
 	public function handle($lexer, $variableParts, &$output)
 	{
@@ -12,6 +12,12 @@ class AuraHandler extends Handler
 			case 'ticking':
 			case 'refreshable':
 			case 'remains': $variableParts = ['debuff', $this->action->spellNameCanonical, $variableParts[0]]; break;
+		}
+
+		if ($variableParts[0] == 'death_and_decay') {
+			$variableParts[0] = 'debuff';
+			$variableParts[2] = $variableParts[1];
+			$variableParts[1] = 'death_and_decay';
 		}
 
 		$spell = $this->profile->SpellName($variableParts[1]);

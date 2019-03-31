@@ -124,7 +124,7 @@ class Element
 		switch ($this->type) {
 			case self::TYPE_VARIABLE:
 				$variable = $this->content['variable'];
-				$operator = $this->content['operator'];
+				$operator = $variable['operator'];
 				if ($operator == 'add') {
 					$this->writeLine("local {$variable['name']} = {$variable['name']} + {$variable['value']};", $this->level);
 				} elseif ($operator == 'sub') {

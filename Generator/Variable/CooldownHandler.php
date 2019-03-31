@@ -5,7 +5,7 @@ namespace Generator\Variable;
 class CooldownHandler extends Handler
 {
 	public $handledPrefixes = [
-		'cooldown', 'duration', 'charges', 'charges_fractional', 'full_recharge_time', 'cost'
+		'cooldown', 'duration', 'charges', 'charges_fractional', 'full_recharge_time', 'cost', 'ground_aoe'
 	];
 
 	public function handle($lexer, $variableParts, &$output)
