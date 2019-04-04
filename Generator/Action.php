@@ -173,7 +173,7 @@ class Action
 		$this->spellName = $this->profile->SpellName($action);
 		$this->spellNameCanonical = Helper::properCaseWithSpaces($action);
 
-		if ($this->isSpellBlacklisted($action)) {
+		if ($this::isSpellBlacklisted($action)) {
 			$this->isBlacklisted = true;
 			return;
 		}
@@ -368,7 +368,7 @@ class Action
 	}
 
 
-	protected function isSpellBlacklisted($spellName)
+	public static function isSpellBlacklisted($spellName)
 	{
 		return in_array($spellName, [
 			'flask', 'food', 'augmentation', 'summon_pet', 'snapshot_stats', 'potion', 'arcane_pulse',

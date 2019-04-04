@@ -64,6 +64,9 @@ class Converter
 		$mainList->write();
 
 		foreach ($this->profile->actionLists as $actionList) {
+			if ($actionList->name == 'precombat') {
+				continue;
+			}
 			$list = new Element($this->handle, 0);
 			$this->writeActionList($actionList, $list);
 			if (is_null($list)) {
@@ -101,8 +104,12 @@ class Converter
 						switch ($action->variableOperation) {
 							case 'set':
 							case 'add':
-							case 'sub': $value = $action->variableValue; break;
-							case 'reset': $value = 0; break;
+							case 'sub':
+								$value = $action->variableValue;
+								break;
+							case 'reset':
+								$value = 0;
+								break;
 							default:
 								throw new \Exception('Unrecognized variable operation: ' . $action->variableOperation);
 						}

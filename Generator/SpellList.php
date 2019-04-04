@@ -38,7 +38,10 @@ class SpellList
 			if (strpos($spellSimcName, 'BL.') !== false) {
 				throw new \Exception('Spell prefix is invalid');
 			}
-			echo 'Unknown spell: ' . $spellSimcName . PHP_EOL;
+
+			if (!Action::isSpellBlacklisted($spellSimcName)) {
+				echo 'Unknown spell: ' . $spellSimcName . PHP_EOL;
+			}
 		}
 
 	}
