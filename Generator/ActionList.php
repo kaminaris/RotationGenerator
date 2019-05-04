@@ -26,6 +26,9 @@ class ActionList
 	public function getFunctionName()
 	{
 		$result = Helper::properCase($this->profile->class);
+		if (strtolower($result) == 'deathknight') {
+			$result = 'DeathKnight';
+		}
 
 		if ($this->name == '_MAIN') {
 			return $result . ':' . Helper::properCase($this->profile->spec);

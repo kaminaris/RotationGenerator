@@ -9,7 +9,7 @@ class DefaultHandler extends Handler
 	public $handledPrefixes = [
 		'cooldown_react', 'contagion', 'spell_haste', 'time_to_shard', 'firestarter', 'soul_fragments', 'ca_execute',
 		'imps_spawned_during', 'time_to_imps', 'floor', 'ceil', 'feral_spirit', 'ap_check', 'solar_wrath', 'rtb_buffs',
-		'stealthed', 'cp_max_spend'
+		'stealthed', 'cp_max_spend', 'health', 'incoming_damage_1500ms', 'incoming_damage_1999ms', 'stagger'
 	];
 
 	public function handle($lexer, $variableParts, &$output)

@@ -17,6 +17,8 @@ class ResourceHandler extends Handler
 			$variableParts[0] = 'soul_shards';
 		} elseif ($variableParts[0] == 'astral_power') {
 			$variableParts[0] = 'lunar_power';
+		} elseif ($variableParts[0] == 'rune') {
+			$variableParts[0] = 'runes';
 		}
 
 		$this->action->actionList->resourceUsage->addResource($variableParts[0]);

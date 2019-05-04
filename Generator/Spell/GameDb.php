@@ -44,8 +44,8 @@ class GameDb implements SpellDb
 				list($resource, $value) = explode(':', $cost);
 				$resource = strtolower($resource);
 				switch ($resource) {
-					case 'runic_power': $resource = 'runic'; break;
-					case 'combo_points': $resource = 'combo'; break;
+//					case 'runic_power': $resource = 'runic'; break;
+//					case 'combo_points': $resource = 'combo'; break;
 				}
 
 				$costs[$resource] = $value;
