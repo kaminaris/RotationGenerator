@@ -40,10 +40,12 @@ class CooldownHandler extends Handler
 			case 'charges':
 			case 'charges_fractional':
 			case 'stack': $value = "{$prefix}[{$spell}].charges"; break;
+			case '':
 			case 'remains': $value = "{$prefix}[{$spell}].remains"; break;
 			default:
 				throw new \Exception(
-					'Unrecognized cooldown suffix type: ' . $suffix . ' expression: ' . implode('.', $variableParts)
+					'Unrecognized cooldown suffix type: ' . $suffix . ' expression: ' . implode('.', $variableParts).
+					"\n Line: " . $this->action->rawLine
 				);
 				break;
 		}

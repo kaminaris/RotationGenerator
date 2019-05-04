@@ -8,7 +8,7 @@ class ResourceHandler extends Handler
 {
 	public $handledPrefixes = [
 		'runic_power', 'chi', 'focus', 'cast_regen', 'combo_points', 'soul_shard', 'rune', 'energy', 'rage',
-		'holy_power', 'pain', 'maelstrom', 'astral_power'
+		'holy_power', 'pain', 'maelstrom', 'astral_power', 'fury'
 	];
 
 	public function handle($lexer, $variableParts, &$output)
