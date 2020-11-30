@@ -17,6 +17,8 @@ class PetHandler extends Handler
 			case 'gargoyle':
 				$output[] = 'petGargoyle';
 				break;
+			case 'turtle':
+			case 'main':
 			case 'cat':
 				if ($variableParts[2] == 'buff') {
 					$output[] = 'buff[' . Helper::pascalCase($variableParts[3]) . '].' . $variableParts[4];

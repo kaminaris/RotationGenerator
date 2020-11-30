@@ -47,3 +47,13 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 34477,Misdirection,0.000000,0,100,0,0,30.000000,
 109304,Exhilaration,0.000000,0,45,0,0,120.000000,
 260404,Calling the Shots,0.000000,0,0,1,1,0.000000,
+308491,Resonating Arrow,0.000000,0,0,0,0,60.000000,
+324149,Flayed Shot,0.000000,0,0,0,0,30.000000,FOCUS:10
+325028,Death Chakram,0.000000,0,0,0,0,45.000000,
+328231,Wild Spirits,0.000000,0,0,0,0,120.000000,
+53351,Kill Shot,0.000000,0,0,0,0,10.000000,FOCUS:10
+336745,Soulforge Embers,0.000000,0,0,0,0,0.000000,
+342049,Chimaera Shot,0.000000,0,40,0,1,0.000000,
+321460,Dead Eye,0.000000,0,40,1,1,0.000000,
+336867,Surging Shots,0.000000,0,40,1,0,0.000000,
+336849,Eagletalon's True Focus,0.000000,0,40,1,0,0.000000,

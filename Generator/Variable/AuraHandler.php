@@ -58,6 +58,9 @@ class AuraHandler extends Handler
 			case 'refreshable':
 				$value = "{$prefix}[{$spell}].refreshable";
 				break;
+			case 'max_stacks':
+				$value = "{$prefix}[{$spell}].maxStacks";
+				break;
 			case 'pmultiplier':
 				$previousElement = end($output);
 				$glimpse = $lexer->glimpse();

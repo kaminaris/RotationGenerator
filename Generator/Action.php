@@ -79,6 +79,11 @@ class Action
 			new Variable\ActiveDotHandler($action->profile, $action),
 			new Variable\TimeToDieHandler($action->profile, $action),
 			new Variable\EquippedHandler($action->profile, $action),
+			new Variable\EssenceHandler($action->profile, $action),
+			new Variable\RuneforgeHandler($action->profile, $action),
+			new Variable\SoulbindHandler($action->profile, $action),
+			new Variable\ConduitHandler($action->profile, $action),
+			new Variable\CovenantHandler($action->profile, $action),
 			new Variable\PetHandler($action->profile, $action),
 		];
 
@@ -95,6 +100,12 @@ class Action
 				break;
 			case 'use_item':
 			case 'use_items':
+			case 'concentrated_flame':
+			case 'bag_of_tricks':
+			case 'anima_of_death':
+			case 'memory_of_lucid_dreams':
+			case 'worldvein_resonance':
+			case 'ripple_in_space':
 				$action->isBlacklisted = true;
 				break;
 			default:
@@ -169,6 +180,13 @@ class Action
 	 */
 	public function parseSpell($action, $exploded)
 	{
+		//Replacement for spell alias
+		switch ($action) {
+			case 'thrash_cat': $action = 'thrash'; break;
+			case 'moonfire_cat': $action = 'moonfire'; break;
+			case 'swipe_cat': $action = 'swipe'; break;
+		}
+
 		$this->spell = $action;
 		$this->spellName = $this->profile->SpellName($action);
 		$this->spellNameCanonical = Helper::properCaseWithSpaces($action);
@@ -205,6 +223,8 @@ class Action
 					case 'cancel_if': //ignore cancel_if
 					case 'line_cd': //ignore line_cd
 					case 'delay': //ignore line_cd
+					case 'max_energy': //ignore line_cd
+					case 'sec': //ignore line_cd
 					case 'use_off_gcd': break; //ignore use_off_gcd
 					case 'precast_time': break; //ignore precast_time
 
@@ -286,6 +306,7 @@ class Action
 			'[\\w\.]+' => 'variable',
 
 			'\\|' => 'or',
+			'\\?' => 'what',
 			'\\&' => 'and',
 			'\\!' => 'not',
 			'\\<=' => 'lteq',
@@ -323,6 +344,7 @@ class Action
 				case 'or': $output[] = 'or'; break;
 				case 'not': $output[] = 'not'; break;
 				case 'eq': $output[] = '=='; break;
+				case 'what': $output[] = '?'; break;
 				case 'plus':
 				case 'minus':
 				case 'mul':
@@ -374,7 +396,9 @@ class Action
 			'flask', 'food', 'augmentation', 'summon_pet', 'snapshot_stats', 'potion', 'arcane_pulse',
 			'lights_judgment', 'arcane_torrent', 'blood_fury', 'berserking', 'fireblood', 'auto_attack',
 			'use_items', 'flying_serpent_kick', 'ancestral_call', 'auto_shot', 'bloodlust', 'wind_shear',
-			'counterspell'
+			'counterspell', 'shadowmeld', 'pool_resource', 'wait', 'guardian_of_azeroth', 'focused_azerite_beam',
+			'essence_of_the_focusing_iris', 'reaping_flames', 'purifying_blast', 'blood_of_the_enemy',
+			'the_unbound_force', 'reckless_force', 'reckless_force_counter', 'memory_of_lucid_dreams'
 		]);
 	}
 }

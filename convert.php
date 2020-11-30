@@ -2,43 +2,43 @@
 
 require_once 'vendor/autoload.php';
 
-$urlPrefix = 'https://raw.githubusercontent.com/simulationcraft/simc/bfa-dev/profiles/Tier23/';
+$urlPrefix = 'https://raw.githubusercontent.com/simulationcraft/simc/shadowlands/profiles/PreRaids/';
 
 $availableProfiles = [
-	'blood'       => 'T23_Death_Knight_Blood.simc',
-	'dk_frost'    => 'T23_Death_Knight_Frost.simc',
-	'unholy'      => 'T23_Death_Knight_Unholy.simc',
-	'havoc'       => 'T23_Demon_Hunter_Havoc.simc',
-	'vengeance'   => 'T23_Demon_Hunter_Vengeance.simc',
-	'moonkin'     => 'T23_Druid_Balance.simc',
-	'feral'       => 'T23_Druid_Feral.simc',
-	'bear'        => 'T23_Druid_Guardian.simc',
-	'bm'          => 'T23_Hunter_Beast_Mastery.simc',
-	'mm'          => 'T23_Hunter_Marksmanship.simc',
-	'survi'       => 'T23_Hunter_Survival.simc',
-	'arcane'      => 'T23_Mage_Arcane.simc',
-	'fire'        => 'T23_Mage_Fire.simc',
-	'mage_frost'  => 'T23_Mage_Frost.simc',
-	'brewmaster'  => 'T23_Monk_Brewmaster.simc',
-	'ww'          => 'T23_Monk_Windwalker.simc',
-	'ww_s'        => 'T23_Monk_Windwalker_Serenity.simc',
-	'pala_prot'   => 'T23_Paladin_Protection.simc',
-	'ret'         => 'T23_Paladin_Retribution.simc',
-	'priest_holy' => 'T23_Priest_Holy.simc',
-	'shadow'      => 'T23_Priest_Shadow.simc',
-	'assa'        => 'T23_Rogue_Assassination.simc',
-	'asss_exsq'   => 'T23_Rogue_Assassination_Exsg.simc',
-	'outlaw'      => 'T23_Rogue_Outlaw.simc',
-	'outlaw_snd'  => 'T23_Rogue_Outlaw_SnD.simc',
-	'sub'         => 'T23_Rogue_Subtlety.simc',
-	'ele'         => 'T23_Shaman_Elemental.simc',
-	'enh'         => 'T23_Shaman_Enhancement.simc',
-	'aff'         => 'T23_Warlock_Affliction.simc',
-	'demo'        => 'T23_Warlock_Demonology.simc',
-	'destro'      => 'T23_Warlock_Destruction.simc',
-	'arms'        => 'T23_Warrior_Arms.simc',
-	'fury'        => 'T23_Warrior_Fury.simc',
-	'warr_prot'   => 'T23_Warrior_Protection.simc',
+	'blood'       => 'PR_Death_Knight_Blood.simc',
+	'dk_frost'    => 'PR_Death_Knight_Frost.simc',
+	'unholy'      => 'PR_Death_Knight_Unholy.simc',
+	'havoc'       => 'PR_Demon_Hunter_Havoc.simc',
+	'vengeance'   => 'PR_Demon_Hunter_Vengeance.simc',
+	'moonkin'     => 'PR_Druid_Balance.simc',
+	'feral'       => 'PR_Druid_Feral.simc',
+	'bear'        => 'PR_Druid_Guardian.simc',
+	'bm'          => 'PR_Hunter_Beast_Mastery.simc',
+	'mm'          => 'PR_Hunter_Marksmanship.simc',
+	'survi'       => 'PR_Hunter_Survival.simc',
+	'arcane'      => 'PR_Mage_Arcane.simc',
+	'fire'        => 'PR_Mage_Fire.simc',
+	'mage_frost'  => 'PR_Mage_Frost.simc',
+	'brewmaster'  => 'PR_Monk_Brewmaster.simc',
+	'ww'          => 'PR_Monk_Windwalker.simc',
+	'ww_s'        => 'PR_Monk_Windwalker_Serenity.simc',
+	'pala_prot'   => 'PR_Paladin_Protection.simc',
+	'ret'         => 'PR_Paladin_Retribution.simc',
+	'priest_holy' => 'PR_Priest_Holy.simc',
+	'shadow'      => 'PR_Priest_Shadow.simc',
+	'assa'        => 'PR_Rogue_Assassination.simc',
+	'asss_exsq'   => 'PR_Rogue_Assassination_Exsg.simc',
+	'outlaw'      => 'PR_Rogue_Outlaw.simc',
+	'outlaw_snd'  => 'PR_Rogue_Outlaw_SnD.simc',
+	'sub'         => 'PR_Rogue_Subtlety.simc',
+	'ele'         => 'PR_Shaman_Elemental.simc',
+	'enh'         => 'PR_Shaman_Enhancement.simc',
+	'aff'         => 'PR_Warlock_Affliction.simc',
+	'demo'        => 'PR_Warlock_Demonology.simc',
+	'destro'      => 'PR_Warlock_Destruction.simc',
+	'arms'        => 'PR_Warrior_Arms.simc',
+	'fury'        => 'PR_Warrior_Fury.simc',
+	'warr_prot'   => 'PR_Warrior_Protection.simc',
 ];
 
 function usage()
@@ -61,7 +61,7 @@ Invalid profile, needs to be either existing file or one of:
 TEXT;
 
 	foreach ($availableProfiles as $short => $v) {
-		echo str_pad($short, 20) . ' - ' . preg_replace('/T23_(.*).simc/', '$1', $v) . PHP_EOL;
+		echo str_pad($short, 20) . ' - ' . preg_replace('/PR_(.*).simc/', '$1', $v) . PHP_EOL;
 	}
 }
 

@@ -5,7 +5,8 @@ namespace Generator\Variable;
 class CooldownHandler extends Handler
 {
 	public $handledPrefixes = [
-		'cooldown', 'duration', 'charges', 'charges_fractional', 'full_recharge_time', 'cost', 'ground_aoe'
+		'cooldown', 'duration', 'charges', 'charges_fractional', 'full_recharge_time', 'cost', 'ground_aoe',
+		'max_charges', 'recharge_time'
 	];
 
 	public function handle($lexer, $variableParts, &$output)
@@ -15,6 +16,8 @@ class CooldownHandler extends Handler
 			case 'duration_guess':
 			case 'duration':
 			case 'full_recharge_time':
+			case 'max_charges':
+			case 'recharge_time':
 			case 'cost': $variableParts = ['cooldown', $this->action->spellNameCanonical, $variableParts[0]]; break;
 
 			case 'charges_fractional':
@@ -37,10 +40,13 @@ class CooldownHandler extends Handler
 			case 'cost':
 			case 'duration': $value = "{$prefix}[{$spell}].{$suffix}"; break;
 			case 'full_recharge_time': $value = "{$prefix}[{$spell}].fullRecharge"; break;
+			case 'recharge_time': $value = "{$prefix}[{$spell}].partialRecharge"; break;
 			case 'charges':
 			case 'charges_fractional':
 			case 'stack': $value = "{$prefix}[{$spell}].charges"; break;
+			case 'max_charges': $value = "{$prefix}[{$spell}].maxCharges"; break;
 			case '':
+			case 'remains_guess':
 			case 'remains': $value = "{$prefix}[{$spell}].remains"; break;
 			default:
 				throw new \Exception(

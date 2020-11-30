@@ -12,13 +12,16 @@ class TalentHandler extends Handler
 
 		$talentName = $this->profile->SpellName($variableParts[1]);
 		$suffix = $variableParts[2];
+		if (!$suffix || $suffix === '') {
+			$suffix = 'enabled';
+		}
 
 		if ($suffix == 'enabled') {
 			$value = 'talents[' . $talentName . ']';
 		} elseif ($suffix == 'disabled') {
 			$value = 'not talents[' . $talentName . ']';
 		} else {
-			throw new \Exception('Unrecognized talent switch type: ' . $suffix);
+			throw new \Exception('Unrecognized talent switch type: ' . $suffix . ' Line: ' . json_encode($variableParts));
 		}
 
 		$previousElement = end($output);

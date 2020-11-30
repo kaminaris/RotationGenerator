@@ -31,6 +31,7 @@ class ActionHandler extends Handler
 				$spellName = $this->profile->SpellName($variableParts[1]);
 				$output[] = "cooldown[{$spellName}].{$variableParts[2]}";
 				break;
+			case 'in_flight_to_target':
 			case 'in_flight':
 				$output[] = 'inFlight';
 				break;
