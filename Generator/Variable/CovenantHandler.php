@@ -8,6 +8,8 @@ class CovenantHandler extends Handler
 
 	public function handle($lexer, $variableParts, &$output)
 	{
+		$this->action->actionList->resourceUsage->covenantId = true;
+
 		$covenantId = 0;
 		switch ($variableParts[1]) {
 			case 'kyrian': $covenantId = 'Enum.CovenantType.Kyrian'; break;
@@ -16,7 +18,7 @@ class CovenantHandler extends Handler
 			case 'necrolord': $covenantId = 'Enum.CovenantType.Necrolord'; break;
 		}
 
-		$output[] = 'covenant.covenantId == ' . $covenantId;
+		$output[] = 'covenantId == ' . $covenantId;
 
 	}
 }

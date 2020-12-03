@@ -186,7 +186,8 @@ class Converter
 				continue;
 			}
 
-			$children[] = $element->makeChildren()->makeVariable($key, 'fd.' . $key);
+			$resourceValue = $list->resourceUsage->getResourceVariableValue($key);
+			$children[] = $element->makeChildren()->makeVariable($key, $resourceValue);
 		}
 
 		foreach ($list->resourceUsage->resources as $resource => $isUsed) {

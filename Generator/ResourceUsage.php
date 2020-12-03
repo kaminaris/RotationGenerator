@@ -17,9 +17,19 @@ class ResourceUsage extends \stdClass
 	public $gcdRemains = false;
 	public $timeToDie = false;
 	public $spellHaste = false;
+	public $covenantId = false;
 
 	public $resources = [];
 	public $azeriteIds = [];
+
+	public function getResourceVariableValue($key) {
+		switch ($key) {
+			case 'covenantId':
+				return 'fd.covenant.covenantId';
+			default:
+				return 'fd.' . $key;
+		}
+	}
 
 	public function addResource($resource)
 	{

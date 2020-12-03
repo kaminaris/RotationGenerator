@@ -1,0 +1,25 @@
+id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
+108503,Grimoire of Sacrifice,0,0,40,0,1,30,
+321792,Impending Catastrophe,2,0,40,0,0,120,
+325289,Decimating Bolt,2.5,0,40,0,0,45,
+325640,Soul Rot,1.5,0,40,0,0,60,
+312321,Scouring Tithe,2,0,40,0,0,40,
+6353,Soul Fire,4,0,40,0,1,45,
+29722,Incinerate,2,0,40,0,0,0,
+270545,Inferno,0,0,0,1,1,0,
+266134,Internal Combustion,0,0,0,1,1,0,
+17962,Conflagrate,0,0,40,0,0,11,
+205184,Roaring Blaze,0,0,0,1,1,0,
+152108,Cataclysm,2,0,40,0,1,30,
+348,Immolate,1.5,0,40,0,0,0,
+196447,Channel Demonfire,2.5,0,40,0,1,21,
+80240,Havoc,0,0,40,0,0,30,
+1122,Summon Infernal,0,0,40,0,0,180,
+113858,Dark Soul Instability,0,0,40,0,1,120,
+267115,Flashover,0,0,0,1,1,0,
+117828,Backdraft,0,0,0,1,0,0,
+116858,Chaos Bolt,2.5,0,40,0,0,0,SOUL_SHARDS:2
+196412,Eradication,0,0,0,1,1,0,
+17877,Shadowburn,0,0,40,0,1,12,SOUL_SHARDS:1
+196408,Fire and Brimstone,0,0,0,1,1,0,
+5740,Rain of Fire,0,0,40,0,0,0,SOUL_SHARDS:3

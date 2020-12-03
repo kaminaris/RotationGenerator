@@ -37,7 +37,7 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 5782,Fear,1.497000,0,30,0,0,0.000000,
 755,Health Funnel,0.000000,0,45,0,0,0.000000,
 105174,Hand of Gul'dan,1.321000,0,40,0,0,0.000000,SOUL_SHARDS:1
-267211,Bilescourge Bombers,0.000000,0,40,0,0,30.000000,SOUL_SHARDS:2
+267211,Bilescourge Bombers,0.000000,0,40,0,1,30.000000,SOUL_SHARDS:2
 126,Eye of Kilrogg,1.761000,0,50000,0,0,0.000000,
 267216,Inner Demons,0.000000,0,100,1,1,0.000000,
 104316,Call Dreadstalkers,1.761000,0,40,0,0,20.000000,SOUL_SHARDS:2
@@ -50,3 +50,9 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 111400,Burning Rush,0.000000,0,0,0,1,0.000000,
 264130,Power Siphon,0.000000,0,100,0,1,30.000000,
 267217,Nether Portal,2.202000,0,40,0,1,180.000000,SOUL_SHARDS:1
+321792,Impending Catastrophe,2,0,40,0,0,120,
+325289,Decimating Bolt,2.5,0,40,0,0,45,
+325640,Soul Rot,1.5,0,40,0,0,60,
+312321,Scouring Tithe,2,0,40,0,0,40,
+264119,sss,1,0,40,0,1,45,SOUL_SHARDS:1
+264119,Summon Vilefiend,1.761000,0,40,0,0,45.000000,SOUL_SHARDS:1

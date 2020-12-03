@@ -14,6 +14,9 @@ class PetHandler extends Handler
 			case 'infernal':
 				$output[] = 'petInfernal';
 				break;
+			case 'xuen_the_white_tiger':
+				$output[] = 'petXuen';
+				break;
 			case 'gargoyle':
 				$output[] = 'petGargoyle';
 				break;

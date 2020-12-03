@@ -18,6 +18,8 @@ class TargetHandler extends Handler
 				$output[] = 'timeToDie'; break;
 			case '':
 				$output[] = $variableParts[0]; break;
+			case 'debuff':
+				$output[] = implode('.', $variableParts); break;
 			default:
 				throw new \Exception(
 					'Unrecognized target variable: ' . $variableParts[1] . ' expression: ' . implode('.', $variableParts)

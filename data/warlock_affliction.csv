@@ -14,9 +14,9 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 6201,Create Healthstone,2.593000,0,0,0,0,0.000000,MANA:2000
 1098,Enslave Demon,2.593000,0,30,0,0,0.000000,MANA:2000
 264874,Darkfury,0.000000,0,0,1,1,0.000000,
-205179,Phantom Singularity,0.000000,0,40,0,0,45.000000,
+205179,Phantom Singularity,0.000000,0,40,0,1,45.000000,
 30283,Shadowfury,1.297000,0,35,0,0,60.000000,
-232670,Shadow Bolt,1.729000,0,40,0,0,0.000000,MANA:2000
+686,Shadow Bolt,1.729000,0,40,0,0,0.000000,MANA:2000
 108370,Soul Leech,0.000000,0,0,1,0,0.000000,
 196226,Sow the Seeds,0.000000,0,0,1,1,0.000000,
 205180,Summon Darkglare,0.000000,0,0,0,0,180.000000,MANA:2000
@@ -29,7 +29,7 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 63106,Siphon Life,0.000000,0,40,0,1,0.000000,
 6789,Mortal Coil,0.000000,0,20,0,1,45.000000,MANA:2000
 101508,The Codex of Xerrath,0.000000,0,0,1,0,0.000000,
-48181,Haunt,1.297000,0,40,0,0,15.000000,MANA:2000
+48181,Haunt,1.297000,0,40,0,1,15.000000,MANA:2000
 198590,Drain Soul,0.000000,0,40,0,1,0.000000,MANA:0
 5782,Fear,1.470000,0,30,0,0,0.000000,MANA:10000
 755,Health Funnel,0.000000,0,45,0,0,0.000000,
@@ -39,7 +39,7 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 264000,Creeping Death,0.000000,0,0,1,1,0.000000,
 234153,Drain Life,0.000000,0,40,0,0,0.000000,MANA:0
 32388,Shadow Embrace,0.000000,0,0,1,1,0.000000,
-113860,Dark Soul: Misery,0.000000,0,0,0,0,120.000000,
+113860,Dark Soul: Misery,0.000000,0,0,0,1,120.000000,
 111771,Demonic Gateway,1.729000,10,40,0,0,10.000000,MANA:20000
 104773,Unending Resolve,0.000000,0,0,0,0,180.000000,MANA:2000
 196103,Absolute Corruption,0.000000,0,0,1,1,0.000000,
@@ -47,3 +47,9 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 111400,Burning Rush,0.000000,0,0,0,1,0.000000,
 119898,Command Demon,0.000000,0,0,0,0,0.000000,
 48018,Demonic Circle,0.432000,0,0,0,0,10.000000,MANA:2000
+324536,Malefic Rapture,1.5,0,40,0,0,0,SOUL_SHARDS:1
+321792,Impending Catastrophe,2,0,40,0,0,120,
+325289,Decimating Bolt,2.5,0,40,0,0,45,
+325640,Soul Rot,1.5,0,40,0,0,60,
+312321,Scouring Tithe,2,0,40,0,0,40,
+334319,Inevitable Demise,0,0,0,1,1,0,
