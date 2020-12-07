@@ -49,3 +49,10 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 61882,Earthquake,0.000000,0,35,0,0,0.000000,MAELSTROM:60
 114050,Ascendance,0.000000,0,0,0,1,180.000000,
 108271,Astral Shift,0.000000,0,0,0,0,90.000000,
+326059,Primordial Wave,0,0,40,0,0,45,
+324386,Vesper Totem,0,0,40,0,0,60,
+328923,Fae Transfusion,3,0,40,0,0,120,
+320674,Chain Harvest,2.5,0,40,0,0,90,
+320125,Echoing Shock,0,0,40,0,1,30,
+342243,Static Discharge,0,0,40,0,1,30,
+157331,Wind Gust,2,0,40,0,0,0,
