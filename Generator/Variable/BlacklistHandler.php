@@ -6,7 +6,7 @@ class BlacklistHandler extends Handler
 {
 	public $handledPrefixes = [
 		'min', 'max', 'movement', 'raid_event', 'time', 'sim', 'travel_time', 'trinket', 'expected_combat_length',
-		'in_flight', 'incoming_imps', 'self'
+		'in_flight', 'incoming_imps', 'self', 'interpolated_fight_remains'
 	];
 
 	public function handle($lexer, $variableParts, &$output)

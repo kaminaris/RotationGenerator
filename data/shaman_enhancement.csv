@@ -1,6 +1,6 @@
 id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 30884,Nature's Guardian,0.000000,0,0,1,1,0.000000,
-197214,Sundering,0.000000,0,0,0,1,40.000000,MAELSTROM:20
+197214,Sundering,0.000000,0,0,0,1,40.000000,
 262395,Totem Mastery,0.000000,0,40,0,0,0.000000,
 6196,Far Sight,1.837000,0,50000,0,0,0.000000,
 201900,Hot Hand,0.000000,0,0,1,1,0.000000,
@@ -11,22 +11,22 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 974,Earth Shield,0.000000,0,40,0,1,0.000000,
 114051,Ascendance,0.000000,0,0,0,1,180.000000,
 33757,Windfury,0.000000,0,0,1,0,0.000000,
-370,Purge,0.000000,0,30,0,0,0.000000,MANA:2000
+370,Purge,0.000000,0,30,0,0,0.000000,
 192058,Capacitor Totem,0.000000,0,40,0,0,60.000000,
 108271,Astral Shift,0.000000,0,0,0,0,90.000000,
 2825,Bloodlust,0.000000,0,0,0,0,300.000000,
 260878,Spirit Wolf,0.000000,0,0,1,1,0.000000,
 265046,Static Charge,0.000000,0,0,1,1,0.000000,
 192106,Lightning Shield,0.000000,0,0,0,0,0.000000,
-17364,Stormstrike,0.000000,0,0,0,0,9.000000,MAELSTROM:30
+17364,Stormstrike,0.000000,0,0,0,0,9.000000,
 2645,Ghost Wolf,0.000000,0,0,0,0,0.000000,
 2008,Ancestral Spirit,9.183000,0,40,0,0,0.000000,
 246035,Boulderfist,0.000000,0,0,1,1,0.000000,
 262624,Elemental Spirits,0.000000,0,100,1,1,0.000000,
-188089,Earthen Spike,0.000000,0,10,0,1,20.000000,MAELSTROM:20
+188089,Earthen Spike,0.000000,0,10,0,1,20.000000,
 58875,Spirit Walk,0.000000,0,0,0,0,60.000000,
-187837,Lightning Bolt,0.000000,0,40,0,0,0.000000,MAELSTROM:0
-197211,Fury of Air,0.000000,0,0,0,1,0.000000,MAELSTROM:3
+188196,Lightning Bolt,0.000000,0,40,0,0,0.000000,
+197211,Fury of Air,0.000000,0,0,0,1,0.000000,
 57994,Wind Shear,0.000000,0,30,0,0,12.000000,
 8143,Tremor Totem,0.000000,0,0,0,0,60.000000,
 51514,Hex,1.561000,0,30,0,0,30.000000,
@@ -34,8 +34,8 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 193786,Rockbiter,0.000000,0,20,0,0,5.500000,
 188070,Healing Surge,1.837000,0,40,0,0,0.000000,
 187880,Maelstrom Weapon,0.000000,0,0,1,0,0.000000,
-196834,Frostbrand,0.000000,0,20,0,0,0.000000,MAELSTROM:20
-60103,Lava Lash,0.000000,0,0,0,0,0.000000,MAELSTROM:40
+196834,Frostbrand,0.000000,0,20,0,0,0.000000,
+60103,Lava Lash,0.000000,0,0,0,0,11,
 546,Water Walking,0.000000,0,30,0,0,0.000000,
 197992,Landslide,0.000000,0,0,1,1,0.000000,
 193796,Flametongue,0.000000,0,20,0,0,12.000000,
@@ -48,5 +48,22 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 51886,Cleanse Spirit,0.000000,0,40,0,0,8.000000,
 210727,Overcharge,0.000000,0,0,1,1,0.000000,
 192087,Searing Assault,0.000000,0,0,1,1,0.000000,
-187874,Crash Lightning,0.000000,0,0,0,0,6.000000,MAELSTROM:20
+187874,Crash Lightning,0.000000,0,0,0,0,6.000000,
 51533,Feral Spirit,0.000000,0,30,0,0,120.000000,
+33757,Windfury Weapon,0,0,0,0,0,0,
+326059,Primordial Wave,0,0,40,0,0,45,
+324386,Vesper Totem,0,0,40,0,0,60,
+328923,Fae Transfusion,3,0,40,0,0,120,
+320674,Chain Harvest,2.5,0,40,0,0,90,
+318038,Flametongue Weapon,0,0,0,0,0,0,
+320137,Stormkeeper,1.5,0,0,0,1,60,
+8512,Windfury Totem,0,0,0,0,0,0,
+335903,Doom Winds,0,0,0,1,0,0,
+115356,Windstrike,0,0,0,0,0,9,
+196840,Frost Shock,0,0,0,0,0,5,
+188389,Flame Shock,0,0,0,0,0,6,
+333974,Fire Nova,0,0,0,0,1,15,
+334046,Lashing Flames,0,0,0,1,1,0,
+188443,Chain Lightning,2,0,0,0,0,0,
+117014,Elemental Blast,2,0,0,0,1,12,
+342240,Ice Strike,0,0,0,0,1,15,

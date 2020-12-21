@@ -44,6 +44,12 @@ class AuraHandler extends Handler
 			case 'down':
 				$value = "not {$prefix}[{$spell}].up";
 				break;
+			case 'value':
+				$value = "{$prefix}[{$spell}].value";
+				break;
+			case 'ticks_remain':
+				$value = "{$prefix}[{$spell}].ticksRemain";
+				break;
 			case 'charges':
 			case 'stack':
 			case 'react':

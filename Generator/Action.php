@@ -6,8 +6,7 @@ use Generator\Variable\Handler;
 use Tmilos\Lexer\Config\LexerArrayConfig;
 use Tmilos\Lexer\Lexer;
 
-class Action
-{
+class Action {
 	const TYPE_SPELL = 'spell';
 	const TYPE_RUN = 'run';
 	const TYPE_CALL = 'call';
@@ -45,15 +44,14 @@ class Action
 
 	public $variableHandlers = [];
 
-
 	/**
-	 * @param $line
+	 * @param            $line
 	 * @param ActionList $actionList
+	 *
 	 * @return Action
 	 * @throws \Exception
 	 */
-	public static function fromSimcAction($line, $actionList)
-	{
+	public static function fromSimcAction($line, $actionList) {
 		$action = new Action();
 		$action->profile = $actionList->profile;
 		$action->actionList = $actionList;
@@ -120,13 +118,14 @@ class Action
 	/**
 	 * @param $action
 	 * @param $exploded
+	 *
 	 * @throws \Exception
 	 */
-	public function parseCallRun($action, $exploded)
-	{
+	public function parseCallRun($action, $exploded) {
 		if ($action == 'call_action_list') {
 			$this->type = 'call';
-		} else {
+		}
+		else {
 			$this->type = 'run';
 		}
 
@@ -134,11 +133,15 @@ class Action
 			list($name, $value) = $this->parseVar($item);
 
 			switch ($name) {
-				case 'name': $this->aplToRun = $value; break;
-				case 'if': $this->aplCondition = $this->parseExpression($value); break;
+				case 'name':
+					$this->aplToRun = $value;
+					break;
+				case 'if':
+					$this->aplCondition = $this->parseExpression($value);
+					break;
 				default:
 					throw new \Exception(
-						'Unrecognized call/run command: ' . $name . ' expression: '. implode(',', $exploded)
+						'Unrecognized call/run command: ' . $name . ' expression: ' . implode(',', $exploded)
 					);
 					break;
 			}
@@ -148,25 +151,37 @@ class Action
 	/**
 	 * @param $action
 	 * @param $exploded
+	 *
 	 * @throws \Exception
 	 */
-	public function parseVariable($action, $exploded)
-	{
+	public function parseVariable($action, $exploded) {
 		$this->type = 'variable';
 
 		foreach ($exploded as $item) {
 			list($name, $value) = $this->parseVar($item);
 
 			switch ($name) {
-				case 'name': $this->variableName = Helper::camelCase($value); break;
-				case 'value': $this->variableValue = $this->parseExpression($value); break;
-				case 'value_else': $this->variableValueElse = $this->parseExpression($value); break;
-				case 'op': $this->variableOperation = $value; break;
-				case 'condition': $this->variableCondition = $this->parseExpression($value); break;
-				case 'if': $this->variableCondition = $this->parseExpression($value); break;
+				case 'name':
+					$this->variableName = Helper::camelCase($value);
+					break;
+				case 'value':
+					$this->variableValue = $this->parseExpression($value);
+					break;
+				case 'value_else':
+					$this->variableValueElse = $this->parseExpression($value);
+					break;
+				case 'op':
+					$this->variableOperation = $value;
+					break;
+				case 'condition':
+					$this->variableCondition = $this->parseExpression($value);
+					break;
+				case 'if':
+					$this->variableCondition = $this->parseExpression($value);
+					break;
 				default:
 					throw new \Exception(
-						'Unrecognized variable operator: ' . $name . ' expression: '. implode(',', $exploded)
+						'Unrecognized variable operator: ' . $name . ' expression: ' . implode(',', $exploded)
 					);
 					break;
 			}
@@ -176,15 +191,21 @@ class Action
 	/**
 	 * @param $action
 	 * @param $exploded
+	 *
 	 * @throws \Exception
 	 */
-	public function parseSpell($action, $exploded)
-	{
+	public function parseSpell($action, $exploded) {
 		//Replacement for spell alias
 		switch ($action) {
-			case 'thrash_cat': $action = 'thrash'; break;
-			case 'moonfire_cat': $action = 'moonfire'; break;
-			case 'swipe_cat': $action = 'swipe'; break;
+			case 'thrash_cat':
+				$action = 'thrash';
+				break;
+			case 'moonfire_cat':
+				$action = 'moonfire';
+				break;
+			case 'swipe_cat':
+				$action = 'swipe';
+				break;
 		}
 
 		$this->spell = $action;
@@ -193,20 +214,28 @@ class Action
 
 		if ($this::isSpellBlacklisted($action)) {
 			$this->isBlacklisted = true;
+
 			return;
 		}
 
 		if (empty($exploded)) {
 			// unconditional spell
 			$this->spellCondition = true;
-		} else {
+		}
+		else {
 			foreach ($exploded as $item) {
 				list($name, $value) = $this->parseVar($item);
 
 				switch ($name) {
-					case 'name': $this->spellName = $value; break;
-					case 'target_if': $this->spellTarget = $this->parseExpression($value); break;
-					case 'if': $this->spellCondition = $this->parseExpression($value); break;
+					case 'name':
+						$this->spellName = $value;
+						break;
+					case 'target_if':
+						$this->spellTarget = $this->parseExpression($value);
+						break;
+					case 'if':
+						$this->spellCondition = $this->parseExpression($value);
+						break;
 
 					case 'interval': // ignore intervals
 					case 'pct_health': // ignore pct_health
@@ -225,17 +254,27 @@ class Action
 					case 'delay': //ignore line_cd
 					case 'max_energy': //ignore line_cd
 					case 'sec': //ignore line_cd
-					case 'use_off_gcd': break; //ignore use_off_gcd
-					case 'precast_time': break; //ignore precast_time
+					case 'use_off_gcd':
+						break; //ignore use_off_gcd
+					case 'precast_time':
+						break; //ignore precast_time
+					case 'type':
+						break; //ignore precast_time
 
 					case 'for_next': //@TODO
 					case 'precombat_seconds':
 						$this->isBlacklisted = true;
+
 						return;
 						break;
 					default:
 						throw new \Exception(
-							'Unrecognized spell operator: ' . $name . ' expression: '. implode(',', $exploded)
+							'Unrecognized spell operator: ' .
+							$name .
+							', action' .
+							$action .
+							' expression: ' .
+							implode(',', $exploded)
 						);
 						break;
 				}
@@ -280,52 +319,55 @@ class Action
 
 	/**
 	 * @param $part
+	 *
 	 * @return mixed
 	 * @throws \Exception
 	 */
-	public function parseVar($part)
-	{
+	public function parseVar($part) {
 		if (preg_match('/^(\w+)=(.*)$/', $part, $out)) {
 			array_shift($out);
+
 			return $out;
-		} else {
+		}
+		else {
 			throw new \Exception('Unrecognized variable part: ' . $part);
 		}
 	}
 
 	/**
 	 * @param $expression
+	 *
 	 * @return string
 	 * @throws \Exception
 	 */
-	public function parseExpression($expression)
-	{
-		$config = new LexerArrayConfig([
-			'\\s' => '',
-			'[\\d\.]+' => 'number',
-			'[\\w\.]+' => 'variable',
+	public function parseExpression($expression) {
+		$config = new LexerArrayConfig(
+			[
+				'\\s'      => '',
+				'[\\d\.]+' => 'number',
+				'[\\w\.]+' => 'variable',
 
-			'\\|' => 'or',
-			'\\?' => 'what',
-			'\\&' => 'and',
-			'\\!' => 'not',
-			'\\<=' => 'lteq',
-			'\\>=' => 'gteq',
-			'\\<' => 'lt',
-			'\\>' => 'gt',
+				'\\|'  => 'or',
+				'\\?'  => 'what',
+				'\\&'  => 'and',
+				'\\!'  => 'not',
+				'\\<=' => 'lteq',
+				'\\>=' => 'gteq',
+				'\\<'  => 'lt',
+				'\\>'  => 'gt',
 
-			'\\+' => 'plus',
-			'-' => 'minus',
-			'\\*' => 'mul',
-			'\\%' => 'mod',
-			'/' => 'div',
-			'\\=' => 'eq',
-			'\\:' => 'semicolon',
+				'\\+' => 'plus',
+				'-'   => 'minus',
+				'\\*' => 'mul',
+				'\\%' => 'mod',
+				'/'   => 'div',
+				'\\=' => 'eq',
+				'\\:' => 'semicolon',
 
-
-			'\\(' => 'open',
-			'\\)' => 'close',
-		]);
+				'\\(' => 'open',
+				'\\)' => 'close',
+			]
+		);
 
 		$lexer = new Lexer($config);
 		$lexer->setInput($expression);
@@ -340,16 +382,28 @@ class Action
 			$previousElement = end($output);
 
 			switch ($name) {
-				case 'and': $output[] = 'and'; break;
-				case 'or': $output[] = 'or'; break;
-				case 'not': $output[] = 'not'; break;
-				case 'eq': $output[] = '=='; break;
-				case 'what': $output[] = '?'; break;
+				case 'and':
+					$output[] = 'and';
+					break;
+				case 'or':
+					$output[] = 'or';
+					break;
+				case 'not':
+					$output[] = 'not';
+					break;
+				case 'eq':
+					$output[] = '==';
+					break;
+				case 'what':
+					$output[] = '?';
+					break;
+				case 'div':
+				case 'mod':
+					$output[] = '/';
+					break;
 				case 'plus':
 				case 'minus':
 				case 'mul':
-				case 'mod':
-				case 'div':
 				case 'lteq':
 				case 'gteq':
 				case 'lt':
@@ -358,6 +412,7 @@ class Action
 				case 'close':
 				case 'number':
 				case 'semicolon':
+				case 'demon_soul_fragments':
 					$output[] = $value;
 					break;
 				case 'variable':
@@ -389,16 +444,16 @@ class Action
 		return implode(' ', $output);
 	}
 
-
-	public static function isSpellBlacklisted($spellName)
-	{
-		return in_array($spellName, [
+	public static function isSpellBlacklisted($spellName) {
+		return in_array(
+			$spellName, [
 			'flask', 'food', 'augmentation', 'summon_pet', 'snapshot_stats', 'potion', 'arcane_pulse',
 			'lights_judgment', 'arcane_torrent', 'blood_fury', 'berserking', 'fireblood', 'auto_attack',
 			'use_items', 'flying_serpent_kick', 'ancestral_call', 'auto_shot', 'bloodlust', 'wind_shear',
 			'counterspell', 'shadowmeld', 'pool_resource', 'wait', 'guardian_of_azeroth', 'focused_azerite_beam',
 			'essence_of_the_focusing_iris', 'reaping_flames', 'purifying_blast', 'blood_of_the_enemy',
 			'the_unbound_force', 'reckless_force', 'reckless_force_counter', 'memory_of_lucid_dreams'
-		]);
+		]
+		);
 	}
 }

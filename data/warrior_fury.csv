@@ -34,10 +34,15 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 152278,Anger Management,0.000000,0,0,1,1,0.000000,
 184367,Rampage,0.000000,0,0,0,0,0.000000,RAGE:75
 184361,Enrage,0.000000,0,0,1,0,0.000000,
-85288,Raging Blow,0.000000,0,0,0,0,0.000000,
+85288,Raging Blow,0.000000,0,0,0,0,7,
 12323,Piercing Howl,0.000000,0,0,0,0,0.000000,RAGE:10
 5308,Execute,0.000000,0,0,0,0,6.000000,
 206315,Massacre,0.000000,0,0,1,1,0.000000,
 184364,Enraged Regeneration,0.000000,0,0,0,0,120.000000,
 23881,Bloodthirst,0.000000,0,0,0,0,4.500000,
 100,Charge,0.000000,8,25,0,0,1.500000,
+330334,Condemn,0,0,0,0,0,6,RAGE:20
+337302,Vicious Contempt,0,0,0,1,0,0,
+335070,Cruelty,0,0,0,0,1,0,
+315720,Onslaught,0,0,0,0,1,12,
+335077,Frenzy,0,0,0,1,1,0,

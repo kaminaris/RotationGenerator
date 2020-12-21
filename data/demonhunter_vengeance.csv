@@ -3,13 +3,13 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 268175,Void Reaver,0.000000,0,0,1,1,0.000000,
 203782,Shear,0.000000,0,0,0,0,0.000000,
 264002,Charred Flesh,0.000000,0,0,1,1,0.000000,
-191427,Metamorphosis,0.000000,0,40,0,0,240.000000,
+187827,Metamorphosis,0.000000,0,40,0,0,240.000000,
 217832,Imprison,0.000000,0,20,0,0,45.000000,
 264004,Gluttony,0.000000,0,0,1,1,0.000000,
 263642,Fracture,0.000000,0,0,0,1,0.000000,
 218612,Feed the Demon,0.000000,0,0,1,1,0.000000,
 207666,Concentrated Sigils,0.000000,0,0,1,1,0.000000,
-212084,Fel Devastation,0.000000,0,20,0,1,60.000000,
+212084,Fel Devastation,0.000000,0,20,0,0,60.000000,FURY:50
 202138,Sigil of Chains,0.000000,0,30,0,1,90.000000,
 209281,Quickened Sigils,0.000000,0,0,1,1,0.000000,
 188499,Blade Dance,0.000000,0,0,0,0,9.000000,FURY:35
@@ -26,7 +26,7 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 198589,Blur,0.000000,0,0,0,0,60.000000,
 185123,Throw Glaive,0.000000,0,30,0,0,0.000000,
 232893,Felblade,0.000000,0,15,0,1,15.000000,
-247454,Spirit Bomb,0.000000,0,0,0,1,0.000000,PAIN:30
+247454,Spirit Bomb,0.000000,0,0,0,1,0.000000,FURY:30
 195072,Fel Rush,0.000000,0,0,0,0,1.000000,
 203747,Mastery: Fel Blood,0.000000,0,0,1,0,0.000000,
 207548,Agonizing Flames,0.000000,0,0,1,1,0.000000,
@@ -42,3 +42,14 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 207739,Burning Alive,0.000000,0,0,1,1,0.000000,
 204254,Shattered Souls,0.000000,0,0,1,0,0.000000,
 207697,Feast of Souls,0.000000,0,0,1,1,0.000000,
+317009,Sinful Brand,0,0,0,0,0,60,
+323639,The Hunt,1,0,0,0,0,90,
+306830,Elysian Decree,0,0,0,0,0,60,
+329554,Fodder to the Flame,0,0,0,0,0,120,
+258920,Immolation Aura,0.000000,0,0,0,0,30.000000,
+204021,Fiery Brand,0,0,0,0,0,60,
+203720,Demon Spikes,0,0,0,0,0,20,
+189110,Infernal Strike,0,0,0,0,0,20,
+320341,Bulk Extraction,0,0,0,0,1,90,
+228477,Soul Cleave,0,0,0,0,0,0,FURY:30
+204596,Sigil of Flame,0,0,0,0,0,30,
