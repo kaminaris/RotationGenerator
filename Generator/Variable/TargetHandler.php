@@ -24,6 +24,9 @@ class TargetHandler extends Handler {
 				$this->action->actionList->resourceUsage->timeToDie = true;
 				$output[] = 'timeToDie';
 				break;
+			case 'time_to_pct_35':
+				$output[] = implode('.', $variableParts);
+				break;
 			case '':
 				$output[] = $variableParts[0];
 				break;
