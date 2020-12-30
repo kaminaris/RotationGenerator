@@ -102,6 +102,9 @@ class Converter
 					if ($action->variableCondition) {
 						$condition = $element->makeChildren();
 						switch ($action->variableOperation) {
+							case '':
+								$value = 'WTFFFFFF';
+								break;
 							case 'set':
 							case 'add':
 							case 'sub':

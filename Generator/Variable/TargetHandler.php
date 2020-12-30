@@ -9,6 +9,11 @@ class TargetHandler extends Handler {
 
 	public function handle($lexer, $variableParts, &$output) {
 		switch ($variableParts[1]) {
+			case 'is_add': //ignore
+				break;
+			case 'time_to_pct_20':
+				$output[] = 'timeTo20';
+				break;
 			case 'health':
 				$output[] = 'targetHp';
 				break;

@@ -24,6 +24,7 @@ class ActionHandler extends Handler
 				break;
 			case 'charges':
 			case 'executing':
+			case 'damage':
 			case 'in_flight_remains':
 			case 'travel_time':
 			case 'cost':

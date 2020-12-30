@@ -254,6 +254,9 @@ class Action {
 					case 'delay': //ignore line_cd
 					case 'max_energy': //ignore line_cd
 					case 'sec': //ignore line_cd
+					case 'op': //ignore op
+					case 'value': //ignore op
+					case 'only_cwc': //ignore op
 					case 'use_off_gcd':
 						break; //ignore use_off_gcd
 					case 'precast_time':

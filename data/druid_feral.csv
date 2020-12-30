@@ -68,3 +68,6 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 8936,Regrowth,1.365000,0,43,0,0,0.000000,
 276026,Iron Jaws,0,0,0,1,0,0.000000,
 135700,Clearcasting,0,0,0,1,0,0.000000,
+326434,Kindred Spirits,2.5,0,0,0,0,0,
+325727,Adaptive Swarm,0,0,0,0,0,25,
+323764,Convoke the Spirits,4,0,0,0,0,120,

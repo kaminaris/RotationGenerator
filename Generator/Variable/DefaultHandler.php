@@ -12,7 +12,7 @@ class DefaultHandler extends Handler
 		'stealthed', 'cp_max_spend', 'health', 'incoming_damage_1500ms', 'incoming_damage_1999ms', 'stagger',
 		'desired_targets', 'persistent_multiplier', 'max_energy', 'tar_trap', 'havoc_active', 'havoc_remains',
 		'can_seed', 'fight_remains', 'combo_strike', 'demon_soul_fragments', 'eclipse', 'starfire', 'mastery_value',
-		'death_knight'
+		'death_knight', 'druid', 'op'
 	];
 
 	public function handle($lexer, $variableParts, &$output)
