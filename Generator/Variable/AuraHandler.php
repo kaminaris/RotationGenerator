@@ -4,7 +4,7 @@ namespace Generator\Variable;
 
 class AuraHandler extends Handler
 {
-	public $handledPrefixes = ['dot', 'buff', 'debuff', 'ticking', 'refreshable', 'remains' , 'death_and_decay'];
+	public $handledPrefixes = ['dot', 'buff', 'debuff', 'ticking', 'refreshable', 'remains' , 'death_and_decay', 'set_bonus'];
 
 	public function handle($lexer, $variableParts, &$output)
 	{
@@ -18,6 +18,12 @@ class AuraHandler extends Handler
 			$variableParts[0] = 'debuff';
 			$variableParts[2] = $variableParts[1];
 			$variableParts[1] = 'death_and_decay';
+		}
+
+		if ($variableParts[0] == 'set_bonus') {
+			$variableParts[0] = 'buff';
+			$variableParts[2] = "up";
+			$variableParts[1] = $variableParts[1];
 		}
 
 		$spell = $this->profile->SpellName($variableParts[1]);
@@ -66,6 +72,11 @@ class AuraHandler extends Handler
 				break;
 			case 'max_stacks':
 				$value = "{$prefix}[{$spell}].maxStacks";
+				break;
+			case 'max_stack':
+				$value = "{$prefix}[{$spell}].maxStacks";
+				break;
+			case 'expiration_delay_remains':
 				break;
 			case 'pmultiplier':
 				$previousElement = end($output);

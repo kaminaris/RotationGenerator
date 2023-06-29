@@ -47,6 +47,8 @@ class CooldownHandler extends Handler
 			case 'max_charges': $value = "{$prefix}[{$spell}].maxCharges"; break;
 			case '':
 			case 'remains_guess':
+			case 'remains_expected':
+				$value = "{$prefix}[{$spell}].remains"; break;
 			case 'remains': $value = "{$prefix}[{$spell}].remains"; break;
 			default:
 				throw new \Exception(

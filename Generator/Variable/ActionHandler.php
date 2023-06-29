@@ -36,6 +36,40 @@ class ActionHandler extends Handler
 			case 'in_flight':
 				$output[] = 'inFlight';
 				break;
+			case 'energize_amount':
+				break;
+			case 'ready':
+				$spellName = $this->profile->SpellName($variableParts[1]);
+				$output[] = "cooldown[{$spellName}].{$variableParts[2]}";
+				break;
+			case 'cast_regen':
+				break;
+			case 'channeling':
+				break;
+			case 'charges_fractional':
+				break;
+			case 'full_reduction':
+				break;
+			case 'tick_reduction':
+				break;
+			case 'cooldown':
+				$spellName = $this->profile->SpellName($variableParts[1]);
+				$output[] = "cooldown[{$spellName}].{$variableParts[2]}";
+				break;
+			case 'max_charges':
+				$spellName = $this->profile->SpellName($variableParts[1]);
+				$output[] = "cooldown[{$spellName}].maxCharges"; 
+				break;
+			case 'cooldown_react':
+				break;
+			case 'last_used':
+				break;
+			case 'usable':
+				$spellName = $this->profile->SpellName($variableParts[1]);
+				$output[] = "MaxDps:FindSpell({$spellName})"; 
+				break;
+			case 'crit_pct_current':
+				break;
 			default:
 				throw new \Exception(
 					'Unrecognized action part: ' . $variableParts[2] . ' expression ' . implode('.', $variableParts)

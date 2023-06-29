@@ -1,0 +1,83 @@
+name: CI-ReleaseBuild
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Enter a gvfsbuild tag or commit to release"
+        default: ""
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 100
+
+      - name: Setup PHP with composer v2
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer:v2
+      
+      - name: Get composer cache directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+      
+      - name: Install dependencies
+        run: composer install --prefer-dist
+
+      - name: Convert
+        run: |
+          php convert.php arms
+          php convert.php blood
+          php convert.php dk_frost
+          php convert.php unholy
+          php convert.php havoc
+          php convert.php vengeance
+          php convert.php moonkin
+          php convert.php feral
+          php convert.php bear
+          php convert.php bm
+          php convert.php mm
+          php convert.php survi
+          php convert.php arcane
+          php convert.php fire
+          php convert.php mage_frost
+          php convert.php brewmaster
+          php convert.php ww
+          php convert.php ww_s
+          php convert.php pala_prot
+          php convert.php ret
+          php convert.php shadow
+          php convert.php assa
+          php convert.php outlaw
+          php convert.php sub
+          php convert.php ele
+          php convert.php enh
+          php convert.php aff
+          php convert.php demo
+          php convert.php destro
+          php convert.php arms
+          php convert.php fury
+          php convert.php warr_prot
+
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+            name: files
+            path: ${{ github.workspace }}

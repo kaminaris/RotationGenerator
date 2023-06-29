@@ -38,6 +38,14 @@ class TargetHandler extends Handler {
 			case 'debuff':
 				$output[] = implode('.', $variableParts);
 				break;
+			case 'cooldown':
+				break;
+			case 'is_boss':
+				break;
+			case 'distance':
+				break;
+			case 'level':
+				break;
 			default:
 				throw new \Exception(
 					'Unrecognized target variable: ' . $variableParts[1] . ' expression: ' . implode(

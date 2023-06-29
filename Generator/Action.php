@@ -139,6 +139,9 @@ class Action {
 				case 'if':
 					$this->aplCondition = $this->parseExpression($value);
 					break;
+				case 'target_if':
+					$this->aplCondition = $this->parseExpression($value);
+					break;
 				default:
 					throw new \Exception(
 						'Unrecognized call/run command: ' . $name . ' expression: ' . implode(',', $exploded)
@@ -178,6 +181,15 @@ class Action {
 					break;
 				case 'if':
 					$this->variableCondition = $this->parseExpression($value);
+					break;
+				case 'target_if':
+					$this->variableCondition = $this->parseExpression($value);
+					break;
+				case 'default':
+					break;
+				case 'use_off_gcd':
+					break;
+				case 'use_while_casting':
 					break;
 				default:
 					throw new \Exception(
@@ -236,7 +248,6 @@ class Action {
 					case 'if':
 						$this->spellCondition = $this->parseExpression($value);
 						break;
-
 					case 'interval': // ignore intervals
 					case 'pct_health': // ignore pct_health
 					case 'cycle_targets': //ignore cycling targets
@@ -263,11 +274,15 @@ class Action {
 						break; //ignore precast_time
 					case 'type':
 						break; //ignore precast_time
-
+					case 'toggle': //ignore op
+					case 'mode': //ignore mode
 					case 'for_next': //@TODO
 					case 'precombat_seconds':
 						$this->isBlacklisted = true;
-
+						return;
+						break;
+					case 'precombat_time':
+						$this->isBlacklisted = true;
 						return;
 						break;
 					default:

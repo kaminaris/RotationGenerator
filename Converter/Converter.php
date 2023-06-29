@@ -106,12 +106,16 @@ class Converter
 								$value = 'WTFFFFFF';
 								break;
 							case 'set':
+							case 'setif':
+								break;
 							case 'add':
 							case 'sub':
 								$value = $action->variableValue;
 								break;
 							case 'reset':
 								$value = 0;
+								break;
+							case 'max':
 								break;
 							default:
 								throw new \Exception('Unrecognized variable operation: ' . $action->variableOperation);

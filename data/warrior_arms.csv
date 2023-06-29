@@ -44,3 +44,4 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 197690,Defensive Stance,0.000000,0,0,0,1,6.000000,
 268243,Collateral Damage,0.000000,0,0,1,1,0.000000,
 845,Cleave,0.000000,0,0,0,1,9.000000,RAGE:20
+405578,Tier304pc,0.000000,0,0,0,0,0.000000,
