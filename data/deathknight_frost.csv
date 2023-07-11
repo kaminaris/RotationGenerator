@@ -1,78 +1,109 @@
 id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
-315443,Abomination Limb,0.000000,0,20,0,0,120.000000,
-48707,Anti-Magic Shell,0.000000,0,0,0,0,60.000000,
-108194,Asphyxiate,0.000000,0,20,0,1,45.000000,
-207142,Avalanche,0.000000,0,0,1,1,0.000000,
-6945,Biting Cold,0.000000,0,0,1,0,0.000000,
-207167,Blinding Sleet,0.000000,0,0,0,1,60.000000,
-152279,Breath of Sindragosa,0.000000,0,0,0,1,120.000000,RUNIC_POWER:16
-45524,Chains of Ice,0.000000,0,30,0,0,0.000000,RUNES:1
-281208,Cold Heart,0.000000,0,0,1,1,0.000000,
-111673,Control Undead,1.300000,0,30,0,0,0.000000,RUNES:1
-56222,Dark Command,0.000000,0,30,0,0,8.000000,
-178819,Dark Succor,0.000000,0,0,1,0,0.000000,
-43265,Death and Decay,0.000000,0,30,0,0,30.000000,RUNES:1
-50977,Death Gate,3.600000,0,0,0,0,60.000000,RUNES:1
-49576,Death Grip,0.000000,0,30,0,0,25.000000,
-48743,Death Pact,0.000000,0,0,0,1,120.000000,
-49998,Death Strike,0.000000,0,0,0,0,0.000000,RUNIC_POWER:35
-48265,Death's Advance,0.000000,0,0,0,0,45.000000,
-324128,Death's Due,0.000000,0,30,0,0,30.000000,RUNES:1
-276079,Death's Reach,0.000000,0,0,1,1,0.000000,
-47568,Empower Rune Weapon,0.000000,0,0,0,0,1.800000,
-83,Eradicating Blow,0.000000,0,0,1,0,0.000000,
-91,Everfrost,0.000000,0,0,1,0,0.000000,
-55095,Frost Fever,0.000000,0,0,1,0,0.000000,
-49143,Frost Strike,0.000000,0,0,0,0,0.000000,RUNIC_POWER:25
-207230,Frostscythe,0.000000,0,8,0,1,0.000000,RUNES:1
-279302,Frostwyrm's Fury,0.000000,0,0,0,0,180.000000,
-194909,Frozen Pulse,0.000000,0,0,1,1,0.000000,
-194912,Gathering Storm,0.000000,0,0,1,1,0.000000,
-194913,Glacial Advance,0.000000,0,100,0,1,5.400000,RUNIC_POWER:30
-57330,Horn of Winter,0.000000,0,0,0,1,45.000000,
-49184,Howling Blast,0.000000,0,30,0,0,0.000000,RUNES:1;
-321995,Hypothermic Presence,0.000000,0,0,0,1,45.000000,
-48792,Icebound Fortitude,0.000000,0,0,0,0,180.000000,
-207126,Icecap,0.000000,0,0,1,1,0.000000,
-194878,Icy Talons,0.000000,0,0,1,1,0.000000,
-253593,Inexorable Assault,0.000000,0,0,1,1,0.000000,
-51128,Killing Machine,0.000000,0,0,1,0,0.000000,
-77514,Mastery: Frozen Heart,0.000000,0,0,1,0,0.000000,
-47528,Mind Freeze,0.000000,0,15,0,0,15.000000,
-207061,Murderous Efficiency,0.000000,0,0,1,1,0.000000,
-49020,Obliterate,0.000000,0,0,0,0,0.000000,RUNES:2
-281238,Obliteration,0.000000,0,0,1,0,0.000000,
-51986,On a Pale Horse,0.000000,0,0,1,1,0.000000,
-3714,Path of Frost,0.000000,0,0,0,0,0.000000,RUNES:1
-207200,Permafrost,0.000000,0,0,1,1,0.000000,
-6954,Phearomones,0.000000,0,0,0,0,0.000000,
-51271,Pillar of Frost,0.000000,0,0,0,0,60.000000,
-61999,Raise Ally,0.000000,0,40,0,0,600.000000,RUNIC_POWER:30
-46585,Raise Dead,0.000000,0,0,0,0,120.000000,
-51714,Razorice,0.000000,0,0,1,0,0.000000,
-196770,Remorseless Winter,0.000000,0,0,0,0,20.000000,RUNES:1
-59057,Rime,0.000000,0,0,1,0,0.000000,
-53428,Runeforging,0.000000,0,0,0,0,0.000000,
-207104,Runic Attenuation,0.000000,0,0,1,1,0.000000,
-81229,Runic Empowerment,0.000000,0,0,1,0,0.000000,
-327574,Sacrificial Pact,0.000000,0,0,0,0,120.000000,RUNIC_POWER:20
-312202,Shackle the Unworthy,0.000000,0,30,0,0,60.000000,
-311648,Swarming Mist,0.000000,0,0,0,0,60.000000,RUNES:1
-122,Unleashed Frenzy,0.000000,0,0,1,0,0.000000,
-48263,Veteran of the Third War,0.000000,0,0,1,0,0.000000,
-212552,Wraith Walk,0.000000,0,0,0,1,60.000000,
-53365,Unholy Strength,0.000000,0,0,1,0,0.000000,
-305392,Chill Streak,0,0,40,0,1,45,RUNES:1;RUNIC_POWER:10
+43265,Death and Decay,0,0,30,0,0,30,RUNES:1;RUNIC_POWER:-10;
+279302,Frostwyrm's Fury,0,0,0,0,1,180,
+391571,Gloom Ward,0,0,0,1,1,0,
+49143,Frost Strike,0,0,0,0,1,0,RUNIC_POWER:30;
+51052,Anti-Magic Zone,0,0,30,0,1,120,
+59057,Rime,0,0,0,1,1,0,
+377190,Enduring Strength,0,0,0,1,1,0,
+374111,Might of Thassarian,0,0,0,1,1,0,
+111673,Control Undead,1249,0,30,0,1,0,RUNES:1;RUNIC_POWER:-10;
+47528,Mind Freeze,0,0,15,0,1,15,RUNIC_POWER:0;
+376938,Everfrost,0,0,0,1,1,0,
+377351,Piercing Chill,0,0,0,1,1,0,
+49576,Death Grip,0,0,30,0,0,25,
+50977,Death Gate,3330,0,0,0,0,60,RUNES:1;RUNIC_POWER:-10;
+373923,Merciless Strikes,0,0,0,1,1,0,
+48707,Anti-Magic Shell,0,0,0,0,1,60,
+47568,Empower Rune Weapon,0,0,0,0,1,120,
+405166,Fatal Fixation,0,0,0,1,1,0,
+316838,Improved Rime,0,0,0,1,1,0,
+221562,Asphyxiate,0,0,20,0,1,45,
+51271,Pillar of Frost,0,0,0,0,1,60,
+48743,Death Pact,0,0,0,0,1,120,
+373926,Acclimation,0,0,0,1,1,0,
+378848,Coldthirst,0,0,0,1,1,0,
+48263,Veteran of the Third War,0,0,0,1,1,0,
+374277,Improved Death Strike,0,0,0,1,1,0,
+194878,Icy Talons,0,0,0,1,1,0,
+392566,Enfeeble,0,0,0,1,1,0,
+327574,Sacrificial Pact,0,0,0,0,1,120,RUNIC_POWER:20;
+49184,Howling Blast,0,0,30,0,1,0,RUNES:1;RUNIC_POWER:-10;
+377073,Frigid Executioner,0,0,0,1,1,0,
+373930,Proliferating Chill,0,0,0,1,1,0,
+389679,Clenching Grasp,0,0,0,1,1,0,
+374598,Blood Draw,0,0,0,1,1,0,
+392950,Icebreaker,0,0,0,1,1,0,
+207167,Blinding Sleet,0,0,0,0,1,60,
+276079,Death's Reach,0,0,0,1,1,0,
+273952,Grip of the Dead,0,0,0,1,1,0,
+207104,Runic Attenuation,0,0,0,1,1,0,
+376251,Runic Command,0,0,0,1,1,0,
+3714,Path of Frost,0,0,0,0,0,0,RUNES:1;
+46585,Raise Dead,0,0,30,0,1,120,
+389682,Unholy Endurance,0,0,0,1,1,0,
+207057,Shattering Blade,0,0,0,1,1,0,
+383269,Abomination Limb,0,0,20,0,1,120,
+374030,Blood Scent,0,0,0,1,1,0,
+194913,Glacial Advance,0,0,100,0,1,0,RUNIC_POWER:30;
+317198,Improved Obliterate,0,0,0,1,1,0,
+377047,Absolute Zero,0,0,0,1,1,0,
+376905,Unleashed Frenzy,0,0,0,1,1,0,
+77514,Mastery: Frozen Heart,0,0,0,1,0,0,
+51128,Killing Machine,0,0,0,1,1,0,
+196770,Remorseless Winter,0,0,0,0,0,20,RUNES:1;RUNIC_POWER:-10;
+48792,Icebound Fortitude,0,0,0,0,1,180,
+51986,On a Pale Horse,0,0,0,1,0,0,
+53428,Runeforging,0,0,0,0,0,0,
+61999,Raise Ally,0,0,40,0,0,600,RUNIC_POWER:30;
+81229,Runic Empowerment,0,0,0,1,0,0,
+207200,Permafrost,0,0,0,1,1,0,
+48265,Death's Advance,0,0,0,0,0,45,
+374383,Assimilation,0,0,0,1,1,0,
+212552,Wraith Walk,0,0,0,0,1,60,
+316916,Cleaving Strikes,0,0,0,1,1,0,
+47541,Death Coil,0,0,30,0,0,0,RUNIC_POWER:30;
+377076,Rage of the Frozen Champion,0,0,0,1,1,0,
+377083,Cold-Blooded Rage,0,0,0,1,1,0,
+377098,Bonegrinder,0,0,0,1,1,0,
+305392,Chill Streak,0,0,40,0,1,45,RUNES:1;RUNIC_POWER:-10;
+374574,Rune Mastery,0,0,0,1,1,0,
+56222,Dark Command,0,0,30,0,0,8,
+81333,Might of the Frozen Wastes,0,0,0,1,0,0,
+205727,Anti-Magic Barrier,0,0,0,1,1,0,
+178819,Dark Succor,0,0,0,1,0,0,
+49020,Obliterate,0,0,0,0,1,0,RUNES:2;
+391546,March of Darkness,0,0,0,1,1,0,
+207061,Murderous Efficiency,0,0,0,1,1,0,
+194912,Gathering Storm,0,0,0,1,1,0,
+377092,Invigorating Freeze,0,0,0,1,1,0,
+377226,Frostwhelp's Aid,0,0,0,1,1,0,
+374049,Suppression,0,0,0,1,1,0,
+374261,Unholy Bond,0,0,0,1,1,0,
+316803,Improved Frost Strike,0,0,0,1,1,0,
+374504,Brittle,0,0,0,1,1,0,
+49039,Lichborne,0,0,0,0,0,120,
+377056,Biting Cold,0,0,0,1,1,0,
+206967,Will of the Necropolis,0,0,0,1,1,0,
+45524,Chains of Ice,0,0,30,0,1,0,RUNES:1;RUNIC_POWER:-10;
+207126,Icecap,0,0,0,1,1,0,
+207142,Avalanche,0,0,0,1,1,0,
+377376,Enduring Chill,0,0,0,1,1,0,
+356367,Death's Echo,0,0,0,1,1,0,
+207230,Frostscythe,0,0,8,0,1,0,RUNES:1;
+57330,Horn of Winter,0,0,0,0,1,45,
+281208,Cold Heart,0,0,0,1,1,0,
+253593,Inexorable Assault,0,0,0,1,1,0,
+391566,Insidious Chill,0,0,0,1,1,0,
+374265,Unholy Ground,0,0,0,1,1,0,
+343294,Soul Reaper,0,0,0,0,1,6,RUNES:1;RUNIC_POWER:-10;
+281238,Obliteration,0,0,0,1,1,0,
+49998,Death Strike,0,0,0,0,1,0,RUNIC_POWER:45;
+152279,Breath of Sindragosa,0,0,0,0,1,120,RUNIC_POWER:0;
+
+51714,Razorice,0,0,0,0,0,0,
+55095,Frost Fever,0,0,0,0,0,0,
+53365,Unholy Strength,0,0,0,0,0,0,
+359437,Chaos Bane,0,0,0,0,0,0,
 317214,Frostreaper,0,0,0,0,0,0,
-374383,Assimilation,0,0,0,0,1,0,
-377047,Absolute Zero,0,0,0,0,1,0,
-377073,Frigid Executioner,0,0,0,0,1,0,
-392950,Icebreaker,0,0,0,0,1,0,
-81333,Might Of The Frozen Wastes,0,0,0,0,0,0,
-377076,Rage Of The Frozen Champion,0,0,0,0,1,0,
-343294,Soul Reaper,0,0,0,0,1,6,RUNES:1
-51052,Anti-Magic Zone,0,0,0,0,1,120,
-207057,Shattering Blade,0,0,0,0,1,0,
-317195,Improved Obliterate,0,0,0,0,1,0,
-316916,Cleaving Strikes,0,0,0,0,1,0,
-195617,Frost Fever Superstrain,0,0,0,0,0,0,
+393623,tier30_2pc,0,0,0,0,0,0,

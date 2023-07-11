@@ -1,51 +1,125 @@
 id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
-21562,Power Word: Fortitude,0.000000,0,40,0,0,0.000000,MANA:4000
-197419,Contrition,0.000000,0,0,1,1,0.000000,
-19236,Desperate Prayer,0.000000,0,0,0,0,90.000000,
-204263,Shining Force,0.000000,0,40,0,0,45.000000,MANA:2500
-47540,Penance,0.000000,0,40,0,0,9.000000,MANA:2000
-123040,Mindbender,0.000000,0,40,0,1,60.000000,
-212036,Mass Resurrection,8.811000,0,100,0,0,0.000000,MANA:800
-238063,Lenience,0.000000,0,0,1,1,0.000000,
-196704,Psychic Voice,0.000000,0,0,1,1,0.000000,
-271534,Mastery: Grace,0.000000,0,0,1,0,0.000000,
-129250,Power Word: Solace,0.000000,0,40,0,1,12.000000,
-205367,Dominant Mind,0.000000,0,0,1,1,0.000000,
-8122,Psychic Scream,0.000000,0,0,0,0,60.000000,MANA:3000
-110744,Divine Star,0.000000,0,30,0,0,15.000000,MANA:2000
-33206,Pain Suppression,0.000000,0,40,0,0,180.000000,MANA:1600
-120517,Halo,1.322000,0,30,0,1,40.000000,MANA:2700
-45243,Focused Will,0.000000,0,0,1,0,0.000000,
-214621,Schism,1.322000,0,40,0,1,24.000000,MANA:500
-17,Power Word: Shield,0.000000,0,40,0,0,0.000000,MANA:2500
-246287,Evangelism,0.000000,0,0,0,1,75.000000,
-194509,Power Word: Radiance,1.762000,0,40,0,0,0.000000,MANA:6500
-197045,Shield Discipline,0.000000,0,0,1,1,0.000000,
-198068,Power of the Dark Side,0.000000,0,0,1,0,0.000000,
-81749,Atonement,0.000000,0,0,1,0,0.000000,
-585,Smite,1.322000,0,40,0,0,0.000000,MANA:500
-34433,Shadowfiend,0.000000,0,40,0,0,180.000000,
-280391,Sins of the Many,0.000000,0,0,1,1,0.000000,
-528,Dispel Magic,0.000000,0,30,0,0,0.000000,MANA:4000
-32375,Mass Dispel,1.322000,0,30,0,0,45.000000,MANA:8000
-589,Shadow Word: Pain,0.000000,0,40,0,0,0.000000,MANA:1800
-2061,Flash Heal,1.322000,0,40,0,0,0.000000,MANA:3000
-9484,Shackle Undead,1.322000,0,30,0,0,0.000000,MANA:4000
-2006,Resurrection,8.811000,0,40,0,0,0.000000,MANA:0;MANA:800
-204197,Purge the Wicked,0.000000,0,40,0,1,0.000000,MANA:1800
-605,Mind Control,1.586000,0,30,0,0,0.000000,MANA:500
-47536,Rapture,0.000000,0,0,0,0,90.000000,
-1706,Levitate,0.000000,0,30,0,0,0.000000,MANA:900;MANA:0
-132157,Holy Nova,0.000000,0,0,0,0,0.000000,MANA:1600
-527,Purify,0.000000,0,40,0,0,8.000000,MANA:1300
-62618,Power Word: Barrier,0.000000,0,40,0,0,180.000000,MANA:4000
-586,Fade,0.000000,0,0,0,0,30.000000,
-265259,Twist of Fate,0.000000,0,0,1,1,0.000000,
-2096,Mind Vision,0.000000,0,50000,0,0,0.000000,MANA:0
-193063,Masochism,0.000000,0,0,1,1,0.000000,
-193134,Castigation,0.000000,0,0,1,1,0.000000,
-64129,Body and Soul,0.000000,0,0,1,1,0.000000,
-73325,Leap of Faith,0.000000,0,40,0,0,90.000000,MANA:2600
-271466,Luminous Barrier,0.000000,0,40,0,1,180.000000,MANA:4000
-204065,Shadow Covenant,0.000000,0,40,0,1,12.000000,MANA:2800
-121536,Angelic Feather,0.000000,0,40,0,0,0.000000,
+238100,Angel's Mercy,0,0,0,1,1,0,
+214621,Schism,1190,0,40,0,1,24,MANA:250;
+32375,Mass Dispel,1190,0,30,0,1,45,MANA:4000;MANA:0;MANA:0;
+415479,Essence Devourer,0,0,0,1,1,0,
+32379,Shadow Word: Death,0,0,40,0,1,10,MANA:250;
+108942,Phantasm,0,0,0,1,1,0,
+64129,Body and Soul,0,0,0,1,1,0,
+528,Dispel Magic,0,0,30,0,1,0,MANA:1000;MANA:0;MANA:0;
+110744,Divine Star,0,0,30,0,1,15,MANA:1000;
+390684,Bright Pupil,0,0,0,1,1,0,
+390686,Painful Punishment,0,0,0,1,1,0,
+47540,Penance,0,0,40,0,0,9,MANA:800;
+194509,Power Word: Radiance,1587,0,40,0,1,15,MANA:2250;
+390685,Enduring Luminescence,0,0,0,1,1,0,
+390689,Pain and Suffering,0,0,0,1,1,0,
+372969,Malicious Intent,0,0,0,1,1,0,
+390781,Wrath Unleashed,0,0,0,1,1,0,
+314867,Shadow Covenant,0,0,40,0,1,30,MANA:2250;
+373065,Twilight Corruption,0,0,0,1,1,0,
+55676,Petrifying Scream,0,0,0,1,1,0,
+212036,Mass Resurrection,7935,0,100,0,0,0,MANA:400;
+453,Mind Soothe,0,0,40,0,0,5,MANA:500;
+271466,Luminous Barrier,0,0,40,0,1,180,MANA:2000;
+47536,Rapture,0,0,40,0,1,90,MANA:1550;
+373003,Revel in Purity,0,0,0,1,1,0,
+373035,Protector of the Frail,0,0,0,1,1,0,
+368275,Binding Heals,0,0,0,1,1,0,
+372972,Dark Indulgence,0,0,0,1,1,0,
+9484,Shackle Undead,1190,0,30,0,1,0,MANA:600;
+585,Smite,1071,0,40,0,0,0,MANA:200;MANA:0;MANA:0;
+373042,Exaltation,0,0,0,1,1,0,
+373481,Power Word: Life,0,0,40,0,1,30,MANA:250;MANA:0;MANA:0;
+271534,Mastery: Grace,0,0,0,1,0,0,
+108920,Void Tendrils,0,0,0,0,1,60,MANA:500;
+373450,Light's Inspiration,0,0,0,1,1,0,
+280391,Sins of the Many,0,0,0,1,0,0,
+390786,Weal and Woe,0,0,0,1,1,0,
+390691,Borrowed Time,0,0,0,1,1,0,
+120517,Halo,1190,0,30,0,1,40,MANA:1350;
+108968,Void Shift,0,0,40,0,1,300,
+62618,Power Word: Barrier,0,0,40,0,1,180,MANA:2000;
+45243,Focused Will,0,0,0,1,0,0,
+238135,Aegis of Wrath,0,0,0,1,1,0,
+390996,Manipulation,0,0,0,1,1,0,
+390972,Twist of Fate,0,0,0,1,1,0,
+390693,Train of Thought,0,0,0,1,1,0,
+204197,Purge the Wicked,0,0,40,0,1,0,MANA:900;
+377422,Throes of Pain,0,0,0,1,1,0,
+373446,Translucent Image,0,0,0,1,1,0,
+205364,Dominate Mind,1428,0,30,0,1,30,MANA:1000;
+2006,Resurrection,7935,0,40,0,0,0,MANA:0;MANA:400;
+197419,Contrition,0,0,0,1,1,0,
+108945,Angelic Bulwark,0,0,0,1,1,0,
+322115,Light's Promise,0,0,0,1,1,0,
+196704,Psychic Voice,0,0,0,1,1,0,
+390632,Improved Purify,0,0,0,1,1,0,
+390668,Apathy,0,0,0,1,1,0,
+2061,Flash Heal,1071,0,40,0,0,0,MANA:0;MANA:0;MANA:1800;MANA:0;
+373456,Unwavering Will,0,0,0,1,1,0,
+375901,Mindgames,1190,0,40,0,1,45,MANA:1000;
+390919,Sheer Terror,0,0,0,1,1,0,
+193134,Castigation,0,0,0,1,1,0,
+373457,Crystalline Reflection,0,0,0,1,1,0,
+1706,Levitate,0,0,30,0,0,0,MANA:450;MANA:0;
+199855,San'layn,0,0,0,1,1,0,
+391079,Make Amends,0,0,0,1,1,0,
+129250,Power Word: Solace,0,0,40,0,1,15,
+17,Power Word: Shield,0,0,40,0,0,7.5,MANA:1200;MANA:0;MANA:0;MANA:0;
+390667,Spell Warding,0,0,0,1,1,0,
+373427,Inescapable Torment,0,0,0,1,1,0,
+2096,Mind Vision,0,0,50000,0,0,0,MANA:0;
+393870,Improved Flash Heal,0,0,0,1,1,0,
+139,Renew,0,0,40,0,1,0,MANA:0;MANA:1200;MANA:0;
+321291,Death and Madness,0,0,0,1,1,0,
+34433,Shadowfiend,0,0,40,0,1,180,
+586,Fade,0,0,0,0,0,30,
+280749,Void Shield,0,0,0,1,1,0,
+132157,Holy Nova,0,0,0,0,1,0,MANA:800;
+390620,Move with Grace,0,0,0,1,1,0,
+372985,Embrace Shadow,0,0,0,1,1,0,
+390670,Improved Fade,0,0,0,1,1,0,
+373049,Indemnity,0,0,0,1,1,0,
+390622,Rhapsody,0,0,0,1,1,0,
+238063,Lenience,0,0,0,1,1,0,
+33076,Prayer of Mending,0,0,40,0,1,12,MANA:1000;MANA:0;MANA:0;
+390770,Void Summoner,0,0,0,1,1,0,
+121536,Angelic Feather,0,0,40,0,1,20,
+390767,Blessed Recovery,0,0,0,1,1,0,
+373466,Twins of the Sun Priestess,0,0,0,1,1,0,
+246287,Evangelism,0,0,0,0,1,90,
+341167,Improved Mass Dispel,0,0,0,1,1,0,
+390832,Expiation,0,0,0,1,1,0,
+605,Mind Control,1428,0,30,0,1,0,MANA:1000;
+390705,Twilight Equilibrium,0,0,0,1,1,0,
+390765,Resplendent Light,0,0,0,1,1,0,
+372354,Focused Mending,0,0,0,1,1,0,
+10060,Power Infusion,0,0,40,0,1,120,
+373180,Harsh Discipline,0,0,0,1,1,0,
+109186,Surge of Light,0,0,0,1,1,0,
+19236,Desperate Prayer,0,0,0,0,0,90,
+373178,Light's Wrath,1984,0,40,0,1,90,MANA:1000;
+373054,Abyssal Reverie,0,0,0,1,1,0,
+215768,Blaze of Light,0,0,0,1,1,0,
+372991,Pain Transformation,0,0,0,1,1,0,
+390676,Inspiration,0,0,0,1,1,0,
+391112,Shattered Perceptions,0,0,0,1,1,0,
+47515,Divine Aegis,0,0,0,1,1,0,
+197045,Shield Discipline,0,0,0,1,1,0,
+73325,Leap of Faith,0,0,40,0,1,90,MANA:1300;
+373223,Tithe Evasion,0,0,0,1,1,0,
+8092,Mind Blast,1190,0,40,0,0,7.141,MANA:480;MANA:0;MANA:0;MANA:0;
+377438,Words of the Pious,0,0,0,1,1,0,
+193063,Protective Light,0,0,0,1,1,0,
+33206,Pain Suppression,0,0,40,0,1,180,MANA:800;
+390615,From Darkness Comes Light,0,0,0,1,1,0,
+15286,Vampiric Embrace,0,0,0,0,1,120,
+81749,Atonement,0,0,0,1,1,0,
+527,Purify,0,0,40,0,0,8,MANA:650;
+198068,Power of the Dark Side,0,0,0,1,1,0,
+21562,Power Word: Fortitude,0,0,40,0,0,0,MANA:2000;
+8122,Psychic Scream,0,0,0,0,0,45,MANA:600;
+123040,Mindbender,0,0,40,0,1,60,
+373218,Sanguine Teachings,0,0,0,1,1,0,
+415416,Benevolence,0,0,0,1,1,0,

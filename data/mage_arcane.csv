@@ -1,34 +1,109 @@
 id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
-114923,Nether Tempest,0,0,40,0,1,0,MANA:750
-12051,Evocation,0,0,0,0,0,90,
-1449,Arcane Explosion,0,0,0,0,0,0,MANA:5000
-1459,Arcane Intellect,0,0,40,0,0,0,MANA:2000
-153561,Meteor,0,0,40,0,1,45,MANA:500
-79684,Clearcasting,0,0,0,0,1,0,
-376103,Radiant Spark,0,0,40,0,0,30,MANA:1000
-5143,Arcane Missiles,0,0,40,0,1,0,MANA:7500
-55342,Mirror Image,0,0,0,0,1,120,MANA:1000
-759,Conjure Mana Gem,0,0,0,0,1,0,MANA:9000
-80353,Time Warp,0,0,0,0,0,300,MANA:2000
-205022,Arcane Familiar,0,0,0,0,1,10,
-384452,Arcane Harmony,0,0,0,0,1,0,
-30451,Arcane Blast,0,0,40,0,1,0,MANA:1375
-384187,Siphon Storm,0,0,0,0,1,0,
-386539,Temporal Warp,0,0,0,0,1,0,
-365350,Arcane Surge,0,0,40,0,1,90,MANA:1
-153626,Arcane Orb,0,0,40,0,1,20,MANA:500
-116011,Rune of Power,0,0,0,0,1,45,
-321507,Touch of the Magi,0,0,40,0,1,45,MANA:2500
-44425,Arcane Barrage,0,0,40,0,1,3,
-384276,Cascading Power,0,0,0,0,1,0,
-382440,Shifting Power,0,0,0,0,1,60,MANA:2500
+343183,Improved Frost Nova,0,0,0,1,1,0,
+321752,Crackling Energy,0,0,0,1,1,0,
+342231,Arcane Echo,0,0,0,1,1,0,
+382268,Flow of Time,0,0,0,1,1,0,
+212653,Shimmer,0,0,0,0,1,21,MANA:1000;
+5143,Arcane Missiles,0,0,40,0,1,0,MANA:7500;
+108839,Ice Floes,0,0,0,0,1,20,
+382270,Diverted Energy,0,0,0,1,1,0,
+382493,Tome of Rhonin,0,0,0,1,1,0,
+157981,Blast Wave,0,0,0,0,1,30,
 157997,Ice Nova,0,0,40,0,1,25,
-342231,Arcane Echo,0,0,0,0,1,0,
+110959,Greater Invisibility,0,0,0,0,1,120,
+759,Conjure Mana Gem,2353,0,0,0,1,0,MANA:9000;
+264354,Rule of Threes,0,0,0,1,1,0,
+414659,Ice Cold,0,0,0,1,1,0,
+31661,Dragon's Breath,0,0,0,0,1,45,MANA:2000;
+205036,Ice Ward,0,0,0,1,1,0,
+414660,Mass Barrier,0,0,0,0,1,120,MANA:6000;
+190336,Conjure Refreshment,2353,0,0,0,0,15,MANA:1500;
+391102,Mass Slow,0,0,0,1,1,0,
+384276,Cascading Power,0,0,0,1,1,0,
+44425,Arcane Barrage,0,0,40,0,0,0,
+236628,Amplification,0,0,0,1,1,0,
+231564,Arcing Cleave,0,0,0,1,1,0,
+1449,Arcane Explosion,0,0,0,0,0,0,MANA:5000;
+384374,Concentration,0,0,0,1,1,0,
+414664,Mass Invisibility,0,0,0,0,1,300,MANA:3000;
+414379,Concentrated Power,0,0,0,1,1,0,
+383243,Time Anomaly,0,0,0,1,1,0,
+382820,Reabsorption,0,0,0,1,1,0,
+390218,Overflowing Energy,0,0,0,1,1,0,
+79684,Clearcasting,0,0,0,1,0,0,MANA:500;
+342245,Alter Time,0,0,0,0,1,60,MANA:500;
+382440,Shifting Power,0,0,0,0,1,60,MANA:2500;
+30449,Spellsteal,0,0,40,0,1,0,MANA:3465;
+30451,Arcane Blast,1764,0,40,0,0,0,MANA:1375;
+384187,Siphon Storm,0,0,0,1,1,0,
+80353,Time Warp,0,0,0,0,0,300,MANA:2000;
+387807,Time Manipulation,0,0,0,1,1,0,
+130,Slow Fall,0,0,40,0,0,0,MANA:500;
+122,Frost Nova,0,0,0,0,0,30,MANA:1000;
+382569,Reduplication,0,0,0,1,1,0,
+389713,Displacement,0,0,40,0,1,45,
+45438,Ice Block,0,0,0,0,1,240,
+31589,Slow,0,0,35,0,1,0,MANA:500;
+382297,Quick Witted,0,0,0,1,1,0,
+386539,Temporal Warp,0,0,0,1,1,0,
+321420,Improved Clearcasting,0,0,0,1,1,0,
+66,Invisibility,0,0,0,0,0,300,MANA:1500;
+114923,Nether Tempest,0,0,40,0,1,0,MANA:750;
 205025,Presence of Mind,0,0,0,0,1,45,
-384581,Arcane Bombardment,0,0,0,0,1,0,
-384858,Orb Barrage,0,0,0,0,1,0,
-384374,Concentration,0,0,0,0,1,0,
-383782,Nether Precision,0,0,0,0,1,0,
-36032,Arcane Charge,0,0,0,0,0,0,
-307454,Radiant Spark Vulnerability,0,0,0,0,0,0,
+342249,Master of Time,0,0,0,1,1,0,
+382826,Temporal Velocity,0,0,0,1,1,0,
+384858,Orb Barrage,0,0,0,1,1,0,
+386763,Freezing Cold,0,0,0,1,1,0,
+235450,Prismatic Barrier,0,0,0,0,1,25,MANA:1500;
+281482,Reverberate,0,0,0,1,1,0,
+383121,Mass Polymorph,1333,0,0,0,1,60,MANA:2000;
+321387,Enlightened,0,0,0,1,1,0,
+386828,Energized Barriers,0,0,0,1,1,0,
+384452,Arcane Harmony,0,0,0,1,1,0,
+319836,Fire Blast,0,0,40,0,0,9.41,MANA:500;
+113724,Ring of Frost,1568,0,30,0,1,45,MANA:4000;
+205028,Resonance,0,0,0,1,1,0,
+382289,Tempest Barrier,0,0,0,1,1,0,
+384861,Foresight,0,0,0,1,1,0,
+190740,Mastery: Savant,0,0,0,1,0,0,
+383782,Nether Precision,0,0,0,1,1,0,
+384612,Prodigious Savant,0,0,0,1,1,0,
+236457,Slipstream,0,0,0,1,1,0,
+475,Remove Curse,0,0,40,0,1,8,MANA:650;
+382490,Tome of Antonidas,0,0,0,1,1,0,
+1463,Incanter's Flow,0,0,0,1,1,0,
+55342,Mirror Image,0,0,0,0,1,120,MANA:1000;
+382293,Incantation of Swiftness,0,0,0,1,1,0,
+382292,Cryo-Freeze,0,0,0,1,1,0,
+382800,Accumulative Shielding,0,0,0,1,1,0,
+321745,Improved Prismatic Barrier,0,0,0,1,1,0,
+205022,Arcane Familiar,0,0,0,0,1,10,
+389627,Volatile Detonation,0,0,0,1,1,0,
+153626,Arcane Orb,0,0,40,0,1,20,MANA:500;
+157980,Supernova,0,0,40,0,1,25,
+383676,Impetus,0,0,0,1,1,0,
+384060,Illuminated Thoughts,0,0,0,1,1,0,
+235224,Frigid Winds,0,0,0,1,1,0,
+376103,Radiant Spark,1176,0,40,0,1,30,MANA:1000;
+365350,Arcane Surge,1961,0,40,0,1,90,MANA:63132;
+382481,Rigid Ice,0,0,0,1,1,0,
+384581,Arcane Bombardment,0,0,0,1,1,0,
+12051,Evocation,0,0,0,0,1,90,
+321526,Mana Adept,0,0,0,1,1,0,
+383661,Improved Arcane Missiles,0,0,0,1,1,0,
+235711,Chrono Shift,0,0,0,1,1,0,
+384651,Charged Orb,0,0,0,1,1,0,
+384683,Harmonic Echo,0,0,0,1,1,0,
+2139,Counterspell,0,0,40,0,0,24,MANA:1000;
+382424,Winter's Protection,0,0,0,1,1,0,
+383980,Arcane Tempo,0,0,0,1,1,0,
+116,Frostbolt,1568,0,40,0,0,0,MANA:1000;
+1459,Arcane Intellect,0,0,40,0,0,0,MANA:2000;
+118,Polymorph,1333,0,30,0,0,0,MANA:2000;
+383092,Arcane Warding,0,0,0,1,1,0,
+120,Cone of Cold,0,0,0,0,0,12,MANA:2000;
+321507,Touch of the Magi,0,0,40,0,1,45,MANA:2500;
+
+393654,tier30_4pc,0,0,0,0,0,0,
+190427,Arcane Charge,0,0,0,0,0,0,
 409022,Arcane Overload,0,0,0,0,0,0,

@@ -1,63 +1,122 @@
 id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
-267214,Sacrificed Souls,0.000000,0,100,1,1,0.000000,
-219272,Demon Skin,0.000000,0,0,1,1,0.000000,
-215941,Soul Conduit,0.000000,0,0,1,1,0.000000,
-267215,Demonic Consumption,0.000000,0,100,1,1,0.000000,
-77219,Mastery: Master Demonologist,0.000000,0,0,1,0,0.000000,
-710,Banish,1.321000,0,30,0,0,0.000000,
-205145,Demonic Calling,0.000000,0,0,1,1,0.000000,
-246985,Soul Shards,0.000000,0,0,1,0,0.000000,
-111771,Demonic Gateway,1.761000,10,40,0,0,10.000000,
-267170,From the Shadows,0.000000,0,40,1,1,0.000000,
-264178,Demonbolt,3.963000,0,40,0,0,0.000000,
-29893,Create Soulwell,2.642000,0,30,0,0,120.000000,
-265187,Summon Demonic Tyrant,1.761000,0,40,0,0,90.000000,
-6201,Create Healthstone,2.642000,0,0,0,0,0.000000,
-1098,Enslave Demon,2.642000,0,30,0,0,0.000000,
-264874,Darkfury,0.000000,0,0,1,1,0.000000,
-111898,Grimoire: Felguard,0.000000,0,40,0,0,120.000000,SOUL_SHARDS:1
-30283,Shadowfury,1.321000,0,35,0,0,60.000000,
-264119,Summon Vilefiend,1.761000,0,40,0,0,45.000000,SOUL_SHARDS:1
-267171,Demonic Strength,0.000000,0,100,0,1,60.000000,
-108416,Dark Pact,0.000000,0,0,0,1,60.000000,
-108370,Soul Leech,0.000000,0,0,1,0,0.000000,
-264057,Soul Strike,0.000000,0,50,0,1,10.000000,
-288843,Demonic Embrace,0.000000,0,0,1,0,0.000000,
-265412,Doom,0.000000,0,40,0,1,0.000000,
-267102,Demonic Core,0.000000,0,100,1,0,0.000000,
-119898,Command Demon,0.000000,0,0,0,0,0.000000,
-268358,Demonic Circle,0.440000,0,0,0,1,10.000000,
-5697,Unending Breath,0.000000,0,30,0,0,0.000000,
-20707,Soulstone,2.642000,0,40,0,0,600.000000,
-234153,Drain Life,0.000000,0,40,0,0,0.000000,
-6789,Mortal Coil,0.000000,0,20,0,1,45.000000,
-101508,The Codex of Xerrath,0.000000,0,0,1,0,0.000000,
-698,Ritual of Summoning,0.000000,0,30,0,0,120.000000,
-196277,Implosion,0.000000,0,40,0,0,0.000000,
-5782,Fear,1.497000,0,30,0,0,0.000000,
-755,Health Funnel,0.000000,0,45,0,0,0.000000,
-105174,Hand of Gul'dan,1.321000,0,40,0,0,0.000000,SOUL_SHARDS:1
-267211,Bilescourge Bombers,0.000000,0,40,0,1,30.000000,SOUL_SHARDS:2
-126,Eye of Kilrogg,1.761000,0,50000,0,0,0.000000,
-267216,Inner Demons,0.000000,0,100,1,1,0.000000,
-104316,Call Dreadstalkers,1.761000,0,40,0,0,20.000000,SOUL_SHARDS:2
-108415,Soul Link,0.000000,0,100,1,0,0.000000,
-264078,Dreadlash,0.000000,0,40,1,1,0.000000,
-686,Shadow Bolt,1.761000,0,40,0,0,0.000000,
-104773,Unending Resolve,0.000000,0,0,0,0,180.000000,
-48018,Demonic Circle,0.440000,0,0,0,0,10.000000,
-48020,Demonic Circle: Teleport,0.000000,0,40,0,0,30.000000,
-111400,Burning Rush,0.000000,0,0,0,1,0.000000,
-264130,Power Siphon,0.000000,0,100,0,1,30.000000,
-267217,Nether Portal,2.202000,0,40,0,1,180.000000,SOUL_SHARDS:1
-321792,Impending Catastrophe,2,0,40,0,0,120,
-325289,Decimating Bolt,2.5,0,40,0,0,45,
-325640,Soul Rot,1.5,0,40,0,0,60,
-312321,Scouring Tithe,2,0,40,0,0,40,
-264119,sss,1,0,40,0,1,45,SOUL_SHARDS:1
-264119,Summon Vilefiend,1.761000,0,40,0,0,45.000000,SOUL_SHARDS:1
-10060,Power Infusion,0,0,40,0,1,120,
-334585,Soulbound Tyrant,0,0,0,0,1,0,
-385899,Soulburn,0,0,0,0,1,6,SOUL_SHARDS:1
+219272,Demon Skin,0,0,0,1,1,0,
+390173,Reign of Tyranny,0,0,0,1,1,0,
+387602,Stolen Power,0,0,0,1,1,0,
+386110,Fiendish Stride,0,0,0,1,1,0,
+386174,Annihilan Training,0,0,0,1,1,0,
+387349,Bloodbound Imps,0,0,0,1,1,0,
+405955,Sargerei Technique,0,0,0,1,1,0,
+387445,Imp Gang Boss,0,0,0,1,1,0,
+386620,Sweet Souls,0,0,0,1,1,0,
+387541,Pact of the Imp Mother,0,0,0,1,1,0,
+5782,Fear,1270,0,30,0,0,0,MANA:2500;
+386113,Fel Pact,0,0,0,1,1,0,
+264130,Power Siphon,0,0,100,0,1,30,
+215941,Soul Conduit,0,0,0,1,1,0,
+328774,Amplify Curse,0,0,0,0,1,60,
+267211,Bilescourge Bombers,0,0,40,0,1,30,
+416341,Malefic Impact,0,0,0,1,1,0,
+334585,Soulbound Tyrant,0,0,40,1,1,0,
+387322,Shadow's Bite,0,0,0,1,1,0,
+416183,Heavy Handed,0,0,0,1,1,0,
+172,Corruption,1494,0,40,0,0,0,MANA:500;
+389609,Abyss Walker,0,0,0,1,1,0,
+104316,Call Dreadstalkers,1494,0,40,0,1,20,SOUL_SHARDS:2;
+29893,Create Soulwell,2241,0,30,0,0,120,MANA:2500;
+386689,Grim Feast,0,0,0,1,1,0,
+333889,Fel Domination,0,0,0,0,1,180,
+56244,Horrify,0,0,0,1,1,0,
+416154,Cavitation,0,0,0,1,1,0,
+268358,Demonic Circle,0,0,0,1,1,0,MANA:1000;
+108370,Soul Leech,0,0,0,1,0,0,
+386659,Dark Accord,0,0,0,1,1,0,
+196277,Implosion,0,0,40,0,1,0,MANA:1000;
+267216,Inner Demons,0,0,100,1,1,0,
+105174,Hand of Gul'dan,1120,0,40,0,0,0,SOUL_SHARDS:3;
+387549,Infernal Command,0,0,0,1,1,0,
+389359,Resolute Barrier,0,0,0,1,1,0,
+267217,Nether Portal,1120,0,40,0,1,180,SOUL_SHARDS:1;
+387391,Dread Calling,0,0,0,1,1,0,
+385899,Soulburn,0,0,0,0,1,6,SOUL_SHARDS:1;
+386185,Demonic Knowledge,0,0,0,1,1,0,
+386344,Inquisitor's Gaze,0,0,0,1,1,0,
+686,Shadow Bolt,1494,0,40,0,0,0,MANA:750;
+20707,Soulstone,2241,0,40,0,0,600,MANA:500;
+5484,Howl of Terror,0,0,0,0,1,40,MANA:900;
+265187,Summon Demonic Tyrant,1494,0,40,0,1,90,MANA:1000;
+387578,Gul'dan's Ambition,0,0,0,1,1,0,
+698,Ritual of Summoning,0,0,30,0,0,120,MANA:0;
+77219,Mastery: Master Demonologist,0,0,0,1,0,0,
+111771,Demonic Gateway,1494,10,40,0,1,10,MANA:10000;
+386124,Fel Armor,0,0,0,1,1,0,
+386664,Ichor of Devils,0,0,0,1,1,0,
+101508,The Codex of Xerrath,0,0,0,1,0,0,
+334275,Curse of Exhaustion,0,0,40,0,0,0,MANA:500;
+288843,Demonic Embrace,0,0,0,1,1,0,
+126,Eye of Kilrogg,1494,0,50000,0,0,0,MANA:1500;
+603,Doom,0,0,40,0,1,0,MANA:500;
+234153,Drain Life,0,0,40,0,0,0,MANA:0;
+389576,Profane Bargain,0,0,0,1,1,0,
+267214,Sacrificed Souls,0,0,100,1,1,0,
+1714,Curse of Tongues,0,0,40,0,0,0,MANA:500;
+755,Health Funnel,0,0,45,0,0,0,
+387526,Ner'zhul's Volition,0,0,0,1,1,0,
+264874,Darkfury,0,0,0,1,1,0,
+119898,Command Demon,0,0,0,0,0,0,
+386858,Demonic Inspiration,0,0,100,1,1,0,
+48018,Demonic Circle,373,0,50000,0,0,10,MANA:1000;
+386613,Accrued Vitality,0,0,0,1,1,0,
+389367,Fel Synergy,0,0,100,1,1,0,
+387494,Antoran Armaments,0,0,0,1,1,0,
+386256,Summon Soulkeeper,747,0,40,0,1,0,
+389590,Demonic Resilience,0,0,100,1,1,0,
+246985,Soul Shards,0,0,0,1,0,0,
+171975,Grimoire of Synergy,0,0,0,1,1,0,
+108415,Soul Link,0,0,100,1,1,0,
+342601,Ritual of Doom,0,0,40,0,0,3600,SOUL_SHARDS:1;
+387972,Teachings of the Satyr,0,0,0,1,1,0,
+317138,Strength of Will,0,0,0,1,1,0,
+416230,Imp-erator,0,0,0,1,1,0,
+384069,Shadowflame,0,0,0,0,1,15,MANA:1500;
+387084,Grand Warlock's Design,0,0,0,1,1,0,
+6201,Create Healthstone,2241,0,0,0,0,0,MANA:1000;
+111400,Burning Rush,0,0,0,0,1,0,
+264178,Demonbolt,3361,0,40,0,1,0,MANA:1000;
+710,Banish,1120,0,30,0,1,0,MANA:750;
+267102,Demonic Core,0,0,100,1,0,0,
+264078,Dreadlash,0,0,40,1,1,0,
+5697,Unending Breath,0,0,30,0,0,0,MANA:1000;
+264119,Summon Vilefiend,1494,0,40,0,1,45,SOUL_SHARDS:1;
+386864,Wrathful Minion,0,0,100,1,1,0,
+108416,Dark Pact,0,0,0,0,1,60,
+30283,Shadowfury,1120,0,35,0,1,60,MANA:500;
 386833,Guillotine,0,0,40,0,1,45,
-387600,The Expendables,0,0,0,0,1,0,
+205145,Demonic Calling,0,0,0,1,1,0,
+385881,Teachings of the Black Harvest,0,0,0,1,1,0,
+104773,Unending Resolve,0,0,0,0,0,180,MANA:1000;
+386194,Carnivorous Stalkers,0,0,0,1,1,0,
+264057,Soul Strike,0,0,50,0,1,10,
+111898,Grimoire: Felguard,0,0,40,0,1,120,SOUL_SHARDS:1;
+387399,Fel Sunder,0,0,100,1,1,0,
+386200,Fel and Steel,0,0,0,1,1,0,
+386105,Curses of Enfeeblement,0,0,0,1,1,0,
+387483,Kazaak's Final Curse,0,0,0,1,1,0,
+267170,The Houndmaster's Stratagem,0,0,40,1,1,0,
+405936,Socrethar's Guile,0,0,0,1,1,0,
+405798,Umbral Blaze,0,0,0,1,1,0,
+386646,Lifeblood,0,0,0,1,1,0,
+267171,Demonic Strength,0,0,100,0,1,60,
+702,Curse of Weakness,0,0,40,0,0,0,MANA:500;
+48020,Demonic Circle: Teleport,0,0,40,0,0,30,MANA:1500;
+386648,Nightmare,0,0,0,1,1,0,
+386617,Demonic Fortitude,0,0,100,1,1,0,
+387600,The Expendables,0,0,0,1,1,0,
+405670,Immutable Hatred,0,0,0,1,1,0,
+6789,Mortal Coil,0,0,20,0,1,45,MANA:1000;
+1098,Subjugate Demon,2241,0,30,0,0,0,MANA:1000;
+386686,Frequent Donor,0,0,0,1,1,0,
+
+265273,Demonic Power,0,0,0,0,0,0,
+265187,Tyrant,0,0,0,0,0,0,
+386309,Tormented Soul,0,0,0,0,0,0,
+104316,Dreadstalkers,0,0,0,0,0,0,

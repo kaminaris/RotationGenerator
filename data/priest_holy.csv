@@ -1,0 +1,129 @@
+id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
+390967,Prismatic Echoes,0,0,0,1,1,0,
+14914,Holy Fire,1190,0,40,0,0,10,MANA:500;
+238100,Angel's Mercy,0,0,0,1,1,0,
+415416,Benevolence,0,0,0,1,1,0,
+372616,Empyreal Blaze,0,0,0,0,1,60,MANA:500;
+32375,Mass Dispel,1190,0,30,0,1,45,MANA:0;MANA:4000;MANA:0;
+415479,Essence Devourer,0,0,0,1,1,0,
+32379,Shadow Word: Death,0,0,40,0,1,10,MANA:250;
+108942,Phantasm,0,0,0,1,1,0,
+64129,Body and Soul,0,0,0,1,1,0,
+200128,Trail of Light,0,0,0,1,1,0,
+110744,Divine Star,0,0,30,0,1,15,MANA:1000;
+196985,Light of the Naaru,0,0,0,1,1,0,
+372370,Gales of Song,0,0,0,1,1,0,
+64843,Divine Hymn,0,0,40,0,1,180,MANA:2200;
+20711,Spirit of Redemption,0,0,0,1,0,0,
+391161,Everlasting Light,0,0,0,1,1,0,
+2050,Holy Word: Serenity,0,0,40,0,1,60,MANA:1250;
+88625,Holy Word: Chastise,0,0,30,0,1,60,MANA:1000;
+373223,Tithe Evasion,0,0,0,1,1,0,
+193157,Benediction,0,0,0,1,1,0,
+390881,Healing Chorus,0,0,0,1,1,0,
+390972,Twist of Fate,0,0,0,1,1,0,
+200209,Guardian Angel,0,0,0,1,1,0,
+212036,Mass Resurrection,7935,0,100,0,0,0,MANA:400;
+453,Mind Soothe,0,0,40,0,0,5,MANA:500;
+321377,Prayer Circle,0,0,0,1,1,0,
+586,Fade,0,0,0,0,0,30,
+390977,Prayers of the Virtuous,0,0,0,1,1,0,
+390996,Manipulation,0,0,0,1,1,0,
+373450,Light's Inspiration,0,0,0,1,1,0,
+391387,Answered Prayers,0,0,0,1,1,0,
+9484,Shackle Undead,1190,0,30,0,1,0,MANA:600;
+585,Smite,1071,0,40,0,0,0,MANA:0;MANA:100;MANA:0;
+265202,Holy Word: Salvation,1984,0,40,0,1,720,MANA:3000;
+373481,Power Word: Life,0,0,40,0,1,30,MANA:0;MANA:250;MANA:0;
+238136,Cosmic Ripple,0,0,0,1,1,0,
+108920,Void Tendrils,0,0,0,0,1,60,MANA:500;
+372307,Burning Vehemence,0,0,0,1,1,0,
+368275,Binding Heals,0,0,0,1,1,0,
+391154,Holy Mending,0,0,100,1,1,0,
+2006,Resurrection,7935,0,40,0,0,0,MANA:400;MANA:0;
+120517,Halo,1190,0,30,0,1,40,MANA:1350;
+108968,Void Shift,0,0,40,0,1,300,
+2060,Heal,1785,0,40,0,0,0,MANA:1200;
+414553,Epiphany,0,0,0,1,1,0,
+372309,Resonant Words,0,0,0,1,1,0,
+372835,Lightwell,0,0,40,0,1,120,MANA:1850;
+73325,Leap of Faith,0,0,40,0,1,90,MANA:1300;
+390947,Orison,0,0,0,1,1,0,
+45243,Focused Will,0,0,0,1,0,0,
+377422,Throes of Pain,0,0,0,1,1,0,
+2096,Mind Vision,0,0,50000,0,0,0,MANA:0;
+196489,Sanctified Prayers,0,0,100,1,1,0,
+390980,Pontifex,0,0,0,1,1,0,
+390954,Crisis Management,0,0,0,1,1,0,
+132157,Holy Nova,0,0,0,0,1,0,MANA:800;
+393870,Improved Flash Heal,0,0,0,1,1,0,
+34861,Holy Word: Sanctify,0,0,40,0,1,60,MANA:1750;
+390632,Improved Purify,0,0,0,1,1,0,
+17,Power Word: Shield,0,0,40,0,0,7.5,MANA:0;MANA:1550;MANA:0;MANA:0;
+2061,Flash Heal,1071,0,40,0,0,0,MANA:1800;MANA:0;MANA:0;MANA:0;
+373456,Unwavering Will,0,0,0,1,1,0,
+321291,Death and Madness,0,0,0,1,1,0,
+390919,Sheer Terror,0,0,0,1,1,0,
+341167,Improved Mass Dispel,0,0,0,1,1,0,
+373457,Crystalline Reflection,0,0,0,1,1,0,
+1706,Levitate,0,0,30,0,0,0,MANA:0;MANA:450;
+109186,Surge of Light,0,0,0,1,1,0,
+200183,Apotheosis,0,0,0,0,1,120,
+200199,Censure,0,0,0,1,1,0,
+391368,Rapid Recovery,0,0,0,1,1,0,
+390667,Spell Warding,0,0,0,1,1,0,
+196437,Guardians of the Light,0,0,100,1,1,0,
+391112,Shattered Perceptions,0,0,0,1,1,0,
+64901,Symbol of Hope,0,0,40,0,1,180,
+390668,Apathy,0,0,0,1,1,0,
+204883,Circle of Healing,0,0,40,0,1,15,MANA:1650;
+34433,Shadowfiend,0,0,40,0,1,180,
+47788,Guardian Spirit,0,0,40,0,1,180,MANA:450;
+390992,Lightweaver,0,0,0,1,1,0,
+391209,Prayerful Litany,0,0,0,1,1,0,
+596,Prayer of Healing,1428,0,40,0,1,0,MANA:2200;
+341997,Renewed Faith,0,0,0,1,1,0,
+390670,Improved Fade,0,0,0,1,1,0,
+392988,Divine Image,0,0,0,1,1,0,
+390620,Move with Grace,0,0,0,1,1,0,
+235587,Miracle Worker,0,0,0,1,1,0,
+33076,Prayer of Mending,0,0,40,0,1,12,MANA:0;MANA:1000;MANA:0;
+605,Mind Control,1428,0,30,0,1,0,MANA:1000;
+121536,Angelic Feather,0,0,40,0,1,20,
+390767,Blessed Recovery,0,0,0,1,1,0,
+391208,Revitalizing Prayers,0,0,0,1,1,0,
+391339,Empowered Renew,0,0,0,1,1,0,
+196704,Psychic Voice,0,0,0,1,1,0,
+280749,Void Shield,0,0,0,1,1,0,
+373446,Translucent Image,0,0,0,1,1,0,
+589,Shadow Word: Pain,0,0,40,0,0,0,MANA:0;MANA:150;MANA:0;MANA:0;
+55676,Petrifying Scream,0,0,0,1,1,0,
+372354,Focused Mending,0,0,0,1,1,0,
+10060,Power Infusion,0,0,40,0,1,120,
+390622,Rhapsody,0,0,0,1,1,0,
+373466,Twins of the Sun Priestess,0,0,0,1,1,0,
+19236,Desperate Prayer,0,0,0,0,0,90,
+139,Renew,0,0,40,0,1,0,MANA:900;MANA:0;MANA:0;
+196707,Afterlife,0,0,0,1,1,0,
+193155,Enlightenment,0,0,0,1,1,0,
+372760,Divine Word,0,0,0,0,1,60,
+390676,Inspiration,0,0,0,1,1,0,
+193063,Protective Light,0,0,0,1,1,0,
+390994,Harmonious Apparatus,0,0,0,1,1,0,
+375901,Mindgames,1190,0,40,0,1,45,MANA:1000;
+199855,San'layn,0,0,0,1,1,0,
+108945,Angelic Bulwark,0,0,0,1,1,0,
+391233,Divine Service,0,0,0,1,1,0,
+377438,Words of the Pious,0,0,0,1,1,0,
+391186,Say Your Prayers,0,0,100,1,1,0,
+205364,Dominate Mind,1428,0,30,0,1,30,MANA:1000;
+390615,From Darkness Comes Light,0,0,0,1,1,0,
+15286,Vampiric Embrace,0,0,0,0,1,120,
+528,Dispel Magic,0,0,30,0,1,0,MANA:0;MANA:1000;MANA:0;
+527,Purify,0,0,40,0,0,8,MANA:650;
+391124,Restitution,0,0,0,1,1,0,
+21562,Power Word: Fortitude,0,0,40,0,0,0,MANA:2000;
+8122,Psychic Scream,0,0,0,0,0,45,MANA:600;
+77485,Mastery: Echo of Light,0,0,0,1,0,0,
+373218,Sanguine Teachings,0,0,0,1,1,0,
+391381,Desperate Times,0,0,0,1,1,0,

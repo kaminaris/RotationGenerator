@@ -1,0 +1,128 @@
+id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
+35395,Crusader Strike,0,0,0,0,0,6.25,MANA:4000;
+183998,Light of the Martyr,0,0,40,0,1,0,MANA:4000;
+414113,Righteous Judgment,0,0,0,1,1,0,
+853,Hammer of Justice,0,0,10,0,0,60,MANA:1750;
+392907,Inflorescence of the Sunwell,0,0,0,1,1,0,
+53576,Infusion of Light,0,0,0,1,0,0,
+385129,Seal of Order,0,0,0,1,1,0,
+414273,Hand of Divinity,1202,0,0,0,1,90,
+385349,Touch of Light,0,0,0,1,1,0,
+20066,Repentance,1362,0,30,0,1,15,MANA:3000;
+200652,Tyr's Deliverance,1603,0,100,0,1,90,MANA:6000;
+392938,Veneration,0,0,0,1,1,0,
+200430,Protection of Tyr,0,0,100,1,1,0,
+114158,Light's Hammer,0,0,40,0,1,60,MANA:9000;
+385414,Afterimage,0,0,0,1,1,0,
+385639,Auras of Swift Vengeance,0,0,0,1,1,0,
+197446,Beacon of the Lightbringer,0,0,0,1,1,0,
+414720,Tirion's Devotion,0,0,0,1,1,0,
+24275,Hammer of Wrath,0,0,30,0,1,15.026,MANA:2500;
+183778,Judgment of Light,0,0,0,1,1,0,
+406468,Lightforged Blessing,0,0,0,1,1,0,
+223817,Divine Purpose,0,0,0,1,1,0,
+20473,Holy Shock,0,0,40,0,1,6.811,MANA:6000;
+405768,Fading Light,0,0,0,1,1,0,
+26573,Consecration,0,0,0,0,0,9,
+414214,Holy Infusion,0,0,0,1,1,0,
+231642,Tower of Radiance,0,0,0,1,1,0,
+465,Devotion Aura,0,0,0,0,0,0,
+387801,Echoing Blessings,0,0,0,1,1,0,
+121183,Contemplation,0,0,0,0,0,8,
+392911,Unwavering Spirit,0,0,0,1,1,0,
+385450,Seal of Might,0,0,0,1,1,0,
+375576,Divine Toll,0,0,40,0,1,60,MANA:7500;
+414378,Illumination,0,0,0,1,1,0,
+379391,Quickened Invocation,0,0,0,1,1,0,
+387170,Empyrean Legacy,0,0,0,1,1,0,
+183415,Merciful Auras,0,0,0,1,1,0,
+385515,Holy Aegis,0,0,0,1,1,0,
+633,Lay on Hands,0,0,40,0,1,600,
+157047,Saved by the Light,0,0,0,1,1,0,
+317920,Concentration Aura,0,0,0,0,0,0,
+403042,Crusader's Reprieve,0,0,0,1,1,0,
+231644,Greater Judgment,0,0,0,1,1,0,
+377043,Justification,0,0,0,1,1,0,
+379008,Strength of Conviction,0,0,0,1,1,0,
+6940,Blessing of Sacrifice,0,0,40,0,1,60,MANA:3500;
+384914,Recompense,0,0,0,1,1,0,
+196926,Crusader's Might,0,0,0,1,1,0,
+385425,Seal of Alacrity,0,0,0,1,1,0,
+498,Divine Protection,0,0,0,0,0,60,MANA:1750;
+31821,Aura Mastery,0,0,0,0,1,180,
+384820,Sacrifice of the Just,0,0,0,1,1,0,
+414443,Shining Righteousness,0,0,0,1,1,0,
+387805,Divine Glimpse,0,0,0,1,1,0,
+10326,Turn Evil,1202,0,20,0,1,15,MANA:5250;
+642,Divine Shield,0,0,0,0,0,300,
+212056,Absolution,8014,0,100,0,0,0,MANA:2000;
+210294,Divine Favor,0,0,0,0,1,30,
+414127,Overflowing Light,0,0,0,1,1,0,
+7328,Redemption,8014,0,40,0,0,0,MANA:2000;
+190784,Divine Steed,0,0,0,0,1,45,
+402964,Sanctified Plates,0,0,0,1,1,0,
+4987,Cleanse,0,0,40,0,0,8,MANA:3250;
+392951,Boundless Salvation,0,0,0,1,1,0,
+414065,Glorious Dawn,0,0,0,1,1,0,
+387808,Divine Revelations,0,0,0,1,1,0,
+385427,Obduracy,0,0,0,1,1,0,
+85673,Word of Glory,0,0,40,0,0,0,HOLY_POWER:3;MANA:3000;MANA:0;MANA:0;
+275773,Judgment,0,0,30,0,0,8.815,MANA:6000;
+386738,Divine Resonance,0,0,0,1,1,0,
+31884,Avenging Wrath,0,0,0,0,1,120,
+19750,Flash of Light,1202,0,40,0,0,0,MANA:0;MANA:0;MANA:9000;MANA:0;
+1044,Blessing of Freedom,0,0,40,0,1,25,MANA:3500;
+234299,Fist of Justice,0,0,0,1,1,0,
+200025,Beacon of Virtue,0,0,40,0,1,15,MANA:10000;
+392961,Imbued Infusions,0,0,0,1,1,0,
+414195,Awakening,0,0,0,1,1,0,
+384909,Improved Blessing of Protection,0,0,0,1,1,0,
+416799,Light's Protection,0,0,0,1,1,0,
+1022,Blessing of Protection,0,0,40,0,1,300,MANA:7500;
+96231,Rebuke,0,0,0,0,1,15,
+230332,Cavalier,0,0,0,1,1,0,
+53376,Sanctified Wrath,0,0,0,1,1,0,
+5502,Sense Undead,0,0,0,0,0,0,
+387781,Commanding Light,0,0,0,1,1,0,
+406101,Faith's Armor,0,0,0,1,1,0,
+156910,Beacon of Faith,0,0,60,0,1,0,MANA:1250;
+385464,Incandescence,0,0,100,1,1,0,
+403530,Punishment,0,0,0,1,1,0,
+387814,Untempered Dedication,0,0,0,1,1,0,
+85222,Light of Dawn,0,0,0,0,1,0,HOLY_POWER:3;MANA:3000;
+414073,Light's Conviction,0,0,0,1,1,0,
+414708,Blessed Focus,0,0,0,1,1,0,
+216331,Avenging Crusader,0,0,0,0,1,60,HOLY_POWER:3;MANA:9000;
+391054,Intercession,1603,0,40,0,0,600,HOLY_POWER:0;MANA:0;MANA:5000;
+387879,Breaking Dawn,0,0,0,1,1,0,
+115750,Blinding Light,0,0,0,0,1,90,MANA:3000;
+53563,Beacon of Light,0,0,60,0,0,0,MANA:1250;
+416770,Seal of the Crusader,0,0,0,1,1,0,
+388007,Blessing of Summer,0,0,40,0,1,45,MANA:2500;
+114154,Unbreakable Spirit,0,0,0,1,1,0,
+393024,Improved Cleanse,0,0,0,1,1,0,
+409439,Of Dusk and Dawn,0,0,0,1,1,0,
+414170,Daybreak,0,0,0,0,1,60,
+415091,Shield of the Righteous,0,0,0,0,0,1,HOLY_POWER:3;
+384897,Seal of Mercy,0,0,0,1,1,0,
+414139,Glistening Radiance,0,0,0,1,1,0,
+416869,Vanguard's Momentum,0,0,0,1,1,0,
+414203,Rising Sunlight,0,0,0,1,1,0,
+82326,Holy Light,2003,0,40,0,0,0,MANA:6000;
+62124,Hand of Reckoning,0,0,30,0,0,8,MANA:1500;
+148039,Barrier of Faith,0,0,40,0,1,30,MANA:6000;
+387786,Moment of Compassion,0,0,0,1,1,0,
+387998,Unending Light,0,0,0,1,1,0,
+200474,Power of the Silver Hand,0,0,100,1,1,0,
+388011,Blessing of Winter,0,0,40,0,0,45,MANA:2500;
+417855,Awestruck,0,0,0,1,1,0,
+415364,Reclamation,0,0,0,1,1,0,
+287269,Glimmer of Light,0,0,0,1,1,0,
+383388,Relentless Inquisitor,0,0,0,1,1,0,
+183997,Mastery: Lightbringer,0,0,0,1,0,0,
+392902,Resplendent Light,0,0,0,1,1,0,
+377128,Golden Path,0,0,0,1,1,0,
+388018,Maraad's Dying Breath,0,0,0,1,1,0,
+376996,Seasoned Warhorse,0,0,0,1,1,0,
+114165,Holy Prism,0,0,40,0,1,20,MANA:6500;
+385633,Auras of the Resolute,0,0,0,1,1,0,

@@ -1,57 +1,115 @@
 id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
-698,Ritual of Summoning,0.000000,0,30,0,0,120.000000,MANA:0
-219272,Demon Skin,0.000000,0,0,1,1,0.000000,
-278350,Vile Taint,1.297000,0,40,0,1,20.000000,SOUL_SHARDS:1
-77215,Mastery: Potent Afflictions,0.000000,0,0,1,0,0.000000,
-710,Banish,1.297000,0,30,0,0,0.000000,MANA:1500
-108416,Dark Pact,0.000000,0,100,0,1,60.000000,
-246985,Soul Shards,0.000000,0,0,1,0,0.000000,
-108558,Nightfall,0.000000,0,0,1,1,0.000000,
-27243,Seed of Corruption,2.161000,0,40,0,0,0.000000,SOUL_SHARDS:1
-108503,Grimoire of Sacrifice,0.000000,0,50000,0,1,30.000000,
-980,Agony,0.000000,0,40,0,0,0.000000,MANA:1000
-29893,Create Soulwell,2.593000,0,30,0,0,120.000000,MANA:5000
-6201,Create Healthstone,2.593000,0,0,0,0,0.000000,MANA:2000
-1098,Enslave Demon,2.593000,0,30,0,0,0.000000,MANA:2000
-264874,Darkfury,0.000000,0,0,1,1,0.000000,
-205179,Phantom Singularity,0.000000,0,40,0,1,45.000000,
-30283,Shadowfury,1.297000,0,35,0,0,60.000000,
-686,Shadow Bolt,1.729000,0,40,0,0,0.000000,MANA:2000
-108370,Soul Leech,0.000000,0,0,1,0,0.000000,
-196226,Sow the Seeds,0.000000,0,0,1,1,0.000000,
-205180,Summon Darkglare,0.000000,0,0,0,0,180.000000,MANA:2000
-30108,Unstable Affliction,1.297000,0,40,0,0,0.000000,SOUL_SHARDS:1
-215941,Soul Conduit,0.000000,0,0,1,1,0.000000,
-5697,Unending Breath,0.000000,0,30,0,0,0.000000,MANA:2000
-268358,Demonic Circle,0.432000,0,0,0,1,10.000000,MANA:2000
-20707,Soulstone,2.593000,0,40,0,0,600.000000,
-264106,Deathbolt,0.000000,0,40,0,0,30.000000,MANA:2000
-63106,Siphon Life,0.000000,0,40,0,1,0.000000,
-6789,Mortal Coil,0.000000,0,20,0,1,45.000000,MANA:2000
-101508,The Codex of Xerrath,0.000000,0,0,1,0,0.000000,
-48181,Haunt,1.297000,0,40,0,1,15.000000,MANA:2000
-198590,Drain Soul,0.000000,0,40,0,1,0.000000,MANA:0
-5782,Fear,1.470000,0,30,0,0,0.000000,MANA:10000
-755,Health Funnel,0.000000,0,45,0,0,0.000000,
-172,Corruption,0.000000,0,40,0,0,0.000000,MANA:1000
-196102,Writhe in Agony,0.000000,0,0,1,1,0.000000,
-126,Eye of Kilrogg,1.729000,0,50000,0,0,0.000000,MANA:3000
-264000,Creeping Death,0.000000,0,0,1,1,0.000000,
-234153,Drain Life,0.000000,0,40,0,0,0.000000,MANA:0
-32388,Shadow Embrace,0.000000,0,0,1,1,0.000000,
-113860,Dark Soul: Misery,0.000000,0,0,0,1,120.000000,
-111771,Demonic Gateway,1.729000,10,40,0,0,10.000000,MANA:20000
-104773,Unending Resolve,0.000000,0,0,0,0,180.000000,MANA:2000
-196103,Absolute Corruption,0.000000,0,0,1,1,0.000000,
-48020,Demonic Circle: Teleport,0.000000,0,40,0,0,30.000000,MANA:3000
-111400,Burning Rush,0.000000,0,0,0,1,0.000000,
-119898,Command Demon,0.000000,0,0,0,0,0.000000,
-48018,Demonic Circle,0.432000,0,0,0,0,10.000000,MANA:2000
-324536,Malefic Rapture,1.5,0,40,0,0,0,SOUL_SHARDS:1
-321792,Impending Catastrophe,2,0,40,0,0,120,
-325289,Decimating Bolt,2.5,0,40,0,0,45,
-325640,Soul Rot,1.5,0,40,0,0,60,
-312321,Scouring Tithe,2,0,40,0,0,40,
+219272,Demon Skin,0,0,0,1,1,0,
+386617,Demonic Fortitude,0,0,100,1,1,0,
+416621,Doom Blossom,0,0,0,1,1,0,
+278350,Vile Taint,1120,0,40,0,1,30,SOUL_SHARDS:1;
+1714,Curse of Tongues,0,0,40,0,0,0,MANA:500;
+386110,Fiendish Stride,0,0,0,1,1,0,
+264000,Creeping Death,0,0,0,1,1,0,
+399668,Focused Malignancy,0,0,0,1,1,0,
+405955,Sargerei Technique,0,0,0,1,1,0,
+386620,Sweet Souls,0,0,0,1,1,0,
+48020,Demonic Circle: Teleport,0,0,40,0,0,30,MANA:1500;
+387065,Wrath of Consumption,0,0,0,1,1,0,
+5782,Fear,1270,0,30,0,0,0,MANA:2500;
+386113,Fel Pact,0,0,0,1,1,0,
+215941,Soul Conduit,0,0,0,1,1,0,
+328774,Amplify Curse,0,0,0,0,1,60,
+198590,Drain Soul,0,0,40,0,1,0,MANA:0;
+389576,Profane Bargain,0,0,0,1,1,0,
+172,Corruption,0,0,40,0,0,0,MANA:500;
+389609,Abyss Walker,0,0,0,1,1,0,
+205179,Phantom Singularity,0,0,40,0,1,45,MANA:500;
+29893,Create Soulwell,2241,0,30,0,0,120,MANA:2500;
+386689,Grim Feast,0,0,0,1,1,0,
+333889,Fel Domination,0,0,0,0,1,180,
+56244,Horrify,0,0,0,1,1,0,
+389992,Grim Reach,0,0,0,1,1,0,
+268358,Demonic Circle,0,0,0,1,1,0,MANA:1000;
+317031,Xavian Teachings,0,0,40,1,0,0,
+386659,Dark Accord,0,0,0,1,1,0,
+119898,Command Demon,0,0,0,0,0,0,
+389359,Resolute Barrier,0,0,0,1,1,0,
+234153,Drain Life,0,0,40,0,0,0,MANA:0;
+385899,Soulburn,0,0,0,0,1,6,SOUL_SHARDS:1;
+980,Agony,0,0,40,0,0,0,MANA:500;
+386344,Inquisitor's Gaze,0,0,0,1,1,0,
+108370,Soul Leech,0,0,0,1,0,0,
+386648,Nightmare,0,0,0,1,1,0,
+5484,Howl of Terror,0,0,0,0,1,40,MANA:900;
+334275,Curse of Exhaustion,0,0,40,0,0,0,MANA:500;
+205180,Summon Darkglare,0,0,0,0,1,120,MANA:1000;
+48181,Haunt,1120,0,40,0,1,15,MANA:1000;
+111771,Demonic Gateway,1494,10,40,0,1,10,MANA:10000;
+389775,Dread Touch,0,0,0,1,1,0,
+386124,Fel Armor,0,0,0,1,1,0,
+386664,Ichor of Devils,0,0,0,1,1,0,
+101508,The Codex of Xerrath,0,0,0,1,0,0,
+126,Eye of Kilrogg,1494,0,50000,0,0,0,MANA:1500;
+288843,Demonic Embrace,0,0,0,1,1,0,
+405936,Socrethar's Guile,0,0,0,1,1,0,
+386951,Soul Swap,0,0,40,0,1,30,SOUL_SHARDS:1;
+196103,Absolute Corruption,0,0,0,1,1,0,
+324536,Malefic Rapture,1120,0,100,0,1,0,SOUL_SHARDS:1;
+387301,Haunted Soul,0,0,0,1,1,0,
+702,Curse of Weakness,0,0,40,0,0,0,MANA:500;
+342601,Ritual of Doom,0,0,40,0,0,3600,SOUL_SHARDS:1;
+387016,Dark Harvest,0,0,0,1,1,0,
+264874,Darkfury,0,0,0,1,1,0,
+32388,Shadow Embrace,0,0,0,1,1,0,
+386858,Demonic Inspiration,0,0,100,1,1,0,
+48018,Demonic Circle,373,0,50000,0,0,10,MANA:1000;
+386922,Agonizing Corruption,0,0,0,1,1,0,
+389367,Fel Synergy,0,0,100,1,1,0,
+386986,Sacrolash's Dark Strike,0,0,0,1,1,0,
+386256,Summon Soulkeeper,747,0,40,0,1,0,
+389590,Demonic Resilience,0,0,100,1,1,0,
+386686,Frequent Donor,0,0,0,1,1,0,
+171975,Grimoire of Synergy,0,0,0,1,1,0,
+387273,Malevolent Visionary,0,0,0,1,1,0,
+755,Health Funnel,0,0,45,0,0,0,
+387972,Teachings of the Satyr,0,0,0,1,1,0,
+317138,Strength of Will,0,0,0,1,1,0,
+246985,Soul Shards,0,0,0,1,0,0,
+196226,Sow the Seeds,0,0,0,1,1,0,
+387084,Grand Warlock's Design,0,0,0,1,1,0,
+6201,Create Healthstone,2241,0,0,0,0,0,MANA:1000;
+111400,Burning Rush,0,0,0,0,1,0,
+108503,Grimoire of Sacrifice,0,0,50000,0,1,30,
+63106,Siphon Life,0,0,40,0,1,0,MANA:500;
+384069,Shadowflame,0,0,0,0,1,15,MANA:1500;
+386613,Accrued Vitality,0,0,0,1,1,0,
+386759,Pandemic Invocation,0,0,0,1,1,0,
+196102,Writhe in Agony,0,0,0,1,1,0,
+386864,Wrathful Minion,0,0,100,1,1,0,
+108416,Dark Pact,0,0,0,0,1,60,
+30283,Shadowfury,1120,0,35,0,1,60,MANA:500;
+416615,Xavius' Gambit,0,0,0,1,1,0,
+27243,Seed of Corruption,1494,0,40,0,1,0,SOUL_SHARDS:1;
 334319,Inevitable Demise,0,0,0,1,1,0,
-10060,Power Infusion,0,0,40,0,1,120,
-389630,Souleaters Gluttony,0,0,0,0,1,0,
+104773,Unending Resolve,0,0,0,0,0,180,MANA:1000;
+387075,Tormented Crescendo,0,0,0,1,1,0,
+385881,Teachings of the Black Harvest,0,0,0,1,1,0,
+108558,Nightfall,0,0,0,1,1,0,
+5697,Unending Breath,0,0,30,0,0,0,MANA:1000;
+405327,Dark Virtuosity,0,0,0,1,1,0,
+386105,Curses of Enfeeblement,0,0,0,1,1,0,
+199471,Soul Flame,0,0,0,1,1,0,
+405330,Kindled Malice,0,0,0,1,1,0,
+389630,Soul-Eater's Gluttony,0,0,0,1,1,0,
+386976,Withering Bolt,0,0,0,1,1,0,
+386646,Lifeblood,0,0,0,1,1,0,
+108415,Soul Link,0,0,100,1,1,0,
+710,Banish,1120,0,30,0,1,0,MANA:750;
+387250,Seized Vitality,0,0,0,1,1,0,
+698,Ritual of Summoning,0,0,30,0,0,120,MANA:0;
+77215,Mastery: Potent Afflictions,0,0,0,1,0,0,
+316099,Unstable Affliction,1120,0,40,0,1,0,MANA:500;
+386997,Soul Rot,1120,0,40,0,1,60,MANA:250;
+6789,Mortal Coil,0,0,20,0,1,45,MANA:1000;
+20707,Soulstone,2241,0,40,0,0,600,MANA:500;
+1098,Subjugate Demon,2241,0,30,0,0,0,MANA:1000;
+
+386309,Tormented Soul,0,0,0,0,0,0,
+394238,Shadow Bolt,0,0,0,0,0,0,
+386931,Vile Taint Dot,0,0,0,0,0,0,

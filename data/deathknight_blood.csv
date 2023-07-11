@@ -1,40 +1,106 @@
 id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
-315443,Abomination Limb,0.000000,0,20,0,0,120.000000,
-50842,Blood Boil,0.000000,0,0,0,0,0.000000,
-206931,Blooddrinker,2.700000,0,30,0,1,30.000000,RUNES:1
-221699,Blood Tap,0.000000,0,0,0,1,0.000000,
-195181,Bone Shield,0.000000,0,0,1,0,0.000000,
-194844,Bonestorm,0.000000,0,0,0,1,60.000000,RUNIC_POWER:10
-274156,Consumption,0.000000,0,5,0,1,30.000000,
-81141,Crimson Scourge,0.000000,0,0,1,0,0.000000,
-49028,Dancing Rune Weapon,0.000000,0,30,0,0,120.000000,
-43265,Death and Decay,0.000000,0,30,0,0,15.000000,RUNES:1
-49998,Death Strike,0.000000,0,5,0,0,0.000000,RUNIC_POWER:45
-324128,Death's Due,0.000000,0,30,0,0,15.000000,RUNES:1
-206930,Heart Strike,0.000000,0,5,0,0,0.000000,RUNES:1
-221536,Heartbreaker,0.000000,0,0,1,0,0.000000,
-273947,Hemostasis,0.000000,0,0,1,1,0.000000,
-195182,Marrowrend,0.000000,0,5,0,0,0.000000,RUNES:2
-46584,Raise Dead,0.000000,0,0,0,0,30.000000,
-194662,Rapid Decomposition,0.000000,0,0,1,1,0.000000,
-317610,Relish in Blood,0.000000,0,0,1,1,0.000000,
-327574,Sacrificial Pact,0.000000,0,0,0,0,120.000000,RUNIC_POWER:20
-312202,Shackle the Unworthy,0.000000,0,30,0,0,60.000000,
-311648,Swarming Mist,0.000000,0,0,0,0,60.000000,RUNES:1
-219809,Tombstone,0.000000,0,0,0,1,60.000000,
-108199,Gorefiends Grasp,0,0,30,0,0,120,
-194878,Icy Talons,0,0,0,0,1,0,
-206970,Tightening Grasp,0,0,0,0,1,0,
-391477,Coagulopathy,0,0,0,0,1,0,
-47568,Empower Rune Weapon,0,0,0,0,0,120,
+43265,Death and Decay,0,0,30,0,0,15,RUNES:1;RUNIC_POWER:-10;
+391571,Gloom Ward,0,0,0,1,1,0,
+206970,Tightening Grasp,0,0,0,1,1,0,
+391477,Coagulopathy,0,0,0,1,1,0,
+49028,Dancing Rune Weapon,0,0,30,0,1,120,
+374111,Might of Thassarian,0,0,0,1,1,0,
+111673,Control Undead,1260,0,30,0,1,0,RUNES:1;RUNIC_POWER:-10;
+374715,Improved Bone Shield,0,0,0,1,1,0,
+377668,Everlasting Bond,0,0,0,1,1,0,
+374049,Suppression,0,0,0,1,1,0,
+377637,Insatiable Blade,0,0,0,1,1,0,
+206940,Mark of Blood,0,0,15,0,1,6,
+373923,Merciless Strikes,0,0,0,1,1,0,
+374717,Improved Heart Strike,0,0,0,1,1,0,
+391386,Blood Feast,0,0,0,1,1,0,
+47568,Empower Rune Weapon,0,0,0,0,1,120,
+194844,Bonestorm,0,0,0,0,1,60,RUNIC_POWER:100;
+221562,Asphyxiate,0,0,20,0,1,45,
+377640,Shattering Bone,0,0,0,1,1,0,
+48743,Death Pact,0,0,0,0,1,120,
+373926,Acclimation,0,0,0,1,1,0,
+378848,Coldthirst,0,0,0,1,1,0,
+206974,Foul Bulwark,0,0,0,1,1,0,
+374721,Blood Fortification,0,0,0,1,0,0,
+48263,Veteran of the Third War,0,0,0,1,1,0,
+374277,Improved Death Strike,0,0,0,1,1,0,
+194878,Icy Talons,0,0,0,1,1,0,
+392566,Enfeeble,0,0,0,1,1,0,
+327574,Sacrificial Pact,0,0,0,0,1,120,RUNIC_POWER:20;
+373930,Proliferating Chill,0,0,0,1,1,0,
+389679,Clenching Grasp,0,0,0,1,1,0,
+374598,Blood Draw,0,0,0,1,1,0,
+77513,Mastery: Blood Shield,0,0,0,1,0,0,
+51986,On a Pale Horse,0,0,0,1,0,0,
+207167,Blinding Sleet,0,0,0,0,1,60,
+53428,Runeforging,0,0,0,0,0,0,
+276079,Death's Reach,0,0,0,1,1,0,
+273952,Grip of the Dead,0,0,0,1,1,0,
+207104,Runic Attenuation,0,0,0,1,1,0,
+205723,Red Thirst,0,0,0,1,1,0,
+61999,Raise Ally,0,0,40,0,0,600,RUNIC_POWER:30;
+273953,Voracious,0,0,0,1,1,0,
+389682,Unholy Endurance,0,0,0,1,1,0,
+206930,Heart Strike,0,0,0,0,1,0,RUNES:1;RUNIC_POWER:-15;HEALTH:0;HEALTH:0;
+383269,Abomination Limb,0,0,20,0,1,120,
+374030,Blood Scent,0,0,0,1,1,0,
+3714,Path of Frost,0,0,0,0,0,0,RUNES:1;
+47528,Mind Freeze,0,0,15,0,1,15,RUNIC_POWER:0;
+391398,Bloodshot,0,0,0,1,1,0,
+48265,Death's Advance,0,0,0,0,0,45,
+49576,Death Grip,0,0,40,0,0,15,
+221536,Heartbreaker,0,0,0,1,1,0,
+50977,Death Gate,3360,0,0,0,0,60,RUNES:1;RUNIC_POWER:-10;
 48792,Icebound Fortitude,0,0,0,0,1,180,
-55078,Blood Plague,0,0,0,0,0,0,
-343294,Soul Reaper,0,0,0,0,1,6,RUNES:1
-195292,Death's Caress,0,0,30,0,1,6,RUNES:1
-47528,Mind Freeze,0,0,15,0,1,15,
+47541,Death Coil,0,0,30,0,0,0,RUNIC_POWER:30;
+195292,Death's Caress,0,0,30,0,1,6,RUNES:1;RUNIC_POWER:-10;
+195679,Bloodworms,0,0,0,1,1,0,
 55233,Vampiric Blood,0,0,0,0,1,90,
-374265,Unholy Ground,0,0,0,0,1,0,
-391458,Sanguine Ground,0,0,0,0,1,0,
-377640,Shattering Bone,0,0,0,0,1,0,
-377637,Insatiable Blade,0,0,0,0,1,0,
+391395,Iron Heart,0,0,0,1,1,0,
+374747,Perseverance of the Ebon Blade,0,0,0,1,1,0,
+374383,Assimilation,0,0,0,1,1,0,
+212552,Wraith Walk,0,0,0,0,1,60,
+316916,Cleaving Strikes,0,0,0,1,1,0,
+50842,Blood Boil,0,0,0,0,1,6.299,
+195182,Marrowrend,0,0,0,0,1,0,RUNES:2;RUNIC_POWER:-20;
+391517,Umbilicus Eternus,0,0,0,1,1,0,
+374737,Reinforced Bones,0,0,0,1,1,0,
+377655,Heartrend,0,0,0,1,1,0,
+317610,Relish in Blood,0,0,0,1,1,0,
+56222,Dark Command,0,0,30,0,0,8,
+194662,Rapid Decomposition,0,0,0,1,1,0,
+205727,Anti-Magic Barrier,0,0,0,1,1,0,
+273946,Hemostasis,0,0,0,1,1,0,
+219786,Ossuary,0,0,0,1,1,0,
+391458,Sanguine Ground,0,0,0,1,1,0,
+206931,Blooddrinker,0,0,30,0,1,30,RUNES:1;RUNIC_POWER:-10;
+221699,Blood Tap,0,0,0,0,1,60,
+317133,Improved Vampiric Blood,0,0,0,1,1,0,
+219809,Tombstone,0,0,0,0,1,60,
+194679,Rune Tap,0,0,0,0,1,25,RUNES:1;RUNIC_POWER:-10;
+374261,Unholy Bond,0,0,0,1,1,0,
+108199,Gorefiend's Grasp,0,0,30,0,1,120,
+51052,Anti-Magic Zone,0,0,30,0,1,120,
+49039,Lichborne,0,0,0,0,0,120,
+374504,Brittle,0,0,0,1,1,0,
+206967,Will of the Necropolis,0,0,0,1,1,0,
+207200,Permafrost,0,0,0,1,1,0,
+391546,March of Darkness,0,0,0,1,1,0,
+45524,Chains of Ice,0,0,30,0,1,0,RUNES:1;RUNIC_POWER:-10;
+114556,Purgatory,0,0,0,1,1,0,
+377629,Leeching Strike,0,0,0,1,1,0,
+274156,Consumption,0,0,0,0,1,30,
+374574,Rune Mastery,0,0,0,1,1,0,
+81136,Crimson Scourge,0,0,0,1,1,0,
+391566,Insidious Chill,0,0,0,1,1,0,
+343294,Soul Reaper,0,0,0,0,1,6,RUNES:1;RUNIC_POWER:-10;
+374265,Unholy Ground,0,0,0,1,1,0,
+356367,Death's Echo,0,0,0,1,1,0,
+46585,Raise Dead,0,0,30,0,1,120,
+49998,Death Strike,0,0,0,0,1,0,RUNIC_POWER:40;
+48707,Anti-Magic Shell,0,0,0,0,1,60,
+
 408356,Vampiric Strength,0,0,0,0,0,0,
+195181,Bone Shield,0,0,0,0,0,0,
+55078,Blood Plague,0,0,0,0,0,0,

@@ -1,0 +1,136 @@
+id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
+392302,Power of the Archdruid,0,0,0,1,1,0,
+113043,Omen of Clarity,0,0,0,1,1,0,
+382550,Passing Seasons,0,0,0,1,1,0,
+158478,Soul of the Forest,0,0,0,1,1,0,
+33891,Incarnation: Tree of Life,0,0,0,0,1,180,
+382552,Improved Ironbark,0,0,0,1,1,0,
+50769,Revive,7670,0,45,0,0,0,MANA:2000;
+132469,Typhoon,0,0,20,0,1,30,
+20484,Rebirth,1534,0,45,0,0,600,RAGE:0;MANA:5000;
+131768,Feline Swiftness,0,0,0,1,1,0,
+400531,Forest's Flow,0,0,0,1,1,0,
+29166,Innervate,0,0,45,0,1,180,
+383192,Grove Tending,0,0,0,1,1,0,
+155675,Germination,0,0,0,1,1,0,
+276029,Flight Form,0,0,0,1,0,0,
+400533,Wild Synthesis,0,0,0,1,1,0,
+22568,Ferocious Bite,0,0,0,0,0,0,ENERGY:25;COMBO_POINTS:5;
+378986,Protector of the Pack,0,0,0,1,1,0,
+102351,Cenarion Ward,0,0,45,0,1,30,MANA:4600;
+378988,Lycara's Teachings,0,0,0,1,1,0,
+5176,Wrath,1151,0,45,0,0,0,MANA:0;MANA:0;MANA:0;MANA:0;MANA:500;
+382559,Unstoppable Growth,0,0,0,1,1,0,
+377842,Ursine Vigor,0,0,0,1,1,0,
+197625,Moonkin Form,0,0,0,0,1,0,
+197721,Flourish,0,0,0,0,1,90,
+392315,Luxuriant Soil,0,0,0,1,1,0,
+392124,Embrace of the Dream,0,0,0,1,1,0,
+197626,Starsurge,0,0,45,0,1,10,MANA:1500;
+88423,Nature's Cure,0,0,45,0,0,8,MANA:3250;
+203651,Overgrowth,0,0,45,0,1,60,MANA:6000;
+231032,Improved Regrowth,0,0,0,1,1,0,
+192081,Ironfur,0,0,0,0,1,0.5,RAGE:40;
+377847,Well-Honed Instincts,0,0,0,1,1,0,
+197628,Starfire,1918,0,45,0,1,0,MANA:1500;
+392256,Harmonious Blooming,0,0,0,1,1,0,
+319454,Heart of the Wild,0,0,0,0,1,300,
+5211,Mighty Bash,0,0,0,0,1,60,
+33917,Mangle,0,0,0,0,0,6,
+132158,Nature's Swiftness,0,0,0,0,1,60,
+5215,Prowl,0,0,0,0,0,6,
+1822,Rake,0,0,0,0,1,0,ENERGY:35;
+99,Incapacitating Roar,0,0,0,0,1,30,
+16931,Thick Hide,0,0,0,1,1,0,
+108299,Killer Instinct,0,0,0,1,1,0,
+22812,Barkskin,0,0,0,0,0,60,
+392325,Verdancy,0,0,0,1,1,0,
+207385,Spring Blossoms,0,0,0,1,1,0,
+5487,Bear Form,0,0,0,0,0,0,
+159286,Primal Fury,0,0,0,1,1,0,
+1126,Mark of the Wild,0,0,40,0,0,0,MANA:10000;
+212040,Revitalize,7670,0,105,0,0,0,MANA:2000;
+274902,Photosynthesis,0,0,0,1,1,0,
+106898,Stampeding Roar,0,0,10,0,1,120,
+8936,Regrowth,1151,0,45,0,0,0,MANA:8500;MANA:0;MANA:0;MANA:0;MANA:0;
+377796,Natural Recovery,0,0,0,1,1,0,
+188550,Lifebloom,0,0,45,0,0,0,MANA:4000;
+197061,Stonebark,0,0,0,1,1,0,
+231040,Improved Rejuvenation,0,0,0,1,1,0,
+213764,Swipe,0,0,13,0,0,0,
+391888,Adaptive Swarm,0,0,45,0,1,25,MANA:2500;
+6795,Growl,0,0,35,0,0,8,
+108238,Renewal,0,0,0,0,1,90,
+377801,Tireless Pursuit,0,0,0,1,1,0,
+48438,Wild Growth,1151,0,45,0,1,10,MANA:11000;MANA:0;MANA:0;MANA:0;
+102342,Ironbark,0,0,45,0,1,90,
+417712,Rising Light, Falling Night,0,0,0,1,1,0,
+2908,Soothe,0,0,45,0,1,10,MANA:2800;
+22570,Maim,0,0,0,0,1,20,ENERGY:30;COMBO_POINTS:5;
+124974,Nature's Vigil,0,0,0,0,1,90,
+145205,Efflorescence,0,0,45,0,1,0,MANA:8500;
+93402,Sunfire,0,0,45,0,1,0,MANA:6000;
+102359,Mass Entanglement,0,0,35,0,1,30,
+1079,Rip,0,0,0,0,1,0,ENERGY:20;COMBO_POINTS:5;
+404521,Rampant Growth,0,0,0,1,1,0,
+18562,Swiftmend,0,0,45,0,1,15,MANA:4000;MANA:0;MANA:0;MANA:0;
+392410,Verdant Infusion,0,0,0,1,1,0,
+403949,Deep Focus,0,0,0,1,1,0,
+193753,Dreamwalk,7670,0,0,0,0,60,MANA:250;
+392220,Flash of Clarity,0,0,0,1,1,0,
+392221,Waking Dream,0,0,0,1,1,0,
+328025,Improved Wild Growth,0,0,0,1,1,0,
+106839,Skull Bash,0,0,18,0,1,15,
+114282,Treant Form,0,0,0,0,0,0,
+1850,Dash,0,0,0,0,0,120,
+393371,Cenarius' Guidance,0,0,0,1,1,0,
+392160,Invigorate,0,0,40,0,1,20,MANA:1000;
+391969,Circle of Life and Death,0,0,0,1,1,0,
+392288,Nature's Splendor,0,0,0,1,1,0,
+33873,Nurturing Instinct,0,0,0,1,1,0,
+385786,Matted Fur,0,0,0,1,1,0,
+50464,Nourish,1534,0,45,0,1,0,MANA:9000;
+392162,Dreamstate,0,0,0,1,1,0,
+231050,Improved Sunfire,0,0,0,1,1,0,
+392099,Nurturing Dormancy,0,0,0,1,1,0,
+392378,Improved Nature's Cure,0,0,0,1,1,0,
+403521,Tranquil Mind,0,0,0,1,1,0,
+252216,Tiger Dash,0,0,0,0,1,45,
+276012,Aquatic Form,0,0,0,1,0,0,
+392356,Reforestation,0,0,0,1,1,0,
+400142,Gale Winds,0,0,0,1,1,0,
+288826,Improved Stampeding Roar,0,0,0,1,1,0,
+391528,Convoke the Spirits,0,0,0,0,1,120,
+197073,Inner Peace,0,0,0,1,1,0,
+33786,Cyclone,1304,0,25,0,1,0,MANA:3000;
+2637,Hibernate,1151,0,35,0,1,0,MANA:3000;
+102793,Ursol's Vortex,0,0,35,0,1,60,
+301768,Verdant Heart,0,0,0,1,1,0,
+392167,Budding Leaves,0,0,0,1,1,0,
+22842,Frenzied Regeneration,0,0,0,0,1,27.612,RAGE:10;
+327993,Improved Barkskin,0,0,0,1,1,0,
+740,Tranquility,0,0,5,0,1,180,MANA:9200;
+383191,Regenesis,0,0,0,1,1,0,
+400129,Forestwalk,0,0,0,1,1,0,
+391951,Unbridled Swarm,0,0,0,1,1,0,
+164862,Flap,0,0,0,0,0,0,
+127757,Charm Woodland Creature,0,0,40,0,0,30,
+768,Cat Form,0,0,0,0,0,0,
+8921,Moonfire,0,0,45,0,0,0,MANA:3000;MANA:0;
+200390,Cultivation,0,0,0,1,1,0,
+339,Entangling Roots,1304,0,40,0,0,0,MANA:3000;
+210053,Mount Form,0,0,0,0,0,0,
+145108,Ysera's Gift,0,0,105,1,1,0,
+106832,Thrash,0,0,0,0,1,0,
+392116,Regenerative Heartwood,0,0,0,1,1,0,
+400140,Incessant Tempest,0,0,0,1,1,0,
+5221,Shred,0,0,0,0,0,0,ENERGY:40;
+783,Travel Form,0,0,0,0,0,0,
+774,Rejuvenation,0,0,45,0,1,0,MANA:5500;MANA:0;MANA:0;MANA:0;MANA:0;
+207383,Abundance,0,0,0,1,1,0,
+400158,Improved Swipe,0,0,0,1,1,0,
+197524,Astral Influence,0,0,0,1,1,0,
+102401,Wild Charge,0,5,30,0,1,15,
+33763,Lifebloom,0,0,45,0,1,0,MANA:4000;
+392301,Undergrowth,0,0,0,1,1,0,
+77495,Mastery: Harmony,0,0,0,1,0,0,

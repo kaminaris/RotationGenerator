@@ -1,62 +1,129 @@
 id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
-30884,Nature's Guardian,0.000000,0,0,1,1,0.000000,
-2484,Earthbind Totem,0.000000,0,35,0,0,30.000000,
-6196,Far Sight,1.838000,0,50000,0,0,0.000000,
-192222,Liquid Magma Totem,0.000000,0,40,0,1,60.000000,
-974,Earth Shield,0.000000,0,40,0,1,0.000000,
-188443,Chain Lightning,1.838000,0,40,0,0,0.000000,
-8042,Earth Shock,0.000000,0,40,0,0,0.000000,MAELSTROM:60
-370,Purge,0.000000,0,30,0,0,0.000000,MANA:4000
-210643,Totem Mastery,0.000000,0,40,0,0,0.000000,
-210714,Icefury,1.838000,0,40,0,1,30.000000,
-2825,Bloodlust,0.000000,0,0,0,0,300.000000,
-260878,Spirit Wolf,0.000000,0,0,1,1,0.000000,
-108283,Echo of the Elements,0.000000,0,0,1,1,0.000000,
-188389,Flame Shock,0.000000,0,40,0,0,6.000000,
-273221,Aftershock,0.000000,0,0,1,1,0.000000,
-191634,Stormkeeper,1.379000,0,0,0,0,60.000000,
-2645,Ghost Wolf,0.000000,0,0,0,0,0.000000,
-117013,Primal Elementalist,0.000000,0,0,1,1,0.000000,
-260895,Unlimited Power,0.000000,0,0,1,1,0.000000,
-196840,Frost Shock,0.000000,0,40,0,0,0.000000,
-192249,Storm Elemental,0.000000,0,40,0,1,150.000000,
-168534,Mastery: Elemental Overload,0.000000,0,0,1,0,0.000000,
-77756,Lava Surge,0.000000,0,0,1,0,0.000000,
-60188,Elemental Fury,0.000000,0,0,1,0,0.000000,
-57994,Wind Shear,0.000000,0,30,0,0,12.000000,
-198067,Fire Elemental,0.000000,0,40,0,0,150.000000,
-51886,Cleanse Spirit,0.000000,0,40,0,0,8.000000,
-51490,Thunderstorm,0.000000,0,0,0,0,45.000000,
-8143,Tremor Totem,0.000000,0,0,0,0,60.000000,
-51514,Hex,1.563000,0,30,0,0,30.000000,
-192077,Wind Rush Totem,0.000000,0,40,0,1,120.000000,
-188196,Lightning Bolt,1.838000,0,40,0,0,0.000000,
-51505,Lava Burst,1.838000,0,40,0,0,0.000000,
-117014,Elemental Blast,1.838000,0,40,0,1,12.000000,
-170374,Earthen Rage,0.000000,0,0,1,1,0.000000,
-8004,Healing Surge,1.379000,0,40,0,0,0.000000,
-546,Water Walking,0.000000,0,30,0,0,0.000000,
-265046,Static Charge,0.000000,0,0,1,1,0.000000,
-2008,Ancestral Spirit,9.192000,0,40,0,0,0.000000,
-108281,Ancestral Guidance,0.000000,0,0,0,1,120.000000,
-260890,High Voltage,0.000000,0,0,1,1,0.000000,
-556,Astral Recall,9.192000,0,0,0,0,600.000000,
-20608,Reincarnation,0.000000,0,0,1,0,0.000000,
-198103,Earth Elemental,0.000000,0,40,0,0,300.000000,
-16166,Master of the Elements,0.000000,0,0,1,1,0.000000,
-260694,Exposed Elements,0.000000,0,0,1,1,0.000000,
-192058,Capacitor Totem,0.000000,0,35,0,0,60.000000,
-61882,Earthquake,0.000000,0,35,0,0,0.000000,MAELSTROM:60
-114050,Ascendance,0.000000,0,0,0,1,180.000000,
-108271,Astral Shift,0.000000,0,0,0,0,90.000000,
-326059,Primordial Wave,0,0,40,0,0,45,
-324386,Vesper Totem,0,0,40,0,0,60,
-328923,Fae Transfusion,3,0,40,0,0,120,
-320674,Chain Harvest,2.5,0,40,0,0,90,
-320125,Echoing Shock,0,0,40,0,1,30,
-342243,Static Discharge,0,0,40,0,1,30,
-157331,Wind Gust,2,0,40,0,0,0,
-381776,Flux Melting,0,0,0,0,1,0,
-381932,Magma Chamber,0,0,0,0,1,0,
-382685,Unrelenting Calamity,0,0,0,0,1,0,
-79206,Spiritwalkers Grace,0,0,0,0,1,120,MANA:7050
+265046,Static Charge,0,0,0,1,1,60,
+117014,Elemental Blast,1687,0,40,0,1,0,MANA:0;MAELSTROM:75;
+188443,Chain Lightning,1476,0,40,0,1,0,MANA:500;
+191634,Stormkeeper,1266,0,0,0,1,60,
+378077,Spiritwalker's Aegis,0,0,0,1,1,0,
+318038,Flametongue Weapon,0,0,0,0,0,0,
+375982,Primordial Wave,0,0,40,0,1,45,MANA:1500;
+60188,Elemental Fury,0,0,0,1,1,0,
+381666,Focused Insight,0,0,0,1,1,0,
+1064,Chain Heal,2109,0,40,0,1,0,MANA:0;MANA:37500;MANA:0;MANA:0;
+378079,Enfeeblement,0,0,0,1,1,0,
+378270,Deeply Rooted Elements,0,0,0,1,1,0,
+77756,Lava Surge,0,0,0,1,1,0,
+8004,Healing Surge,1266,0,40,0,0,0,MANA:0;MANA:25000;MANA:0;MANA:0;
+378271,Elemental Equilibrium,0,0,0,1,1,0,
+385923,Flow of Power,0,0,0,1,1,0,
+381764,Primordial Bond,0,0,0,1,1,0,
+382685,Unrelenting Calamity,0,0,0,1,1,0,
+5394,Healing Stream Totem,0,0,0,0,1,0,MANA:0;MANA:12500;MANA:0;MANA:0;
+51485,Earthgrab Totem,0,0,35,0,1,30,MANA:1250;
+73899,Primal Strike,0,0,0,0,0,0,MANA:4700;
+378241,Call of Thunder,0,0,0,1,1,0,
+378779,Thundershock,0,0,0,1,1,0,
+20608,Reincarnation,0,0,0,1,0,1800,
+51505,Lava Burst,1687,0,40,0,1,8,MANA:1250;
+58875,Spirit Walk,0,0,0,0,1,60,
+384087,Echoes of Great Sundering,0,0,0,1,1,0,
+57994,Wind Shear,0,0,30,0,1,12,
+198067,Fire Elemental,0,0,40,0,1,150,MANA:2500;
+381726,Mountains Will Fall,0,0,0,1,1,0,
+974,Earth Shield,0,0,40,0,1,0,MANA:0;MANA:12500;MANA:0;
+378211,Refreshing Waters,0,0,0,1,1,0,
+370,Purge,0,0,30,0,1,0,MANA:0;MANA:35000;MANA:0;
+108285,Totemic Recall,0,0,0,0,1,180,
+382086,Electrified Shocks,0,0,0,1,1,0,
+8143,Tremor Totem,0,0,0,0,1,60,MANA:1150;
+51490,Thunderstorm,0,0,0,0,1,30,
+191861,Power of the Maelstrom,0,0,0,1,1,0,
+381743,Tumultuous Fissures,0,0,0,1,1,0,
+210689,Lightning Rod,0,0,0,1,1,0,
+546,Water Walking,0,0,30,0,0,0,
+2825,Bloodlust,0,0,0,0,0,300,MANA:1000;
+381707,Swelling Maelstrom,0,0,0,1,1,0,
+378310,Skybreaker's Fiery Demise,0,0,0,1,1,0,
+2008,Ancestral Spirit,8437,0,40,0,0,0,MANA:2000;
+381930,Mana Spring,0,0,0,1,1,0,
+381708,Eye of the Storm,0,0,0,1,1,0,
+381867,Totemic Surge,0,0,0,1,1,0,
+382042,Splintered Elements,0,0,0,1,1,0,
+382947,Ancestral Defense,0,0,0,1,1,0,
+381650,Elemental Warding,0,0,0,1,1,0,
+383011,Call of the Elements,0,0,0,1,1,0,
+382027,Improved Flametongue Weapon,0,0,0,1,1,0,
+381932,Magma Chamber,0,0,0,1,1,0,
+188196,Lightning Bolt,1476,0,40,0,0,0,MANA:500;
+383012,Creation Core,0,0,0,1,1,0,
+381647,Planes Traveler,0,0,0,1,1,0,
+273221,Aftershock,0,0,0,1,1,0,
+51514,Hex,1434,0,30,0,1,30,
+377933,Astral Bulwark,0,0,0,1,1,0,
+386474,Primordial Surge,0,0,0,1,1,0,
+556,Astral Recall,8437,0,0,0,0,600,
+198103,Earth Elemental,0,0,40,0,1,300,
+108271,Astral Shift,0,0,0,0,1,120,
+381776,Flux Melting,0,0,0,1,1,0,
+108287,Totemic Projection,0,0,40,0,1,10,
+187880,Maelstrom Weapon,0,0,0,1,1,0,
+382888,Flurry,0,0,0,1,1,0,
+378094,Swirling Currents,0,0,0,1,1,0,
+381936,Flash of Lightning,0,0,0,1,1,0,
+305483,Lightning Lasso,0,0,20,0,1,45,
+114050,Ascendance,0,0,0,0,1,180,
+382032,Echo Chamber,0,0,0,1,1,0,
+262303,Surge of Power,0,0,100,1,1,0,
+188389,Flame Shock,0,0,40,0,0,6,MANA:750;
+192088,Graceful Spirit,0,0,0,1,1,0,
+382033,Surging Shields,0,0,0,1,1,0,
+378255,Call of Fire,0,0,0,1,1,0,
+6196,Far Sight,1687,0,50000,0,0,0,
+381787,Further Beyond,0,0,0,1,1,0,
+378193,Primordial Fury,0,0,0,1,1,0,
+30884,Nature's Guardian,0,0,0,1,1,0,
+16166,Master of the Elements,0,0,0,1,1,0,
+383019,Tranquil Air Totem,0,0,0,0,1,60,MANA:750;
+383013,Poison Cleansing Totem,0,0,40,0,1,45,MANA:1250;
+378081,Nature's Swiftness,0,0,0,0,1,60,
+51886,Cleanse Spirit,0,0,40,0,1,8,MANA:25000;
+8042,Earth Shock,0,0,40,0,1,0,MAELSTROM:50;
+381782,Searing Flames,0,0,0,1,1,0,
+192058,Capacitor Totem,0,0,40,0,1,60,MANA:5000;
+378776,Inundate,0,0,0,1,1,0,
+381655,Nature's Fury,0,0,0,1,1,0,
+192106,Lightning Shield,0,0,0,0,0,0,MANA:750;
+192249,Storm Elemental,0,0,40,0,1,150,MANA:2500;
+383017,Stoneskin Totem,0,0,0,0,1,30,MANA:750;
+79206,Spiritwalker's Grace,0,0,0,0,1,120,MANA:7050;
+108281,Ancestral Guidance,0,0,0,0,1,120,
+381689,Brimming with Life,0,0,0,1,1,0,
+2484,Earthbind Totem,0,0,40,0,0,30,MANA:1250;
+382197,Ancestral Wolf Affinity,0,0,0,1,1,0,
+381785,Oath of the Far Seer,0,0,0,1,1,0,
+382215,Winds of Al'Akir,0,0,0,1,1,0,
+192063,Gust of Wind,0,0,0,0,1,30,
+381678,Go with the Flow,0,0,0,1,1,0,
+260878,Spirit Wolf,0,0,0,1,1,0,
+386443,Rolling Magma,0,0,0,1,1,0,
+204268,Voodoo Mastery,0,0,0,1,1,0,
+2645,Ghost Wolf,0,0,0,0,0,0,
+117013,Primal Elementalist,0,0,0,1,1,0,
+381819,Guardian's Cudgel,0,0,0,1,1,0,
+61882,Earthquake,0,0,40,0,1,0,MAELSTROM:50;
+168534,Mastery: Elemental Overload,0,0,0,1,0,0,
+210714,Icefury,1687,0,40,0,1,30,MANA:1500;
+382201,Totemic Focus,0,0,0,1,1,0,
+192077,Wind Rush Totem,0,0,40,0,1,120,
+382886,Fire and Ice,0,0,0,1,1,0,
+383010,Elemental Orbit,0,0,0,1,1,0,
+378773,Greater Purge,0,0,30,0,1,12,MANA:0;MANA:52500;MANA:0;
+196840,Frost Shock,0,0,40,0,1,0,MANA:500;
+378075,Thunderous Paws,0,0,0,1,1,0,
+333919,Echo of the Elements,0,0,0,1,1,0,
+378266,Flames of the Cauldron,0,0,0,1,1,0,
+192222,Liquid Magma Totem,0,0,40,0,1,60,MANA:1750;
+378268,Windspeaker's Lava Resurgence,0,0,0,1,1,0,
+
+393688,tier30_2pc,0,0,0,0,0,0,
+114074,Lava Beam,0,0,40,0,0,0,
+188196,Lightning Bolt,0,0,40,0,0,0,

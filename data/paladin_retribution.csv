@@ -1,65 +1,128 @@
 id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
-53385,Divine Storm,0.000000,0,0,0,0,0.000000,HOLY_POWER:3
-184575,Blade of Justice,0.000000,0,12,0,0,10.500000,
-267798,Execution Sentence,0.000000,0,20,0,0,30.000000,HOLY_POWER:3
-24275,Hammer of Wrath,0.000000,0,30,0,0,7.500000,
-184662,Shield of Vengeance,0.000000,0,0,0,0,120.000000,
-267610,Righteous Verdict,0.000000,0,0,1,1,0.000000,
-223817,Divine Purpose,0.000000,0,0,1,1,0.000000,
-203539,Greater Blessing of Wisdom,0.000000,0,30,0,0,0.000000,
-271580,Divine Judgment,0.000000,0,0,1,1,0.000000,
-234299,Fist of Justice,0.000000,0,0,1,1,0.000000,
-35395,Crusader Strike,0.000000,0,0,0,0,0.000000,
-19750,Flash of Light,1.344000,0,40,0,0,0.000000,MANA:1805
-20066,Repentance,1.524000,0,30,0,1,15.000000,MANA:720
-183435,Retribution,0.000000,0,0,1,0,0.000000,
-213644,Cleanse Toxins,0.000000,0,40,0,0,8.000000,MANA:468
-85804,Selfless Healer,0.000000,0,0,1,1,0.000000,
-230332,Cavalier,0.000000,0,0,1,1,0.000000,
-215661,Justicar's Vengeance,0.000000,0,0,0,1,0.000000,HOLY_POWER:5
-190784,Divine Steed,0.000000,0,0,0,0,0.000000,
-269569,Zeal,0.000000,0,0,1,1,0.000000,
-121183,Contemplation,0.000000,0,0,0,0,8.000000,
-642,Divine Shield,0.000000,0,0,0,0,300.000000,
-1022,Blessing of Protection,0.000000,0,40,0,0,1.500000,MANA:1080
-267316,Mastery: Hand of Light,0.000000,0,0,1,0,0.000000,
-32223,Heart of the Crusader,0.000000,0,0,1,0,0.000000,
-205228,Consecration,0.000000,0,0,0,1,20.000000,
-267344,Art of War,0.000000,0,0,1,0,0.000000,
-85256,Templar's Verdict,0.000000,0,0,0,0,0.000000,HOLY_POWER:3
-203316,Fires of Justice,0.000000,0,0,1,1,0.000000,
-115750,Blinding Light,0.000000,0,0,0,0,90.000000,MANA:576
-183218,Hand of Hindrance,0.000000,0,30,0,0,30.000000,MANA:720
-96231,Rebuke,0.000000,0,0,0,0,15.000000,
-1044,Blessing of Freedom,0.000000,0,40,0,0,1.500000,MANA:1080
-20271,Judgment,0.000000,0,30,0,0,0.000000,MANA:0
-84963,Inquisition,0.000000,0,0,0,0,0.000000,HOLY_POWER:1
-62124,Hand of Reckoning,0.000000,0,30,0,0,0.000000,MANA:216
-853,Hammer of Justice,0.000000,0,20,0,0,60.000000,MANA:252
-203538,Greater Blessing of Kings,0.000000,0,30,0,0,0.000000,
-31884,Avenging Wrath,0.000000,0,0,0,0,120.000000,
-210191,Word of Glory,0.000000,0,40,0,0,0.000000,HOLY_POWER:3
-255937,Wake of Ashes,0.000000,0,0,0,0,45.000000,
-7328,Redemption,8.962000,0,40,0,0,0.000000,MANA:288
-231895,Crusade,0.000000,0,0,0,1,20.000000,
-231832,Blade of Wrath,0.000000,0,0,1,1,0.000000,
-205191,Eye for an Eye,0.000000,0,0,0,1,60.000000,
-633,Lay on Hands,0.000000,0,40,0,0,600.000000,
-114154,Unbreakable Spirit,0.000000,0,0,1,1,0.000000,
-343721,Final Reckoning,0,0,0,0,1,60,
-406940,Executioners Will,0,0,0,0,1,0,
-406158,Divine Auxiliary,0,0,0,0,1,0,
-326732,Empyrean Power,0,0,0,0,1,0,
-387170,Empyrean Legacy,0,0,0,0,1,0,
-404306,Divine Arbiter,0,0,0,0,1,0,
-384027,Divine Resonance,0,0,0,0,1,0,
-375576,Divine Toll,0,0,30,0,1,60,MANA:7500
-406646,Templar Strikes,0,0,0,0,1,0,
-405278,Boundless Judgment,0,0,0,0,1,0,
-383342,Holy Blade,0,0,0,0,1,0,
-403010,Blessed Champion,0,0,0,0,1,0,
-383314,Vanguard's Momentum,0,0,0,0,1,0,
-404542,Crusading Strikes,0,0,0,0,1,0,
+385728,Seal of the Crusader,0,0,0,1,1,0,
+385633,Auras of the Resolute,0,0,0,1,1,0,
+403826,Blade of Vengeance,0,0,0,1,1,0,
+403509,Zealot's Fervor,0,0,0,1,1,0,
+385349,Touch of Light,0,0,0,1,1,0,
+20066,Repentance,1372,0,30,0,1,15,MANA:3000;
+383254,Improved Crusader Strike,0,0,0,1,0,0,
+402971,Jurisdiction,0,0,0,1,1,0,
+406940,Executioner's Will,0,0,0,1,1,0,
+407480,Templar Strike,0,0,0,0,0,5.649,MANA:1000;
+405607,Judge, Jury and Executioner,0,0,0,1,1,0,
+377128,Golden Path,0,0,0,1,1,0,
+231895,Crusade,0,0,0,0,1,120,
+183778,Judgment of Light,0,0,0,1,1,0,
+405768,Fading Light,0,0,0,1,1,0,
 198034,Divine Hammer,0,0,0,0,1,20,
-407480,Templar Strike,0,0,8,0,0,5.5,MANA:1000
-406647,Templar Slash,0,0,0,0,0,0,MANA:1000
+405355,Seething Flames,0,0,0,1,1,0,
+404752,Instrument of Retribution,0,0,0,1,0,0,
+407067,Rush of Light,0,0,0,1,1,0,
+385639,Auras of Swift Vengeance,0,0,0,1,1,0,
+384909,Improved Blessing of Protection,0,0,0,1,1,0,
+853,Hammer of Justice,0,0,10,0,0,60,MANA:1750;
+121183,Contemplation,0,0,0,0,0,8,
+402912,Righteous Cause,0,0,0,1,1,0,
+404306,Divine Arbiter,0,0,0,1,1,0,
+385450,Seal of Might,0,0,0,1,1,0,
+375576,Divine Toll,0,0,30,0,1,60,MANA:7500;
+383228,Swift Justice,0,0,0,1,1,0,
+385414,Afterimage,0,0,0,1,1,0,
+405289,Burning Crusade,0,0,0,1,1,0,
+204054,Consecrated Ground,0,0,0,1,1,0,
+385515,Holy Aegis,0,0,0,1,1,0,
+633,Lay on Hands,0,0,40,0,1,600,
+1022,Blessing of Protection,0,0,40,0,1,300,MANA:7500;
+403010,Blessed Champion,0,0,0,1,1,0,
+403042,Crusader's Reprieve,0,0,0,1,1,0,
+32223,Crusader Aura,0,0,0,0,0,0,
+406154,Heart of the Crusader,0,0,0,1,1,0,
+379008,Strength of Conviction,0,0,0,1,1,0,
+6940,Blessing of Sacrifice,0,0,40,0,1,120,MANA:3500;
+384914,Recompense,0,0,0,1,1,0,
+326734,Healing Hands,0,0,0,1,1,0,
+20271,Judgment,0,0,30,0,0,7.263,MANA:1500;
+403664,Blades of Light,0,0,0,1,1,0,
+377043,Justification,0,0,0,1,1,0,
+384820,Sacrifice of the Just,0,0,0,1,1,0,
+379391,Quickened Invocation,0,0,0,1,1,0,
+387170,Empyrean Legacy,0,0,0,1,1,0,
+384027,Divine Resonance,0,0,0,1,1,0,
+406157,Adjudication,0,0,0,1,1,0,
+406158,Divine Auxiliary,0,0,0,1,1,0,
+406064,Art of War,0,0,0,1,1,0,
+385425,Seal of Alacrity,0,0,0,1,1,0,
+7328,Redemption,8070,0,40,0,0,0,MANA:2000;
+190784,Divine Steed,0,0,0,0,1,45,
+85673,Word of Glory,0,0,40,0,0,0,HOLY_POWER:3;MANA:0;MANA:0;MANA:25000;
+267316,Mastery: Hand of Light,0,0,0,1,0,0,
+255937,Wake of Ashes,0,0,0,0,1,30,
+404540,Searing Light,0,5,50000,1,1,0,
+405461,Improved Judgment,0,0,0,1,1,0,
+385427,Obduracy,0,0,0,1,1,0,
+215661,Justicar's Vengeance,0,0,8,0,1,0,HOLY_POWER:4;
+62124,Hand of Reckoning,0,0,30,0,0,8,MANA:1500;
+183435,Retribution Aura,0,0,0,0,0,0,
+383396,Tempest of the Lightbringer,0,0,0,1,1,0,
+403495,Judgment of Justice,0,0,0,1,1,0,
+404542,Crusading Strikes,0,0,0,1,1,0,
+234299,Fist of Justice,0,0,0,1,1,0,
+403654,Aegis of Protection,0,0,0,1,1,0,
+403876,Divine Protection,0,0,0,0,0,60,MANA:1750;
+31884,Avenging Wrath,0,0,0,0,1,120,
+403479,Lightforged Blessing,0,0,0,1,1,0,
+343527,Execution Sentence,0,0,30,0,1,30,
+404512,Highlord's Judgment,0,0,0,1,1,0,
+19750,Flash of Light,1211,0,40,0,0,0,MANA:25000;MANA:0;MANA:0;MANA:0;
+403026,Penitence,0,0,0,1,1,0,
+385129,Seal of Order,0,0,0,1,1,0,
+406545,Vanguard of Justice,0,0,0,1,1,0,
+184575,Blade of Justice,0,0,20,0,1,9.684,
+96231,Rebuke,0,0,0,0,1,15,
+385464,Incandescence,0,0,100,1,1,0,
+230332,Cavalier,0,0,0,1,1,0,
+403530,Punishment,0,0,0,1,1,0,
+5502,Sense Undead,0,0,0,0,0,0,
+403975,Inquisitor's Ire,0,0,0,1,1,0,
+385125,Of Dusk and Dawn,0,0,0,1,1,0,
+403745,Improved Blade of Justice,0,0,0,1,1,0,
+391054,Intercession,1614,0,40,0,0,600,HOLY_POWER:0;MANA:5000;MANA:0;
+404357,Guided Prayer,0,0,0,1,1,0,
+405278,Boundless Judgment,0,0,0,1,1,0,
+115750,Blinding Light,0,0,0,0,1,90,MANA:3000;
+404834,Consecrated Blade,0,0,0,1,1,0,
+383344,Expurgation,0,0,8,1,1,0,
+382536,Sanctify,0,0,0,1,1,0,
+406835,Vengeful Wrath,0,0,0,1,1,0,
+305394,Unbound Freedom,0,0,0,1,1,0,
+114154,Unbreakable Spirit,0,0,0,1,1,0,
+406101,Faith's Armor,0,0,0,1,1,0,
+1044,Blessing of Freedom,0,0,40,0,1,25,MANA:3500;
+384897,Seal of Mercy,0,0,0,1,1,0,
+406646,Templar Strikes,0,0,0,1,1,0,
+184662,Shield of Vengeance,0,0,0,0,1,90,
+383342,Holy Blade,0,0,0,1,1,0,
+326732,Empyrean Power,0,0,0,1,1,0,
+402964,Sanctified Plates,0,0,0,1,1,0,
+10326,Turn Evil,1211,0,20,0,1,15,MANA:5250;
+231663,Greater Judgment,0,0,0,1,1,0,
+213644,Cleanse Toxins,0,0,40,0,1,8,MANA:25000;
+404436,Light of Justice,0,0,0,1,1,0,
+642,Divine Shield,0,0,0,0,0,300,
+53385,Divine Storm,0,0,0,0,1,0,HOLY_POWER:4;
+403696,Truth's Wake,0,0,0,1,1,0,
+383328,Final Verdict,0,0,20,0,1,0,HOLY_POWER:4;
+408459,Divine Purpose,0,0,0,1,1,0,
+343721,Final Reckoning,0,0,30,0,1,60,
+406872,Divine Wrath,0,0,0,1,1,0,
+24275,Hammer of Wrath,0,0,30,0,1,6.052,MANA:0;
+383314,Vanguard's Momentum,0,0,0,1,1,0,
+376996,Seasoned Warhorse,0,0,0,1,1,0,
+403698,Light's Celerity,0,0,0,1,1,0,
+53600,Shield of the Righteous,0,0,0,0,0,1,HOLY_POWER:3;
+
+406647,Templar Slash,0,0,0,0,0,0,
+85256,Templar's Verdict,0,0,5,0,0,0,HOLY_POWER:3
+393677,tier30_4pc,0,0,0,0,0,0,
+26573,Consecration,0,0,0,0,0,9,
+35395,Crusader Strike,0,0,0,0,0,0,

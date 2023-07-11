@@ -1,66 +1,106 @@
 id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
-122,Frost Nova,0.000000,0,0,0,0,0.000000,
-235219,Cold Snap,0.000000,0,0,0,0,300.000000,
-1459,Arcane Intellect,0.000000,0,40,0,0,0.000000,
-157997,Ice Nova,0.000000,0,40,0,1,25.000000,
-153595,Comet Storm,0.000000,0,40,0,1,30.000000,
-108853,Fire Blast,0.000000,0,40,0,0,0.500000,
-205027,Bone Chilling,0.000000,0,0,1,1,0.000000,
-190356,Blizzard,1.857000,0,40,0,0,8.000000,
-76613,Mastery: Icicles,0.000000,0,0,1,0,0.000000,
-113724,Ring of Frost,1.857000,0,30,0,1,45.000000,
-2139,Counterspell,0.000000,0,40,0,0,24.000000,
-205036,Ice Ward,0.000000,0,0,1,1,0.000000,
-30455,Ice Lance,0.000000,0,40,0,0,0.000000,
-56384,Arcane Momentum,0.000000,0,0,1,0,0.000000,
-205021,Ray of Frost,0.000000,0,40,0,1,75.000000,
-155149,Thermal Void,0.000000,0,0,1,1,0.000000,
-278309,Chain Reaction,0.000000,0,0,1,1,0.000000,
-45438,Ice Block,0.000000,0,0,0,0,240.000000,
-120146,Ancient Portal: Dalaran,9.283000,0,10,0,0,60.000000,
-11426,Ice Barrier,0.000000,0,0,0,0,25.000000,
-212653,Shimmer,0.000000,0,0,0,1,0.500000,
-44544,Fingers of Frost,0.000000,0,0,1,0,0.000000,
-108839,Ice Floes,0.000000,0,0,0,1,0.000000,
-84714,Frozen Orb,0.000000,0,40,0,0,60.000000,
-30449,Spellsteal,0.000000,0,40,0,0,0.000000,
-80353,Time Warp,0.000000,0,0,0,0,300.000000,
-190336,Conjure Refreshment,2.785000,0,0,0,0,15.000000,
-116,Frostbolt,1.857000,0,40,0,0,0.000000,
-12472,Icy Veins,0.000000,0,0,0,0,180.000000,
-11,Frostbolt of Ages,0.000000,0,100,0,0,0.000000,
-235224,Frigid Winds,0.000000,0,0,1,1,0.000000,
-1,Word of Recall (OLD),9.283000,0,0,0,0,0.000000,
-190446,Brain Freeze,0.000000,0,0,1,0,0.000000,
-130,Slow Fall,0.000000,0,40,0,0,0.000000,
-1953,Blink,0.000000,0,0,0,0,0.500000,
-205024,Lonely Winter,0.000000,0,0,1,1,0.000000,
-56377,Splitting Ice,0.000000,0,0,1,1,0.000000,
-270233,Freezing Rain,0.000000,0,0,1,1,0.000000,
-118,Polymorph,1.578000,0,30,0,0,0.000000,
-66,Invisibility,0.000000,0,0,0,0,300.000000,
-12982,Shatter,0.000000,0,0,1,0,0.000000,
-199786,Glacial Spike,2.785000,0,40,0,1,0.000000,
-116011,Rune of Power,1.392000,0,30,0,1,10.000000,
-120,Cone of Cold,0.000000,0,0,0,0,12.000000,
-55342,Mirror Image,0.000000,0,0,0,1,120.000000,
-44614,Flurry,2.785000,0,40,0,0,0.000000,
-475,Remove Curse,0.000000,0,40,0,0,8.000000,
-235297,Glacial Insulation,0.000000,0,0,1,1,0.000000,
-205030,Frozen Touch,0.000000,0,0,1,1,0.000000,
-1463,Incanter's Flow,0.000000,0,0,1,1,0.000000,
-257537,Ebonbolt,2.321000,0,40,0,1,45.000000,
-205473,Icicles,0,0,0,1,0,0,
-31687,Summon Water Elemental,1.5,0,0,0,0,30,
-228358,Winter's Chill,0,0,0,1,0,0,
-1449,Arcane Explosion,0,0,0,0,0,0,MANA:5000
-153561,Meteor,0,0,40,0,1,45,MANA:500
-127111,Freeze,0,0,45,0,0,25,MANA:6000
-31661,Dragons Breath,0,0,0,0,1,45,MANA:2000
-381706,Snowstorm,0,0,0,0,1,0,
-382440,Shifting Power,0,0,0,0,1,60,MANA:2500
-382144,Slick Ice,0,0,0,0,1,0,
-378749,Deep Shatter,0,0,0,0,1,0,
-236662,Ice Caller,0,0,0,0,1,0,
-382103,Freezing Winds,0,0,0,0,1,0,
-135029,Water Jet,1,0,45,0,0,45,
+343183,Improved Frost Nova,0,0,0,1,1,0,
+382490,Tome of Antonidas,0,0,0,1,1,0,
+382268,Flow of Time,0,0,0,1,1,0,
+212653,Shimmer,0,0,0,0,1,21,MANA:1000;
+130,Slow Fall,0,0,40,0,0,0,MANA:500;
+108839,Ice Floes,0,0,0,0,1,20,
+382270,Diverted Energy,0,0,0,1,1,0,
+382493,Tome of Rhonin,0,0,0,1,1,0,
+382144,Slick Ice,0,0,0,1,1,0,
+157981,Blast Wave,0,0,0,0,1,30,
+157997,Ice Nova,0,0,40,0,1,25,
+110959,Greater Invisibility,0,0,0,0,1,120,
+378749,Deep Shatter,0,0,0,1,1,0,
+414659,Ice Cold,0,0,0,1,1,0,
+31661,Dragon's Breath,0,0,0,0,1,45,MANA:2000;
+205036,Ice Ward,0,0,0,1,1,0,
+414660,Mass Barrier,0,0,0,0,1,120,MANA:6000;
+190336,Conjure Refreshment,2135,0,0,0,0,15,MANA:1500;
+391102,Mass Slow,0,0,0,1,1,0,
+205021,Ray of Frost,0,0,40,0,1,60,MANA:1000;
+381706,Snowstorm,0,0,0,1,1,0,
+385167,Everlasting Frost,0,0,0,1,1,0,
+417489,Winter's Blessing,0,0,0,1,1,0,
+270233,Freezing Rain,0,0,0,1,1,0,
+414664,Mass Invisibility,0,0,0,0,1,300,MANA:3000;
+378406,Wintertide,0,0,0,1,1,0,
+382820,Reabsorption,0,0,0,1,1,0,
+390218,Overflowing Energy,0,0,0,1,1,0,
+236662,Ice Caller,0,0,0,1,1,0,
+383243,Time Anomaly,0,0,0,1,1,0,
+382440,Shifting Power,0,0,0,0,1,60,MANA:2500;
+30449,Spellsteal,0,0,40,0,1,0,MANA:10500;
+342245,Alter Time,0,0,0,0,1,60,MANA:500;
+80353,Time Warp,0,0,0,0,0,300,MANA:2000;
+417493,Coldest Snap,0,0,0,1,1,0,
+387807,Time Manipulation,0,0,0,1,1,0,
+389713,Displacement,0,0,40,0,1,45,
+199786,Glacial Spike,1957,0,40,0,1,0,MANA:500;
+382569,Reduplication,0,0,0,1,1,0,
+190356,Blizzard,1424,0,40,0,0,8,MANA:1250;
+45438,Ice Block,0,0,0,0,1,240,
+235219,Cold Snap,0,0,0,0,0,300,
+11426,Ice Barrier,0,0,0,0,1,25,MANA:1500;
+386539,Temporal Warp,0,0,0,1,1,0,
+418733,Splintering Ray,0,0,0,1,1,0,
+66,Invisibility,0,0,0,0,0,300,MANA:1500;
+122,Frost Nova,0,0,0,0,0,30,MANA:1000;
+386763,Freezing Cold,0,0,0,1,1,0,
+342249,Master of Time,0,0,0,1,1,0,
+31589,Slow,0,0,35,0,1,0,MANA:500;
+382826,Temporal Velocity,0,0,0,1,1,0,
+417491,Cryopathy,0,0,0,1,1,0,
+380154,Subzero,0,0,0,1,1,0,
+56377,Splitting Ice,0,0,0,1,1,0,
+113724,Ring of Frost,1424,0,30,0,1,45,MANA:4000;
+379049,Splintering Cold,0,0,0,1,1,0,
+386828,Energized Barriers,0,0,0,1,1,0,
+378947,Glacial Assault,0,0,0,1,1,0,
+319836,Fire Blast,0,0,40,0,0,8.541,MANA:500;
+205027,Bone Chilling,0,0,0,1,1,0,
+383121,Mass Polymorph,1210,0,0,0,1,60,MANA:2000;
+382289,Tempest Barrier,0,0,0,1,1,0,
+1463,Incanter's Flow,0,0,0,1,1,0,
+55342,Mirror Image,0,0,0,0,1,120,MANA:1000;
+378448,Fractured Frost,0,0,0,1,1,0,
+475,Remove Curse,0,0,40,0,1,8,MANA:650;
+278309,Chain Reaction,0,0,0,1,1,0,
+382481,Rigid Ice,0,0,0,1,1,0,
+205030,Frozen Touch,0,0,0,1,1,30,
+155149,Thermal Void,0,0,0,1,1,0,
+379993,Flash Freeze,0,0,0,1,1,0,
+382292,Cryo-Freeze,0,0,0,1,1,0,
+12472,Icy Veins,0,0,0,0,1,120,
+382800,Accumulative Shielding,0,0,0,1,1,0,
+12982,Shatter,0,0,0,1,1,0,
+30455,Ice Lance,0,0,40,0,1,0,MANA:500;
+389627,Volatile Detonation,0,0,0,1,1,0,
+382293,Incantation of Swiftness,0,0,0,1,1,0,
+205024,Lonely Winter,0,0,0,1,1,0,
+382103,Freezing Winds,0,0,0,1,1,0,
+378198,Perpetual Winter,0,0,0,1,1,0,
+235224,Frigid Winds,0,0,0,1,1,0,
+381244,Hailstones,0,0,0,1,1,0,
+153595,Comet Storm,0,0,40,0,1,30,MANA:500;
+84714,Frozen Orb,0,0,40,0,1,60,MANA:500;
+190447,Brain Freeze,0,0,0,1,1,0,
+378919,Piercing Cold,0,0,0,1,1,0,
+112965,Fingers of Frost,0,0,0,1,1,0,
+44614,Flurry,0,0,40,0,1,30,MANA:500;
+378756,Frostbite,0,0,0,1,1,0,
+1449,Arcane Explosion,0,0,0,0,0,0,MANA:5000;
+382424,Winter's Protection,0,0,0,1,1,0,
+2139,Counterspell,0,0,40,0,0,24,MANA:1000;
+382297,Quick Witted,0,0,0,1,1,0,
+382110,Cold Front,0,0,0,1,1,0,
+116,Frostbolt,1424,0,40,0,0,0,MANA:1000;
+1459,Arcane Intellect,0,0,40,0,0,0,MANA:2000;
+118,Polymorph,1210,0,30,0,0,0,MANA:2000;
+383092,Arcane Warding,0,0,0,1,1,0,
+120,Cone of Cold,0,0,0,0,0,12,MANA:2000;
+76613,Mastery: Icicles,0,0,0,1,0,0,
+
+135029,Water Jet,0,0,0,0,0,0,
+393657,tier30_2pc,0,0,0,0,0,0,
+33395,Freeze,0,0,0,0,0,0,

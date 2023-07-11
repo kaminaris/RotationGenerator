@@ -1,56 +1,116 @@
 id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
-204018,Blessing of Spellwarding,0.000000,0,40,0,1,180.000000,MANA:3000
-204074,Righteous Protector,0.000000,0,0,1,1,0.000000,
-204019,Blessed Hammer,0.000000,0,0,0,1,0.000000,
-204035,Bastion of Light,0.000000,0,0,0,1,120.000000,
-203791,Last Defender,0.000000,0,0,1,1,0.000000,
-53600,Shield of the Righteous,0.000000,0,0,0,0,1.000000,
-35395,Crusader Strike,0.000000,0,0,0,0,0.000000,
-19750,Flash of Light,1.396000,0,40,0,0,0.000000,MANA:5016
-203776,First Avenger,0.000000,0,0,1,1,0.000000,
-498,Divine Protection,0.000000,0,0,0,0,60.000000,MANA:700
-213644,Cleanse Toxins,0.000000,0,40,0,0,8.000000,MANA:1300
-213652,Hand of the Protector,0.000000,0,40,0,1,0.000000,
-114154,Unbreakable Spirit,0.000000,0,0,1,1,0.000000,
-230332,Cavalier,0.000000,0,0,1,1,0.000000,
-280373,Redoubt,0.000000,0,0,1,1,0.000000,
-204077,Final Stand,0.000000,0,0,1,1,0.000000,
-96231,Rebuke,0.000000,0,0,0,0,15.000000,
-121183,Contemplation,0.000000,0,0,0,0,8.000000,
-642,Divine Shield,0.000000,0,0,0,0,300.000000,
-26573,Consecration,0.000000,0,0,0,0,4.500000,
-204054,Consecrated Ground,0.000000,0,0,1,1,0.000000,
-86659,Guardian of Ancient Kings,0.000000,0,30,0,0,300.000000,
-32223,Heart of the Crusader,0.000000,0,0,1,0,0.000000,
-204023,Crusader's Judgment,0.000000,0,0,1,1,0.000000,
-1044,Blessing of Freedom,0.000000,0,40,0,0,1.500000,MANA:3000
-31935,Avenger's Shield,0.000000,0,30,0,0,15.000000,
-152261,Holy Shield,0.000000,0,0,1,1,0.000000,
-85043,Grand Crusader,0.000000,0,0,1,0,0.000000,
-115750,Blinding Light,0.000000,0,0,0,1,90.000000,MANA:1600
-20066,Repentance,1.582000,0,30,0,1,15.000000,MANA:2000
-198054,Fist of Justice,0.000000,0,0,1,1,0.000000,
-204150,Aegis of Light,0.000000,0,0,0,1,180.000000,
-184092,Light of the Protector,0.000000,0,0,0,0,0.000000,
-275779,Judgment,0.000000,0,30,0,0,0.000000,MANA:0
-152262,Seraphim,0.000000,0,0,0,1,45.000000,
-853,Hammer of Justice,0.000000,0,10,0,0,60.000000,MANA:700
-183778,Judgment of Light,0.000000,0,0,1,1,0.000000,
-31884,Avenging Wrath,0.000000,0,0,0,0,120.000000,
-62124,Hand of Reckoning,0.000000,0,30,0,0,0.000000,MANA:600
-76671,Mastery: Divine Bulwark,0.000000,0,0,1,0,0.000000,
-7328,Redemption,9.305000,0,40,0,0,0.000000,MANA:800
-190784,Divine Steed,0.000000,0,0,0,0,0.000000,
-203797,Retribution Aura,0.000000,0,0,1,1,0.000000,
-1022,Blessing of Protection,0.000000,0,40,0,0,1.500000,MANA:3000
-633,Lay on Hands,0.000000,0,40,0,0,600.000000,
-6940,Blessing of Sacrifice,0.000000,0,40,0,0,1.000000,MANA:1400
-327193,Moment of Glory,0.000000,0,0,0,1,90,
-375576,Divine Toll,0.000000,0,30,0,1,60,MANA:7500
-387174,Eye of Tyr,0.000000,0,0,0,1,45,
-405757,Inmost Light,0.000000,0,0,0,1,0,
-223817,Divine Purpose,0.000000,0,0,0,1,0,
-386653,Bulwark of Righteous Fury,0.000000,0,0,0,1,0,
-24275,Hammer of Wrath,0.000000,0,30,0,1,6,
-53595,Hammer of the Righteous,0.000000,0,30,0,1,4.8,
-53595,Word of Glory,0.000000,0,40,0,0,4.8,HOLY_POWER:3
+378457,Soaring Shield,0,0,0,1,1,0,
+385728,Seal of the Crusader,0,0,0,1,1,0,
+385633,Auras of the Resolute,0,0,0,1,1,0,
+853,Hammer of Justice,0,0,10,0,0,60,MANA:1750;
+389539,Sentinel,0,0,0,0,1,120,
+275779,Judgment,0,0,30,0,0,4.388,MANA:1500;
+385349,Touch of Light,0,0,0,1,1,0,
+20066,Repentance,1356,0,30,0,1,15,MANA:3000;
+53600,Shield of the Righteous,0,0,0,0,0,1,HOLY_POWER:3;
+204018,Blessing of Spellwarding,0,0,40,0,1,300,MANA:7500;
+386653,Bulwark of Righteous Fury,0,0,0,1,1,0,
+24275,Hammer of Wrath,0,0,30,0,1,5.983,MANA:0;
+183778,Judgment of Light,0,0,0,1,1,0,
+85043,Grand Crusader,0,0,0,1,1,0,
+204019,Blessed Hammer,0,0,0,0,1,4.787,MANA:800;
+405768,Fading Light,0,0,0,1,1,0,
+26573,Consecration,0,0,0,0,0,9,
+385639,Auras of Swift Vengeance,0,0,0,1,1,0,
+384909,Improved Blessing of Protection,0,0,0,1,1,0,
+378845,Focused Enmity,0,0,0,1,1,0,
+406468,Lightforged Blessing,0,0,0,1,1,0,
+384815,Seal of Charity,0,0,0,1,1,0,
+375576,Divine Toll,0,0,30,0,1,60,MANA:7500;
+378974,Bastion of Light,0,0,0,0,1,120,
+385515,Holy Aegis,0,0,0,1,1,0,
+633,Lay on Hands,0,0,40,0,1,600,
+1022,Blessing of Protection,0,0,40,0,1,300,MANA:7500;
+317920,Concentration Aura,0,0,0,0,0,0,
+403042,Crusader's Reprieve,0,0,0,1,1,0,
+379008,Strength of Conviction,0,0,0,1,1,0,
+378405,Light of the Titans,0,0,0,1,1,0,
+385422,Resolute Defender,0,0,0,1,1,0,
+213644,Cleanse Toxins,0,0,40,0,1,8,MANA:25000;
+204054,Consecrated Ground,0,0,0,1,1,0,
+378279,Gift of the Golden Val'kyr,0,0,0,1,1,0,
+378425,Uther's Counsel,0,0,0,1,1,0,
+384820,Sacrifice of the Just,0,0,0,1,1,0,
+379391,Quickened Invocation,0,0,0,1,1,0,
+76671,Mastery: Divine Bulwark,0,0,0,1,0,0,
+204023,Crusader's Judgment,0,0,0,1,1,0,
+32223,Crusader Aura,0,0,0,0,0,0,
+209389,Bulwark of Order,0,0,0,1,1,0,
+315924,Hand of the Protector,0,0,0,1,1,0,
+386568,Inner Light,0,0,0,1,1,0,
+31850,Ardent Defender,0,0,0,0,1,120,
+190784,Divine Steed,0,0,0,0,1,45,
+377043,Justification,0,0,0,1,1,0,
+642,Divine Shield,0,0,0,0,0,300,
+465,Devotion Aura,0,0,0,0,0,0,
+121183,Contemplation,0,0,0,0,0,8,
+380188,Crusader's Resolve,0,0,0,1,1,0,
+391142,Zealot's Paragon,0,0,0,1,1,0,
+85673,Word of Glory,0,0,40,0,0,0,HOLY_POWER:3;MANA:0;MANA:25000;MANA:0;
+183435,Retribution Aura,0,0,0,0,0,0,
+387174,Eye of Tyr,0,0,0,0,1,60,
+31935,Avenger's Shield,0,0,30,0,1,15,
+385414,Afterimage,0,0,0,1,1,0,
+234299,Fist of Justice,0,0,0,1,1,0,
+378285,Tyr's Enforcer,0,0,0,1,1,0,
+385450,Seal of Might,0,0,0,1,1,0,
+377128,Golden Path,0,0,0,1,1,0,
+31884,Avenging Wrath,0,0,0,0,1,120,
+321136,Shining Light,0,0,0,1,1,0,
+384914,Recompense,0,0,0,1,1,0,
+6940,Blessing of Sacrifice,0,0,40,0,1,60,MANA:3500;
+393114,Improved Ardent Defender,0,0,0,1,1,0,
+204074,Righteous Protector,0,0,0,1,1,0,
+385427,Obduracy,0,0,0,1,1,0,
+114154,Unbreakable Spirit,0,0,0,1,1,0,
+62124,Hand of Reckoning,0,0,30,0,0,8,MANA:1500;
+96231,Rebuke,0,0,0,0,1,15,
+161800,Riposte,0,0,0,1,0,0,
+230332,Cavalier,0,0,0,1,1,0,
+403530,Punishment,0,0,0,1,1,0,
+353367,Aegis of Light,0,0,0,1,0,0,
+5502,Sense Undead,0,0,0,0,0,0,
+391054,Intercession,0,0,40,0,0,600,HOLY_POWER:3;MANA:0;MANA:0;
+379021,Sanctuary,0,0,0,1,1,0,
+393022,Inspiring Vanguard,0,0,0,1,1,0,
+19750,Flash of Light,1197,0,40,0,0,0,MANA:0;MANA:25000;MANA:0;MANA:0;
+86659,Guardian of Ancient Kings,0,0,30,0,1,300,
+115750,Blinding Light,0,0,0,0,1,90,MANA:3000;
+377053,Seal of Reprisal,0,0,0,1,1,0,
+392928,Tirion's Devotion,0,0,0,1,1,0,
+385129,Seal of Order,0,0,0,1,1,0,
+379022,Consecration in Flame,0,0,0,1,1,0,
+305394,Unbound Freedom,0,0,0,1,1,0,
+385425,Seal of Alacrity,0,0,0,1,1,0,
+386738,Divine Resonance,0,0,0,1,1,0,
+1044,Blessing of Freedom,0,0,40,0,1,25,MANA:3500;
+204077,Final Stand,0,0,0,1,1,0,
+405757,Inmost Light,0,0,0,1,1,0,
+53595,Hammer of the Righteous,0,0,0,0,1,4.787,MANA:800;
+280373,Redoubt,0,0,0,1,1,0,
+152261,Holy Shield,0,0,0,1,1,0,
+402964,Sanctified Plates,0,0,0,1,1,0,
+10326,Turn Evil,1197,0,20,0,1,15,MANA:5250;
+384897,Seal of Mercy,0,0,0,1,1,0,
+406101,Faith's Armor,0,0,0,1,1,0,
+409441,Of Dusk and Dawn,0,0,0,1,1,0,
+385464,Incandescence,0,0,100,1,1,0,
+378762,Ferren Marcus's Fervor,0,0,0,1,1,0,
+7328,Redemption,7978,0,40,0,0,0,MANA:2000;
+327193,Moment of Glory,0,0,0,0,1,90,
+385726,Barricade of Faith,0,0,0,1,1,0,
+223817,Divine Purpose,0,0,0,1,1,0,
+231663,Greater Judgment,0,0,0,1,1,0,
+379043,Faith in the Light,0,0,0,1,1,0,
+393071,Strength in Adversity,0,0,0,1,1,0,
+376996,Seasoned Warhorse,0,0,0,1,1,0,
+393030,Improved Holy Shield,0,0,0,1,1,0,
+383388,Relentless Inquisitor,0,0,0,1,1,0,
+
+35395,Crusader Strike,0,0,0,0,0,0,
+393673,tier29_2pc,0,0,0,0,0,0,

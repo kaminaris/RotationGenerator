@@ -1,80 +1,107 @@
 id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
-315443,Abomination Limb,0.000000,0,20,0,0,120.000000,
-194916,All Will Serve,0.000000,0,0,1,1,0.000000,
-48707,Anti-Magic Shell,0.000000,0,0,0,0,60.000000,
-275699,Apocalypse,0.000000,0,0,0,0,90.000000,
-276837,Army of the Damned,0.000000,0,0,1,1,0.000000,
-42650,Army of the Dead,0.000000,0,0,0,0,480.000000,RUNES:1
-108194,Asphyxiate,0.000000,0,20,0,0,45.000000,
-55078,Blood Plague,0.000000,0,0,1,0,0.000000,
-207264,Bursting Sores,0.000000,0,0,1,1,0.000000,
-45524,Chains of Ice,0.000000,0,30,0,0,0.000000,RUNES:1
-207311,Clawing Shadows,0.000000,0,30,0,1,0.000000,RUNES:1
-111673,Control Undead,1.424000,0,30,0,0,0.000000,RUNES:1
-338553,Convocation of the Dead,0.000000,0,0,1,0,0.000000,
-56222,Dark Command,0.000000,0,30,0,0,8.000000,
-178819,Dark Succor,0.000000,0,0,1,0,0.000000,
-63560,Dark Transformation,0.000000,0,100,0,0,60.000000,
-6952,Deadliest Coil,0.000000,0,0,1,0,0.000000,
-43265,Death and Decay,0.000000,0,30,0,0,30.000000,RUNES:1
-47541,Death Coil,0.000000,0,30,0,0,0.000000,RUNIC_POWER:40
-50977,Death Gate,3.798000,0,0,0,0,60.000000,RUNES:1
-49576,Death Grip,0.000000,0,30,0,0,0.000000,
-48743,Death Pact,0.000000,0,0,0,1,120.000000,
-49998,Death Strike,0.000000,0,0,0,0,0.000000,RUNIC_POWER:35
-48265,Death's Advance,0.000000,0,0,0,0,45.000000,
-324128,Death's Due,0.000000,0,30,0,0,30.000000,RUNES:1
-276079,Death's Reach,0.000000,0,0,1,1,0.000000,
-152280,Defile,0.000000,0,30,0,1,20.000000,RUNES:1
-207269,Ebon Fever,0.000000,0,0,1,1,0.000000,
-207317,Epidemic,0.000000,0,0,0,0,0.000000,RUNIC_POWER:30
-85948,Festering Strike,0.000000,0,0,0,0,0.000000,RUNES:2
-194310,Festering Wound,0.000000,0,0,1,0,0.000000,
-55095,Frost Fever,0.000000,0,0,1,0,0.000000,
-273952,Grip of the Dead,0.000000,0,0,1,1,0.000000,
-276023,Harbinger of Doom,0.000000,0,0,1,1,0.000000,
-48792,Icebound Fortitude,0.000000,0,0,0,0,180.000000,
-207272,Infected Claws,0.000000,0,0,1,1,0.000000,
-342156,Lead by Example,0.000000,0,0,0,0,0.000000,
-77515,Mastery: Dreadblade,0.000000,0,0,1,0,0.000000,
-47528,Mind Freeze,0.000000,0,15,0,0,15.000000,
-51986,On a Pale Horse,0.000000,0,0,1,0,0.000000,
-77575,Outbreak,0.000000,0,30,0,0,0.000000,RUNES:1
-3714,Path of Frost,0.000000,0,0,0,0,0.000000,RUNES:1
-277234,Pestilence,0.000000,0,0,1,1,0.000000,
-194917,Pestilent Pustules,0.000000,0,0,1,1,0.000000,
-6954,Phearomones,0.000000,0,0,0,0,0.000000,
-61999,Raise Ally,0.000000,0,40,0,0,600.000000,RUNIC_POWER:30
-46584,Raise Dead,0.000000,0,0,0,0,30.000000,
-53428,Runeforging,0.000000,0,0,0,0,0.000000,
-51462,Runic Corruption,0.000000,0,0,1,0,0.000000,
-327574,Sacrificial Pact,0.000000,0,0,0,0,120.000000,RUNIC_POWER:20
-55090,Scourge Strike,0.000000,0,0,0,0,0.000000,RUNES:1
-312202,Shackle the Unworthy,0.000000,0,30,0,0,60.000000,
-130736,Soul Reaper,0.000000,0,0,0,1,6.000000,RUNES:1
-207321,Spell Eater,0.000000,0,0,1,1,0.000000,
-81340,Sudden Doom,0.000000,0,0,1,0,0.000000,
-49206,Summon Gargoyle,0.000000,0,30,0,1,180.000000,
-6953,Superstrain,0.000000,0,0,1,0,0.000000,
-311648,Swarming Mist,0.000000,0,0,0,0,60.000000,RUNES:1
-207289,Unholy Assault,0.000000,0,0,0,1,78.000000,
-115989,Unholy Blight,0.000000,0,0,0,1,45.000000,RUNES:1
-115994,Unholy Blight DoT,0.000000,0,0,1,0,0.000000,
-207289,Unholy Frenzy,0.000000,0,0,0,1,75.000000,
-48263,Veteran of the Third War,0.000000,0,0,1,0,0.000000,
-191587,Virulent Plague,0.000000,0,0,1,0,0.000000,
-212552,Wraith Walk,0.000000,0,0,0,0,60.000000,
-374383,Assimilation,0,0,0,0,1,0,
-377590,Festermight,0,0,0,0,1,0,
-377592,Morbidity,0,0,0,0,1,0,
-390175,Plaguebringer,0,0,0,0,1,0,
-390279,Vile Contagion,0,0,0,0,1,0,RUNIC_POWER:30
-47568,Empower Rune Weapon,0,0,0,0,0,120,
+390268,Eternal Agony,0,0,0,1,1,0,
+377537,Death Rot,0,0,0,1,1,0,
+152280,Defile,0,0,30,0,1,20,RUNES:1;RUNIC_POWER:-10;
+391571,Gloom Ward,0,0,0,1,1,0,
+390270,Coil of Devastation,0,0,0,1,1,0,
+390175,Plaguebringer,0,0,0,1,1,0,
+51052,Anti-Magic Zone,0,0,30,0,1,120,
+207272,Infected Claws,0,0,0,1,1,0,
+374111,Might of Thassarian,0,0,0,1,1,0,
+111673,Control Undead,1260,0,30,0,1,0,RUNES:1;RUNIC_POWER:-10;
+47528,Mind Freeze,0,0,15,0,1,15,RUNIC_POWER:0;
+316867,Improved Festering Strike,0,0,0,1,1,0,
 207289,Unholy Assault,0,0,0,0,1,90,
-390259,Commander of the Dead,0,0,0,0,1,0,
-374265,Unholy Ground,0,0,0,0,1,0,
-51052,Anti-Magic Zone,0.000000,0,0,0,1,120,
-377537,Death Rot,0.000000,0,0,0,1,0,
-377580,Improved Death Coil,0.000000,0,0,0,1,0,
-390270,Coil Of Devastation,0.000000,0,0,0,1,0,
-390275,Rotten Touch,0.000000,0,0,0,1,0,
+49576,Death Grip,0,0,30,0,0,25,
+85948,Festering Strike,0,0,0,0,1,0,RUNES:2;RUNIC_POWER:-20;
+373923,Merciless Strikes,0,0,0,1,1,0,
+48707,Anti-Magic Shell,0,0,0,0,1,60,
+47568,Empower Rune Weapon,0,0,0,0,1,0,
+221562,Asphyxiate,0,0,20,0,1,45,
+48743,Death Pact,0,0,0,0,1,120,
+373926,Acclimation,0,0,0,1,1,0,
+377514,Reaping,0,0,0,1,1,0,
+378848,Coldthirst,0,0,0,1,1,0,
+48263,Veteran of the Third War,0,0,0,1,1,0,
+374277,Improved Death Strike,0,0,0,1,1,0,
+276837,Army of the Damned,0,0,0,1,1,0,
+392566,Enfeeble,0,0,0,1,1,0,
+327574,Sacrificial Pact,0,0,0,0,1,120,RUNIC_POWER:20;
+373930,Proliferating Chill,0,0,0,1,1,0,
+51462,Runic Corruption,0,0,0,1,0,0,
+77515,Mastery: Dreadblade,0,0,0,1,0,0,
+377580,Improved Death Coil,0,0,0,1,1,0,
+389679,Clenching Grasp,0,0,0,1,1,0,
+374598,Blood Draw,0,0,0,1,1,0,
+51986,On a Pale Horse,0,0,0,1,0,0,
+390283,Superstrain,0,0,0,1,1,0,
+207167,Blinding Sleet,0,0,0,0,1,60,
+316941,Unholy Command,0,0,0,1,1,0,
+276079,Death's Reach,0,0,0,1,1,0,
+49998,Death Strike,0,0,0,0,1,0,RUNIC_POWER:45;
+207104,Runic Attenuation,0,0,0,1,1,0,
+53428,Runeforging,0,0,0,0,0,0,
+275699,Apocalypse,0,0,0,0,1,90,
+377585,Replenishing Wounds,0,0,0,1,1,0,
+389682,Unholy Endurance,0,0,0,1,1,0,
+207311,Clawing Shadows,0,0,30,0,1,0,RUNES:1;RUNIC_POWER:-10;
+383269,Abomination Limb,0,0,20,0,1,120,
+374030,Blood Scent,0,0,0,1,1,0,
+61999,Raise Ally,0,0,40,0,0,600,RUNIC_POWER:30;
+49530,Sudden Doom,0,0,0,1,1,0,
+207264,Bursting Sores,0,0,0,1,1,0,
+377587,Ghoulish Frenzy,0,0,0,1,1,0,
+3714,Path of Frost,0,0,0,0,0,0,RUNES:1;
+391546,March of Darkness,0,0,0,1,1,0,
+48265,Death's Advance,0,0,0,0,0,45,
+48792,Icebound Fortitude,0,0,0,0,1,180,
+50977,Death Gate,3360,0,0,0,0,60,RUNES:1;RUNIC_POWER:-10;
+47541,Death Coil,0,0,30,0,0,0,RUNIC_POWER:30;
+43265,Death and Decay,0,0,30,0,0,30,RUNES:1;RUNIC_POWER:-10;
+56222,Dark Command,0,0,30,0,0,8,
+63560,Dark Transformation,0,0,100,0,1,60,
+42650,Army of the Dead,0,0,0,0,1,480,RUNES:1;RUNIC_POWER:-10;
+374383,Assimilation,0,0,0,1,1,0,
+212552,Wraith Walk,0,0,0,0,1,60,
+374574,Rune Mastery,0,0,0,1,1,0,
+390161,Feasting Strikes,0,0,0,1,1,0,
+390259,Commander of the Dead,0,0,0,1,1,0,
+77575,Outbreak,0,0,30,0,1,0,RUNES:1;RUNIC_POWER:-10;
+390196,Magus of the Dead,0,0,0,1,1,0,
+55090,Scourge Strike,0,0,0,0,1,0,RUNES:1;RUNIC_POWER:-10;
+46584,Raise Dead,0,0,30,0,1,30,
+377592,Morbidity,0,0,0,1,1,0,
+194916,All Will Serve,0,0,0,1,1,0,
+205727,Anti-Magic Barrier,0,0,0,1,1,0,
+178819,Dark Succor,0,0,0,1,0,0,
+390166,Runic Mastery,0,0,0,1,1,0,
+319230,Unholy Pact,0,0,0,1,1,0,
+390275,Rotten Touch,0,0,0,1,1,0,
+356367,Death's Echo,0,0,0,1,1,0,
+276023,Harbinger of Doom,0,0,0,1,1,0,
+374049,Suppression,0,0,0,1,1,0,
+377590,Festermight,0,0,0,1,1,0,
+374261,Unholy Bond,0,0,0,1,1,0,
+374504,Brittle,0,0,0,1,1,0,
+207200,Permafrost,0,0,0,1,1,0,
+49039,Lichborne,0,0,0,0,0,120,
+115989,Unholy Blight,0,0,0,0,1,45,RUNES:1;RUNIC_POWER:-10;
+391566,Insidious Chill,0,0,0,1,1,0,
+46585,Raise Dead,0,0,30,0,1,120,
+45524,Chains of Ice,0,0,30,0,1,0,RUNES:1;RUNIC_POWER:-10;
+207269,Ebon Fever,0,0,0,1,1,0,
+377440,Unholy Aura,0,0,0,1,1,0,
+390279,Vile Contagion,0,0,30,0,1,90,RUNIC_POWER:30;
+207317,Epidemic,0,0,30,0,1,0,RUNIC_POWER:30;
+277234,Pestilence,0,0,0,1,1,0,
+49206,Summon Gargoyle,0,0,30,0,1,180,
+343294,Soul Reaper,0,0,0,0,1,6,RUNES:1;RUNIC_POWER:-10;
+206967,Will of the Necropolis,0,0,0,1,1,0,
+374265,Unholy Ground,0,0,0,1,1,0,
+316916,Cleaving Strikes,0,0,0,1,1,0,
+273952,Grip of the Dead,0,0,0,1,1,0,
+390236,Ruptured Viscera,0,0,0,1,1,0,
+194878,Icy Talons,0,0,0,1,1,0,
+
+194310,Festering Wound,0,0,0,0,0,0,
+191587,Virulent Plague,0,0,0,0,0,0,

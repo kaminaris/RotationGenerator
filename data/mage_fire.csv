@@ -1,62 +1,113 @@
 id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
-157642,Enhanced Pyrotechnics,0.000000,0,0,1,0,0.000000,
-205026,Firestarter,0.000000,0,0,1,1,0.000000,
-157981,Blast Wave,0.000000,0,0,0,1,25.000000,
-55342,Mirror Image,0.000000,0,0,0,1,120.000000,
-1463,Incanter's Flow,0.000000,0,0,1,1,0.000000,
-30449,Spellsteal,0.000000,0,40,0,0,0.000000,
-108853,Fire Blast,0.000000,0,40,0,0,0.500000,
-44457,Living Bomb,0.000000,0,40,0,0,12.000000,
-113724,Ring of Frost,1.836000,0,30,0,1,45.000000,
-2139,Counterspell,0.000000,0,40,0,0,24.000000,
-205020,Pyromaniac,0.000000,0,0,1,1,0.000000,
-269644,Searing Touch,0.000000,0,0,1,1,0.000000,
-155148,Kindling,0.000000,0,0,1,1,0.000000,
-31661,Dragon's Breath,0.000000,0,0,0,0,20.000000,
-205029,Flame On,0.000000,0,0,1,1,0.000000,
-205037,Flame Patch,0.000000,0,0,1,1,0.000000,
-190319,Combustion,0.000000,0,0,0,0,120.000000,
-12846,Mastery: Ignite,0.000000,0,0,1,0,0.000000,
-2948,Scorch,1.377000,0,40,0,0,0.000000,
-212653,Shimmer,0.000000,0,0,0,1,0.500000,
-11366,Pyroblast,4.132000,0,40,0,0,0.000000,
-133,Fireball,2.066000,0,40,0,0,0.000000,
-117216,Critical Mass,0.000000,0,0,1,0,0.000000,
-257541,Phoenix Flames,0.000000,0,40,0,1,0.000000,
-86949,Cauterize,0.000000,0,0,1,0,0.000000,
-190336,Conjure Refreshment,2.755000,0,0,0,0,15.000000,
-205023,Conflagration,0.000000,0,0,1,1,0.000000,
-56384,Arcane Momentum,0.000000,0,0,1,0,0.000000,
-269650,Pyroclasm,0.000000,0,0,1,1,0.000000,
-80353,Time Warp,0.000000,0,0,0,0,300.000000,
-203286,Greater Pyroblast,4.132000,0,40,0,0,0.000000,
-235870,Alexstrasza's Fury,0.000000,0,0,1,1,0.000000,
-130,Slow Fall,0.000000,0,40,0,0,0.000000,
-1953,Blink,0.000000,0,0,0,0,0.500000,
-118,Polymorph,1.561000,0,30,0,0,0.000000,
-153561,Meteor,0.000000,0,40,0,0,45.000000,
-2120,Flamestrike,2.525000,0,40,0,0,0.000000,
-195283,Hot Streak,0.000000,0,0,1,0,0.000000,
-1459,Arcane Intellect,0.000000,0,40,0,0,0.000000,
-11,Frostbolt of Ages,0.000000,0,100,0,0,0.000000,
-66,Invisibility,0.000000,0,0,0,0,300.000000,
-45438,Ice Block,0.000000,0,0,0,0,240.000000,
-205036,Ice Ward,0.000000,0,0,1,1,0.000000,
-116011,Rune of Power,1.377000,0,30,0,1,10.000000,
-122,Frost Nova,0.000000,0,0,0,0,0.000000,
-475,Remove Curse,0.000000,0,40,0,0,8.000000,
-236058,Frenetic Speed,0.000000,0,0,1,1,0.000000,
-235313,Blazing Barrier,0.000000,0,0,0,0,25.000000,
-235365,Blazing Soul,0.000000,0,0,1,1,0.000000,
-1449,Arcane Explosion,0,0,0,0,0,0,MANA:5000
-203275,Flame Accelerant,0,0,0,0,1,0,
-383860,Hyperthermia,0,0,0,0,1,0,
-386539,Temporal Warp,0,0,0,0,1,0,
+343183,Improved Frost Nova,0,0,0,1,1,0,
+382490,Tome of Antonidas,0,0,0,1,1,0,
+383665,Incendiary Eruptions,0,0,100,1,1,0,
+212653,Shimmer,0,0,0,0,1,21,MANA:1000;
+384174,Master of Flame,0,0,0,1,1,0,
+11366,Pyroblast,2745,0,40,0,1,0,MANA:1000;
+383476,Phoenix Reborn,0,0,0,1,1,0,
+108839,Ice Floes,0,0,0,0,1,20,
+382270,Diverted Energy,0,0,0,1,1,0,
+416719,Deep Impact,0,0,0,1,1,0,
+383604,Improved Scorch,0,0,0,1,1,0,
+382493,Tome of Rhonin,0,0,0,1,1,0,
+157981,Blast Wave,0,0,0,0,1,30,
 157997,Ice Nova,0,0,40,0,1,25,
-382440,Shifting Power,0,0,0,0,1,60,MANA:2500
-383886,Sun King's Blessing,0,0,0,0,1,0,
-383391,Feel the Burn,0,0,0,0,1,0,
-383659,Tempered Flames,0,0,0,0,1,0,
-342344,From the Ashes,0,0,0,0,1,0,
+110959,Greater Invisibility,0,0,0,0,1,120,
+190319,Combustion,0,0,0,0,1,120,MANA:5000;
+414659,Ice Cold,0,0,0,1,1,0,
+31661,Dragon's Breath,0,0,0,0,1,45,MANA:2000;
+343222,Call of the Sun King,0,0,0,1,1,0,
+205036,Ice Ward,0,0,0,1,1,0,
+414660,Mass Barrier,0,0,0,0,1,120,MANA:6000;
+190336,Conjure Refreshment,2353,0,0,0,0,15,MANA:1500;
+391102,Mass Slow,0,0,0,1,1,0,
+86949,Cauterize,0,0,0,1,0,0,
+80353,Time Warp,0,0,0,0,0,300,MANA:2000;
+205037,Flame Patch,0,0,0,1,1,0,
+203275,Flame Accelerant,0,0,0,1,1,0,
+1449,Arcane Explosion,0,0,0,0,0,0,MANA:5000;
+44457,Living Bomb,0,0,40,0,1,30,MANA:750;
+414664,Mass Invisibility,0,0,0,0,1,300,MANA:3000;
+416506,Unleashed Inferno,0,0,0,1,1,0,
+383391,Feel the Burn,0,0,0,1,1,0,
+416094,Fuel the Fire,0,0,0,1,1,0,
+390218,Overflowing Energy,0,0,0,1,1,0,
+382297,Quick Witted,0,0,0,1,1,0,
+383886,Sun King's Blessing,0,0,0,1,1,0,
+382440,Shifting Power,0,0,0,0,1,60,MANA:2500;
+235313,Blazing Barrier,0,0,0,0,1,25,MANA:1500;
+342245,Alter Time,0,0,0,0,1,60,MANA:500;
+387807,Time Manipulation,0,0,0,1,1,0,
+416715,Convection,0,0,0,1,1,0,
+343230,Surging Blaze,0,0,0,1,1,0,
+130,Slow Fall,0,0,40,0,0,0,MANA:500;
+122,Frost Nova,0,0,0,0,0,30,MANA:1000;
+382569,Reduplication,0,0,0,1,1,0,
+389713,Displacement,0,0,40,0,1,45,
+45438,Ice Block,0,0,0,0,1,240,
+382800,Accumulative Shielding,0,0,0,1,1,0,
+383967,Improved Combustion,0,0,0,1,1,0,
+386539,Temporal Warp,0,0,0,1,1,0,
+31589,Slow,0,0,35,0,1,0,MANA:500;
+66,Invisibility,0,0,0,0,0,300,MANA:1500;
+133,Fireball,1764,0,40,0,0,0,MANA:1000;
+342344,From the Ashes,0,0,0,1,1,0,
+342249,Master of Time,0,0,0,1,1,0,
+383810,Fevered Incantation,0,0,0,1,1,0,
+382826,Temporal Velocity,0,0,0,1,1,0,
+205026,Firestarter,0,0,0,1,1,0,
+384033,Firefall,0,0,0,1,1,0,
+2120,Flamestrike,2353,0,40,0,0,0,MANA:1250;
+386763,Freezing Cold,0,0,0,1,1,0,
+257541,Phoenix Flames,0,0,40,0,1,25,
+386828,Energized Barriers,0,0,0,1,1,0,
+417467,Inflame,0,0,0,1,1,0,
+382820,Reabsorption,0,0,0,1,1,0,
+155148,Kindling,0,0,0,1,1,0,
+113724,Ring of Frost,1568,0,30,0,1,45,MANA:4000;
+382289,Tempest Barrier,0,0,0,1,1,0,
+387044,Fervent Flickering,0,0,0,1,1,0,
+30449,Spellsteal,0,0,40,0,1,0,MANA:10500;
+153561,Meteor,0,0,40,0,1,45,MANA:500;
+12846,Mastery: Ignite,0,0,0,1,0,0,
+55342,Mirror Image,0,0,0,0,1,120,MANA:1000;
+383243,Time Anomaly,0,0,0,1,1,0,
+382268,Flow of Time,0,0,0,1,1,0,
+382481,Rigid Ice,0,0,0,1,1,0,
+235224,Frigid Winds,0,0,0,1,1,0,
+205029,Flame On,0,0,0,1,1,0,
+383489,Wildfire,0,0,0,1,1,0,
+382292,Cryo-Freeze,0,0,0,1,1,0,
+157642,Pyrotechnics,0,0,0,1,1,0,
+383499,Firemind,0,0,0,1,1,0,
+389627,Volatile Detonation,0,0,0,1,1,0,
+269644,Searing Touch,0,0,0,1,1,0,
+383634,Fiery Rush,0,0,0,1,1,0,
+382293,Incantation of Swiftness,0,0,0,1,1,0,
+383659,Tempered Flames,0,0,0,1,1,0,
+108853,Fire Blast,0,0,40,0,1,7.842,MANA:500;
+475,Remove Curse,0,0,40,0,1,8,MANA:650;
+416714,Intensifying Flame,0,0,0,1,1,0,
+2948,Scorch,1176,0,40,0,1,0,MANA:500;
+195283,Hot Streak,0,0,0,1,0,0,
+383669,Controlled Destruction,0,0,0,1,1,0,
+383121,Mass Polymorph,1333,0,0,0,1,60,MANA:2000;
+117216,Critical Mass,0,0,0,1,1,0,
+235870,Alexstrasza's Fury,0,0,0,1,1,45,
+205020,Pyromaniac,0,0,0,1,1,0,
+383860,Hyperthermia,0,0,0,1,1,0,
+2139,Counterspell,0,0,40,0,0,24,MANA:1000;
+382424,Winter's Protection,0,0,0,1,1,0,
+205023,Conflagration,0,0,0,1,1,0,
+116,Frostbolt,1568,0,40,0,0,0,MANA:1000;
+1459,Arcane Intellect,0,0,40,0,0,0,MANA:2000;
+118,Polymorph,1333,0,30,0,0,0,MANA:2000;
+383092,Arcane Warding,0,0,0,1,1,0,
+120,Cone of Cold,0,0,0,0,0,12,MANA:2000;
+1463,Incanter's Flow,0,0,0,1,1,0,
+
 48107,Heating Up,0,0,0,0,0,0,
 408665,Charring Embers,0,0,0,0,0,0,
+409964,Flame's Fury,0,0,0,0,0,0,
+393655,tier30_2pc,0,0,0,0,0,0,

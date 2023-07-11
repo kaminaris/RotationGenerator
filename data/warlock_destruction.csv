@@ -1,30 +1,123 @@
 id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
-108503,Grimoire of Sacrifice,0,0,40,0,1,30,
-321792,Impending Catastrophe,2,0,40,0,0,120,
-325289,Decimating Bolt,2.5,0,40,0,0,45,
-325640,Soul Rot,1.5,0,40,0,0,60,
-312321,Scouring Tithe,2,0,40,0,0,40,
-6353,Soul Fire,4,0,40,0,1,45,
-29722,Incinerate,2,0,40,0,0,0,
+219272,Demon Skin,0,0,0,1,1,0,
+387252,Ashen Remains,0,0,0,1,1,0,
+387475,Infernal Brand,0,0,0,1,1,0,
+386110,Fiendish Stride,0,0,0,1,1,0,
+387095,Pyrogenics,0,0,0,1,1,0,
+387159,Avatar of Destruction,0,0,0,1,1,0,
+29722,Incinerate,1494,0,40,0,0,0,MANA:750;
+386620,Sweet Souls,0,0,0,1,1,0,
+48020,Demonic Circle: Teleport,0,0,40,0,0,30,MANA:1500;
+6353,Soul Fire,2988,0,40,0,1,45,MANA:1000;
+5782,Fear,1270,0,30,0,0,0,MANA:2500;
+386113,Fel Pact,0,0,0,1,1,0,
+387384,Backlash,0,0,0,1,1,0,
+215941,Soul Conduit,0,0,0,1,1,0,
+328774,Amplify Curse,0,0,0,0,1,60,
 270545,Inferno,0,0,0,1,1,0,
+389576,Profane Bargain,0,0,0,1,1,0,
+387259,Flashpoint,0,0,0,1,1,0,
+108370,Soul Leech,0,0,0,1,0,0,
+389609,Abyss Walker,0,0,0,1,1,0,
+126,Eye of Kilrogg,1494,0,50000,0,0,0,MANA:1500;
+386648,Nightmare,0,0,0,1,1,0,
 266134,Internal Combustion,0,0,0,1,1,0,
-17962,Conflagrate,0,0,40,0,0,11,
+386689,Grim Feast,0,0,0,1,1,0,
+333889,Fel Domination,0,0,0,0,1,180,
+20707,Soulstone,2241,0,40,0,0,600,MANA:500;
+56244,Horrify,0,0,0,1,1,0,
+387103,Ruin,0,0,0,1,1,0,
+268358,Demonic Circle,0,0,0,1,1,0,MANA:1000;
+417234,Crashing Chaos,0,0,0,1,1,0,
+386659,Dark Accord,0,0,0,1,1,0,
+386617,Demonic Fortitude,0,0,100,1,1,0,
+111771,Demonic Gateway,1494,10,40,0,1,10,MANA:10000;
+116858,Chaos Bolt,2241,0,40,0,1,0,SOUL_SHARDS:2;
+698,Ritual of Summoning,0,0,30,0,0,120,MANA:0;
+389359,Resolute Barrier,0,0,0,1,1,0,
+702,Curse of Weakness,0,0,40,0,0,0,MANA:500;
+234153,Drain Life,0,0,40,0,0,0,MANA:0;
+385899,Soulburn,0,0,0,0,1,6,SOUL_SHARDS:1;
+1714,Curse of Tongues,0,0,40,0,0,0,MANA:500;
+386344,Inquisitor's Gaze,0,0,0,1,1,0,
+196447,Channel Demonfire,0,0,40,0,1,25,MANA:750;
+405955,Sargerei Technique,0,0,0,1,1,0,
+5484,Howl of Terror,0,0,0,0,1,40,MANA:900;
+334275,Curse of Exhaustion,0,0,40,0,0,0,MANA:500;
+405936,Socrethar's Guile,0,0,0,1,1,0,
+387176,Decimation,0,0,0,1,1,0,
+5740,Rain of Fire,0,0,40,0,1,0,SOUL_SHARDS:3;
+387108,Conflagration of Chaos,0,0,0,1,1,0,
+386124,Fel Armor,0,0,0,1,1,0,
+386664,Ichor of Devils,0,0,0,1,1,0,
+101508,The Codex of Xerrath,0,0,0,1,0,0,
+205148,Reverse Entropy,0,0,0,1,1,0,
+288843,Demonic Embrace,0,0,0,1,1,0,
+387173,Diabolic Embers,0,0,0,1,1,0,
+386613,Accrued Vitality,0,0,0,1,1,0,
+387166,Raging Demonfire,0,0,0,1,1,0,
+755,Health Funnel,0,0,45,0,0,0,
+119910,Spell Lock,0,0,50000,0,0,0,
+386686,Frequent Donor,0,0,0,1,1,0,
 205184,Roaring Blaze,0,0,0,1,1,0,
-152108,Cataclysm,2,0,40,0,1,30,
-348,Immolate,1.5,0,40,0,0,0,
-196447,Channel Demonfire,2.5,0,40,0,1,21,
-80240,Havoc,0,0,40,0,0,30,
-1122,Summon Infernal,0,0,40,0,0,180,
-113858,Dark Soul Instability,0,0,40,0,1,120,
-267115,Flashover,0,0,0,1,1,0,
-117828,Backdraft,0,0,0,1,0,0,
-116858,Chaos Bolt,2.5,0,40,0,0,0,SOUL_SHARDS:2
-196412,Eradication,0,0,0,1,1,0,
-17877,Shadowburn,0,0,40,0,1,12,SOUL_SHARDS:1
+231793,Improved Conflagrate,0,0,0,1,1,0,
+264874,Darkfury,0,0,0,1,1,0,
+77220,Mastery: Chaotic Energies,0,0,0,1,0,0,
+386858,Demonic Inspiration,0,0,100,1,1,0,
+48018,Demonic Circle,373,0,50000,0,0,10,MANA:1000;
+388827,Explosive Potential,0,0,0,1,1,0,
+389367,Fel Synergy,0,0,100,1,1,0,
+111400,Burning Rush,0,0,0,0,1,0,
+386256,Summon Soulkeeper,747,0,40,0,1,0,
+389590,Demonic Resilience,0,0,100,1,1,0,
+348,Immolate,1120,0,40,0,0,0,MANA:750;
+171975,Grimoire of Synergy,0,0,0,1,1,0,
+387400,Madness of the Azj'Aqir,0,0,0,1,1,0,
+342601,Ritual of Doom,0,0,40,0,0,3600,SOUL_SHARDS:1;
+387972,Teachings of the Satyr,0,0,0,1,1,0,
+317138,Strength of Will,0,0,0,1,1,0,
+246985,Soul Shards,0,0,0,1,0,0,
+387522,Cry Havoc,0,0,0,1,1,0,
+387084,Grand Warlock's Design,0,0,0,1,1,0,
+6201,Create Healthstone,2241,0,0,0,0,0,MANA:1000;
+387275,Chaos Incarnate,0,0,0,1,1,0,
+1122,Summon Infernal,0,0,30,0,1,180,MANA:1000;
 196408,Fire and Brimstone,0,0,0,1,1,0,
-5740,Rain of Fire,0,0,40,0,0,0,SOUL_SHARDS:3
+384069,Shadowflame,0,0,0,0,1,15,MANA:1500;
+5697,Unending Breath,0,0,30,0,0,0,MANA:1000;
+388832,Scalding Flames,0,0,0,1,1,0,
+17962,Conflagrate,0,0,40,0,1,8.186,MANA:500;
+386864,Wrathful Minion,0,0,100,1,1,0,
+108416,Dark Pact,0,0,0,0,1,60,
+30283,Shadowfury,1120,0,35,0,1,60,MANA:500;
 387976,Dimensional Rift,0,0,40,0,1,45,
-387095,Pyrogenics,0,0,0,0,1,0,
-387103,Ruin,0,0,0,0,1,0,
-387173,Diabolic Embers,0,0,0,0,1,0,
-387506,Mayhem,0,0,0,0,1,0,
+266086,Rain of Chaos,0,0,0,1,1,0,
+385881,Teachings of the Black Harvest,0,0,0,1,1,0,
+104773,Unending Resolve,0,0,0,0,0,180,MANA:1000;
+387509,Pandemonium,0,0,0,1,1,0,
+108415,Soul Link,0,0,100,1,1,0,
+387279,Power Overwhelming,0,0,0,1,1,0,
+196412,Eradication,0,0,0,1,1,0,
+196406,Backdraft,0,0,0,1,1,0,
+386105,Curses of Enfeeblement,0,0,0,1,1,0,
+387153,Burn to Ashes,0,0,0,1,1,0,
+80240,Havoc,0,0,40,0,1,30,MANA:1000;
+387506,Mayhem,0,0,0,1,1,0,
+387093,Improved Immolate,0,0,0,1,1,0,
+386646,Lifeblood,0,0,0,1,1,0,
+152108,Cataclysm,1494,0,40,0,1,30,MANA:500;
+710,Banish,1120,0,30,0,1,0,MANA:750;
+1098,Subjugate Demon,2241,0,30,0,0,0,MANA:1000;
+29893,Create Soulwell,2241,0,30,0,0,120,MANA:2500;
+17877,Shadowburn,0,0,40,0,1,8.963,SOUL_SHARDS:1;
+108503,Grimoire of Sacrifice,0,0,50000,0,1,30,
+387156,Ritual of Ruin,0,0,0,1,1,0,
+6789,Mortal Coil,0,0,20,0,1,45,MANA:1000;
+387569,Rolling Havoc,0,0,0,1,1,0,
+387165,Master Ritualist,0,0,0,1,1,0,
+
+266134,Infernal Combustion,0,0,0,0,0,0,
+387409,madness_cb,0,0,0,0,0,0,
+387413,madness_rof,0,0,0,0,0,0,
+386309,Tormented Soul,0,0,0,0,0,0,
+405576,tier30_4pc,0,0,0,0,0,0,

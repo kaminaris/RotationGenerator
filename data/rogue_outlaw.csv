@@ -1,73 +1,122 @@
 id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
-2098,Dispatch,0.000000,0,0,0,0,0.000000,ENERGY:35;COMBO_POINTS:1
-1766,Kick,0.000000,0,0,0,0,15.000000,
-1833,Cheap Shot,0.000000,0,0,0,0,0.000000,ENERGY:40
-271877,Blade Rush,0.000000,0,20,0,1,45.000000,
-51690,Killing Spree,0.000000,0,10,0,0,120.000000,
-8676,Ambush,0.000000,0,0,0,0,0.000000,ENERGY:50
-31209,Fleet Footed,0.000000,0,0,1,0,0.000000,
-196924,Acrobatic Strikes,0.000000,0,0,1,1,0.000000,
-13750,Adrenaline Rush,0.000000,0,0,0,0,180.000000,
-193546,Iron Stomach,0.000000,0,0,1,1,0.000000,
-13877,Blade Flurry,0.000000,0,0,0,0,12.000000,ENERGY:15
-921,Pick Pocket,0.000000,0,10,0,0,0.500000,
-108216,Dirty Tricks,0.000000,0,0,1,1,0.000000,
-193539,Alacrity,0.000000,0,0,1,1,0.000000,
-14983,Vigor,0.000000,0,0,1,1,0.000000,
-2983,Sprint,0.000000,0,0,0,0,120.000000,
-137619,Marked for Death,0.000000,0,30,0,0,60.000000,
-79008,Elusiveness,0.000000,0,0,1,1,0.000000,
-14161,Ruthlessness,0.000000,0,0,1,0,0.000000,
-79096,Restless Blades,0.000000,0,0,1,0,0.000000,
-76806,Mastery: Main Gauche,0.000000,0,0,1,0,0.000000,
-256170,Loaded Dice,0.000000,0,0,1,1,0.000000,
-61329,Combat Potency,0.000000,0,0,1,0,0.000000,
-185311,Crimson Vial,0.000000,0,0,0,0,30.000000,ENERGY:30
-272026,Dancing Steel,0.000000,0,0,1,1,0.000000,
-199754,Riposte,0.000000,0,0,0,0,120.000000,
-1776,Gouge,0.000000,0,0,0,0,15.000000,ENERGY:25
-193315,Sinister Strike,0.000000,0,0,0,0,0.000000,ENERGY:45
-1784,Stealth,0.000000,0,0,0,0,2.000000,
-1725,Distract,0.000000,0,30,0,0,30.000000,ENERGY:30
-57934,Tricks of the Trade,0.000000,0,100,0,0,30.000000,
-114018,Shroud of Concealment,0.000000,0,0,0,0,360.000000,
-6770,Sap,0.000000,0,10,0,0,0.000000,ENERGY:35
-1804,Pick Lock,1.500000,0,5,0,0,0.000000,
-193316,Roll the Bones,0.000000,0,100,0,0,0.000000,ENERGY:25;COMBO_POINTS:1
-196938,Quick Draw,0.000000,0,0,1,1,0.000000,
-195457,Grappling Hook,0.000000,0,40,0,0,60.000000,
-56814,Detection,0.000000,0,0,0,0,0.000000,
-269513,Death from Above,0.000000,0,15,0,0,30.000000,ENERGY:25;COMBO_POINTS:1
-131511,Prey on the Weak,0.000000,0,0,1,1,0.000000,
-193531,Deeper Stratagem,0.000000,0,0,1,1,0.000000,
-31230,Cheat Death,0.000000,0,0,1,1,0.000000,
-1966,Feint,0.000000,0,0,0,0,15.000000,ENERGY:35
-196937,Ghostly Strike,0.000000,0,0,0,1,35.000000,ENERGY:30
-256165,Blinding Powder,0.000000,0,0,1,1,0.000000,
-200733,Weaponmaster,0.000000,0,0,1,1,0.000000,
-1856,Vanish,0.000000,0,0,0,0,120.000000,
-199804,Between the Eyes,0.000000,0,20,0,0,30.000000,ENERGY:25;COMBO_POINTS:1
-185763,Pistol Shot,0.000000,0,20,0,0,0.000000,ENERGY:40
-196922,Hit and Run,0.000000,0,0,1,1,0.000000,
-31224,Cloak of Shadows,0.000000,0,0,0,0,120.000000,
-5171,Slice and Dice,0.000000,0,100,0,1,0.000000,ENERGY:25;COMBO_POINTS:1
-2094,Blind,0.000000,0,15,0,0,120.000000,
-256188,Retractable Hook,0.000000,0,0,1,1,0.000000,
-193358,Grand Melee,0.000000,0,0,1,0,0,
-193357,Ruthless Precision,0,0,0,1,0,0,
-193356,Broadside,0,0,0,1,0,0,
-199603,Skull and Crossbones,0,0,0,1,0,0,
-195627,Opportunity,0,0,0,1,0,0,
-288988,Keep Your Wits About You,0,0,0,1,0,0,
-272940,Deadshot,0,0,0,1,0,0,
-275863,Snake Eyes,0,0,0,1,0,0,
-108208,Subterfuge,0,0,0,0,1,0,
-385616,Echoing Reprimand,0,0,0,0,1,45,ENERGY:10
-385408,Sepsis,0,0,0,0,0,90,ENERGY:25
-381982,Count The Odds,0,0,0,0,1,0,
-343142,Dreadblades,0,0,0,0,1,120,ENERGY:40
-381845,Audacity,0,0,0,0,1,0,
-381990,Summarily Dispatched,0,0,0,0,1,0,
-383281,Hidden Opportunity,0,0,0,0,1,0,
-386823,Greenskins Wickers,0,0,0,0,1,0,
-91023,Find Weakness,0,0,0,0,1,0,
+394332,Reverberation,0,0,0,1,1,0,
+31224,Cloak of Shadows,0,0,0,0,1,120,
+381982,Count the Odds,0,0,0,1,1,0,
+31230,Cheat Death,0,0,0,1,1,0,
+36554,Shadowstep,0,0,25,0,1,30,
+378427,Nimble Fingers,0,0,0,1,1,0,
+231719,Deadened Nerves,0,0,0,1,1,0,
+196937,Ghostly Strike,0,0,0,0,1,35,ENERGY:30;
+14161,Ruthlessness,0,0,0,1,1,0,
+382746,Improved Main Gauche,0,0,0,1,1,0,
+315341,Between the Eyes,0,0,20,0,0,45,ENERGY:22;COMBO_POINTS:6;
+381985,Precise Cuts,0,0,0,1,1,0,
+196922,Hit and Run,0,0,0,1,1,0,
+196938,Quick Draw,0,0,0,1,1,0,
+271877,Blade Rush,0,0,20,0,1,45,
+381637,Atrophic Poison,1500,0,0,0,1,0,
+381542,Deadly Precision,0,0,0,1,1,0,
+381828,Ace Up Your Sleeve,0,0,0,1,1,0,
+200733,Weaponmaster,0,0,0,1,1,0,
+381543,Virulent Poisons,0,0,0,1,1,0,
+381988,Swift Slasher,0,0,0,1,1,0,
+235484,Improved Between the Eyes,0,0,0,1,1,0,
+381989,Keep It Rolling,0,0,0,0,1,420,
+381894,Triple Threat,0,0,0,1,1,0,
+379005,Blackjack,0,0,0,1,1,0,
+381990,Summarily Dispatched,0,0,0,1,1,0,
+256170,Loaded Dice,0,0,0,1,1,0,
+14062,Nightstalker,0,0,0,1,1,0,
+382245,Cold Blood,0,0,0,0,1,45,
+35551,Fatal Flourish,0,0,0,1,1,0,
+395422,Improved Adrenaline Rush,0,0,0,1,1,0,
+378436,Master Poisoner,0,0,0,1,1,0,
+315508,Roll the Bones,0,0,0,0,1,45,ENERGY:25;
+185763,Pistol Shot,0,0,20,0,0,0,ENERGY:40;
+378813,Fleet Footed,0,0,0,1,1,0,
+378996,Recuperator,0,0,0,1,1,0,
+315496,Slice and Dice,0,0,100,0,0,0,ENERGY:20;COMBO_POINTS:6;
+256165,Blinding Powder,0,0,0,1,1,0,
+344363,Riposte,0,0,0,1,1,0,
+319066,Improved Wound Poison,0,0,0,1,1,0,
+256188,Retractable Hook,0,0,0,1,1,0,
+76806,Mastery: Main Gauche,0,0,0,1,0,0,
+1784,Stealth,0,0,0,0,0,2,
+2094,Blind,0,0,15,0,1,120,
+1776,Gouge,0,0,0,0,1,20,ENERGY:25;
+193546,Iron Stomach,0,0,0,1,1,0,
+2983,Sprint,0,0,0,0,0,120,
+385616,Echoing Reprimand,0,0,0,0,1,45,ENERGY:10;
+114018,Shroud of Concealment,0,0,0,0,0,360,
+386823,Greenskin's Wickers,0,0,0,1,1,0,
+137619,Marked for Death,0,0,30,0,1,60,
+108208,Subterfuge,0,0,0,1,1,0,
+381839,Sleight of Hand,0,0,0,1,1,0,
+1833,Cheap Shot,0,0,0,0,0,0,ENERGY:40;
+57934,Tricks of the Trade,0,0,100,0,1,30,
+280716,Leeching Poison,0,0,0,1,1,0,
+91023,Find Weakness,0,0,0,1,1,0,
+61329,Combat Potency,0,0,0,1,1,0,
+381619,Thief's Versatility,0,0,0,1,1,0,
+393970,Soothing Darkness,0,0,0,1,1,0,
+5938,Shiv,0,0,0,0,1,25,ENERGY:20;
+921,Pick Pocket,0,0,10,0,0,0.5,
+108216,Dirty Tricks,0,0,0,1,1,0,
+5277,Evasion,0,0,0,0,1,120,
+14983,Vigor,0,0,0,1,1,0,
+381620,Improved Ambush,0,0,0,1,1,0,
+394321,Devious Stratagem,0,0,0,1,1,0,
+13877,Blade Flurry,0,0,0,0,1,30,ENERGY:15;
+2098,Dispatch,0,0,0,0,0,0,ENERGY:32;COMBO_POINTS:6;
+381621,Tight Spender,0,0,0,1,1,0,
+79008,Elusiveness,0,0,0,1,1,0,
+272026,Dancing Steel,0,0,0,1,1,0,
+196924,Acrobatic Strikes,0,0,0,1,1,0,
+6770,Sap,0,0,10,0,1,0,ENERGY:35;
+381877,Combat Stamina,0,0,0,1,1,0,
+1804,Pick Lock,1500,0,5,0,0,0,
+381845,Audacity,0,0,0,1,1,0,
+381623,Thistle Tea,0,0,0,0,1,60,
+1725,Distract,0,0,30,0,0,30,ENERGY:30;
+131511,Prey on the Weak,0,0,0,1,1,0,
+381846,Fan the Hammer,0,0,0,1,1,0,
+381878,Deft Maneuvers,0,0,0,1,1,0,
+193539,Alacrity,0,0,0,1,1,0,
+193531,Deeper Stratagem,0,0,0,1,1,0,
+382238,Lethality,0,0,0,1,1,0,
+343142,Dreadblades,0,0,0,0,1,120,ENERGY:40;
+231691,Improved Sprint,0,0,0,1,1,0,
+5761,Numbing Poison,1500,0,0,0,1,0,
+1766,Kick,0,0,0,0,0,15,
+381622,Resounding Clarity,0,0,0,1,1,0,
+79096,Restless Blades,0,0,0,1,1,0,
+185311,Crimson Vial,0,0,0,0,0,30,ENERGY:20;
+51690,Killing Spree,0,0,10,0,1,120,
+13750,Adrenaline Rush,0,0,0,0,1,180,
+185313,Shadow Dance,0,0,0,0,1,6,
+408,Kidney Shot,0,0,0,0,0,20,ENERGY:22;COMBO_POINTS:5;
+400804,Unbreakable Stride,0,0,0,1,1,0,
+195457,Grappling Hook,0,0,40,0,1,45,
+14190,Seal Fate,0,0,0,1,1,0,
+8676,Ambush,0,0,0,0,0,0,ENERGY:50;
+378803,Rushed Setup,0,0,0,1,1,0,
+1966,Feint,0,0,0,0,0,15,ENERGY:35;
+193315,Sinister Strike,0,0,0,0,0,0,ENERGY:45;
+56814,Detection,0,0,0,0,0,0,
+385408,Sepsis,0,0,0,0,1,90,ENERGY:25;
+383281,Hidden Opportunity,0,0,0,1,1,0,
+279876,Opportunity,0,0,0,1,1,0,
+354897,Float Like a Butterfly,0,0,0,1,1,0,
+382742,Take 'em by Surprise,0,0,0,1,1,0,
+381885,Heavy Hitter,0,0,0,1,1,0,
+1856,Vanish,0,0,0,0,0,120,
+381822,Ambidexterity,0,0,0,1,1,0,
+378807,Shadowrunner,0,0,0,1,1,0,
+1860,Safe Fall,0,0,0,1,0,0,
+
+193356,Broadside,0,0,0,0,0,0,
+199603,Skull and Crossbones,0,0,0,0,0,0,
+193359,True Bearing,0,0,0,0,0,0,
+199600,Buried Treasure,0,0,0,0,0,0,
+193358,Grand Melee,0,0,0,0,0,0,
+193357,Ruthless Precision,0,0,0,0,0,0,
