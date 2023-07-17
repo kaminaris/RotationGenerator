@@ -26,6 +26,8 @@ class ResourceUsage extends \stdClass
 		switch ($key) {
 			case 'covenantId':
 				return 'fd.covenant.covenantId';
+			case 'targets':
+				return 'fd.targets and fd.targets or 1';
 			default:
 				return 'fd.' . $key;
 		}

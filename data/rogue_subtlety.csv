@@ -56,3 +56,13 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 31230,Cheat Death,0.000000,0,0,1,1,0.000000,
 196819,Eviscerate,0.000000,0,0,0,0,0.000000,COMBO_POINTS:1;ENERGY:35
 238104,Enveloping Shadows,0.000000,0,0,1,1,0.000000,
+14190,Seal Fate,0,0,0,0,1,0,
+1943,Rupture,0,0,0,0,0,0,COMBO_POINTS:1;ENERGY:22
+385616,Echoing Reprimand,0,0,0,0,1,45,ENERGY:10
+315496,Slice And Dice,0,0,100,0,0,0,COMBO_POINTS:1;ENERGY:20
+323654,Flagellation,0,0,0,0,1,90,
+385408,Sepsis,0,0,0,0,1,90,ENERGY:25
+382518,Perforated Veins,0,0,0,0,1,0,
+343160,Premeditation,0,0,0,0,1,0,
+382015,The Rotten,0,0,0,0,1,0,
+382528,Danse Macabre,0,0,0,0,1,0,

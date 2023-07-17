@@ -46,3 +46,13 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 335070,Cruelty,0,0,0,0,1,0,
 315720,Onslaught,0,0,0,0,1,12,
 335077,Frenzy,0,0,0,1,1,0,
+107574,Avatar,0,0,0,0,1,90,
+113344,Bloodbath,0,0,100,0,0,0,
+12950,Improved Whirlwind,0,0,0,0,1,0,
+1464,Slam,0,0,0,0,0,0,RAGE:20
+228920,Ravager,0,0,0,0,1,90,
+376079,Spear Of Bastion,0,0,0,0,0,90,
+392536,Ashen Juggernaut,0,0,0,0,1,0,
+383916,Annihilator,0,0,0,0,1,0,
+388933,Tenderize,0,0,0,0,1,0,
+409983,Tier30_4pc,0,0,0,0,0,0,

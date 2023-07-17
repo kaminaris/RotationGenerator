@@ -59,3 +59,12 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 53351,Kill Shot,0.000000,0,0,0,0,10.000000,FOCUS:10
 324156,Flayer's Mark,0.000000,0,0,1,0,0.000000,
 336745,Soulforge Embers,0.000000,0,0,0,0,0.000000,
+162488,Steel Trap,0,0,40,0,1,30,
+269737,Alpha Predator,0,0,0,0,1,0,
+271788,Serpent Sting,0,0,40,0,1,0,FOCUS:10
+392060,Wailing Arrow,0,0,40,0,1,60,FOCUS:15
+378207,Kill Cleave,0,0,0,0,1,0,
+359844,Call of the Wild,0,0,0,0,1,180,
+212431,Explosive Shot,0,0,40,0,1,30,
+378442,Wild Instincts,0,0,0,0,1,0,
+273283,Latent Poison,0,0,0,0,0,0,

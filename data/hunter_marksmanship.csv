@@ -57,3 +57,17 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 321460,Dead Eye,0.000000,0,40,1,1,0.000000,
 336867,Surging Shots,0.000000,0,40,1,0,0.000000,
 336849,Eagletalon's True Focus,0.000000,0,40,1,0,0.000000,
+162488,Steel Trap,0,0,40,0,0,25,
+201430,Stampede,0,0,40,0,0,120,
+204089,Bullseye,0,0,0,0,1,0,
+34026,Kill Command,0,0,50,0,1,7.5,FOCUS:30
+378888,Serpentstalkers Trickery,0,0,0,0,1,0,
+378905,Windrunners Guidance,0,0,0,0,1,0,
+384790,Razor Fragments,0,0,0,0,1,0,
+389019,Bulletstorm,0,0,0,0,1,0,
+400456,Salvo,0,0,0,0,1,45,
+392060,Wailing Arrow,0,0,40,0,1,60,FOCUS:15
+406425,Legacy of the Windrunners,0,0,0,0,1,0,
+260241,Hydra's Bite,0,0,0,0,1,0,
+378014,Poison Injection,0,0,0,0,1,0,
+273283,Latent Poison,0,0,0,0,0,0,

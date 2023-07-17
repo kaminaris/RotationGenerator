@@ -53,3 +53,9 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 320341,Bulk Extraction,0,0,0,0,1,90,
 228477,Soul Cleave,0,0,0,0,0,0,FURY:30
 204596,Sigil of Flame,0,0,0,0,0,30,
+389958,Frailty,0,0,0,0,1,0,
+389976,Vulnerability,0,0,0,0,1,0,
+389985,Soulcrush,0,0,0,0,1,0,
+207407,Soul Carver,0,0,0,0,1,60,
+389220,Fiery Demise,0,0,0,0,1,0,
+207771,Fiery Brand Dot,0,0,0,0,0,0,

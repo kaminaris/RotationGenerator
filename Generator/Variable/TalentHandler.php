@@ -11,8 +11,12 @@ class TalentHandler extends Handler
 		$this->action->actionList->resourceUsage->talents = true;
 
 		$talentName = $this->profile->SpellName($variableParts[1]);
-		$suffix = $variableParts[2];
-		if (!$suffix || $suffix === '') {
+		if (isset($variableParts[2])) {
+			$suffix = $variableParts[2];
+		} else {
+			$suffix = '';
+		}
+		if (!$suffix || $suffix === '' || $suffix === 'rank') {
 			$suffix = 'enabled';
 		}
 

@@ -22,3 +22,19 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 312202,Shackle the Unworthy,0.000000,0,30,0,0,60.000000,
 311648,Swarming Mist,0.000000,0,0,0,0,60.000000,RUNES:1
 219809,Tombstone,0.000000,0,0,0,1,60.000000,
+108199,Gorefiends Grasp,0,0,30,0,0,120,
+194878,Icy Talons,0,0,0,0,1,0,
+206970,Tightening Grasp,0,0,0,0,1,0,
+391477,Coagulopathy,0,0,0,0,1,0,
+47568,Empower Rune Weapon,0,0,0,0,0,120,
+48792,Icebound Fortitude,0,0,0,0,1,180,
+55078,Blood Plague,0,0,0,0,0,0,
+343294,Soul Reaper,0,0,0,0,1,6,RUNES:1
+195292,Death's Caress,0,0,30,0,1,6,RUNES:1
+47528,Mind Freeze,0,0,15,0,1,15,
+55233,Vampiric Blood,0,0,0,0,1,90,
+374265,Unholy Ground,0,0,0,0,1,0,
+391458,Sanguine Ground,0,0,0,0,1,0,
+377640,Shattering Bone,0,0,0,0,1,0,
+377637,Insatiable Blade,0,0,0,0,1,0,
+408356,Vampiric Strength,0,0,0,0,0,0,

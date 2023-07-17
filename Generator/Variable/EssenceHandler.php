@@ -17,7 +17,7 @@ class EssenceHandler extends Handler
 				$output[] = "MaxDps.AzeriteEssences.minor[{$spell}]";
 				break;
 			default:
-				throw new \Exception('Unrecognized essence part:' . json_encode($variableParts));
+				throw new \Exception('Unrecognized essence part:' . implode(".",$variableParts));
 		}
 
 	}

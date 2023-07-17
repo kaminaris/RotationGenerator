@@ -48,3 +48,15 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 236058,Frenetic Speed,0.000000,0,0,1,1,0.000000,
 235313,Blazing Barrier,0.000000,0,0,0,0,25.000000,
 235365,Blazing Soul,0.000000,0,0,1,1,0.000000,
+1449,Arcane Explosion,0,0,0,0,0,0,MANA:5000
+203275,Flame Accelerant,0,0,0,0,1,0,
+383860,Hyperthermia,0,0,0,0,1,0,
+386539,Temporal Warp,0,0,0,0,1,0,
+157997,Ice Nova,0,0,40,0,1,25,
+382440,Shifting Power,0,0,0,0,1,60,MANA:2500
+383886,Sun King's Blessing,0,0,0,0,1,0,
+383391,Feel the Burn,0,0,0,0,1,0,
+383659,Tempered Flames,0,0,0,0,1,0,
+342344,From the Ashes,0,0,0,0,1,0,
+48107,Heating Up,0,0,0,0,0,0,
+408665,Charring Embers,0,0,0,0,0,0,

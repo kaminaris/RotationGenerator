@@ -1,0 +1,34 @@
+id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
+114923,Nether Tempest,0,0,40,0,1,0,MANA:750
+12051,Evocation,0,0,0,0,0,90,
+1449,Arcane Explosion,0,0,0,0,0,0,MANA:5000
+1459,Arcane Intellect,0,0,40,0,0,0,MANA:2000
+153561,Meteor,0,0,40,0,1,45,MANA:500
+79684,Clearcasting,0,0,0,0,1,0,
+376103,Radiant Spark,0,0,40,0,0,30,MANA:1000
+5143,Arcane Missiles,0,0,40,0,1,0,MANA:7500
+55342,Mirror Image,0,0,0,0,1,120,MANA:1000
+759,Conjure Mana Gem,0,0,0,0,1,0,MANA:9000
+80353,Time Warp,0,0,0,0,0,300,MANA:2000
+205022,Arcane Familiar,0,0,0,0,1,10,
+384452,Arcane Harmony,0,0,0,0,1,0,
+30451,Arcane Blast,0,0,40,0,1,0,MANA:1375
+384187,Siphon Storm,0,0,0,0,1,0,
+386539,Temporal Warp,0,0,0,0,1,0,
+365350,Arcane Surge,0,0,40,0,1,90,MANA:1
+153626,Arcane Orb,0,0,40,0,1,20,MANA:500
+116011,Rune of Power,0,0,0,0,1,45,
+321507,Touch of the Magi,0,0,40,0,1,45,MANA:2500
+44425,Arcane Barrage,0,0,40,0,1,3,
+384276,Cascading Power,0,0,0,0,1,0,
+382440,Shifting Power,0,0,0,0,1,60,MANA:2500
+157997,Ice Nova,0,0,40,0,1,25,
+342231,Arcane Echo,0,0,0,0,1,0,
+205025,Presence of Mind,0,0,0,0,1,45,
+384581,Arcane Bombardment,0,0,0,0,1,0,
+384858,Orb Barrage,0,0,0,0,1,0,
+384374,Concentration,0,0,0,0,1,0,
+383782,Nether Precision,0,0,0,0,1,0,
+36032,Arcane Charge,0,0,0,0,0,0,
+307454,Radiant Spark Vulnerability,0,0,0,0,0,0,
+409022,Arcane Overload,0,0,0,0,0,0,

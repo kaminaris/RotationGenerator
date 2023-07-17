@@ -51,3 +51,16 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 137619,Marked for Death,0.000000,0,30,0,1,60.000000,
 1943,Rupture,0.000000,0,0,0,0,0.000000,ENERGY:25;COMBO_POINTS:1
 196819,Eviscerate,0.000000,0,0,0,0,0.000000,COMBO_POINTS:1;ENERGY:35
+1329,Mutilate,0,0,0,0,0,0,ENERGY:50
+385616,Echoing Reprimand,0,0,0,0,0,45,ENERGY:10
+315496,Slice And Dice,0,0,100,0,0,0,COMBO_POINTS:1;ENERGY:20
+32645,Envenom,0,0,0,0,0,0,COMBO_POINTS:1;ENERGY:32
+385408,Sepsis,0,0,0,0,0,90,ENERGY:25
+360194,Deathmark,0,0,0,0,1,120,
+381673,Doomblade,0,0,0,0,1,0,
+381797,Dashing Scoundrel,0,0,0,0,1,0,
+381802,Indiscriminate Carnage,0,0,0,0,1,45,
+385627,Kingsbane,0,0,0,0,1,60,ENERGY:35
+394983,Lightweight Shiv,0,0,0,0,1,0,
+5938,Shiv,0,0,0,0,1,25,ENERGY:20
+8676,Ambush,0,0,0,0,0,0,ENERGY:50

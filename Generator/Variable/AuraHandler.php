@@ -67,6 +67,11 @@ class AuraHandler extends Handler
 			case 'max_stacks':
 				$value = "{$prefix}[{$spell}].maxStacks";
 				break;
+			case 'max_stack':
+				$value = "{$prefix}[{$spell}].maxStacks";
+				break;
+			case 'expiration_delay_remains':
+				break;
 			case 'pmultiplier':
 				$previousElement = end($output);
 				$glimpse = $lexer->glimpse();

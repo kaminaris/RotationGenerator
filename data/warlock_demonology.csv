@@ -56,3 +56,8 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 312321,Scouring Tithe,2,0,40,0,0,40,
 264119,sss,1,0,40,0,1,45,SOUL_SHARDS:1
 264119,Summon Vilefiend,1.761000,0,40,0,0,45.000000,SOUL_SHARDS:1
+10060,Power Infusion,0,0,40,0,1,120,
+334585,Soulbound Tyrant,0,0,0,0,1,0,
+385899,Soulburn,0,0,0,0,1,6,SOUL_SHARDS:1
+386833,Guillotine,0,0,40,0,1,45,
+387600,The Expendables,0,0,0,0,1,0,

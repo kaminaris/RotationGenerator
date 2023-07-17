@@ -62,3 +62,17 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 48263,Veteran of the Third War,0.000000,0,0,1,0,0.000000,
 212552,Wraith Walk,0.000000,0,0,0,1,60.000000,
 53365,Unholy Strength,0.000000,0,0,1,0,0.000000,
+305392,Chill Streak,0,0,40,0,1,45,RUNES:1;RUNIC_POWER:10
+317214,Frostreaper,0,0,0,0,0,0,
+374383,Assimilation,0,0,0,0,1,0,
+377047,Absolute Zero,0,0,0,0,1,0,
+377073,Frigid Executioner,0,0,0,0,1,0,
+392950,Icebreaker,0,0,0,0,1,0,
+81333,Might Of The Frozen Wastes,0,0,0,0,0,0,
+377076,Rage Of The Frozen Champion,0,0,0,0,1,0,
+343294,Soul Reaper,0,0,0,0,1,6,RUNES:1
+51052,Anti-Magic Zone,0,0,0,0,1,120,
+207057,Shattering Blade,0,0,0,0,1,0,
+317195,Improved Obliterate,0,0,0,0,1,0,
+316916,Cleaving Strikes,0,0,0,0,1,0,
+195617,Frost Fever Superstrain,0,0,0,0,0,0,

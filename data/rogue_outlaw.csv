@@ -61,3 +61,13 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 288988,Keep Your Wits About You,0,0,0,1,0,0,
 272940,Deadshot,0,0,0,1,0,0,
 275863,Snake Eyes,0,0,0,1,0,0,
+108208,Subterfuge,0,0,0,0,1,0,
+385616,Echoing Reprimand,0,0,0,0,1,45,ENERGY:10
+385408,Sepsis,0,0,0,0,0,90,ENERGY:25
+381982,Count The Odds,0,0,0,0,1,0,
+343142,Dreadblades,0,0,0,0,1,120,ENERGY:40
+381845,Audacity,0,0,0,0,1,0,
+381990,Summarily Dispatched,0,0,0,0,1,0,
+383281,Hidden Opportunity,0,0,0,0,1,0,
+386823,Greenskins Wickers,0,0,0,0,1,0,
+91023,Find Weakness,0,0,0,0,1,0,

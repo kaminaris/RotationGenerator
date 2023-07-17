@@ -49,3 +49,34 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 109132,Roll,0.000000,0,0,0,0,0.800000,
 119381,Leg Sweep,0.000000,0,0,0,0,60.000000,
 115173,Celerity,0.000000,0,0,1,1,0.000000,
+100780,Tiger Palm,0,0,10,0,0,0,ENERGY:50
+100784,Blackout Kick,0,0,0,0,0,3,CHI:1
+109132,Roll,0,0,0,0,0,15,
+116645,Teachings Of The Monastery,0,0,0,0,1,0,
+123904,Invoke Xuen The White Tiger,0,0,40,0,1,120,
+152175,Whirling Dragon Punch,0,0,0,0,1,24,
+322101,Expel Harm,0,0,100,0,0,15,ENERGY:15
+327104,Faeline Stomp,0,0,0,0,0,30,
+345829,Pressure Point,0,0,0,0,1,0,
+392982,Shadowboxing Treads,0,0,0,0,1,0,
+392985,Thunderfist,0,0,0,0,1,0,
+392991,Skyreach,0,0,0,0,1,0,
+405044,Skytouch,0,0,0,0,1,0,
+388686,Summon White Tiger Statue,0,0,0,0,1,120,
+391412,Faeline Harmony,0,0,0,0,1,0,
+220357,Mark of the Crane,0,0,0,0,1,0,
+121817,Power Strikes,0,0,0,0,1,0,
+325201,Dance of Chi-Ji,0,0,0,0,1,0,
+392983,Strike of the Windlord,0,0,9,0,1,40,CHI:2
+392983,Thunderfist,0,0,0,0,1,0,
+113656,Fists of Fury,0,0,8,0,1,22,CHI:3
+386276,Bonedust Brew,0,0,0,0,1,60,
+116847,Rushing Jade Wind,0,0,0,0,1,5.4,CHI:1
+137639,Storm Earth and Fire,0,0,0,0,1,90,
+322109,Touch of Death,0,0,0,0,0,90,
+122470,Touch of Karma,0,0,20,0,1,90,
+117952,Crackling Jade Lightning,0,0,40,0,0,0,ENERGY:20
+388661,Invoker's Delight,0,0,0,0,1,0,
+388848,Crane Vortex,0,0,0,0,1,0,
+392979,Jade Ignition,0,0,0,0,1,0,
+392993,Xuen's Battlegear,0,0,0,0,1,0,

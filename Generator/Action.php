@@ -83,6 +83,10 @@ class Action {
 			new Variable\ConduitHandler($action->profile, $action),
 			new Variable\CovenantHandler($action->profile, $action),
 			new Variable\PetHandler($action->profile, $action),
+			new Variable\RaidEventHandler($action->profile, $action),
+			new Variable\SetBonusHandler($action->profile, $action),
+			new Variable\TimeEventHandler($action->profile, $action),
+			new Variable\SpellHandler($action->profile, $action),
 		];
 
 		$exploded = explode(',', $line);
@@ -103,6 +107,13 @@ class Action {
 			case 'anima_of_death':
 			case 'memory_of_lucid_dreams':
 			case 'worldvein_resonance':
+			case 'cancel_action':
+			case 'cancel_buff':
+			case 'invoke_external_buff':
+			case 'invoke_power_infusion_0':
+			case 'retarget_auto_attack':
+			case 'pick_up_fragment':
+			case 'out_of_range':
 			case 'ripple_in_space':
 				$action->isBlacklisted = true;
 				break;
@@ -139,6 +150,9 @@ class Action {
 				case 'if':
 					$this->aplCondition = $this->parseExpression($value);
 					break;
+				case 'target_if':
+					$this->aplCondition = $this->parseExpression($value);
+					break;
 				default:
 					throw new \Exception(
 						'Unrecognized call/run command: ' . $name . ' expression: ' . implode(',', $exploded)
@@ -168,6 +182,7 @@ class Action {
 					$this->variableValue = $this->parseExpression($value);
 					break;
 				case 'value_else':
+					print_r($value);
 					$this->variableValueElse = $this->parseExpression($value);
 					break;
 				case 'op':
@@ -178,6 +193,15 @@ class Action {
 					break;
 				case 'if':
 					$this->variableCondition = $this->parseExpression($value);
+					break;
+				case 'target_if':
+					$this->variableCondition = $this->parseExpression($value);
+					break;
+				case 'default':
+					break;
+				case 'use_off_gcd':
+					break;
+				case 'use_while_casting':
 					break;
 				default:
 					throw new \Exception(
@@ -197,7 +221,28 @@ class Action {
 	public function parseSpell($action, $exploded) {
 		//Replacement for spell alias
 		switch ($action) {
+			case 'bt_rake':
+				$action = 'rake';
+				break;
+			case 'bt_shred':
+				$action = 'shred';
+				break;
+			case 'bt_brutal_slash':
+				$action = 'brutal_slash';
+				break;
+			case 'bt_moonfire':
+				$action = 'moonfire';
+				break;
+			case 'bt_thrash':
+				$action = 'thrash';
+				break;
+			case 'bt_swipe':
+				$action = 'swipe';
+				break;
 			case 'thrash_cat':
+				$action = 'thrash';
+				break;
+			case 'thrash_bear':
 				$action = 'thrash';
 				break;
 			case 'moonfire_cat':
@@ -205,6 +250,12 @@ class Action {
 				break;
 			case 'swipe_cat':
 				$action = 'swipe';
+				break;
+			case 'swipe_bear':
+				$action = 'swipe';
+				break;
+			case 'berserk_bear':
+				$action = 'berserk';
 				break;
 		}
 
@@ -236,7 +287,6 @@ class Action {
 					case 'if':
 						$this->spellCondition = $this->parseExpression($value);
 						break;
-
 					case 'interval': // ignore intervals
 					case 'pct_health': // ignore pct_health
 					case 'cycle_targets': //ignore cycling targets
@@ -263,11 +313,17 @@ class Action {
 						break; //ignore precast_time
 					case 'type':
 						break; //ignore precast_time
-
+					case 'toggle': //ignore op
+					case 'mode': //ignore mode
 					case 'for_next': //@TODO
+					case 'early_chain_if':
+					case 'empower_to': //@TODO
 					case 'precombat_seconds':
 						$this->isBlacklisted = true;
-
+						return;
+						break;
+					case 'precombat_time':
+						$this->isBlacklisted = true;
 						return;
 						break;
 					default:
@@ -286,6 +342,15 @@ class Action {
 
 		$additionalConditions = [];
 		$spellInfo = $this->profile->spellDb->findByName($action);
+		if ($action == "execute"){
+			$additionalConditions[] = "canExecute";
+		}
+		if ($action == "bloodbath" or $action == "crushing_blow"){
+			$additionalConditions[] = "MaxDps:FindSpell({$this->spellName})";
+		}
+		if ($action == "templar_slash"){
+			$additionalConditions[] = "MaxDps.Spells[{$this->spellName}]";
+		}
 		if ($spellInfo) {
 			if ($spellInfo->isTalent) {
 				$this->actionList->resourceUsage->talents = true;
@@ -452,10 +517,14 @@ class Action {
 			$spellName, [
 			'flask', 'food', 'augmentation', 'summon_pet', 'snapshot_stats', 'potion', 'arcane_pulse',
 			'lights_judgment', 'arcane_torrent', 'blood_fury', 'berserking', 'fireblood', 'auto_attack',
-			'use_items', 'flying_serpent_kick', 'ancestral_call', 'auto_shot', 'bloodlust', 'wind_shear',
-			'counterspell', 'shadowmeld', 'pool_resource', 'wait', 'guardian_of_azeroth', 'focused_azerite_beam',
+			'use_items', 'flying_serpent_kick', 'ancestral_call', 'auto_shot', 'bloodlust',
+			'mind_freeze', 'strangulate', 'skull_bash', 'solar_beam', 'counter_shot', 'counterspell',
+			'spear_hand_strike', 'rebuke', 'silence', 'kick', 'wind_shear', 'spell_lock', 'optical_blast',
+			'pummel', 'quell',
+			'shadowmeld', 'pool_resource', 'wait', 'guardian_of_azeroth', 'focused_azerite_beam',
 			'essence_of_the_focusing_iris', 'reaping_flames', 'purifying_blast', 'blood_of_the_enemy',
-			'the_unbound_force', 'reckless_force', 'reckless_force_counter', 'memory_of_lucid_dreams'
+			'the_unbound_force', 'reckless_force', 'reckless_force_counter', 'memory_of_lucid_dreams',
+			'charge', 'roll', 'chi_torpedo', 'blink', 'heroic_leap'
 		]
 		);
 	}

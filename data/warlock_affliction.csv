@@ -53,3 +53,5 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 325640,Soul Rot,1.5,0,40,0,0,60,
 312321,Scouring Tithe,2,0,40,0,0,40,
 334319,Inevitable Demise,0,0,0,1,1,0,
+10060,Power Infusion,0,0,40,0,1,120,
+389630,Souleaters Gluttony,0,0,0,0,1,0,

@@ -35,6 +35,7 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 106832,Thrash,0.000000,0,0,0,0,5.000000,
 77758,Thrash Bear,0.000000,0,0,0,0,5.000000,
 213764,Swipe,0.000000,0,8,0,0,0.000000,
+213771,Swipe Bear,0.000000,0,8,0,0,0.000000,
 276029,Flight Form,0.000000,0,0,1,0,0.000000,
 2782,Remove Corruption,0.000000,0,40,0,0,8.000000,MANA:1300
 8936,Regrowth,1.313000,0,40,0,0,0.000000,MANA:4368
@@ -56,3 +57,19 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 99,Incapacitating Roar,0.000000,0,0,0,0,30.000000,
 5487,Bear Form,0.000000,0,0,0,0,0.000000,
 155578,Guardian of Elune,0.000000,0,0,1,1,0.000000,
+1079,Rip,0,0,8,0,1,0,ENERGY:20;COMBO_POINTS:1
+135288,Tooth And Claw,0,0,0,0,1,0,
+1822,Rake,0,0,8,0,1,0,ENERGY:35
+22568,Ferocious Bite,0,0,8,0,0,0,ENERGY:25
+400254,Raze,0,0,8,0,1,0,RAGE:40
+102558,Berserk Bear,0,0,0,0,1,0,
+391528,Convoke the Spirits,0,0,0,0,1,60,
+200851,Rage Of The Sleeper,0,0,0,0,1,60,
+102558,Incarnation: Guardian of Ursoc,0,0,0,0,1,180,
+319454,Heart of the Wild,0,0,0,0,1,300,
+197625,Moonkin Form,0,0,0,0,1,0,
+393618,Reinforced Fur,0,0,0,0,1,0,
+400222,Thorns of Iron,0,0,0,0,1,0,
+135601,Tooth and Claw Debuff,0,0,0,0,0,0,
+372019,Vicious Cycle Mangle,0,0,0,0,0,0,
+372015,Vicious Cycle Maul,0,0,0,0,0,0,

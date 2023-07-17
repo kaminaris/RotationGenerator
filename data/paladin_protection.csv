@@ -45,3 +45,12 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 1022,Blessing of Protection,0.000000,0,40,0,0,1.500000,MANA:3000
 633,Lay on Hands,0.000000,0,40,0,0,600.000000,
 6940,Blessing of Sacrifice,0.000000,0,40,0,0,1.000000,MANA:1400
+327193,Moment of Glory,0.000000,0,0,0,1,90,
+375576,Divine Toll,0.000000,0,30,0,1,60,MANA:7500
+387174,Eye of Tyr,0.000000,0,0,0,1,45,
+405757,Inmost Light,0.000000,0,0,0,1,0,
+223817,Divine Purpose,0.000000,0,0,0,1,0,
+386653,Bulwark of Righteous Fury,0.000000,0,0,0,1,0,
+24275,Hammer of Wrath,0.000000,0,30,0,1,6,
+53595,Hammer of the Righteous,0.000000,0,30,0,1,4.8,
+53595,Word of Glory,0.000000,0,40,0,0,4.8,HOLY_POWER:3

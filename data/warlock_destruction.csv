@@ -23,3 +23,8 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 17877,Shadowburn,0,0,40,0,1,12,SOUL_SHARDS:1
 196408,Fire and Brimstone,0,0,0,1,1,0,
 5740,Rain of Fire,0,0,40,0,0,0,SOUL_SHARDS:3
+387976,Dimensional Rift,0,0,40,0,1,45,
+387095,Pyrogenics,0,0,0,0,1,0,
+387103,Ruin,0,0,0,0,1,0,
+387173,Diabolic Embers,0,0,0,0,1,0,
+387506,Mayhem,0,0,0,0,1,0,

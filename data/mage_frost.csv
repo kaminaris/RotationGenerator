@@ -53,3 +53,14 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 205473,Icicles,0,0,0,1,0,0,
 31687,Summon Water Elemental,1.5,0,0,0,0,30,
 228358,Winter's Chill,0,0,0,1,0,0,
+1449,Arcane Explosion,0,0,0,0,0,0,MANA:5000
+153561,Meteor,0,0,40,0,1,45,MANA:500
+127111,Freeze,0,0,45,0,0,25,MANA:6000
+31661,Dragons Breath,0,0,0,0,1,45,MANA:2000
+381706,Snowstorm,0,0,0,0,1,0,
+382440,Shifting Power,0,0,0,0,1,60,MANA:2500
+382144,Slick Ice,0,0,0,0,1,0,
+378749,Deep Shatter,0,0,0,0,1,0,
+236662,Ice Caller,0,0,0,0,1,0,
+382103,Freezing Winds,0,0,0,0,1,0,
+135029,Water Jet,1,0,45,0,0,45,

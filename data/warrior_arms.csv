@@ -44,3 +44,14 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 197690,Defensive Stance,0.000000,0,0,0,1,6.000000,
 268243,Collateral Damage,0.000000,0,0,1,1,0.000000,
 845,Cleave,0.000000,0,0,0,1,9.000000,RAGE:20
+405578,Tier304pc,0.000000,0,0,0,0,0.000000,
+376079,Spear Of Bastion,0,0,0,0,0,90,
+316440,Martial Prowess,0,0,0,0,1,0,
+383317,Merciless Bonegrinder,0,0,0,0,1,0,
+383292,Juggernaut,0,0,0,0,1,0,
+386628,Unhinged,0,0,0,0,1,0,
+386630,Battlelord,0,0,0,0,1,0,
+390563,Hurricane,0,0,0,0,1,0,
+390725,Sonic Boom,0,0,0,0,1,0,
+46968,Shockwave,0,0,0,0,1,40,
+396719,Thunder Clap,0,0,0,0,1,6,RAGE:40

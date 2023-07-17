@@ -46,3 +46,20 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 205191,Eye for an Eye,0.000000,0,0,0,1,60.000000,
 633,Lay on Hands,0.000000,0,40,0,0,600.000000,
 114154,Unbreakable Spirit,0.000000,0,0,1,1,0.000000,
+343721,Final Reckoning,0,0,0,0,1,60,
+406940,Executioners Will,0,0,0,0,1,0,
+406158,Divine Auxiliary,0,0,0,0,1,0,
+326732,Empyrean Power,0,0,0,0,1,0,
+387170,Empyrean Legacy,0,0,0,0,1,0,
+404306,Divine Arbiter,0,0,0,0,1,0,
+384027,Divine Resonance,0,0,0,0,1,0,
+375576,Divine Toll,0,0,30,0,1,60,MANA:7500
+406646,Templar Strikes,0,0,0,0,1,0,
+405278,Boundless Judgment,0,0,0,0,1,0,
+383342,Holy Blade,0,0,0,0,1,0,
+403010,Blessed Champion,0,0,0,0,1,0,
+383314,Vanguard's Momentum,0,0,0,0,1,0,
+404542,Crusading Strikes,0,0,0,0,1,0,
+198034,Divine Hammer,0,0,0,0,1,20,
+407480,Templar Strike,0,0,8,0,0,5.5,MANA:1000
+406647,Templar Slash,0,0,0,0,0,0,MANA:1000

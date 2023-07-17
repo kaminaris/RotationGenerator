@@ -48,6 +48,30 @@ class Converter
 	{
 		$spellPrefix = $this->profile->spellPrefix;
 
+		$pascalclass = Helper::pascalCase($this->profile->class);
+
+		$constantsList = new Element($this->handle, 0);
+		$constantsList->makeVariable("_, addonTable", "...");
+		$constantsList->write();
+		$constantsList->makeNewline();
+		$constantsList->write();
+		$constantsList->makeComment("@type MaxDps");
+		$constantsList->write();
+		$constantsList->makeStatement("if not MaxDps then return end");
+		$constantsList->write();
+		$constantsList->makeVariable("{$pascalclass}", "addonTable.{$pascalclass}");
+		$constantsList->write();
+		$constantsList->makeVariable("MaxDps", "MaxDps");
+		$constantsList->write();
+		$constantsList->makeNewline();
+		$constantsList->write();
+		$constantsList->makeVariable("UnitPower", "UnitPower");
+		$constantsList->write();
+		$constantsList->makeVariable("UnitPowerMax", "UnitPowerMax");
+		$constantsList->write();
+		$constantsList->makeNewline();
+		$constantsList->write();
+
 		$spellList = new Element($this->handle, 0);
 		$spellList->makeArray($spellPrefix, $this->profile->spellList->toArray());
 		$spellList->write();
@@ -89,6 +113,7 @@ class Converter
 		$funcName = $list->getFunctionName();
 
 		$children = [];
+		$varelse = null;
 
 		$this->writeResources($list, $element, $children);
 
@@ -106,6 +131,11 @@ class Converter
 								$value = 'WTFFFFFF';
 								break;
 							case 'set':
+								$value = $action->variableValue;
+								break;
+							case 'setif':
+								$value = $action->variableValue;
+								break;
 							case 'add':
 							case 'sub':
 								$value = $action->variableValue;
@@ -113,13 +143,26 @@ class Converter
 							case 'reset':
 								$value = 0;
 								break;
+							case 'min':
+								$value = $action->variableValue;
+								break;
+							case 'max':
+								$value = $action->variableValue;
+								break;
 							default:
 								throw new \Exception('Unrecognized variable operation: ' . $action->variableOperation);
 						}
-
+						if (!isset($value)) {
+							throw new \Exception('Missing $value for: ' . $action->variableOperation);
+						}
 						$var = $condition->makeChildren()->makeVariable($action->variableName, $value, $action->variableOperation);
-
-						$children[] = $condition->makeCondition($action->variableCondition, [$var]);
+						if (isset($action->variableValueElse)){
+							$varelse = $condition->makeChildren()->makeVariable($action->variableName, $action->variableValueElse, $action->variableOperation);
+							$children[] = $condition->makeCondition($action->variableCondition, [$var], [$varelse]);
+						} else {
+						    $children[] = $condition->makeCondition($action->variableCondition, [$var]);
+						}
+						
 					} else {
 						$children[] = $element->makeChildren()->makeVariable($action->variableName, $action->variableValue, $action->variableOperation);
 					}
@@ -127,7 +170,7 @@ class Converter
 				case $action::TYPE_SPELL:
 					if ($action->spellCondition === true) {
 						// unconditional spells
-						$children[] = $element->makeChildren()->makeResult($action->spellName);
+						$children[] = $element->makeChildren()->makeComment($action->spellName);
 					} elseif ($action->spellCondition) {
 						$child = $element->makeChildren();
 						$result = $child->makeChildren()->makeResult($action->spellName);
@@ -163,6 +206,9 @@ class Converter
 						$children[] = $subCondition->makeCondition($action->aplCondition, $conditionChildren);
 					} else {
 						if ($action->type == $action::TYPE_CALL) {
+							if ($action->aplToRun == "trinkets" or $action->aplToRun == "racials") {
+								break;
+							}
 							$children[] = $element->makeChildren()->makeVariable('result', $this->getAplListName($action->aplToRun));
 							$child = $element->makeChildren();
 							$children[] = $child->makeCondition('result', [$child->makeChildren()->makeResult('result')]);
@@ -183,6 +229,9 @@ class Converter
 	protected function writeResources(ActionList $list, Element $element, &$children)
 	{
 		$children[] = $element->makeChildren()->makeVariable('fd', 'MaxDps.FrameData');
+		$children[] = $element->makeChildren()->makeVariable("timeTo35", "fd.timeToDie");
+		$children[] = $element->makeChildren()->makeVariable("timeTo20", "fd.timeToDie");
+		$children[] = $element->makeChildren()->makeVariable("targetHp", "MaxDps:TargetPercentHealth() * 100");
 
 		foreach ($list->resourceUsage as $key => $value) {
 			if (!$value || $key == 'resources') {
@@ -194,8 +243,28 @@ class Converter
 		}
 
 		foreach ($list->resourceUsage->resources as $resource => $isUsed) {
+		    #handle (rage/mana).pct and (runicpower/insanity).deficit (rune).time_to_3 (rune).time_to_4 (rune).time_to_2
+		    # (focus/energy).time_to_max (focus/chi).max (energy).regen (energy).regen_combined
 			$properName = Helper::properCase($resource);
 			$children[] = $element->makeChildren()->makeVariable($resource, "UnitPower('player', Enum.PowerType.{$properName})");
+			if ($properName == 'Runes') {
+				$children[] = $element->makeChildren()->makeVariable($resource . "duration", "select(2,GetRuneCooldown(1))");
+				$children[] = $element->makeChildren()->makeVariable($resource . "Regen", $resource . "duration and math.floor({$resource}duration*100)/100");
+				$children[] = $element->makeChildren()->makeVariable($resource . "TimeTo2", "DeathKnight:TimeToRunes(2)");
+				$children[] = $element->makeChildren()->makeVariable($resource . "TimeTo3", "DeathKnight:TimeToRunes(3)");
+				$children[] = $element->makeChildren()->makeVariable($resource . "TimeTo4", "DeathKnight:TimeToRunes(4)");
+			} else {
+				$children[] = $element->makeChildren()->makeVariable($resource . "Max", "UnitPowerMax('player', Enum.PowerType.{$properName})");
+				$children[] = $element->makeChildren()->makeVariable($resource . "Pct", "UnitPower('player')/UnitPowerMax('player') * 100");
+				$children[] = $element->makeChildren()->makeVariable($resource . "Regen", "select(2,GetPowerRegen())");
+				$children[] = $element->makeChildren()->makeVariable($resource . "RegenCombined", "{$resource}Regen + {$resource}");
+				$children[] = $element->makeChildren()->makeVariable($resource . "Deficit", "UnitPowerMax('player', Enum.PowerType.{$properName}) - $resource");
+				$children[] = $element->makeChildren()->makeVariable($resource . "TimeToMax", "{$resource}Max - {$resource} / {$resource}Regen");
+			}
+
+		}
+		if ($this->class == "Warrior"){
+			$children[] = $element->makeChildren()->makeVariable("canExecute", "((talents[FR.Massacre] and targetHp < 35) or targetHp < 20) or buff[FR.SuddenDeathAura].up");
 		}
 	}
 

@@ -56,3 +56,7 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 320125,Echoing Shock,0,0,40,0,1,30,
 342243,Static Discharge,0,0,40,0,1,30,
 157331,Wind Gust,2,0,40,0,0,0,
+381776,Flux Melting,0,0,0,0,1,0,
+381932,Magma Chamber,0,0,0,0,1,0,
+382685,Unrelenting Calamity,0,0,0,0,1,0,
+79206,Spiritwalkers Grace,0,0,0,0,1,120,MANA:7050

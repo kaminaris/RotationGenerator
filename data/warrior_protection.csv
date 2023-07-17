@@ -45,3 +45,12 @@ id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
 107570,Storm Bolt,0.000000,0,20,0,1,30.000000,
 275339,Rumbling Earth,0.000000,0,0,1,1,0.000000,
 202560,Best Served Cold,0.000000,0,0,1,1,0.000000,
+206315,Massacre,0,0,0,0,1,0,
+29725,Sudden Death,0,0,0,0,1,0,
+307865,Spear Of Bastion,0,0,25,0,0,60,
+382956,Seismic Reverberation,0,0,0,0,1,0,
+386477,Violent Outburst,0,0,0,0,1,0,
+390725,Sonic Boom,0,0,0,0,1,0,
+394307,Immovable Object,0,0,0,0,1,0,
+5308,Execute,0,0,0,0,0,6,
+772,Rend,0,0,0,0,0,0,RAGE:30

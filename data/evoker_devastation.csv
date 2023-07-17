@@ -1,0 +1,34 @@
+id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
+375087,Dragonrage,0,0,0,0,1,120,0,
+360995,Verdant Embrace,0,0,25,0,1,24,0,MANA:
+372469,Scarlet Adaptation,0,0,0,0,1,120,
+361469,Living Flame,2,0,25,0,0,0,0,MANA:
+382411,Eternity Surge,0,0,0,0,0,30,0,
+357208,Fire Breath,0,0,0,0,0,30,0,MANA:
+351338,Quell,0,0,25,0,1,40,
+370452,Shattering Star,0,0,25,0,1,20,
+370553,Tip the Scales,0,0,25,0,1,120,
+375797,Animosity,0,0,0,0,1,0,
+370839,Power Swell,0,0,0,0,1,0,
+409848,Blazing Shards,0,0,0,0,0,0,0,
+353759,Deep Breath,0,0,100,0,0,0,0,
+359618,Essence Burst,0,0,0,0,0,0,0,
+386342,Arcane Vigor,0,0,0,0,1,0,
+357211,Pyre,0,0,25,0,1,0,Essence:3
+369089,Volatility,0,0,0,0,1,0,
+370454,Charged Blast,0,0,0,0,0,1,0,
+405659,Raging Inferno,0,0,0,0,0,1,0,
+375801,Burnout,0,0,0,0,0,1,0,
+369939,Leaping Flames,0,0,0,0,0,1,0,
+356995,Disintegrate,0,0,25,0,0,0,0,Essence:3
+370783,Snapfire,0,0,0,0,0,1,0,
+355627,Azure Strike,0,0,0,0,0,0,0,
+355913,Emerald Blossom,0,0,25,0,0,0,30,Essence:3;MANA:
+358267,Hover,0,0,0,0,0,0,35,
+375783,Font of Magic,0,0,0,0,0,1,0,
+370819,Everburning Flame,0,0,0,0,0,1,0,
+411164,Event Horizon,0,0,0,0,0,1,0,
+411165,Eye of Infinity,0,0,0,0,0,1,0,
+386348,Onyx Legacy,0,0,0,0,0,1,0,
+370781,Imminent Destruction,0,0,0,0,0,1,0,
+369990,Ancient Flame,0,0,0,0,0,1,0,
