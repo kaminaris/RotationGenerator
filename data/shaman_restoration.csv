@@ -1,0 +1,127 @@
+id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
+265046,Static Charge,0,0,0,1,1,60,
+382045,Primal Tide Core,0,0,0,1,1,0,
+5394,Healing Stream Totem,0,0,0,0,1,30,MANA:4500;MANA:0;MANA:0;MANA:0;
+378077,Spiritwalker's Aegis,0,0,0,1,1,0,
+382046,Continuous Waves,0,0,0,1,1,0,
+375982,Primordial Wave,0,0,40,0,1,30,MANA:1500;
+157154,High Tide,0,0,0,1,1,0,MANA:2500;
+16191,Mana Tide Totem,0,0,0,0,1,180,
+383222,Overflowing Shores,0,0,0,1,1,0,
+1064,Chain Heal,1055,0,40,0,1,0,MANA:15000;MANA:0;MANA:0;MANA:0;
+207399,Ancestral Protection Totem,0,0,40,0,1,300,MANA:5500;
+16196,Resurgence,0,0,0,1,1,0,
+378270,Deeply Rooted Elements,0,0,0,1,1,0,
+77756,Lava Surge,0,0,0,1,1,0,
+318038,Flametongue Weapon,0,0,0,0,0,0,
+61295,Riptide,0,0,40,0,1,6,MANA:4000;
+378779,Thundershock,0,0,0,1,1,0,
+51564,Tidal Waves,0,0,0,1,1,0,
+378081,Nature's Swiftness,0,0,0,0,1,60,
+207401,Ancestral Vigor,0,0,0,1,1,0,
+207778,Downpour,1266,0,40,0,1,5,MANA:7500;
+51485,Earthgrab Totem,0,0,35,0,1,30,MANA:1250;
+382021,Earthliving Weapon,0,0,0,0,1,0,
+73899,Primal Strike,0,0,0,0,0,0,MANA:4700;
+404522,Spiritwalker's Tidal Totem,0,0,0,1,1,0,
+20608,Reincarnation,0,0,0,1,0,1800,
+382020,Earthen Harmony,0,0,0,1,1,0,
+333919,Echo of the Elements,0,0,0,1,1,0,
+73685,Unleash Life,0,0,40,0,1,15,MANA:2000;
+57994,Wind Shear,0,0,30,0,1,12,
+77130,Purify Spirit,0,0,40,0,0,8,MANA:3250;
+212048,Ancestral Vision,8437,0,100,0,0,0,MANA:2000;
+974,Earth Shield,0,0,40,0,1,0,MANA:5000;MANA:0;MANA:0;
+77226,Mastery: Deep Healing,0,0,0,1,0,0,
+370,Purge,0,0,30,0,1,0,MANA:4000;MANA:0;MANA:0;
+236501,Tidebringer,0,0,0,1,1,0,
+187880,Maelstrom Weapon,0,0,0,1,1,0,
+8143,Tremor Totem,0,0,0,0,1,60,MANA:1150;
+381867,Totemic Surge,0,0,0,1,1,0,
+382309,Ancestral Awakening,0,0,0,1,1,0,
+280614,Flash Flood,0,0,0,1,1,0,
+77472,Healing Wave,2109,0,40,0,1,0,MANA:7500;
+546,Water Walking,0,0,30,0,0,0,
+377933,Astral Bulwark,0,0,0,1,1,0,
+382215,Winds of Al'Akir,0,0,0,1,1,0,
+383009,Stormkeeper,1266,0,0,0,1,60,
+2825,Bloodlust,0,0,0,0,0,300,MANA:1000;
+381930,Mana Spring,0,0,0,1,1,0,
+2008,Ancestral Spirit,8437,0,40,0,0,0,MANA:2000;
+383010,Elemental Orbit,0,0,0,1,1,0,
+381946,Wavespeaker's Blessing,0,0,0,1,1,0,
+382947,Ancestral Defense,0,0,0,1,1,0,
+382888,Flurry,0,0,0,1,1,0,
+383011,Call of the Elements,0,0,0,1,1,0,
+51490,Thunderstorm,0,0,0,0,1,30,
+381678,Go with the Flow,0,0,0,1,1,0,
+188196,Lightning Bolt,1687,0,40,0,0,0,MANA:500;
+383012,Creation Core,0,0,0,1,1,0,
+381647,Planes Traveler,0,0,0,1,1,0,
+404539,Resonant Waters,0,0,0,1,1,0,
+200071,Undulation,0,0,0,1,1,0,
+382886,Fire and Ice,0,0,0,1,1,0,
+382191,Improved Primordial Wave,0,0,0,1,1,0,
+382315,Improved Earthliving Weapon,0,0,0,1,1,0,
+198103,Earth Elemental,0,0,40,0,1,300,
+108271,Astral Shift,0,0,0,0,1,120,
+382030,Water Totem Mastery,0,0,0,1,1,0,
+108287,Totemic Projection,0,0,40,0,1,10,
+200072,Torrent,0,0,0,1,1,0,
+378443,Acid Rain,0,0,0,1,1,0,
+378094,Swirling Currents,0,0,0,1,1,0,
+16166,Master of the Elements,0,0,0,1,1,0,
+6196,Far Sight,1687,0,50000,0,0,0,
+383016,Improved Purify Spirit,0,0,0,1,1,0,
+260878,Spirit Wolf,0,0,0,1,1,0,
+556,Astral Recall,8437,0,0,0,0,600,
+188389,Flame Shock,0,0,40,0,0,6,MANA:750;
+383017,Stoneskin Totem,0,0,0,0,1,30,MANA:750;
+382033,Surging Shields,0,0,0,1,1,0,
+73920,Healing Rain,1687,0,40,0,1,10,MANA:10800;
+382732,Ancestral Reach,0,0,0,1,1,0,
+8004,Healing Surge,1266,0,40,0,0,0,MANA:12000;MANA:0;MANA:0;MANA:0;
+108280,Healing Tide Totem,0,0,0,0,1,180,MANA:2800;
+30884,Nature's Guardian,0,0,0,1,1,0,
+188443,Chain Lightning,1687,0,40,0,1,0,MANA:500;
+383019,Tranquil Air Totem,0,0,0,0,1,60,MANA:750;
+198838,Earthen Wall Totem,0,0,40,0,1,60,MANA:5500;
+382194,Undercurrent,0,0,0,1,1,0,
+108285,Totemic Recall,0,0,0,0,1,180,
+197995,Wellspring,1266,0,30,0,1,20,MANA:10000;
+381655,Nature's Fury,0,0,0,1,1,0,
+192058,Capacitor Totem,0,0,40,0,1,60,MANA:5000;
+200076,Deluge,0,0,0,1,1,0,
+382197,Ancestral Wolf Affinity,0,0,0,1,1,0,
+192106,Lightning Shield,0,0,0,0,0,0,MANA:750;
+51514,Hex,1434,0,30,0,1,30,
+382482,Living Stream,0,0,0,1,1,0,
+378079,Enfeeblement,0,0,0,1,1,0,
+108281,Ancestral Guidance,0,0,0,0,1,120,
+381689,Brimming with Life,0,0,0,1,1,0,
+2484,Earthbind Totem,0,0,40,0,0,30,MANA:1250;
+79206,Spiritwalker's Grace,0,0,0,0,1,120,MANA:7050;
+382039,Flow of the Tides,0,0,0,1,1,0,
+58875,Spirit Walk,0,0,0,0,1,60,
+192063,Gust of Wind,0,0,0,0,1,30,
+114052,Ascendance,0,0,0,0,1,180,
+382040,Tumbling Waves,0,0,0,1,1,0,
+192088,Graceful Spirit,0,0,0,1,1,0,
+204268,Voodoo Mastery,0,0,0,1,1,0,
+2645,Ghost Wolf,0,0,0,0,0,0,
+381650,Elemental Warding,0,0,0,1,1,0,
+381819,Guardian's Cudgel,0,0,0,1,1,0,
+98008,Spirit Link Totem,0,0,40,0,1,180,MANA:5500;
+305483,Lightning Lasso,0,0,20,0,1,45,
+383013,Poison Cleansing Totem,0,0,40,0,1,45,MANA:1250;
+382201,Totemic Focus,0,0,0,1,1,0,
+192077,Wind Rush Totem,0,0,40,0,1,120,
+51505,Lava Burst,1687,0,40,0,1,8,MANA:1250;
+52127,Water Shield,0,0,0,0,0,0,
+378773,Greater Purge,0,0,30,0,1,12,MANA:6000;MANA:0;MANA:0;
+196840,Frost Shock,0,0,40,0,1,0,MANA:500;
+378075,Thunderous Paws,0,0,0,1,1,0,
+404015,Current Control,0,0,0,1,1,0,
+378211,Refreshing Waters,0,0,0,1,1,0,
+157153,Cloudburst Totem,0,0,0,0,1,45,MANA:4300;
+404019,Tide Turner,0,0,0,1,1,0,

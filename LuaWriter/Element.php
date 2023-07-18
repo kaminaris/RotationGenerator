@@ -78,6 +78,19 @@ class Element
 		return $this;
 	}
 
+	public function makeSpellResult($result)
+	{
+		$this->type = self::TYPE_CONDITION;
+		$this->content = [
+			'condition' => [
+				'condition' => "MaxDps:FindSpell({$result})",
+				'if' => 'if',
+				'else' => null,
+			]
+		];
+		return $this;
+	}
+
 	public function makeArray($arrayName, $array)
 	{
 		$this->type = self::TYPE_ARRAY;

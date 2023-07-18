@@ -1,0 +1,110 @@
+id,name,castTime,minRange,maxRange,isPassive,isTalent,cooldown,costs
+385696,Flow State,0,0,0,1,1,0,
+363916,Obsidian Scales,0,0,0,0,1,90,
+356995,Disintegrate,0,0,25,0,0,0,ESSENCE:3;
+368838,Heavy Wingbeats,0,0,0,1,1,0,
+376236,Resonating Sphere,0,0,0,1,1,0,
+370553,Tip the Scales,0,0,0,0,1,120,
+360806,Sleep Walk,1360,0,25,0,1,15,MANA:6000;
+375443,Clobbering Sweep,0,0,0,1,1,0,
+376237,Nozdormu's Teachings,0,0,0,1,1,0,
+358267,Hover,0,0,0,0,0,35,
+381921,Ouroboros,0,0,0,1,1,0,
+374968,Time Spiral,0,0,0,0,1,120,
+381922,Temporal Artificer,0,0,0,1,1,0,
+376239,Grace Period,0,0,0,1,1,0,
+359793,Fluttering Seedlings,0,0,0,1,1,0,
+376240,Timeless Magic,0,0,0,1,1,0,
+375510,Blast Furnace,0,0,0,1,1,0,
+375542,Exuberance,0,0,0,1,1,0,
+362874,Temporal Compression,0,0,0,1,1,0,
+371257,Renewing Breath,0,0,0,1,1,0,
+373861,Temporal Anomaly,1360,0,0,0,1,15,MANA:18750;
+376179,Lifeforce Mender,0,0,0,1,1,0,
+377100,Exhilarating Burst,0,0,0,1,1,0,
+367226,Spiritbloom,0,0,30,0,1,30,MANA:9500;
+375577,Fire Within,0,0,0,1,1,0,
+369990,Ancient Flame,0,0,0,1,1,0,
+376150,Spiritual Clarity,0,0,0,1,1,0,
+363510,Mastery: Life-Binder,0,0,0,1,0,0,
+371032,Terror of the Skies,0,0,0,1,1,0,
+372527,Time Lord,0,0,0,1,1,0,
+376210,Erasure,0,0,0,1,1,0,
+373834,Call of Ysera,0,0,50000,1,1,0,
+372469,Scarlet Adaptation,0,0,0,1,1,0,
+382266,Fire Breath,0,0,0,0,0,30,MANA:6500;
+375544,Inherent Resistance,0,0,0,1,1,0,
+376207,Delay Harm,0,0,0,1,1,0,
+364342,Blessing of the Bronze,0,0,40,0,0,15,MANA:10000;
+375517,Extended Flight,0,0,0,1,1,0,
+372048,Oppressing Roar,0,0,0,0,1,120,
+375520,Innate Magic,0,0,0,1,1,0,
+364343,Echo,0,0,30,0,1,0,ESSENCE:2;MANA:4250;
+375574,Foci of Life,0,0,0,1,1,0,
+396571,Tempered Scales,0,0,0,1,0,0,
+376930,Attuned to the Dream,0,0,0,1,1,0,
+369297,Essence Burst,0,0,0,1,1,0,
+373270,Lifebind,0,0,50000,1,1,0,
+365585,Expunge,0,0,30,0,1,8,MANA:25000;
+371806,Recall,0,0,0,1,1,0,
+374251,Cauterizing Flame,0,0,30,0,1,60,MANA:3250;MANA:0;MANA:0;
+366155,Reversion,0,0,30,0,1,8.16,MANA:6250;
+370886,Bountiful Bloom,0,0,0,1,1,0,
+370537,Stasis,0,0,0,0,1,90,MANA:10000;
+360823,Naturalize,0,0,30,0,0,8,MANA:3250;
+375554,Enkindled,0,0,0,1,1,0,
+418101,Potent Mana,0,0,0,1,1,0,
+370665,Rescue,0,0,30,0,1,60,
+370062,Field of Dreams,0,0,0,1,1,0,
+369459,Source of Magic,0,0,25,0,1,0,
+370888,Twin Guardian,0,0,0,1,1,0,
+382731,Spiritbloom,0,0,30,0,0,30,MANA:9500;
+368412,Time of Need,0,0,0,1,1,120,
+375556,Tailwind,0,0,0,1,1,0,
+371270,Punctuality,0,0,0,1,1,0,
+387787,Regenerative Magic,0,0,0,1,1,0,
+351338,Quell,0,0,25,0,1,40,
+374348,Renewing Blaze,0,0,0,0,1,90,
+357170,Time Dilation,0,0,30,0,1,60,MANA:5000;
+355936,Dream Breath,0,0,0,0,1,30,MANA:11250;
+374346,Overawe,0,0,0,1,1,0,
+377082,Dreamwalker,0,0,0,1,1,0,
+390386,Fury of the Aspects,0,0,0,0,0,300,MANA:10000;
+400006,Energizing Flame,0,0,0,1,0,0,
+369939,Leaping Flames,0,0,0,1,1,0,
+378196,Golden Hour,0,0,0,1,1,0,
+358385,Landslide,0,10,40,0,1,90,MANA:7000;
+369908,Power Nexus,0,0,0,1,1,0,
+375528,Forger of Mountains,0,0,0,1,1,0,
+374227,Zephyr,0,0,0,0,1,120,
+376164,Instinctive Arcana,0,0,0,1,1,0,
+369909,Protracted Talons,0,0,0,1,1,0,
+375783,Font of Magic,0,0,0,1,1,0,
+375561,Lush Growth,0,0,0,1,1,0,
+361178,Mass Return,9068,0,100,0,0,0,MANA:2000;
+357210,Deep Breath,0,15,50,0,0,120,
+387341,Walloping Blow,0,0,0,1,1,0,
+377086,Rush of Vitality,0,0,0,1,1,0,
+371832,Cycle of Life,0,0,0,1,1,0,
+376204,Just in Time,0,0,0,1,1,0,
+376166,Draconic Legacy,0,0,0,1,1,0,
+360995,Verdant Embrace,0,0,30,0,1,24,MANA:7500;MANA:0;MANA:0;
+375722,Essence Attunement,0,0,0,1,1,0,
+368432,Unravel,0,0,25,0,1,9,MANA:2500;
+370960,Emerald Communion,0,0,0,0,1,180,
+359816,Dream Flight,0,15,50,0,1,120,MANA:10000;
+370897,Permeating Chill,0,0,0,1,1,0,
+369913,Natural Convergence,0,0,0,1,1,0,
+375406,Obsidian Bulwark,0,0,0,1,1,0,
+371426,Life-Giver's Flame,0,0,0,1,1,0,
+365933,Aerial Mastery,0,0,0,1,1,0,
+382614,Dream Breath,0,0,0,0,0,30,MANA:11250;
+387761,Panacea,0,0,0,1,1,0,
+361469,Living Flame,1814,0,30,0,0,0,MANA:5000;MANA:0;MANA:0;MANA:0;
+355913,Emerald Blossom,0,0,30,0,0,30,ESSENCE:3;MANA:12000;MANA:0;MANA:0;MANA:0;
+376138,Empath,0,0,0,1,1,0,
+372233,Energy Loop,0,0,0,1,1,0,
+362969,Azure Strike,0,0,25,0,0,0,MANA:2250;
+363534,Rewind,0,0,40,0,1,180,MANA:12500;
+361227,Return,9068,0,40,0,0,0,MANA:2000;
+377099,Spark of Insight,0,0,0,1,1,0,

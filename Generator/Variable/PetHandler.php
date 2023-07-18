@@ -35,6 +35,14 @@ class PetHandler extends Handler
 					$output[] = 'buff[' . Helper::pascalCase($variableParts[3]) . '].' . $variableParts[4];
 				}
 				break;
+			case 'darkglare':
+				break;
+			case 'demonic_tyrant':
+				break;
+			case 'pit_lord':
+				break;
+			case 'blasphemy':
+				break;
 			default:
 				throw new \Exception(
 					'Unrecognized pet part: ' . $variableParts[1] . ' expression ' . implode('.', $variableParts)

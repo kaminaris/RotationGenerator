@@ -20,7 +20,8 @@ class Profile
 		'warlock',
 		'monk',
 		'druid',
-		'demonhunter'
+		'demonhunter',
+		'evoker'
 	];
 
 	public $spellPrefix;
@@ -37,6 +38,7 @@ class Profile
 		'monk'        => ['brewmaster'    => 'BR', 'windwalker'   => 'WW', 'mistweaver'  => 'MW'],
 		'druid'       => ['balance'       => 'BL', 'guardian'     => 'GR', 'feral'       => 'FR', 'restoration' => 'RS'],
 		'demonhunter' => ['havoc'         => 'HV', 'vengeance'    => 'VG'],
+		'evoker' => ['devastation'         => 'DV'],
 	];
 
 	public $rawProfile;

@@ -20,13 +20,18 @@ class CooldownHandler extends Handler
 			case 'recharge_time':
 			case 'cost': $variableParts = ['cooldown', $this->action->spellNameCanonical, $variableParts[0]]; break;
 
-			case 'charges_fractional':
+			case 'charges_fractional': $variableParts = ['cooldown', $this->action->spellNameCanonical, 'charges_fractional']; break;
 			case 'charges': $variableParts = ['cooldown', $this->action->spellNameCanonical, 'charges']; break;
+			//case 'cooldown': $variableParts = ['cooldown', $this->action->spellNameCanonical, 'remains']; break;
+		}
+		switch ($variableParts[1]) {
+			case 'pause_action': $variableParts = ['cooldown', $this->action->spellNameCanonical, 'pause_action']; break;
 		}
 
 		$this->action->actionList->resourceUsage->cooldown = true;
 
 		$spell = $this->profile->SpellName($variableParts[1]);
+		$spell = str_replace(' ', '', $spell);
 
 		$prefix = $variableParts[0];
 		$suffix = $variableParts[2];
@@ -42,12 +47,22 @@ class CooldownHandler extends Handler
 			case 'full_recharge_time': $value = "{$prefix}[{$spell}].fullRecharge"; break;
 			case 'recharge_time': $value = "{$prefix}[{$spell}].partialRecharge"; break;
 			case 'charges':
-			case 'charges_fractional':
+			case 'charges_fractional': $value = "{$prefix}[{$spell}].charges"; break;
 			case 'stack': $value = "{$prefix}[{$spell}].charges"; break;
 			case 'max_charges': $value = "{$prefix}[{$spell}].maxCharges"; break;
 			case '':
 			case 'remains_guess':
+			case 'remains_expected':
+				$value = "{$prefix}[{$spell}].remains"; break;
 			case 'remains': $value = "{$prefix}[{$spell}].remains"; break;
+			case 'pause_action':
+			    $info[] = implode('.', $variableParts);
+			    if ($variableParts[2] === 'pause_action'){
+			    	$value = "{$prefix}[{$spell}].remains>=1";
+			    } else {
+			    	$value[] = implode('.', $variableParts);
+			    }
+			    break;
 			default:
 				throw new \Exception(
 					'Unrecognized cooldown suffix type: ' . $suffix . ' expression: ' . implode('.', $variableParts).

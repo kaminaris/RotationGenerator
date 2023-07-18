@@ -1,0 +1,294 @@
+name: BuildRotations
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+env:
+  apiKey: ${{ secrets.APIKEY }}
+  apiSecret: ${{ secrets.APISECRET }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 100
+
+      - name: Setup PHP with composer v2
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer:v2
+      
+      - name: Get composer cache directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+      
+      - name: Install dependencies
+        run: |
+          composer install --prefer-dist
+
+      - name: Current
+        run: New-Item -Path "${{ github.workspace }}" -Name "output" -ItemType Directory
+        shell: pwsh
+
+      - name: Current blood
+        run: Set-Content -Value "blood" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert blood
+        run: |
+          php convert.php blood Blood.lua
+
+      - name: Current dk_frost
+        run: Set-Content -Value "dk_frost" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert dk_frost
+        run: |
+          php convert.php dk_frost DK_Frost.lua
+
+      - name: Current unholy
+        run: Set-Content -Value "unholy" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert unholy
+        run: |
+          php convert.php unholy Unholy.lua
+
+      - name: Current havoc
+        run: Set-Content -Value "havoc" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert havoc
+        run: |
+          php convert.php havoc Havoc.lua
+
+      - name: Current vengeance
+        run: Set-Content -Value "vengeance" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert vengeance
+        run: |
+          php convert.php vengeance Vengeance.lua
+
+      - name: Current moonkin
+        run: Set-Content -Value "moonkin" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert moonkin
+        run: |
+          php convert.php moonkin Balance.lua
+
+      - name: Current feral
+        run: Set-Content -Value "feral" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert feral
+        run: |
+          php convert.php feral Feral.lua
+
+      - name: Current bear
+        run: Set-Content -Value "bear" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert bear
+        run: |
+          php convert.php bear Guardian.lua
+
+      - name: Current dev
+        run: Set-Content -Value "dev" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert dev
+        run: |
+          php convert.php dev Devastation.lua
+
+      - name: Current bm
+        run: Set-Content -Value "bm" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert bm
+        run: |
+          php convert.php bm Beastmastery.lua
+
+      - name: Current mm
+        run: Set-Content -Value "mm" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert mm
+        run: |
+          php convert.php mm Marksmanship.lua
+
+      - name: Current survi
+        run: Set-Content -Value "survi" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert survi
+        run: |
+          php convert.php survi Survival.lua
+
+      - name: Current arcane
+        run: Set-Content -Value "arcane" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert arcane
+        run: |
+          php convert.php arcane Arcane.lua
+
+      - name: Current fire
+        run: Set-Content -Value "fire" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert fire
+        run: |
+          php convert.php fire Fire.lua
+
+      - name: Current mage_frost
+        run: Set-Content -Value "mage_frost" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert mage_frost
+        run: |
+          php convert.php mage_frost MAGE_Frost.lua
+
+      - name: Current brewmaster
+        run: Set-Content -Value "brewmaster" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert brewmaster
+        run: |
+          php convert.php brewmaster Brewmaster.lua
+
+      - name: Current ww
+        run: Set-Content -Value "ww" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert ww
+        run: |
+          php convert.php ww Windwalker.lua
+
+      - name: Current ww_s
+        run: Set-Content -Value "ww_s" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert ww_s
+        run: |
+          php convert.php ww_s Windwalker_s.lua
+
+      - name: Current pala_prot
+        run: Set-Content -Value "pala_prot" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert pala_prot
+        run: |
+          php convert.php pala_prot PALA_Protection.lua
+
+      - name: Current ret
+        run: Set-Content -Value "ret" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert ret
+        run: |
+          php convert.php ret Retribution.lua
+
+      - name: Current shadow
+        run: Set-Content -Value "shadow" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert shadow
+        run: |
+          php convert.php shadow Shadow.lua
+
+      - name: Current assa
+        run: Set-Content -Value "assa" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert assa
+        run: |
+          php convert.php assa Assassination.lua
+
+      - name: Current outlaw
+        run: Set-Content -Value "outlaw" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert outlaw
+        run: |
+          php convert.php outlaw Outlaw.lua
+
+      - name: Current sub
+        run: Set-Content -Value "sub" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert sub
+        run: |
+          php convert.php sub Sublety.lua
+
+      - name: Current ele
+        run: Set-Content -Value "ele" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert ele
+        run: |
+          php convert.php ele Elemental.lua
+
+      - name: Current enh
+        run: Set-Content -Value "enh" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert enh
+        run: |
+          php convert.php enh Enhancement.lua
+
+      - name: Current aff
+        run: Set-Content -Value "aff" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert aff
+        run: |
+          php convert.php aff Affliction.lua
+
+      - name: Current demo
+        run: Set-Content -Value "demo" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert demo
+        run: |
+          php convert.php demo Demonology.lua
+
+      - name: Current destro
+        run: Set-Content -Value "destro" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert destro
+        run: |
+          php convert.php destro Destruction.lua
+
+      - name: Current arms
+        run: Set-Content -Value "arms" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert arms
+        run: |
+          php convert.php arms Arms.lua
+
+      - name: Current fury
+        run: Set-Content -Value "fury" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert fury
+        run: |
+          php convert.php fury Fury.lua
+
+      - name: Current warr_prot
+        run: Set-Content -Value "warr_prot" -Path '${{ github.workspace }}/output/current.txt'
+        shell: pwsh
+      - name: Convert warr_prot
+        run: |
+          php convert.php warr_prot WARRIOR_Protection.lua
+
+      #- name: try zip the test result folder
+      #  run: |
+      #    zip -r testResult.zip ${{ github.workspace }}
+  
+      #- name: Upload result zip
+      #  uses: actions/upload-artifact@v3
+      #  with:
+      #    name: test result zip
+      #    path: testResult.zip
+
+      #- name:
+      #  run: |
+      #    composer require francis-schiavo/blizzard_api
+      #    composer dump-autoload
+      #    php lookupspell.php
+
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+            name: files
+            path: ${{ github.workspace }}

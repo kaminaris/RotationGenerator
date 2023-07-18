@@ -22,7 +22,11 @@ class GameDb implements SpellDb
 
 		$this->db = [];
 		foreach ($csv as $i => $row) {
-			$data = array_combine($keys, $row);
+			if(count($keys) == count($row)){
+			    $data = array_combine($keys, $row);
+			} else {
+			    continue;
+			}
 
 			$spell = new SpellInfo();
 			$spell->setName($data['name']);
